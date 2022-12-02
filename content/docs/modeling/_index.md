@@ -1,6 +1,6 @@
 ---
 title: Modeling
-description: adslfkjlasjdklf llkj
+description: Techniques related to 3D reconstruction
 toc: true
 authors:
 tags:

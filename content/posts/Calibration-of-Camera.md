@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Calibration of Camera
 tags: 
     - SLM

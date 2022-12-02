@@ -1,6 +1,6 @@
 ---
 title: Calibration
-description: This is an example doc layout of Eureka theme
+description: Techniques related to camera calibration
 toc: true
 authors:
 tags:

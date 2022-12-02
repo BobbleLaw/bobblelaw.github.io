@@ -1,6 +1,6 @@
 ---
-title: Hugo Authors
-role: Example Role
+title: Bobble Law
+role: Website maintainer
 bio: Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
 organization:
   name: Example Organization
@@ -8,13 +8,10 @@ organization:
 social:
   - icon: envelope
     iconPack: fas
-    url: mailto:example@example.com
-  - icon: twitter
-    iconPack: fab
-    url: https://example.com/
+    url: mailto:bobble2579@hotmail.com
   - icon: github
     iconPack: fab
-    url: https://example.com/
+    url: https://github.com/bobblelaw
 ---
 
 ## Vestibulum vel arcu

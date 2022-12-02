@@ -14,7 +14,7 @@ experiences:
     organization:
       name: Hong Kong University of Science and Technology
       url: https://hkust.edu.hk
-    dates: "2016 - 2019"
+    dates: "2016 - 2020"
     location: Hong Kong SAR
     writeup: >
       Supervised by LI Zexiang

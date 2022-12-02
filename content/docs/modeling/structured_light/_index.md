@@ -1,7 +1,14 @@
 ---
-layout: post
-title: Structured Light from Motion - Build a SL used on Manipulator
-tags: [structured light, robotics]
+title: Structured Light System
+description: This is an example doc layout of Eureka theme
+toc: true
+authors:
+tags:
+categories:
+series:
+date: '2019-10-15'
+lastmod: '2019-10-15'
+draft: false
 ---
 
 This winter I am going to finish my master degree in UST. In the pass two years, I spent most of my time digging into structured light systems, 3D scanning and object pose estimation, like real deep. Until now two structured light systems, each of which consists of a PointGrey Camera and a TI DLP3000/4500 EVM, are successfully deployed on two manipulators (UR5). With my software, they are capable of 

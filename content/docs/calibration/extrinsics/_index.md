@@ -1,5 +1,5 @@
 ---
-title: Calibration
+title: Extrinsic Calibration
 description: This is an example doc layout of Eureka theme
 toc: true
 authors:

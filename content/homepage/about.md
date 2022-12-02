@@ -41,7 +41,7 @@ widget:
 ## About me
 
 Welcome! My name is Lo TszWan (try to read it in Cantonese), call me Bob for convenience. 
-This is my personal blog where I write artcles about programming, algorithms, and thoughts on working projects. 
+This is my personal blog where I write articles about programming, algorithms, and thoughts on working projects. 
 My focus mainly lies on:
 
 - 3D Reconstrction

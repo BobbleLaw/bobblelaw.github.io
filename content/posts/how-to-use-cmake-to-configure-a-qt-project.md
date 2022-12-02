@@ -1,5 +1,4 @@
 ---
-layout: post
 title: How to use CMake to configure a Qt project?
 tags: [Qt]
 ---

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Tips during Development
 tags: [note, SL]
 ---

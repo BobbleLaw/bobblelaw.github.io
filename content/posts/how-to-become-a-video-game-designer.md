@@ -1,6 +1,7 @@
 ---
-layout: post
 title: How to Become a Video Game Designer?
+date: '2020-11-20T22:52:56+08:00'
+lastmod: '2020-11-20T22:52:56+08:00'
 tags: [note]
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Preliminaries
+title: Images-based Modeling
 description: This is an example doc layout of Eureka theme
 toc: true
 authors:

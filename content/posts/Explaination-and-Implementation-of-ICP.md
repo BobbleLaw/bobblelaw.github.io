@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Explaination and Implementation of ICP
 tags: [software]
 ---
