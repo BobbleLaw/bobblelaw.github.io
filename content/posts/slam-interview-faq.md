@@ -1,13 +1,22 @@
 ---
 title: SLAM Interview FAQs
 description: Questions are collected from Chinese internet
-date: 2022-10-27T16:37:56+08:00
+toc: false
+authors:
+  - host
+tags: 
+  - SLAM
+categories:
+series:
+date: '2022-10-27T16:37:56+08:00'
+lastmod: '2020-11-20T22:52:56+08:00'
+featuredImage:
 draft: false
 ---
 
 ## Linear Algebra
 
-+ 如何求解 $Ax=b$? SVD和QR分解哪个更快？
++ 如何求解 $Ax=b$？SVD和QR分解哪个更快？
 
 Depend on the rank of $[A | b]$.
 
@@ -16,10 +25,24 @@ Solution include QR decomposition, LTLD decomposition, Cholesky decomposition an
 ## Optimization Basics
 
 + Explain Gradient descent, Gaussian-Newton, LM, Dogleg
-+ 
+
+
 ## Computer Vision Basics
 
-+ 提取边缘的方法
++ SIFT vs. SURF
+
++ Parallax and depth
+
+$ \frac{parallax}{baseline} = \frac{focal~ length}{depth} $
+
++ Edge detection algorithms
+
+Filtering, augmentation, and detection. Gaussian filter and some handcrafted kernel to locate pixel gradient.
+
+1. Canny
+2. Sobel
+3. Laplacian
+
 + Hoffman transform
 
 
@@ -35,9 +58,7 @@ Solution include QR decomposition, LTLD decomposition, Cholesky decomposition an
   
 + Explain Essential matrix, Fundamental matrix, and Homography matrix. 
   
-
 + PnP最少需要几个点？只有一/二个点的自由度是多少？
-
 
 + Explain Triangulation
 
@@ -46,6 +67,18 @@ Solution include QR decomposition, LTLD decomposition, Cholesky decomposition an
 + Why Lie Group/Algebra
 
 + Explain Epipolar geometry
+
++ Explain Rigid body transform, Affine transform, and Projective transform
+
++ Explain ICP
+
+
+## Filtering basic
+
++ Explain Kalman filter, Unsented Kalman filter, and Extended Kalman filter
+
++ Explain Particle filter
+
 
 ## VSLAM General
 
@@ -69,6 +102,13 @@ Solutions to dynamic scenes:
 5. Deep learning object detection
 6. Motor dynamic constraint. Human movement.
 
++ How to pick good key frames?
+
+Consider from time and space domain.
+
+1. Keep more frames at low speed movement, less frames at high speed movement. (???)
+2. Keep enough distance, either in translation or rotation.
+3. Tracking quality. Many method can be used to determin tracking quality. Covisibility (ORB-SLAM), Parallax (VINS), Tracked feature ratio.
 
 + 长廊问题
 
@@ -76,11 +116,15 @@ VIO. Make use of line features.
 
 + Kidnap problem
 
+Relocation is also known as "Kidnap problem". It usually happens after robot losts its vision for a while (literally lost vision, or move into a feature-less area). Solution could be utilizing IMU pre-integration to locate previous key frames. Particles filter (?).
+
+
+
 ## ORB-SLAM
 
 + 哪个部分最耗时？
 
-According to the paper, local BA takes most of the time.
+According to the paper, local BA consumes most of the time.
 Local BA includes the following steps:
 1. Add current keyframe and its covisible frame to `ILocalKeyFrame`
 2. Iterate over `ILocalKeyFrame`, add observed MapPoints to `LocalMapPoint`

@@ -1,9 +1,12 @@
 ---
 title: Lo, Tszwan
 draft: false
+weight: 1
+
+# Specific
 role: 3D Computer Vision Engineer
 avatar: images/cartoon_me.png
-bio:
+bio: 
 organization:
   name:
   url:
@@ -15,8 +18,7 @@ social:
     iconPack: fab
     url: https://github.com/BobbleLaw
 
-weight: 1
-
+# Common
 widget:
   handler: about
 

@@ -1,35 +1,35 @@
 ---
 title: Pages
-draft: false
+draft: true
+weight: 3
 
-# Section you want to display
+# section to display
 section: posts
-# Pages count
+# pages count
 count: 5
-# Options: card, plain and masonry.
-style: card
+# [card, plain, masonry]
+style: plain
 
-weight: 2
 widget:
   handler: pages
 
-  # Options: sm, md, lg and xl. Default is md.
+  # [$sm, md, lg, xl]
   width:
 
   sidebar:
-    # Options: left and right. Leave blank to hide.
+    # [left, right]. Leave blank to hide.
     position:
-    # Options: sm, md, lg and xl. Default is md.
+    # [sm, $md, lg, xl]
     scale:
 
   background:
-    # Options: primary, secondary, tertiary or any valid color value. Default is primary.
+    # [$primary, secondary, tertiary, any valid color value]
     color:
     image:
-    # Options: auto, cover and contain. Default is auto.
+    # [$auto, cover and contain]
     size:
-    # Options: center, top, right, bottom, left.
+    # [center, top, right, bottom, left]
     position:
-    # Options: fixed, local, scroll.
+    # [fixed, local, scroll]
     attachment: 
 ---

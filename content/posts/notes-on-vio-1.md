@@ -1,6 +1,16 @@
 ---
-title: Notes on VIO - MSCKF Part I 
-date: 2022-11-13T15:50:13+08:00
+title: Notes on VIO - MSCKF Part I
+description:
+toc: false
+authors:
+  - host
+tags: 
+  - SLAM
+categories:
+series:
+date: '2022-11-13T15:50:13+08:00'
+lastmod: '2020-11-20T22:52:56+08:00'
+featuredImage:
 draft: true
 ---
 

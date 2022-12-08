@@ -1,7 +1,16 @@
 ---
 title: Understanding Perspective-N-Points
 description: 
-date: 2022-10-27T16:37:56+08:00
+toc: false
+authors:
+  - host
+tags:
+  - registration
+categories:
+series:
+date: '2022-10-27T16:37:56+08:00'
+lastmod: '2020-11-20T22:52:56+08:00'
+featuredImage:
 draft: false
 ---
 

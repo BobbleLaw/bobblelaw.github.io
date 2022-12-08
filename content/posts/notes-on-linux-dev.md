@@ -1,9 +1,21 @@
 ---
-title: Tips during Development
-tags: [note, SL]
+title: Notes on Linux Development
+description: A place for problems and solutions encountered in Linux development
+toc: false
+authors:
+  - host
+tags: 
+  - note
+categories:
+series:
+date: '2020-11-20T22:52:56+08:00'
+lastmod: '2020-11-20T22:52:56+08:00'
+featuredImage:
+draft: false
 ---
 
 ### How to use previous version of gcc 
+
 This problem arises when we try to compile mex file in Matlab. It shows a __warning__ as
 
     Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. 

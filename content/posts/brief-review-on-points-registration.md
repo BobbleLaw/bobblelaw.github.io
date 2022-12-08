@@ -1,6 +1,17 @@
 ---
-title: Explaination and Implementation of ICP
-tags: [software]
+title: Review on Points Registration
+description:
+toc: false
+author:
+  - host
+tags: 
+  - registration
+categories:
+series:
+date: '2020-11-20T22:52:56+08:00'
+lastmod: '2020-11-20T22:52:56+08:00'
+featuredImage:
+draft: false
 ---
 
 If you have looked into the principles behind any 3D sensors, you will find they always fall into the following catagory. 

@@ -1,10 +1,11 @@
 ---
-title: How VINS works -- Preliminaries
-description:
-toc: true
+title: How VINS works? -- Preliminaries
+description: Before diving into optimization-based VIO
+toc: false
 authors:
   - host
-tags:
+tags: 
+  - SLAM
 categories:
 series:
 date: '2020-11-20T22:52:56+08:00'
