@@ -1,0 +1,179 @@
+<!doctype html><html lang=en dir=ltr class=dark><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Recursive Lambdas in C++ | Bobble Law</title><meta name=generator content="Hugo Eureka 0.9.3"><link rel=stylesheet href=/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css><script defer src=/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/cpp,%20swift,%20python.min.js crossorigin></script>
+<link rel=stylesheet href=/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css media=print onload='this.media="all",this.onload=null'><script defer type=text/javascript src=/js/fontawesome.min.a975d08212c5439f29e6074e7ad58e159ae1ef5efb6a31962fa3b6885557e794dd9315f4a8a16d705066d023f4eaaf07.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js integrity=sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0 crossorigin></script>
+<link rel=icon type=image/png sizes=32x32 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_32x32_fill_box_center_3.png><link rel=apple-touch-icon sizes=180x180 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_180x180_fill_box_center_3.png><meta name=description content="Ever wondered how to make our beloved [](){}s call themselves?"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Recursive Lambdas in C++","item":"/posts/recursive-lambda-function/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/recursive-lambda-function/"},"headline":"Recursive Lambdas in C\u002b\u002b | Bobble Law","datePublished":"2020-09-12T02:00:00+00:00","dateModified":"2020-11-20T22:52:56+08:00","wordCount":1548,"author":{"@type":"Person","name":["host"]},"publisher":{"@type":"Person","name":"Bob Law","logo":{"@type":"ImageObject","url":"/images/icon.png"}},"description":"Ever wondered how to make our beloved [](){}s call themselves?"}</script><meta property="og:title" content="Recursive Lambdas in C++ | Bobble Law"><meta property="og:type" content="article"><meta property="og:image" content="/images/icon.png"><meta property="og:url" content="/posts/recursive-lambda-function/"><meta property="og:description" content="Ever wondered how to make our beloved [](){}s call themselves?"><meta property="og:locale" content="en"><meta property="og:site_name" content="Bobble Law"><meta property="article:published_time" content="2020-09-12T02:00:00+00:00"><meta property="article:modified_time" content="2020-11-20T22:52:56+08:00"><meta property="article:section" content="posts"><meta property="article:tag" content="C++"><meta property="og:see_also" content="/posts/delete-rvalue-ref-assignment/"><meta property="og:see_also" content="/posts/floating-point-optimizations/"><body class="flex min-h-screen flex-col"><header class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"><div class="mx-auto w-full max-w-screen-xl"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");(storageColorScheme=="Auto"&&window.matchMedia("(prefers-color-scheme: light)").matches||storageColorScheme=="Light")&&document.getElementsByTagName("html")[0].classList.remove("dark")</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="me-6 text-primary-text text-xl font-bold">Bobble Law</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">Posts</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">Topics</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-moon"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById("lightDarkMode");storageColorScheme=="Auto"?(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","adjust"),element.firstElementChild.classList.add("fa-adjust"),document.addEventListener("DOMContentLoaded",()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",switchDarkMode)})):storageColorScheme=="Light"&&(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","sun"),element.firstElementChild.classList.add("fa-sun")),document.addEventListener("DOMContentLoaded",()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="grow pt-16"><div class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8"><div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12"><div class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"><article class=prose><h1 class=mb-4>Recursive Lambdas in C++</h1><div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"><div class="me-6 my-2"><i class="fas fa-calendar me-1"></i>
+<span>2020-09-12</span></div><div class="me-6 my-2"><i class="fas fa-clock me-1"></i>
+<span>8 min read</span></div></div><pre><code class=language-cpp>auto fib = [](int n) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+};
+auto i = fib(7);
+</code></pre><p>If only it were that simple.</p><p>Obviously, any performance-conscious programmer will compute Fibonacci numbers iteratively (or even <a href=https://en.wikipedia.org/wiki/Fibonacci_number#Closed-form_expression>explicitly</a>), but this solution will serve as an example for an underappreciated tool: <em>recursive lambdas</em>.</p><p>Lambdas are one of my favorite features in any programming language and while I long for a <a href=http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0573r1.html>shorter syntax in C++</a>, I still use them quite ubiquitously, especially for local functions.
+They allow us to abstract behavior into a function while still accessing local variables (through captures) and without leaking new names into the surrounding namespace.
+While already plenty powerful, sometimes we might want to call a lambda recursively.</p><p>The Fibonacci sequence is an artificial example but I encountered plenty scenarios where you just want to traverse some recursive data structure real quick and a recursive lambda would have been the best solution.
+But alas, the above example does not compile because the name <code>fib</code> is not accessible within the lambda.</p><blockquote><p>It&rsquo;s funny how the <code>x</code> in <code>int x = x + 1;</code> refers to the newly declared variable and is basically never what you want but the <code>fib</code> in our example does not refer to the declared lambda even though it is exactly what we want.</p></blockquote><h2 id=a-suboptimal-solution>A Suboptimal Solution</h2><p>Before we get to the good stuff, let&rsquo;s examine a common, yet unsatisfactory solution first:</p><pre><code class=language-cpp>#include &lt;functional&gt;
+
+std::function&lt;int(int)&gt; fib;
+fib = [&amp;](int n) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+};
+</code></pre><p>Essentially, by declaring <code>fib</code> beforehand, we are able to reference it inside the lambda.
+However, <code>fib</code> now requires an explicit type and as each lambda expression has its own compiler-generated type, you&rsquo;ll have a hard time naming it (it&rsquo;s a kind of <a href=http://videocortex.io/2017/Bestiary/#-voldemort-types>Voldemort Type</a>).
+Instead, an <code>std::function</code> is often the go-to type to store lambdas.</p><p>So, why do I consider this solution inferior?</p><ul><li>first of all, look at <a href=https://godbolt.org/z/fTTj7r>the assembly</a>! A monster, compared to <a href=https://godbolt.org/z/3E5anW>a normal recursive function</a></li><li><code>std::function</code> is type erased and often allocates (though some standard libraries perform <em>small function optimization</em> and don&rsquo;t allocate if the size of the lambda is small, i.e. it doesn&rsquo;t capture too much)</li><li><code>&lt;functional></code> is a big and costly header, basically <a href=https://artificial-mind.net/projects/compile-health/>costing 200ms+</a> just to include it</li><li>it cannot be made <code>constexpr</code></li><li>it requires writing the function signature twice</li></ul><h2 id=generic-lambdas-to-the-rescue>Generic Lambdas to the Rescue??</h2><p>Let me present my preferred solution:</p><pre><code class=language-cpp>auto fib = [](int n, auto&amp;&amp; fib) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1, fib) + fib(n - 2, fib);
+};
+auto i = fib(7, fib);
+</code></pre><p>Oof. A generic lambda? Templates? Calling <code>fib</code> with itself?</p><p>Let me explain!</p><p>So, the problem with our opening example was that <code>fib</code> is not a visible name inside the lambda.
+We simply remedied that by passing <code>fib</code> as an additional parameter.
+Of course, we don&rsquo;t know the type of <code>fib</code> yet, so we use <code>auto&&</code> and turn it into a generic lambda.
+Also, no, <code>decltype(fib)&&</code> wouldn&rsquo;t work.
+If we could access <code>fib</code>, we wouldn&rsquo;t have this problem in the first case!
+Finally, because we now have an additional parameter, we have to pass <code>fib</code> to itself every time we call it.</p><p>This solution has none of the disadvantages of the previous solution.
+Compared to <a href=https://godbolt.org/z/3E5anW>a normal recursive function</a>, we have <a href=https://godbolt.org/z/fG3TdW>one additional jump in the assembly</a> and of course the slight syntactical inconvenience of having to pass an additional parameter.</p><p>If you use the recursive lambda many times in the remainder of the function you can simply wrap it again to make the call more natural:</p><pre><code class=language-cpp>auto f = [&amp;](int n) { return fib(n, fib); };
+auto i = f(7);
+</code></pre><p>Still produces <a href=https://godbolt.org/z/86WdEr>good assembly</a>.</p><h2 id=desugaring-the-lambda>Desugaring the Lambda</h2><p>Okay, okay, I get it.
+This might still be too much magic to fully comprehend how the lambda works.
+Is it instantiated for every recursion depth?
+How would this work with arbitrary deep recursions?
+Something is not making sense here.</p><p>A step back.</p><p>Lambdas are not a magical feature.
+They are simply syntactical sugar for a local <code>struct</code> that has an <code>operator()</code> and each capture as a member (capturing per reference creates reference members):</p><pre><code class=language-cpp>auto k = 7;
+auto f = [k](int n) { return n + k; };
+return f(3);
+</code></pre><p>is basically equivalent to:</p><pre><code class=language-cpp>auto k = 7;
+struct lambda_obj
+{
+    int k; // captured by value
+    int operator()(int n) const { return n + k; }
+};
+auto f = lambda_obj{k};
+return f(3);
+</code></pre><p>Our <em>recursive lambda</em> is a bit more complex, but not much.
+Generic lambdas simply have a templated <code>operator()</code>, the rest is the same:</p><pre><code class=language-cpp>auto fib = [](int n, auto&amp;&amp; fib) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1, fib) + fib(n - 2, fib);
+};
+auto i = fib(7, fib);
+</code></pre><p>is basically equivalent to:</p><pre><code class=language-cpp>struct lambda_obj
+{
+    template &lt;class F&gt;
+    int operator()(int n, F&amp;&amp; fib) const
+    {
+        if (n &lt;= 1) return n;
+        return fib(n - 1, fib) + fib(n - 2, fib);
+    }
+};
+auto fib = lambda_obj{}; // no capture
+auto i = fib(7, fib);
+</code></pre><p>The only reason you cannot do this in practice is that function-local templates (be it function templates or class templates) are forbidden.
+Generic lambdas have a special exemption from that rule.</p><p>This also solves the question of the infinite instantiation:
+The only template that is instantiated is the templated function <code>lambda_obj::operator()</code> and its only instantiation is <code>int lambda_obj::operator()&lt;lambda_obj>(int n, lambda_obj& fib) const</code>.
+Calling <code>fib</code> inside this function is actually the same instantiation! (<code>fib</code> still has the type <code>lambda_obj&</code>)</p><h2 id=another-example-tree-recursion>Another Example: Tree Recursion</h2><p>Okay, that&rsquo;s cool and all, but how does it help in the real life?</p><p>Let&rsquo;s say we have a simple recursive data structure, for example a <a href=https://en.wikipedia.org/wiki/Binary_space_partitioning>BSP tree</a> stored embeddedly in an <code>std::vector</code> (or some other contiguous container) for memory efficiency:</p><pre><code class=language-cpp>struct node // only represents inner nodes
+{
+    // dividing plane
+    tg::vec3 plane_normal;
+    float plane_distance;
+
+    // idx for child on positive / negative side
+    int child_pos;
+    int child_neg;
+
+    bool is_on_positive_side(tg::pos3 p) const 
+    { 
+        return dot(p, plane_normal) &gt; plane_distance; 
+    }
+};
+</code></pre><p>The two members <code>child_pos</code> and <code>child_neg</code> store the topological information of the tree.
+If they are positive, they point to another inner node.
+If they are negative, they point into leaf data (stored as &ldquo;negative leaf idx - 1&rdquo;).</p><h3 id=point-queries>Point Queries</h3><p>The first example function is a <em>point query</em>, i.e. given a 3D position, return the data stored in the leaf cell:</p><pre><code class=language-cpp>template &lt;class LeafT&gt;
+LeafT&amp; get_data_at(std::span&lt;node const&gt; nodes, std::span&lt;LeafT&gt; leaf_data, tg::pos3 p)
+{
+    auto recurse = [&amp;](int node_idx, auto&amp;&amp; recurse) -&gt; LeafT&amp; {
+        if (node_idx &lt; 0) // leaf node
+            return leaf_data[1 - node_idx];
+
+        // visit proper child
+        auto const&amp; n = nodes[node_idx];
+        recurse(n.is_on_positive_side(p) ? n.child_pos : n.child_neg, recurse);
+    };
+    return recurse(0, recurse);
+}
+
+// usage:
+std::vector&lt;node&gt; nodes = ...;
+std::vector&lt;float&gt; data = ...;
+tg::pos3 query_pos = ...;
+
+// NOTE: template arg cannot be deduced 
+//      (because the compiler does not know vector&lt;float&gt; corresponds to span&lt;float&gt;)
+auto&amp; d = get_data_at&lt;float&gt;(nodes, data, query_pos);
+</code></pre><h3 id=visitor--internal-iteration>Visitor / Internal Iteration</h3><p>The second example is a generic traversal operator that takes a direction and a callback.
+The callback function is called for all leaf indices ordered ascendingly by the given direction.
+This is for example useful to implement the <a href=https://en.wikipedia.org/wiki/Painter%27s_algorithm>painter&rsquo;s algorithm</a> with render jobs stored in the BSP.</p><pre><code class=language-cpp>// callback signature: (int leaf_idx) -&gt; void
+template &lt;class F&gt;
+void visit_in_direction(std::span&lt;node const&gt; nodes, tg::vec3 dir, F&amp;&amp; callback)
+{
+    auto recurse = [&amp;](int node_idx, auto&amp;&amp; recurse) -&gt; void {
+        if (node_idx &lt; 0) // leaf node
+        {
+            callback(1 - node_idx);
+            return;
+        }
+
+        auto const&amp; n = nodes[node_idx];
+        if (dot(n.plane_normal, dir) &gt; 0) // points in same direction
+        {
+            recurse(n.child_neg, recurse);
+            recurse(n.child_pos, recurse);
+        }
+        else // points in different direction
+        {
+            recurse(n.child_pos, recurse);
+            recurse(n.child_neg, recurse);
+        }
+    };
+    recurse(0, recurse);
+}
+
+// usage:
+std::vector&lt;node&gt; nodes = ...;
+tg::vec3 view_dir = ...;
+
+visit_in_direction(nodes, view_dir, [&amp;](int leaf_idx) {
+    // render / process leaf_idx
+});
+</code></pre><p>Note: the trailing return type <code>-> void</code> seems to be mandatory here, otherwise my clang complains that it cannot deduce the return type.</p><h2 id=conclusion>Conclusion</h2><p>&mldr; or rather a late TL;DR?</p><p>Our goal was to make the following <em>recursive lambda</em> work:</p><pre><code class=language-cpp>auto fib = [](int n) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+};
+auto i = fib(7);
+</code></pre><p>While this is not directly possible, we can get really close by just adding a parameter!</p><pre><code class=language-cpp>auto fib = [](int n, auto&amp;&amp; fib) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1, fib) + fib(n - 2, fib);
+};
+auto i = fib(7, fib);
+</code></pre><p>The recipe is simple:
+If you want to call a lambda recursively, just add an <code>auto&&</code> parameter taking the function again and call that.
+This produces basically optimal assembly and can be used in combination with capturing.</p><p>Additional discussion and comments on <a href=https://www.reddit.com/r/cpp/comments/irupel/recursive_lambdas_in_c/>reddit</a>.</p><h3 id=update-2020-09-13>Update 2020-09-13:</h3><p>If the lambda does not capture anything, it can be declared <code>static</code> and the following works:</p><pre><code class=language-cpp>using fib_t = int(*)(int);
+static fib_t fib = [](int n) {
+    if (n &lt;= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+};
+auto i = fib(7);
+</code></pre><p>Note that <code>auto</code> does not work here because the compiler needs to know the type of <code>fib</code> before calling it.</p><p>(<em>Title image from <a href=https://pixabay.com/illustrations/menger-fractal-design-cube-702863/>pixabay</a></em>)</p></article><div class=my-4><a href=/tags/c++/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#C++</a></div><div class=py-2><div class="my-8 flex flex-col items-center md:flex-row"><a href=/authors/host/ class="md:me-4 text-primary-text h-24 w-24"><i class="fas fa-user-circle fa-6x"></i></a><div class="mt-4 w-full md:mt-0 md:w-auto"><a href=/authors/host/ class="mb-2 block border-b pb-1 text-lg font-bold"><h3>Bobble Law</h3></a><span class="block pb-2">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.</span>
+<a href=mailto:bobble2579@hotmail.com class=me-2><i class="fas fa-envelope"></i></a>
+<a href=https://github.com/bobblelaw class=me-2><i class="fab fa-github"></i></a></div></div></div><div class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"><div><span class="text-primary-text block font-bold">Previous</span>
+<a href=/posts/range-ref/ class=block>range_ref&lt;T></a></div><div class="mt-4 md:mt-0 md:text-right"><span class="text-primary-text block font-bold">Next</span>
+<a href=/posts/delete-rvalue-ref-assignment/ class=block>Consider deleting your rvalue ref-qualified assignment operators</a></div></div></div><div class="lg:col-start-2 bg-secondary-bg prose col-span-2 rounded p-6 lg:col-span-6"><h3>See Also</h3><a href=/posts/delete-rvalue-ref-assignment/ class=no-underline>Consider deleting your rvalue ref-qualified assignment operators</a><br><a href=/posts/floating-point-optimizations/ class=no-underline>Basic Floating Point Optimizations</a><br></div></div><script>document.addEventListener("DOMContentLoaded",()=>{hljs.highlightAll()})</script></div></div></main><footer class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">&copy; 2022 <a href=#>Bobble Law</a> and <a href=#>Stay Inc.</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p></div></div></footer></body></html>

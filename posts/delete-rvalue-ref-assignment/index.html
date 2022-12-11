@@ -1,0 +1,90 @@
+<!doctype html><html lang=en dir=ltr class=dark><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Consider deleting your rvalue ref-qualified assignment operators | Bobble Law</title><meta name=generator content="Hugo Eureka 0.9.3"><link rel=stylesheet href=/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css><script defer src=/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/cpp,%20swift,%20python.min.js crossorigin></script>
+<link rel=stylesheet href=/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css media=print onload='this.media="all",this.onload=null'><script defer type=text/javascript src=/js/fontawesome.min.a975d08212c5439f29e6074e7ad58e159ae1ef5efb6a31962fa3b6885557e794dd9315f4a8a16d705066d023f4eaaf07.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js integrity=sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0 crossorigin></script>
+<link rel=icon type=image/png sizes=32x32 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_32x32_fill_box_center_3.png><link rel=apple-touch-icon sizes=180x180 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_180x180_fill_box_center_3.png><meta name=description content="Why is foo{} = foo{} working anyways?"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"Consider deleting your rvalue ref-qualified assignment operators","item":"/posts/delete-rvalue-ref-assignment/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/delete-rvalue-ref-assignment/"},"headline":"Consider deleting your rvalue ref-qualified assignment operators | Bobble Law","datePublished":"2019-09-22T08:00:00+00:00","dateModified":"2020-11-20T22:52:56+08:00","wordCount":673,"publisher":{"@type":"Person","name":"Bob Law","logo":{"@type":"ImageObject","url":"/images/icon.png"}},"description":"Why is foo{} = foo{} working anyways?"}</script><meta property="og:title" content="Consider deleting your rvalue ref-qualified assignment operators | Bobble Law"><meta property="og:type" content="article"><meta property="og:image" content="/images/icon.png"><meta property="og:url" content="/posts/delete-rvalue-ref-assignment/"><meta property="og:description" content="Why is foo{} = foo{} working anyways?"><meta property="og:locale" content="en"><meta property="og:site_name" content="Bobble Law"><meta property="article:published_time" content="2019-09-22T08:00:00+00:00"><meta property="article:modified_time" content="2020-11-20T22:52:56+08:00"><meta property="article:section" content="posts"><meta property="article:tag" content="C++"><meta property="og:see_also" content="/posts/floating-point-optimizations/"><body class="flex min-h-screen flex-col"><header class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"><div class="mx-auto w-full max-w-screen-xl"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");(storageColorScheme=="Auto"&&window.matchMedia("(prefers-color-scheme: light)").matches||storageColorScheme=="Light")&&document.getElementsByTagName("html")[0].classList.remove("dark")</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="me-6 text-primary-text text-xl font-bold">Bobble Law</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">Posts</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">Topics</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-moon"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById("lightDarkMode");storageColorScheme=="Auto"?(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","adjust"),element.firstElementChild.classList.add("fa-adjust"),document.addEventListener("DOMContentLoaded",()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",switchDarkMode)})):storageColorScheme=="Light"&&(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","sun"),element.firstElementChild.classList.add("fa-sun")),document.addEventListener("DOMContentLoaded",()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="grow pt-16"><div class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8"><div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12"><div class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"><article class=prose><h1 class=mb-4>Consider deleting your rvalue ref-qualified assignment operators</h1><div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"><div class="me-6 my-2"><i class="fas fa-calendar me-1"></i>
+<span>2019-09-22</span></div><div class="me-6 my-2"><i class="fas fa-clock me-1"></i>
+<span>4 min read</span></div></div><p>The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:</p><pre><code class=language-cpp>struct foo { ... };
+foo get_my_foo() { ... }
+
+// .. some code later:
+foo f;
+get_my_foo() = f;
+</code></pre><p>This <a href=https://godbolt.org/z/oh3vFA>compiles</a> &mldr; and does nothing useful.</p><p>We&rsquo;ve assigned <code>f</code> to a temporary <code>foo</code>.
+No error, no warning.</p><h2 id=a-real-life-example>A Real-Life Example</h2><p>In the math library I&rsquo;m writing we have a <code>mat</code> struct for matrices and <code>vec</code> for vectors.
+Matrices are stored column-major, i.e. as an array of column vectors.
+Now, sometimes you want to get the row of such matrix and thus <code>mat</code> has a function <code>vec mat::row(int)</code> that returns the specified row.
+It has to return the <code>vec</code> per value because only columns are stored contiguously in <code>mat</code>:</p><pre><code class=language-cpp>template &lt;int C, int R, class ScalarT&gt;
+struct mat
+{
+    using col_t = vec&lt;R, ScalarT&gt;;
+    using row_t = vec&lt;C, ScalarT&gt;;
+
+    col_t columns[C]; // column-major matrix
+
+    row_t row(int i) const { return ...; }
+};
+
+using mat3 = mat&lt;3, 3, float&gt;;
+using vec3 = vec&lt;3, float&gt;;
+</code></pre><p>And then someone writes:</p><pre><code>mat3 m;
+m.row(1) = {1, 2, 3};
+</code></pre><p>Looks perfectly reasonable, compiles without warnings, &mldr; and <a href=https://godbolt.org/z/azm1BP>does nothing</a>.</p><h2 id=solution-a>Solution A</h2><p>The problem in both cases is that it is totally fine to call <code>operator=</code> on an rvalue reference (<code>foo&&</code> or <code>vec3&&</code>).
+The compiler-generated definition something looks like:</p><pre><code class=language-cpp>struct foo
+{
+    foo&amp; operator=(foo const&amp;) = default;
+    foo&amp; operator=(foo&amp;&amp;) = default;
+};
+</code></pre><p>Note that these member functions are not <code>const</code>-qualified as assigning to a <code>const</code> object doesn&rsquo;t really make any sense.
+An easy solution to our &ldquo;easy to use accidentally wrong&rdquo; API problem is thus:</p><pre><code class=language-cpp>struct foo { ... };
+const foo get_my_foo() { ... }
+
+// .. some code later:
+foo f;
+get_my_foo() = f; // ERROR: cannot assign to const foo
+</code></pre><h2 id=solution-b>Solution B</h2><p>Most of the time a type is used way more often than it is declared.
+Our first solution requires each use of our type as a return value to be <code>const</code>-qualified.
+Isn&rsquo;t there a solution that is write-once and then works any time <code>foo</code> is used as a return value?</p><p>Turns out there is.</p><p>And by the way, the following problem cannot be solved by <code>const</code>-qualification:</p><pre><code class=language-cpp>foo f;
+foo{} = f; // no error?
+</code></pre><p>The <code>const</code>-solution works for return values but doesn&rsquo;t really prevent the core of the problem:
+assigning to a temporary.</p><p>Since C++11 it is possible to add <a href=https://en.cppreference.com/w/cpp/language/member_functions#const-.2C_volatile-.2C_and_ref-qualified_member_functions>reference qualifiers to member functions</a>.
+These so-called ref-qualified member functions allow us to overload member functions not only on <code>const</code> and non-<code>const</code> but also on which type of reference <code>this</code> is (<code>&</code> for lvalue, <code>&&</code> for rvalue).</p><p>Simplifying a bit (a lot?), lvalues are &ldquo;things with names&rdquo;, like local variables.
+Most of the time, rvalues are temporaries or at least things we want to consider temporaries.</p><p>Thus, our second solution is to delete the assignment operators for rvalue ref-qualified <code>foo</code>s:</p><pre><code class=language-cpp>struct foo
+{
+    foo&amp; operator=(foo const&amp;) &amp; = default;
+    foo&amp; operator=(foo const&amp;) &amp;&amp; = delete;
+    foo&amp; operator=(foo&amp;&amp;) &amp; = default;
+    foo&amp; operator=(foo&amp;&amp;) &amp;&amp; = delete;
+};
+</code></pre><p>Unfortunately, declaring these <a href=https://foonathan.net/blog/2019/02/26/special-member-functions.html>special member functions</a> causes the compiler-generated copy and move constructors to disappear.
+That means for a full solution (see below) we also need to explicitly default copy and move ctors.
+Declaring any constructor makes the implicitly declared default constructor disappear, so we need to declare that as well.</p><p>A minor consequence of deleting this assignment operator is that <code>std::is_assignable&lt;foo, foo></code> becomes <code>false</code>.
+The reason is that <code>std::is_assignable&lt;foo, foo></code> is actually <code>std::is_assignable&lt;foo&&, foo></code>.
+You typically only want <code>std::is_assignable&lt;foo&, foo></code> anyways, which is still <code>true</code>.</p><h2 id=conclusion>Conclusion</h2><p>If you suspect that a type of yours is susceptible to accidental assignment-to-temporary (like our <code>vec</code> is), consider deleting the rvalue ref-qualified assignments:</p><pre><code class=language-cpp>struct foo
+{
+    // default ctor
+    foo() = default;
+
+    // copy and move ctor
+    foo(foo const&amp;) = default;
+    foo(foo&amp;&amp;) = default;
+
+    // assignment ops
+    foo&amp; operator=(foo const&amp;) &amp; = default;
+    foo&amp; operator=(foo const&amp;) &amp;&amp; = delete;
+    foo&amp; operator=(foo&amp;&amp;) &amp; = default;
+    foo&amp; operator=(foo&amp;&amp;) &amp;&amp; = delete;
+};
+</code></pre><p>So maybe the <a href=https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)><del>rule-of-three</del> rule-of-five</a> should now be rule-of-seven?</p></article><div class=my-4><a href=/tags/c++/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#C++</a></div><div class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"><div><span class="text-primary-text block font-bold">Previous</span>
+<a href=/posts/recursive-lambda-function/ class=block>Recursive Lambdas in C++</a></div><div class="mt-4 md:mt-0 md:text-right"><span class="text-primary-text block font-bold">Next</span>
+<a href=/posts/floating-point-optimizations/ class=block>Basic Floating Point Optimizations</a></div></div></div><div class="lg:col-start-2 bg-secondary-bg prose col-span-2 rounded p-6 lg:col-span-6"><h3>See Also</h3><a href=/posts/floating-point-optimizations/ class=no-underline>Basic Floating Point Optimizations</a><br></div></div><script>document.addEventListener("DOMContentLoaded",()=>{hljs.highlightAll()})</script></div></div></main><footer class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">&copy; 2022 <a href=#>Bobble Law</a> and <a href=#>Stay Inc.</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p></div></div></footer></body></html>

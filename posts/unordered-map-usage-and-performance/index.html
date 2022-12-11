@@ -1,0 +1,136 @@
+<!doctype html><html lang=en dir=ltr class=dark><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>std::unordered_map Performance and Usage | Bobble Law</title><meta name=generator content="Hugo Eureka 0.9.3"><link rel=stylesheet href=/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css><script defer src=/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/cpp,%20swift,%20python.min.js crossorigin></script>
+<link rel=stylesheet href=/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css media=print onload='this.media="all",this.onload=null'><script defer type=text/javascript src=/js/fontawesome.min.a975d08212c5439f29e6074e7ad58e159ae1ef5efb6a31962fa3b6885557e794dd9315f4a8a16d705066d023f4eaaf07.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js integrity=sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0 crossorigin></script>
+<link rel=icon type=image/png sizes=32x32 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_32x32_fill_box_center_3.png><link rel=apple-touch-icon sizes=180x180 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_180x180_fill_box_center_3.png><meta name=description content="Lorem Ipsum Dolor Si Amet"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"std::unordered_map Performance and Usage","item":"/posts/unordered-map-usage-and-performance/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/unordered-map-usage-and-performance/"},"headline":"std::unordered_map Performance and Usage | Bobble Law","datePublished":"2021-05-03T00:00:00+00:00","dateModified":"2022-11-09T00:00:00+00:00","wordCount":2073,"author":{"@type":"Person","name":["host"]},"publisher":{"@type":"Person","name":"Bob Law","logo":{"@type":"ImageObject","url":"/images/icon.png"}},"description":"Lorem Ipsum Dolor Si Amet"}</script><meta property="og:title" content="std::unordered_map Performance and Usage | Bobble Law"><meta property="og:type" content="article"><meta property="og:image" content="/images/icon.png"><meta property="og:url" content="/posts/unordered-map-usage-and-performance/"><meta property="og:description" content="Lorem Ipsum Dolor Si Amet"><meta property="og:locale" content="en"><meta property="og:site_name" content="Bobble Law"><meta property="article:published_time" content="2021-05-03T00:00:00+00:00"><meta property="article:modified_time" content="2022-11-09T00:00:00+00:00"><meta property="article:section" content="posts"><meta property="article:tag" content="C++"><body class="flex min-h-screen flex-col"><header class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"><div class="mx-auto w-full max-w-screen-xl"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");(storageColorScheme=="Auto"&&window.matchMedia("(prefers-color-scheme: light)").matches||storageColorScheme=="Light")&&document.getElementsByTagName("html")[0].classList.remove("dark")</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="me-6 text-primary-text text-xl font-bold">Bobble Law</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">Posts</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">Topics</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-moon"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById("lightDarkMode");storageColorScheme=="Auto"?(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","adjust"),element.firstElementChild.classList.add("fa-adjust"),document.addEventListener("DOMContentLoaded",()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",switchDarkMode)})):storageColorScheme=="Light"&&(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","sun"),element.firstElementChild.classList.add("fa-sun")),document.addEventListener("DOMContentLoaded",()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="grow pt-16"><div class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8"><div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12"><div class="bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"><article class=prose><h1 class=mb-4>std::unordered_map Performance and Usage</h1><div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"><div class="me-6 my-2"><i class="fas fa-calendar me-1"></i>
+<span>2021-05-03</span></div><div class="me-6 my-2"><i class="fas fa-clock me-1"></i>
+<span>10 min read</span></div><div class="me-6 my-2"><i class="fas fa-th-list me-1"></i>
+<a href=/series/c++-tips/ class=hover:text-eureka>C++ Tips</a></div></div><h1 id=origin-story>Origin Story</h1><p>We have always been told that hashmap is the best associative container that offer O(1) insert, delete, and lookup. However, the customization space of it is quite large and depending on the use case, the trade-off space can change radically.
+<code>std::unordered_map</code> is (in)famous for having an API that basically forces implementers to use &ldquo;buckets with linked lists&rdquo;, also known as <em>separate chaining</em>.
+Many performance-critical applications swear on <em>open addressing</em>, often storing keys and values directly in arrays (either together or separate).
+These are often called <code>flat_</code>maps.
+Many requirements and quality attributes influence which particular type is &ldquo;best&rdquo;:</p><ul><li>Is pointer stability required? (often rules out <code>flat_</code> versions, unless only stability of <em>value</em> is required)</li><li>Can entries be deleted individually? (often not required, removing tombstone handling)</li><li>How big are the keys and values? (I&rsquo;ve seen all combinations, even huge-key-small-value is occasionally useful)</li><li>What are the relative frequencies of insert, delete, lookup-with-success, and lookup-without-success?</li><li>Is robustness against adversarial attacks required? (e.g. DoS attacks based on enforced collisions)</li><li>Is the hash collision-free? (keys might share the same bucket, but same hash implies same key)</li></ul><p>There is already a large corpus of constructive (and not so constructive) discussion on all these particulars.
+Many excellent general-purpose and special-purpose hash map implementations are available.
+I&rsquo;ve added a few links at the end of this post.</p><p>However, before choosing a certain hash map implementation, there is a certain elephant in the room that I found myself investigating.
+You see, hash maps require &ldquo;good hashes&rdquo;.
+Everyone knows that.
+Benchmarks often work on random input data, which easily map to &ldquo;good hashes&rdquo;.</p><p>I have written a few bad hashes over the years and they are really not an issue.
+A really bad hash elevates O(1) to O(n).
+If simply inserting 100k entries into a hashmap takes half an hour, the problem basically detects itself.</p><p>No, &ldquo;almost bad hashes&rdquo; and &ldquo;less-than-optimal hashes&rdquo; are the real issue, the silent killers.
+I recently investigated a piece of code that was too slow for my tastes, but not critically so.
+You know, code that works on a few hundred thousand elements and takes a few seconds.
+Not suspicious per se, but it happened to be the next chunk I investigated.
+A napkin calculation later, the runtime cost was roughly 2000 CPU cycles per element.
+It <em>felt</em> too much for some simple floating point arithmetic, but knowing that a cold read from memory can take 200 cycles, I argued to myself that it might be an issue with <code>std::unordered_map</code> as we probably all heard that it&rsquo;s &ldquo;badly designed&rdquo; and &ldquo;too slow&rdquo;.</p><p>I was half-way into pulling some Google-grade <code>flat_map</code> into the project when, on a whim, I slightly modified my hash function.
+Instead of the three <code>float</code>s whose bit pattern I scrambled together via <code>boost::hash_combine</code>, I discretized the <code>float</code>s into <code>int</code>s before passing them to <code>hash_combine</code>.</p><p>The result: 50x improved performance.</p><h1 id=hash-vs-bucket-collisions>Hash vs. Bucket Collisions</h1><p>I did not need more evidence that something with the hash was wrong.
+Just to provide the context, these were my hash functions:</p><pre><code class=language-cpp>void hash_add(size_t&amp; hash, size_t new_hash)
+{
+    // taken from boost::hash_combine
+    hash ^= new_hash + 0x9e3779b9 + (hash &lt;&lt; 6) + (hash &gt;&gt; 2);
+}
+
+size_t myhash_float(float x, float y, float z)
+{
+    size_t h = /* some fixed seed */;
+    hash_add(h, std::bit_cast&lt;uint32_t&gt;(x));
+    hash_add(h, std::bit_cast&lt;uint32_t&gt;(y));
+    hash_add(h, std::bit_cast&lt;uint32_t&gt;(z));
+    return h;
+}
+
+size_t myhash_int(float x, float y, float z)
+{
+    size_t h = /* some fixed seed */;
+    hash_add(h, int32_t(256 * x));
+    hash_add(h, int32_t(256 * y));
+    hash_add(h, int32_t(256 * z));
+    return h;
+}
+</code></pre><p>So, 50x performance difference between <code>myhash_int</code> and <code>myhash_float</code>, eh?</p><p>First, let me note that <code>myhash_float</code> is not a bad hash per se and it is definitely the more versatile one.
+<code>myhash_int</code> has many collisions if the inputs are too small or if different keys differ by only a small amount.
+In my case, it worked due to the nature of the input data.</p><p>I don&rsquo;t know the complete history and rationale of <code>boost::hash_combine</code> but I guess it was not designed with <code>float</code>s in mind and probably comes from the 32 bit era.
+On my real-world data set with 90000 entries, I had 3% hash collisions with <code>myhash_float</code> and only 0.2% with <code>myhash_int</code>.
+While a &ldquo;real&rdquo; hash like <a href=https://github.com/Cyan4973/xxHash><code>xxHash</code></a> realistically produces no collisions for this number of entries, a few collisions do not explain the large performance gap.</p><blockquote><p>Side note: <code>xxHash</code> and similar hash functions are mainly designed for high throughput when processing larger amounts of data, like complete files or buffers.
+That being said, they still often try to guarantee good performance on small data, like keys for hash maps.
+<code>xxHash</code> is also explicitly optimized for good throughput and latency on data consisting of only a few bytes.
+However, its higher hash quality is not free and the overhead can be an order of magnitude slowdown when compared to ad-hoc special-purpose hashes for hash maps, like <code>myhash_xyz</code> above.</p></blockquote><p>Back to my issue.
+Where do we lose 50x performance if the number of collisions is way too low to justify the difference?</p><p>On a 64 bit desktop, hash maps tend to use 64 bit hashes, like a <code>size_t</code>.
+However, the number of buckets is significantly less, typically within factor 2 of the number of entries.
+Thus, each hash map has a way to map a hash <code>h</code> to a bucket index <code>i</code>.</p><p>The naive mapping would be <code>i = h % bucket_count</code>.
+Full 64 bit division and modulo is quite expensive, requiring 25-40 cycles on typical desktops.
+If <code>bucket_count</code> is a power of two, we can optimize the mapping to <code>i = h & (bucket_count - 1)</code>, which is effectively free.</p><p>The discerning reader might already see the problem:
+This mapping now amounts to throwing away most of the bits of <code>h</code>.</p><p>Imagine your key consists of <code>uint32_t a, b</code> and your hash is <code>(a &lt;&lt; 32) | b</code>.
+This hash is completely free of collisions.
+However, if you have less than 4 billion buckets, then the bucket index will completely ignore <code>a</code>, leading to tons of actual collisions for keys that differ only in <code>a</code>.</p><p>As said earlier, these obvious cases are usually trivial to detect.
+In my case, I witnessed a partial quality degradation of the <code>key -> hash -> idx</code> mapping.
+The input <code>float</code>s came from decompressed 3D positions, so they only had a small range of exponents and a few mantissa patterns that really appeared.
+With <code>boost::hash_combine</code>, this was <em>somehow</em> assembled into a 64 bit hash.
+The 3% <em>hash</em> collision rate probably means that <code>hash_combine</code> did a less-than-perfect job scrambling the <code>float</code> patterns.
+However, the real killer came from <code>std::unordered_map</code>, mapping the hash to a bucket index.
+It turned out that more than 98.6% of the keys had &ldquo;bucket collisions&rdquo;, i.e. had to share their bucket with other keys.
+With <code>myhash_int</code>, this was still 86.2%.</p><h1 id=optimal-behavior>Optimal Behavior</h1><p>Before trying to quantify how bad my first hash was, let&rsquo;s briefly talk about what is the best-case scenario.
+Zero bucket collisions are the realm of perfect hashes, which require heavy precomputation and in general only work with known input data.</p><p>If only the input distribution (not the actual data) is known, we want a <code>key -> idx</code> mapping that is <em>uniform</em>.
+Without getting too fancy in the math: if someone hands you a <code>key</code> drawn from the input distribution, you want to hand back an <code>idx</code> that has a roughly uniform distribution over <code>0 .. bucket_count-1</code>.</p><p>In reality, the user is responsible for the <code>key -> hash</code> mapping, while the hash map provides the <code>hash -> idx</code> mapping.
+Some cooperation is required to make the total mapping high-quality.
+In theory, the hash map could always provide a strong <code>hash -> idx</code> mapping, e.g. via <code>xxHash</code>, but that is usually considered net-negative for performance.
+If the input data is already sufficiently uniform, always paying for this extra hashing is extremely wasteful.</p><p>So, assuming a uniform mapping, what is the expected number of bucket collisions?</p><p>Well, that depends on the <a href=https://en.cppreference.com/w/cpp/container/unordered_map/load_factor>load_factor</a>, i.e. the ratio of input keys to buckets.
+If the <code>load_factor</code> is 1, then we have an equal number of keys and buckets.
+Here, on average, 37% of buckets are empty, another 37% of buckets have exactly 1 key, 18% have 2 keys, 6% have 3, and 2% have 4 or more keys.
+This follows a <a href=https://en.wikipedia.org/wiki/Poisson_distribution>Poisson distribution</a> where the load factor is lambda.</p><p>What load factor is optimal is a different discussion, but given a fixed load factor (typically between 0.5 and 1.0), if our hash function produces roughly the same number of collisions as the corresponding Poisson distribution predicts, I would consider it &ldquo;optimal enough&rdquo;.</p><h1 id=measuring-badness>Measuring Badness</h1><p>So, how does my hash compare to an optimal one?
+How do we measure that?</p><p>It turns out that <code>std::unordered_map</code> has a <a href=https://en.cppreference.com/w/cpp/container/unordered_map#Bucket_interface>bucket API</a>:</p><pre><code class=language-cpp>std::unordered_map&lt;Key, Value, Hasher&gt; my_map;
+
+// number of buckets
+size_t bcnt = my_map.bucket_count();
+
+// bucket index from key
+size_t bi = my_map.bucket(some_key);
+
+// number of keys in this bucket
+size_t bsize = my_map.bucket_size(bi);
+</code></pre><p>With this API, we can measure how close (or far away) we are from the Poisson distribution.
+For each key in the map, we sum up the corresponding <code>bucket_size</code>.
+Divided by the number of keys, this is the average bucket size from the perspective of a key.
+Half of this is the expected number of comparisons needed when looking up the key.</p><p>In the optimal case, <code>load_factor</code> is the average number of keys in a bucket (the expected value of the Poisson distribution).
+However, when we know that a given key is part of the map, this average increases to <code>1 + load_factor</code>.</p><p>The result is this little snippet:</p><pre><code class=language-cpp>template &lt;class Map&gt; 
+double unordered_map_badness(Map const&amp; map)
+{
+    auto const lambda = map.size() / double(map.bucket_count());
+
+    auto cost = 0.;
+    for (auto const&amp; [k, _] : map)
+        cost += map.bucket_size(map.bucket(k));
+    cost /= map.size();
+
+    return std::max(0., cost / (1 + lambda) - 1);
+}
+</code></pre><p>I was too lazy to template it on all 5 types required for <code>std::unordered_map</code>.
+Officially, I call that a feature because now it supports all types with a compatible bucket API.</p><p>The return value is slightly remapped.
+<code>cost / (1 + lambda)</code> is the relative cost factor to the optimal distribution.
+We subtract 1 and clamp it to 0 from below so it&rsquo;s a bit easier to read:
+A badness of roughly 0 means that the current bucket distribution is close to optimal.
+1 means that on average 100% more comparisons than optimal are required.</p><h1 id=fixing-my-issue>&ldquo;Fixing&rdquo; my Issue</h1><p>Turns out, <code>myhash_float</code> has a badness of 550 on my data. Ouch.</p><p>Of course, this does not mean that the performance gap to the optimal case is a factor of 550.
+Similar to <a href=https://en.wikipedia.org/wiki/Amdahl%27s_law>Amdahl&rsquo;s law</a>, this factor is only realized if the program literally does nothing else (and we ignore caching and other effects that reality pesters us with).</p><p><code>myhash_int</code> still has a badness of 1.3.</p><p>Not optimal, but so much better that my program sped up by a factor of 50+.</p><p><code>xxHash</code> directly on my 3 input <code>float</code>s has a badness of 0.</p><p>Interestingly enough, using the result of <code>myhash_float</code> as a seed for a single round of <a href=https://en.wikipedia.org/wiki/Xorshift>xorshift</a> has a badness of 0.04.
+So, even if <code>myhash_float</code> has 3% innate collision rate, a cheap scrambling at the end is all it takes to get near optimal hash distribution.</p><p>Xorshift consists of a state update and an output scramble.
+As only the second step is needed, you can funnily enough fix most suboptimal hashes by simply calling:</p><pre><code class=language-cpp>size_t fix_my_hash(size_t h)
+{
+    return h * 0xd989bcacc137dcd5ull &gt;&gt; 32u;
+}
+</code></pre><h1 id=conclusion>Conclusion</h1><p>In my opinion, hash maps are among the most interesting data structures.
+The only container that is more useful is the array, but apart from abstractions like <code>vector</code> and <code>span</code>, arrays are quite compact in design space.
+Hash maps have a plethora of useful variants and tradeoffs.</p><p>This post is about the practical quality of hash functions and how to measure them.
+With the bucket API of <code>std::unordered_map</code>, we can actually quantify how far from optimal our concrete map is.</p><p>My little snipped can be adapted to hash maps with open addressing by measuring the number of comparisons needed until a key is found.
+This is usually not an exposed metric, though I suppose one could simply write a counting equality comparer for that.</p><h1 id=further-reading>Further Reading</h1><ul><li><a href=https://tessil.github.io/2016/08/29/benchmark-hopscotch-map.html>Benchmark of major hash maps implementations (2016)</a></li><li><a href=https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/>I Wrote The Fastest Hashtable (2017)</a></li><li><a href=https://martin.ankerl.com/2019/04/01/hashmap-benchmarks-01-overview/>Hashmaps Benchmarks - Overview (2019)</a></li></ul><p>Additional discussion and comments on <a href=https://www.reddit.com/r/cpp/comments/q551zg/measuring_stdunordered_map_hash_badness/>reddit</a>.</p><p>(<em>Title image from <a href=https://pixabay.com/photos/europe-travel-map-world-1264062/>pixabay</a></em>)</p></article><div class=my-4><a href=/tags/c++/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#C++</a></div><div class=py-2><div class="my-8 flex flex-col items-center md:flex-row"><a href=/authors/host/ class="md:me-4 text-primary-text h-24 w-24"><i class="fas fa-user-circle fa-6x"></i></a><div class="mt-4 w-full md:mt-0 md:w-auto"><a href=/authors/host/ class="mb-2 block border-b pb-1 text-lg font-bold"><h3>Bobble Law</h3></a><span class="block pb-2">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.</span>
+<a href=mailto:bobble2579@hotmail.com class=me-2><i class="fas fa-envelope"></i></a>
+<a href=https://github.com/bobblelaw class=me-2><i class="fab fa-github"></i></a></div></div></div><div class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"><div><span class="text-primary-text block font-bold">Previous</span>
+<a href=/posts/inline-optimization/ class=block>Optimization without Inlining</a></div><div class="mt-4 md:mt-0 md:text-right"><span class="text-primary-text block font-bold">Next</span>
+<a href=/posts/sort-multiple-range/ class=block>std::sort multiple ranges</a></div></div></div><div class=col-span-2><div class="bg-secondary-bg prose max-w-none rounded p-6"><h3>Series of Posts</h3><a href=/posts/unordered-map-usage-and-performance/ class=no-underline>std::unordered_map Performance and Usage</a><br></div></div><div class="bg-secondary-bg prose col-span-2 rounded p-6 lg:col-span-6"><h3>See Also</h3><a href=/posts/sort-multiple-range/ class=no-underline>std::sort multiple ranges</a><br><a href=/posts/multi-level-break/ class=no-underline>Multi-Level Break in C++ via IIFE</a><br><a href=/posts/range-ref/ class=no-underline>range_ref&lt;T></a><br><a href=/posts/recursive-lambda-function/ class=no-underline>Recursive Lambdas in C++</a><br><a href=/posts/delete-rvalue-ref-assignment/ class=no-underline>Consider deleting your rvalue ref-qualified assignment operators</a><br><a href=/posts/floating-point-optimizations/ class=no-underline>Basic Floating Point Optimizations</a><br></div></div><script>document.addEventListener("DOMContentLoaded",()=>{hljs.highlightAll()})</script></div></div></main><footer class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">&copy; 2022 <a href=#>Bobble Law</a> and <a href=#>Stay Inc.</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p></div></div></footer></body></html>

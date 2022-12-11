@@ -1,0 +1,277 @@
+<!doctype html><html lang=en dir=ltr class=dark><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>range_ref&lt;T> | Bobble Law</title><meta name=generator content="Hugo Eureka 0.9.3"><link rel=stylesheet href=/css/eureka.min.9cec6350e37e534b0338fa9a085bf06855de3b0f2dcf857e792e5e97b07ea905d4d5513db554cbc26a9c3da622bae92d.css><script defer src=/js/eureka.min.fa9a6bf6d7a50bb635b4cca7d2ba5cf3dfb095ae3798773f1328f7950028b48c17d06276594e1b5f244a25a6c969a705.js></script>
+<link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" as=style onload='this.onload=null,this.rel="stylesheet"'><link rel=stylesheet href=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/base16/solarized-light.min.css media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/languages/cpp,%20swift,%20python.min.js crossorigin></script>
+<link rel=stylesheet href=/css/highlightjs.min.2958991528e43eb6fc9b8c4f2b8e052f79c4010718e1d1e888a777620e9ee63021c2c57ec7417a3108019bb8c41943e6.css media=print onload='this.media="all",this.onload=null'><script defer type=text/javascript src=/js/fontawesome.min.a975d08212c5439f29e6074e7ad58e159ae1ef5efb6a31962fa3b6885557e794dd9315f4a8a16d705066d023f4eaaf07.js></script>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css integrity=sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ media=print onload='this.media="all",this.onload=null' crossorigin><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js integrity=sha384-VQ8d8WVFw0yHhCk5E8I86oOhv48xLpnDZx5T9GogA/Y84DcCKWXDmSDfn13bzFZY crossorigin></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})})</script><script defer src=https://cdn.jsdelivr.net/npm/mermaid@8.14.0/dist/mermaid.min.js integrity=sha384-atOyb0FxAgN9LyAc6PEf9BjgwLISyansgdH8/VXQH8p2o5vfrRgmGIJ2Sg22L0A0 crossorigin></script>
+<link rel=icon type=image/png sizes=32x32 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_32x32_fill_box_center_3.png><link rel=apple-touch-icon sizes=180x180 href=/images/icon_hucb7ee3c6385b6f166198d69440e1110c_52330_180x180_fill_box_center_3.png><meta name=description content="A fast, lightweight, non-owning view of a range"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"/posts/"},{"@type":"ListItem","position":2,"name":"range_ref\u003cT\u003e","item":"/posts/range-ref/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"/posts/range-ref/"},"headline":"range_ref\u003cT\u003e | Bobble Law","datePublished":"2020-10-24T02:00:00+00:00","dateModified":"2020-11-20T22:52:56+08:00","wordCount":2500,"author":{"@type":"Person","name":["host"]},"publisher":{"@type":"Person","name":"Bob Law","logo":{"@type":"ImageObject","url":"/images/icon.png"}},"description":"A fast, lightweight, non-owning view of a range"}</script><meta property="og:title" content="range_ref<T> | Bobble Law"><meta property="og:type" content="article"><meta property="og:image" content="/images/icon.png"><meta property="og:url" content="/posts/range-ref/"><meta property="og:description" content="A fast, lightweight, non-owning view of a range"><meta property="og:locale" content="en"><meta property="og:site_name" content="Bobble Law"><meta property="article:published_time" content="2020-10-24T02:00:00+00:00"><meta property="article:modified_time" content="2020-11-20T22:52:56+08:00"><meta property="article:section" content="posts"><meta property="article:tag" content="C++"><meta property="og:see_also" content="/posts/recursive-lambda-function/"><meta property="og:see_also" content="/posts/delete-rvalue-ref-assignment/"><meta property="og:see_also" content="/posts/floating-point-optimizations/"><body class="flex min-h-screen flex-col"><header class="min-h-16 pl-scrollbar bg-secondary-bg fixed z-50 flex w-full items-center shadow-sm"><div class="mx-auto w-full max-w-screen-xl"><script>let storageColorScheme=localStorage.getItem("lightDarkMode");(storageColorScheme=="Auto"&&window.matchMedia("(prefers-color-scheme: light)").matches||storageColorScheme=="Light")&&document.getElementsByTagName("html")[0].classList.remove("dark")</script><nav class="flex items-center justify-between flex-wrap px-4 py-4 md:py-0"><a href=/ class="me-6 text-primary-text text-xl font-bold">Bobble Law</a>
+<button id=navbar-btn class="md:hidden flex items-center px-3 py-2" aria-label="Open Navbar">
+<i class="fas fa-bars"></i></button><div id=target class="hidden block md:flex md:grow md:justify-between md:items-center w-full md:w-auto text-primary-text z-20"><div class="md:flex md:h-16 text-sm md:grow pb-4 md:pb-0 border-b md:border-b-0"><a href=/#about class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">About</a>
+<a href=/posts/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 selected-menu-item me-4">Posts</a>
+<a href=/docs/ class="block mt-4 md:inline-block md:mt-0 md:h-(16-4px) md:leading-(16-4px) box-border md:border-t-2 md:border-b-2 border-transparent me-4">Topics</a></div><div class=flex><div class="relative pt-4 md:pt-0"><div class="cursor-pointer hover:text-eureka" id=lightDarkMode><i class="fas fa-moon"></i></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-30" id=is-open></div><div class="absolute flex flex-col start-0 md:start-auto end-auto md:end-0 hidden bg-secondary-bg w-48 rounded py-2 border border-tertiary-bg cursor-pointer z-40" id=lightDarkOptions><span class="px-4 py-1 hover:text-eureka" name=Light>Light</span>
+<span class="px-4 py-1 hover:text-eureka" name=Dark>Dark</span>
+<span class="px-4 py-1 hover:text-eureka" name=Auto>Auto</span></div></div></div></div><div class="fixed hidden inset-0 opacity-0 h-full w-full cursor-default z-0" id=is-open-mobile></div></nav><script>let element=document.getElementById("lightDarkMode");storageColorScheme=="Auto"?(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","adjust"),element.firstElementChild.classList.add("fa-adjust"),document.addEventListener("DOMContentLoaded",()=>{window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",switchDarkMode)})):storageColorScheme=="Light"&&(element.firstElementChild.classList.remove("fa-moon"),element.firstElementChild.setAttribute("data-icon","sun"),element.firstElementChild.classList.add("fa-sun")),document.addEventListener("DOMContentLoaded",()=>{getcolorscheme(),switchBurger()})</script></div></header><main class="grow pt-16"><div class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl lg:px-4 xl:px-8"><div class="grid grid-cols-2 gap-4 lg:grid-cols-8 lg:pt-12"><div class="lg:col-start-2 bg-secondary-bg col-span-2 rounded px-6 py-8 lg:col-span-6"><article class=prose><h1 class=mb-4>range_ref&lt;T></h1><div class="text-tertiary-text not-prose mt-2 flex flex-row flex-wrap items-center"><div class="me-6 my-2"><i class="fas fa-calendar me-1"></i>
+<span>2020-10-24</span></div><div class="me-6 my-2"><i class="fas fa-clock me-1"></i>
+<span>12 min read</span></div></div><p>Passing references to functions is great.</p><pre><code class=language-cpp>struct some_user_type;
+
+void foo(some_user_type const&amp; v)
+{
+    // freely read from v
+}
+</code></pre><p>Memory management and lifetime handling is done by the caller.
+Users of your function / API have a liberating amount of freedom how they organize their data: on the stack, on the heap, in smart pointers, in vectors, it doesn&rsquo;t matter.
+They can pass a reference to your function.
+No (potentially expensive) copy is performed.</p><p>From an API perspective, C++ references are views on a single object.
+We already have a few &ldquo;view types&rdquo; for more complex needs:</p><ul><li><a href=https://en.cppreference.com/w/cpp/string/basic_string_view>std::string_view</a> for &ldquo;views on strings&rdquo; (C++17)</li><li><a href=https://en.cppreference.com/w/cpp/container/span>std::span</a> for &ldquo;views on contiguous ranges&rdquo; (C++20)</li><li><a href=http://open-std.org/JTC1/SC22/WG21/docs/papers/2020/p0009r10.html>mdspan</a> for a multidimensional version of <code>std::span</code> (proposed)</li><li><a href=https://foonathan.net/2017/01/function-ref-implementation/>function_ref</a> for &ldquo;views on callables&rdquo;</li></ul><blockquote><p>These types can quickly lead to dangling references and should mainly be used as function parameters.
+Arthur O&rsquo;Dwyer calls them <a href=https://quuxplusone.github.io/blog/2018/03/27/string-view-is-a-borrow-type>borrow types or parameter-only types</a>.
+A more general term is &ldquo;view type&rdquo;.
+I personally avoid calling them &ldquo;reference types&rdquo; as that only ever leads to confusion.</p></blockquote><p>In this blog post I propose and present a new view type that I find quite useful:</p><pre><code class=language-cpp>void foo(range_ref&lt;std::string_view&gt; values)
+{
+    values.for_each([&amp;](std::string_view s) { 
+        std::cout &lt;&lt; s &lt;&lt; std::endl;
+    });
+}
+
+// usage examples:
+std::vector&lt;std::string&gt; v = ...;
+foo(v);
+
+std::list&lt;char const*&gt; l = ...;
+foo(l);
+
+std::span&lt;std::string_view&gt; s = ...;
+foo(s);
+
+std::set&lt;std::string&gt; s = ...;
+foo(s);
+
+char const* a[] = ...;
+foo(a);
+
+foo({&quot;hello&quot;, &quot;world&quot;});
+</code></pre><p>A <code>range_ref&lt;T></code> is a non-owning, lightweight view of a range whose element type is <em>convertible</em> to <code>T</code>.
+If used as a function parameter, we can pass any object that supports <a href=https://en.cppreference.com/w/cpp/language/range-for>range-based for</a> and where <code>T(*std::begin(my_obj))</code> is valid.</p><p>In the previous example, <code>foo</code> is not templated and can be implemented in a source file.
+However, we still have extreme freedom how to pass parameters, making for a delightful API.</p><p>The best thing: <code>range_ref&lt;T></code> is completely non-allocating and quite fast (though not as fast as a templated implementation can be).</p><h2 id=motivation>Motivation</h2><p>Before we start with <code>range_ref&lt;T></code>, I want to motivate the need for view types a bit further.
+(If you already drank the view type kool-aid, you can safely skip to the next section.)</p><p>On a basic level, we use <code>T&</code> for a mutable view on a single object, and, correspondingly, <code>T const&</code> for a readonly view.
+(Don&rsquo;t confuse this with a view on an immutable object, as the underlying object might get changed through a different alias.)</p><p>So, why do we even bother with more complex view types?</p><pre><code class=language-cpp>void foo(std::string const&amp; s)
+{
+    // do some parsing, maybe?
+}
+</code></pre><p>Isn&rsquo;t <code>std::string const&</code> already a view on a string?</p><p>Yes and no.</p><p><code>std::string const&</code> is a view on a string, but not all views on a string have to be <code>std::string const&</code>.
+<code>(char const*, size_t)</code> is also a perfectly fine view on a string.</p><p>One could say that <code>std::string const&</code> is &ldquo;too concrete&rdquo;.
+It forces the caller to use a specific type to manage their strings.
+Even if the actual call of <code>foo</code> does not allocate, the caller is forced to convert their strings into a <code>std::string</code> (either explicitly or implicitly), potentially doing a short-lived heap allocation.</p><p><code>foo("'sup")</code> will compile, but constructs a temporary string.</p><blockquote><p>Most standard libraries actually implement <a href=https://akrzemi1.wordpress.com/2014/04/14/common-optimizations/>small</a> <a href=https://shaharmike.com/cpp/std-string/>string</a> <a href=https://blogs.msmvps.com/gdicanio/2016/11/17/the-small-string-optimization/>optimization</a>.
+Depending on the actual implementation, strings up to 23 characters might actually not allocate.</p></blockquote><p>Views don&rsquo;t have to be references to concrete types.
+Especially if there are multiple choices for representation.
+Most complex view types operate on a slightly higher level of abstraction and wrap enough information to support a larger class of concrete types.</p><p><code>std::string_view</code> is the <a href=https://en.cppreference.com/w/cpp/string/basic_string_view>standard library&rsquo;s view on strings</a>.</p><p>From an implementation perspective, it&rsquo;s just a glorified <code>std::pair&lt;char const*, size_t></code>.</p><p>From an API perspective, <code>std::string_view</code> is a view on any contiguous range of <code>char</code>s.
+As a non-owning type, lifetime is handled by the caller and any string-like type that can provide <code>char const*</code> and size can be passed via <code>std::string_view</code> without allocation.
+This includes <code>std::string</code>, but also C strings, <code>std::vector&lt;char></code>, <code>std::array&lt;char, 20></code>, and even subranges of these.</p><p>With C++20, we get <code>std::span&lt;T></code>, the <a href=https://en.cppreference.com/w/cpp/container/span>view on contiguous ranges of <code>T</code></a>, or view on array-like types.
+<code>std::span&lt;T></code> is a really great type.
+Too often I see APIs that take <code>std::vector&lt;float> const& values</code>, because they want to accept a range of <code>float</code>s.
+If the values live in a local array, the caller has to construct a temporary <code>vector</code> to call the function.
+Passing <code>{1.5f, 2.5f, 3.5f}</code> constructs a temporary <code>vector</code>.</p><p>Sometimes, there is an additional overload that takes <code>float const*</code> and <code>size_t</code>, either to acknowledge the inappropriateness of <code>std::vector&lt;float> const&</code> or to channel their inner C programmer.
+While this does solve the performance issues, it doesn&rsquo;t make the API easier to use:</p><pre><code class=language-cpp>std::array&lt;float, 10&gt; get_values();
+void process_values(float const* values, size_t size);
+
+// what we have to do:
+auto vals = get_values();
+process_values(vals.data(), vals.size());
+
+// what we would love to do:
+process_values(get_values());
+</code></pre><p>With <code>std::span</code>, we can!</p><p><code>void process_values(std::span&lt;float const> values)</code> is exactly the abstraction we want to use here.</p><h2 id=the-need-for-range_reft>The Need for <code>range_ref&lt;T></code></h2><p>So &mldr;</p><p>Why <code>range_ref&lt;T></code>?</p><p><code>std::span&lt;T></code> has two big limitations: the objects have to be contiguous in memory and they have to match quite well.
+You can neither pass <code>std::set&lt;double></code> nor <code>std::vector&lt;int></code> to a <code>std::span&lt;double const></code>.</p><p>Consider the following function:</p><pre><code class=language-cpp>std::string concatenate(??? strings)
+{
+    std::string result;
+    for (auto const&amp; s : strings)
+        result += s;
+    return result;
+}
+</code></pre><p>What type would you give <code>strings</code>?</p><p>Well, we can certainly avoid this question by templating the function:</p><pre><code class=language-cpp>template &lt;class StringRange&gt;
+std::string concatenate(StringRange&amp;&amp; strings)
+{
+    std::string result;
+    for (auto const&amp; s : strings)
+        result += s;
+    return result;
+}
+</code></pre><p>However, this most likely forces us to implement <code>concatenate</code> in the header and will probably increase compile time.
+For more complex functions, we might have to include additional headers, leading to increased header dependency.</p><p>Before C++17 we might have been tempted to pass <code>std::vector&lt;std::string> const& strings</code>.
+After C++17/20, you might consider:</p><ul><li><code>std::vector&lt;std::string_view> const& strings</code></li><li><code>std::span&lt;std::string const> strings</code></li><li><code>std::span&lt;std::string_view const> strings</code></li></ul><p>Especially the last one seems great, no? view of views, sounds delicious.</p><p>Well, you cannot pass a <code>std::vector&lt;std::string></code> to the first and third.</p><p>And the second would not accept a <code>std::array&lt;char const*, 3></code>.</p><h2 id=designing-range_reft>Designing <code>range_ref&lt;T></code></h2><p>You are hopefully convinced by now that a proper type for the <code>strings</code> in <code>concatenate</code> is missing.</p><p>I call this type <code>range_ref&lt;T></code> and it is a view on:</p><ul><li>any type that supports <a href=https://en.cppreference.com/w/cpp/language/range-for>range-based for</a></li><li>whose elements are <em>convertible</em> to <code>T</code></li></ul><p>It should be non-owning, non-allocating, and fast.</p><p>The idea is to provide a type-erased wrapper of the following templated function:</p><pre><code class=language-cpp>template &lt;class T, class Range, class Callback&gt;
+void call_for_each(Range&amp;&amp; range, Callback&amp;&amp; callback)
+{
+    for (auto&amp;&amp; v : range)
+        callback(T(v));
+}
+</code></pre><p>The <code>range_ref&lt;T></code> is type-erasing <code>Range</code> in the sense that while it accepts a generic <code>Range</code> from the caller, neither the <code>range_ref&lt;T></code> itself nor the API author know the concrete <code>Range</code> compile-time.</p><p>The <code>T</code> is our element type contract: only elements convertible to <code>T</code> are allowed.</p><p><code>callback</code> on the other hand will be hidden from the caller and is provided by the consumer of a <code>range_ref&lt;T></code>.</p><p>Let&rsquo;s assume that we have a <code>function_ref&lt;ReturnT(ArgsT...)></code> type as described by <a href=https://vittorioromeo.info/index/blog/passing_functions_to_functions.html>Vittorio Romeo</a> or <a href=https://foonathan.net/2017/01/function-ref-implementation/>Jonathan Müller</a>.
+This is basically a function pointer that also allows capturing lambdas and other callables (a non-owning view of a callable, implemented roughly via function pointer plus <code>void*</code>).</p><p>With this we can formulate our first version of <code>range_ref&lt;T></code>:</p><pre><code class=language-cpp>template &lt;class T&gt;
+struct range_ref
+{
+    void for_each(function_ref&lt;void(T)&gt; callback)
+    {
+        _for_each(_range, callback);
+    }
+
+private:
+    using range_fun_t = void (*)(void*, function_ref&lt;void(T)&gt;);
+
+    void* _range = nullptr;
+    range_fun_t _for_each = nullptr;
+};
+</code></pre><p>Before we see how to construct this type, we can already look at its consumer-site API:
+The type itself is only templated on <code>T</code>, so it is agnostic to the actual range type and also to the callback type.</p><p>We now have a solution for our <code>concatenate</code> example:</p><pre><code class=language-cpp>std::string concatenate(range_ref&lt;std::string_view&gt; strings)
+{
+    std::string result;
+    strings.for_each([&amp;](std::string_view s) { 
+        result += s; 
+    });
+    return result;
+}
+</code></pre><blockquote><p>Unfortunately, we cannot use range-based for with <code>range_ref&lt;T></code>.
+While it is possible to design <code>range_ref&lt;T></code> to support it, it adds quite some overhead and can easily lead to dangling references.
+In the callback pattern, it is guaranteed that any temporary that we convert to <code>std::string_view</code> outlives the callback function.</p></blockquote><p>However, we are still missing the construction of <code>range_ref&lt;T></code>:</p><pre><code class=language-cpp>template &lt;class Range, 
+          std::enable_if_t&lt;is_compatible_range&lt;Range, T&gt;::value, int&gt; = 0&gt;
+range_ref(Range&amp;&amp; range)
+{
+    _range = &amp;range;
+    _for_each = [](void* r, function_ref&lt;void(T)&gt; callback) {
+        for (auto&amp;&amp; v : *reinterpret_cast&lt;decltype(&amp;range)&gt;(r))
+            callback(v);
+    };
+}
+</code></pre><p>Here, we accept any range that is compatible, i.e. whose elements are convertible to <code>T</code>.
+We use <a href=https://en.cppreference.com/w/cpp/language/sfinae>SFINAE</a> to reject incompatible ranges.
+This way, we can for example overload functions on <code>range_ref&lt;double></code> and <code>range_ref&lt;std::string_view></code> without any problems.
+Note <a href=https://en.cppreference.com/w/cpp/types/enable_if#Notes>the particular form of the <code>std::enable_if</code></a>.
+While we only have one constructor for now, the <code>std::enable_if_t&lt;cond, int> = 0</code> pattern prevents errors when overloading multiple templates functions.</p><p><code>decltype(&range)</code> is used to recover the pointer to the correct range type.
+<code>Range*</code> would not work when passing lvalue references as pointers to references are forbidden.</p><p>A possible implementation of <code>is_compatible_range</code> is:</p><pre><code class=language-cpp>template &lt;class RangeT, class ElementT, class = void&gt;
+struct is_compatible_range : std::false_type { };
+
+template &lt;class RangeT, class ElementT&gt;
+struct is_compatible_range&lt;RangeT, ElementT, std::void_t&lt;
+        decltype(ElementT(*std::begin(std::declval&lt;RangeT&gt;()))),
+        decltype(std::end(std::declval&lt;RangeT&gt;()))&gt;
+    &gt;
+     : std::true_type { };
+</code></pre><p>This uses <a href=https://en.cppreference.com/w/cpp/types/void_t>the C++17 helper <code>std::void_t</code></a> that simplifies partial specialization SFINAE.
+<code>std::begin</code> and <code>std::end</code> make sure that C arrays work.
+We ensure that the element type is convertible to our target type via <code>ElementT(*std::begin(...))</code>.</p><p>One small problem arises when passing <code>const&</code> ranges: <code>_range = &amp;range;</code> is invalid because it tries to convert <code>Range const*</code> to <code>void*</code>.
+Depending on your preference for purity, we can either use a <code>const_cast</code> (which is fine as the later <code>reinterpret_cast</code> will re-add the <code>const</code>) or a <code>union</code> of <code>void*</code> and <code>void const*</code>.</p><p>Congratulations, we have our first working version of <code>range_ref&lt;T></code>!</p><p>And we gained a lot of freedom when passing types to <code>concatenate</code>.
+A small collection of possible caller types that are supported and do not cause additional allocations:</p><ul><li><code>std::vector&lt;std::string></code></li><li><code>std::set&lt;std::string_view></code></li><li><code>std::list&lt;char const*></code></li><li><code>std::array&lt;std::string, 5></code></li><li><code>char const* strings[10]</code></li><li><code>std::span&lt;std::string></code></li></ul><p>We can even support <code>concatenate({"hello", " ", "world"})</code> if we add an <code>std::initializer_list</code> ctor:</p><pre><code class=language-cpp>template &lt;class U, 
+          std::enable_if_t&lt;std::is_convertible_v&lt;U const&amp;, T&gt;, int&gt; = 0&gt;
+range_ref(std::initializer_list&lt;U&gt; const&amp; range)
+{
+    // or via union depending on preference
+    _range = const_cast&lt;void*&gt;(static_cast&lt;void const*&gt;(&amp;range));
+    _for_each = [](void* r, function_ref&lt;void(T)&gt; f) {
+        for (auto&amp;&amp; v : *static_cast&lt;decltype(&amp;range)&gt;(r))
+            f(v);
+    };
+}
+</code></pre><p>It is important to note that the initializer list must be passed via <code>const&</code> because <code>&range</code> would otherwise be a pointer to a local variable and be invalid when we later call <code>for_each</code>.</p><p>Finally, it might be interesting to define a default constructed <code>range_ref&lt;T></code> as the empty range:</p><pre><code class=language-cpp>range_ref()
+{
+    _for_each = [](void*, function_ref&lt;void(T)&gt;) {};
+}
+</code></pre><h2 id=composition>Composition</h2><p>Another neat aspect of <code>range_ref&lt;T></code> is that it composes properly with respect to nesting:
+<code>range_ref&lt;T></code> is any range whose elements are convertible to T, <code>range_ref&lt;range_ref&lt;T>></code> is any range whose elements are ranges whose elements are convertible to <code>T</code>.</p><p>Note that <code>std::span</code> does not have this property.
+<code>std::span&lt;int></code> is a contiguous range of <code>int</code>s.
+<code>std::span&lt;std::span&lt;int>></code> is NOT a contiguous range of contiguous range of <code>int</code>s, but only a contiguous range of <code>std::span&lt;int></code>.</p><p>With <code>range_ref&lt;T></code>, we can for example define the following function:</p><pre><code class=language-cpp>std::string make_html_table(range_ref&lt;range_ref&lt;std::string_view&gt;&gt; rows)
+{
+    std::string result;
+    result += &quot;&lt;table&gt;&quot;;
+    rows.for_each([&amp;](range_ref&lt;std::string_view&gt; cols) {
+        result += &quot;&lt;tr&gt;&quot;;
+        cols.for_each([&amp;](std::string_view entry) {
+            result += &quot;&lt;td&gt;&quot;;
+            result += entry;
+            result += &quot;&lt;/td&gt;&quot;;
+        });
+        result += &quot;&lt;/tr&gt;&quot;;
+    });
+    result += &quot;&lt;/table&gt;&quot;;
+    return result;
+}
+</code></pre><p>And now it doesn&rsquo;t matter if we want to pass <code>std::vector&lt;std::vector&lt;std::string>></code> or <code>std::list&lt;std::array&lt;char const*, 3>></code>.</p><p>Unfortunately, while <code>range_ref&lt;T></code> works nicely with nested ranges, it itself does not support range-based for and thus does not compose with itself.
+For example, a <code>std::vector&lt;range_ref&lt;int>></code> could not be passed as <code>range_ref&lt;range_ref&lt;int>></code>.
+It remains future work to fix this shortcoming without compromising other design goals.
+Note that <code>range_ref&lt;T></code> typically appears in parameters and is usually not stored in other data structures.</p><h2 id=final-version>Final Version</h2><pre><code class=language-cpp>template &lt;class RangeT, class ElementT, class = void&gt;
+struct is_compatible_range : std::false_type { };
+
+template &lt;class RangeT, class ElementT&gt;
+struct is_compatible_range&lt;RangeT, ElementT, std::void_t&lt;
+        decltype(ElementT(*std::begin(std::declval&lt;RangeT&gt;()))),
+        decltype(std::end(std::declval&lt;RangeT&gt;()))&gt;
+    &gt;
+     : std::true_type { };
+
+// a non-owning, lightweight view of a range
+// whose element types are convertible to T
+template &lt;class T&gt;
+struct range_ref
+{
+    // iterates over the viewed range and invokes callback for each element
+    void for_each(function_ref&lt;void(T)&gt; callback) 
+    { 
+        _for_each(_range, callback); 
+    }
+
+    // empty range
+    range_ref()
+    {
+        _for_each = [](void*, function_ref&lt;void(T)&gt;) {};
+    }
+
+    // any compatible range
+    template &lt;class Range, 
+              std::enable_if_t&lt;is_compatible_range&lt;Range, T&gt;::value, int&gt; = 0&gt;
+    range_ref(Range&amp;&amp; range)
+    {
+        _range = const_cast&lt;void*&gt;(static_cast&lt;void const*&gt;(&amp;range));
+        _for_each = [](void* r, function_ref&lt;void(T)&gt; callback) {
+            for (auto&amp;&amp; v : *reinterpret_cast&lt;decltype(&amp;range)&gt;(r))
+                callback(v);
+        };
+    }
+
+    // {initializer, list, syntax}
+    template &lt;class U, 
+              std::enable_if_t&lt;std::is_convertible_v&lt;U const&amp;, T&gt;, int&gt; = 0&gt;
+    range_ref(std::initializer_list&lt;U&gt; const&amp; range)
+    {
+        _range = const_cast&lt;void*&gt;(static_cast&lt;void const*&gt;(&amp;range));
+        _for_each = [](void* r, function_ref&lt;void(T)&gt; f) {
+            for (auto&amp;&amp; v : *static_cast&lt;decltype(&amp;range)&gt;(r))
+                f(v);
+        };
+    }
+
+private:
+    using range_fun_t = void (*)(void*, function_ref&lt;void(T)&gt;);
+
+    // or via union depending on const_cast preference
+    void* _range = nullptr;
+    range_fun_t _for_each = nullptr;
+};
+</code></pre><p>Note that you need a <code>function_ref</code>, e.g. from <a href=https://foonathan.net/2017/01/function-ref-implementation/>here</a> or <a href=https://vittorioromeo.info/index/blog/passing_functions_to_functions.html>here</a>.</p><h2 id=summary>Summary</h2><p>In this post I proposed a new view type: <code>range_ref&lt;T></code>.</p><p>This type accepts any range that has elements that are <em>convertible</em> to <code>T</code>.
+It is non-owning, non-allocating, and quite lightweight: only two pointers, same size as <code>std::string_view</code> or <code>std::span&lt;T></code>.
+Performance-wise, this solution is slower than a templated function but still quite fast:
+The range-based for loop itself (increment, dereference, condition) can be inlined (in the <code>_for_each</code> function defined in the <code>range_ref&lt;T></code> ctor).
+The loop body is behind a <code>function_ref</code>, which translates to a single, perfectly predictable function pointer call.</p><p>If there is interest, I might do a follow-up post in the future that includes:</p><ul><li>benchmarks</li><li>how to model cancellation</li><li>automatic deref and the case for <code>range_ref&lt;T const&></code></li><li>a full reference implementation on github</li><li>exploring a <code>range_ref&lt;T></code> that supports range-based for</li></ul><p>Additional discussion and comments on <a href=https://www.reddit.com/r/cpp/comments/jhtso1/range_reft_a_fast_nonowning_view_on_a_range/>reddit</a>.</p><h3 id=update-2020-10-26>Update 2020-10-26:</h3><p>So, <code>range_ref&lt;T></code> might not be the best name for this view type.
+While it models all kind of ranges, it is itself not a range, thus creating some confusion.
+Though I don&rsquo;t have a preferred version yet, alternative names include:</p><ul><li><code>sequence_ref&lt;T></code></li><li><code>iterable_ref&lt;T></code></li><li><code>foreachable_ref&lt;T></code></li></ul><p><a href=https://www.boost.org/doc/libs/1_67_0/libs/range/doc/html/range/reference/ranges/any_range.html>Boost has any_range</a> which is itself a range and type erases increment, dereference, comparison.
+range-v3 has a similar <code>any_view&lt;T></code>.
+However, they suffer from the mentioned lifetime issue (apart from being slower because they have to type erase &ldquo;more&rdquo;).
+Consider for example:</p><pre><code class=language-cpp>int values[] = {1, 2, 3};
+auto r = std::ranges::views::transform(values, [](int i) {
+    return std::to_string(i);
+});
+</code></pre><p>Now, if you try to wrap <code>r</code> into a <code>any_view&lt;std::string_view></code> and iterate over it, the <code>string_view</code> will bind to a temporary <code>std::string</code>.
+This string is then destroyed <em>before</em> you use it in the loop, leading to a dangling reference.
+In contrast, my <code>range_ref&lt;std::string_view></code> would also create a <code>string_view</code> from a temporary <code>std::string</code>.
+However, it immediately the <code>string_view</code> to the callback function, which can safely use it as the temporary <code>std::string</code> is destroyed at the end of the expression, i.e. <em>after</em> the callback finished.</p><p>Currently, I do not know how to provide a view on a range that works with view type elements and is itself a range again.</p><p>(<em>Title image from <a href=https://pixabay.com/photos/nature-animals-butterflies-2769471/>pixabay</a></em>)</p></article><div class=my-4><a href=/tags/c++/ class="inline-block bg-tertiary-bg text-sm rounded px-3 py-1 my-1 me-2 hover:text-eureka">#C++</a></div><div class=py-2><div class="my-8 flex flex-col items-center md:flex-row"><a href=/authors/host/ class="md:me-4 text-primary-text h-24 w-24"><i class="fas fa-user-circle fa-6x"></i></a><div class="mt-4 w-full md:mt-0 md:w-auto"><a href=/authors/host/ class="mb-2 block border-b pb-1 text-lg font-bold"><h3>Bobble Law</h3></a><span class="block pb-2">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.</span>
+<a href=mailto:bobble2579@hotmail.com class=me-2><i class="fas fa-envelope"></i></a>
+<a href=https://github.com/bobblelaw class=me-2><i class="fab fa-github"></i></a></div></div></div><div class="-mx-2 mt-4 flex flex-col border-t px-2 pt-4 md:flex-row md:justify-between"><div><span class="text-primary-text block font-bold">Previous</span>
+<a href=/posts/multi-level-break/ class=block>Multi-Level Break in C++ via IIFE</a></div><div class="mt-4 md:mt-0 md:text-right"><span class="text-primary-text block font-bold">Next</span>
+<a href=/posts/recursive-lambda-function/ class=block>Recursive Lambdas in C++</a></div></div></div><div class="lg:col-start-2 bg-secondary-bg prose col-span-2 rounded p-6 lg:col-span-6"><h3>See Also</h3><a href=/posts/recursive-lambda-function/ class=no-underline>Recursive Lambdas in C++</a><br><a href=/posts/delete-rvalue-ref-assignment/ class=no-underline>Consider deleting your rvalue ref-qualified assignment operators</a><br><a href=/posts/floating-point-optimizations/ class=no-underline>Basic Floating Point Optimizations</a><br></div></div><script>document.addEventListener("DOMContentLoaded",()=>{hljs.highlightAll()})</script></div></div></main><footer class=pl-scrollbar><div class="mx-auto w-full max-w-screen-xl"><div class="text-center p-6 pin-b"><p class="text-sm text-tertiary-text">&copy; 2022 <a href=#>Bobble Law</a> and <a href=#>Stay Inc.</a>
+&#183; Powered by the <a href=https://github.com/wangchucheng/hugo-eureka class=hover:text-eureka>Eureka</a> theme for <a href=https://gohugo.io class=hover:text-eureka>Hugo</a></p></div></div></footer></body></html>
