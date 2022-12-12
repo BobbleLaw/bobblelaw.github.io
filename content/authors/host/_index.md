@@ -1,37 +1,58 @@
 ---
-title: Bobble Law
-role: Website maintainer
-bio: Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos.
+title: Lo, Tszwan
+draft: false
+weight: 1
+
+# Specific
+role: 3D Computer Vision Engineer
+avatar: images/cartoon_me.png
+bio: 
 organization:
-  name: Example Organization
-  url: https://example.com/
+  name:
+  url:
 social:
   - icon: envelope
     iconPack: fas
     url: mailto:bobble2579@hotmail.com
   - icon: github
     iconPack: fab
-    url: https://github.com/bobblelaw
+    url: https://github.com/BobbleLaw
+
+# Common
+widget:
+  handler: about
+
+  width: #md
+
+  sidebar:
+    position: #hide
+    scale: #md
+  
+  background:
+    # Options: primary, secondary, tertiary or any valid color value. Default is primary.
+    color: secondary
+    image:
+    # Options: auto, cover and contain. Default is auto.
+    size:
+    # Options: center, top, right, bottom, left.
+    position:
+    # Options: fixed, local, scroll.
+    attachment: 
 ---
 
-## Vestibulum vel arcu
+## About me
 
-Donec interdum justo sed posuere imperdiet. Quisque nec mauris eu erat mattis egestas in vitae nisl. Sed nisl augue, congue sed quam quis, tempor tempus nibh. Pellentesque accumsan in quam a interdum. Morbi iaculis venenatis lacinia. Mauris quis nisl vitae nisi mollis placerat id vel ligula. Integer vitae arcu ac leo iaculis rhoncus id vitae dolor. Fusce quis nisl tincidunt, vulputate dolor quis, mollis massa. Donec congue velit at risus cursus, eu auctor dolor rhoncus. In porta at dolor at eleifend. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque vehicula mi at dapibus sodales. Morbi accumsan dictum maximus. In eget leo in purus commodo vestibulum. Duis et velit ex.
+Welcome! My name is Lo TszWan (try to read it in Cantonese), call me Bob for convenience. 
+This is my personal blog where I write articles about programming, algorithms, and thoughts on working projects. 
+My focus mainly lies on:
 
-Nam turpis ligula, commodo eu nunc eget, rutrum convallis dui. Integer posuere massa nibh, sit amet hendrerit lectus facilisis sed. Pellentesque ut auctor urna. Vestibulum cursus varius enim in ullamcorper. Sed sed risus ac lorem porttitor rhoncus commodo ut nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eu urna auctor, scelerisque enim nec, eleifend nisl. Vestibulum nec mauris commodo, egestas justo id, consequat leo. Mauris diam justo, sagittis vel posuere a, imperdiet vel sem. Curabitur eget arcu euismod, consectetur arcu non, posuere neque. Integer commodo dolor volutpat, gravida nunc in, tempus mauris. Suspendisse iaculis purus ut vehicula facilisis. Suspendisse vitae diam ipsum. In consequat vitae dui vitae tincidunt.
+- 3D Reconstrction
+- Geometry Processing
+- Computer Graphics
+- C++/Swift Programming
 
-Nullam eleifend fringilla quam. Sed faucibus efficitur metus at rhoncus. Sed non nunc mollis, cursus ipsum suscipit, blandit mi. Morbi ac interdum massa, non congue ligula. Suspendisse porta condimentum finibus. Donec lobortis eget nisl posuere vehicula. Aenean in mi mollis nisl fermentum lobortis non at lacus. Suspendisse sagittis dolor vitae vehicula gravida. Mauris in dui eu arcu viverra eleifend. Vestibulum nibh sapien, elementum et viverra a, laoreet sit amet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+In general, I get a broad range of interests in algorithms and engineering related 3D, as I always believe that 3D techniques are beyond gaming, and immersive AR/VR devices will be the game changer in next gen human-computer interface. 
 
-## Nunc magna est
+To some reasons, I have been working in smart manufacturing for years since graduate school. I built a high accuracy structured light scanner for tools inspection, and dug into camera calibration and workpiece localization for better geometry perception. However, the further I go, the more I realize that's not what I like. So I decided to dive into consumer 3D technology again. Luckily, most of the concepts and algorithms I developed in the past experience can be applied to 3D entertainment applications.
 
-Donec porta:  
-- Aenean aliquam sapien id fermentum hendrerit.
-- Nullam quis augue id ante tempor suscipit sodales sed velit.
-- Sed at nulla consectetur, sodales nisl sed, luctus velit.
-- Morbi ornare purus at porttitor tristique.
-
-Gravida urna in: 
-- Maecenas blandit diam at massa hendrerit maximus.
-- Sed lacinia purus ac cursus tincidunt.
-- Maecenas posuere ante sed elit tempus porttitor.
-- Sed vel justo quis diam convallis hendrerit ac non mi. 
+I'll gradually organize my previous works and working project, and update them to this website or Github. Stay tune! Hopefully I can accomplish it in half a year.

@@ -1,6 +1,6 @@
 ---
-title: "range_ref<T>"
-description: A fast, lightweight, non-owning view of a range
+title: range_ref<T>
+description: A fast, lightweight, non-owning view of a range.
 toc: false
 authors:
   - host
@@ -8,8 +8,8 @@ tags:
   - C++
 categories:
 series:
-date: '2020-10-24 02:00:00'
-lastmod: '2020-11-20T22:52:56+08:00'
+date: '2020-11-12T19:37:43+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---

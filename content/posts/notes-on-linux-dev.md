@@ -6,10 +6,11 @@ authors:
   - host
 tags: 
   - note
+  - deprecated
 categories:
 series:
-date: '2020-11-20T22:52:56+08:00'
-lastmod: '2020-11-20T22:52:56+08:00'
+date: '2018-08-17T17:41:48+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---

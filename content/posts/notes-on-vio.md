@@ -1,6 +1,6 @@
 ---
-title: Notes on VIO - MSCKF Part I
-description:
+title: Notes on VIO
+description: Random notes and ideas of VIO.
 toc: false
 authors:
   - host
@@ -8,8 +8,8 @@ tags:
   - SLAM
 categories:
 series:
-date: '2022-11-13T15:50:13+08:00'
-lastmod: '2020-11-20T22:52:56+08:00'
+date: '2022-10-12T14:45:53+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: true
 ---

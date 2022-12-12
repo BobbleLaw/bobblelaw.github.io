@@ -1,12 +1,15 @@
 ---
 title: Images-based Modeling
-description: This is an example doc layout of Eureka theme
+description: Introduction
 toc: true
 authors:
+  - host
 tags:
 categories:
 series:
-date: '2020-10-16'
-lastmod: '2020-10-16'
+date: '2022-11-16T15:51:06+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 draft: false
 ---
+
+_TODO_

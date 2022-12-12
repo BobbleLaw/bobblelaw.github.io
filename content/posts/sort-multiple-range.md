@@ -1,5 +1,5 @@
 ---
-title: std::sort multiple ranges
+title: std::sort Multiple Ranges
 description: Sorting a range of keys while keeping a range of values in sync.
 toc: false
 authors:
@@ -8,8 +8,8 @@ tags:
   - C++
 categories:
 series:
-date: 2020-11-28 02:00:00
-lastmod: '2020-11-20T22:52:56+08:00'
+date: '2020-11-28T09:45:32+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---

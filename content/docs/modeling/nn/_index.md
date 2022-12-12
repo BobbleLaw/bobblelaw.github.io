@@ -1,13 +1,13 @@
 ---
-title: LINEMOD
-description:
+title: Neural Network based 3D Modeling
+description: Introduction
 toc: true
 authors:
   - host
 tags:
 categories:
 series:
-date: '2022-11-18T19:15:31+08:00'
+date: '2022-11-16T15:54:25+08:00'
 lastmod: '2022-11-20T22:52:56+08:00'
 draft: false
 ---

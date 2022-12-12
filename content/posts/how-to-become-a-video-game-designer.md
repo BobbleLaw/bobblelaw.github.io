@@ -1,6 +1,6 @@
 ---
 title: How to Become a Video Game Designer?
-description: Random notes on the way to ametuer game designer
+description: Random notes on the way to ametuer game designer.
 toc: false
 authors:
   - host
@@ -9,15 +9,15 @@ tags:
   - deprecated
 categories:
 series:
-date: '2020-11-20T22:52:56+08:00'
-lastmod: '2020-11-20T22:52:56+08:00'
+date: '2019-09-12T11:14:27+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---
 
 This is some notes that I used for preparing the Game Designer position in Tencent. 
 
-__You will read about__
+**You will read about**
 
 + Career path
 + Education
@@ -29,12 +29,12 @@ First of all, we need to talk about the difference between game design and game 
 
 These two are sometimes interchangeable but distinct.
 
-__Game Designer__ needs to know
+**Game Designer** needs to know
 + game concept
 + mechanics
 + storyline
 
-while __Game developer__ tends to know
+while **Game developer** tends to know
 + animation
 + engine programming
 
@@ -44,6 +44,5 @@ Here are some websites you defintely should take a look to learn how to become a
 
 
 写策划案不是写小说，很多时候要求策划用定义式的语句去描述。这也要求策划本身有比较好的概括能力。
-
 
 初级的游戏策划师能够明白结构化的东西更容易体现概念之间的关系，同时能帮助语句变得简洁。同时注意，这两个“句子”其实都是没有主语和句号的。但这样其实在阅读理解上会变得更加容易，查找也更方便了。

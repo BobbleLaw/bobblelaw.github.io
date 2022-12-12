@@ -1,6 +1,6 @@
 ---
 title: std::unordered_map Performance and Usage
-description: Lorem Ipsum Dolor Si Amet
+description: How well is your hashmap?
 toc: true
 authors:
   - host
@@ -9,8 +9,8 @@ tags:
 categories:
 series:
   - C++ Tips
-date: '2021-05-03'
-lastmod: '2022-11-09'
+date: '2020-12-11T09:36:58+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---

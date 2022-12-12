@@ -1,6 +1,6 @@
 ---
 title: Understanding Automatic Differentiation
-description: My humble understand towards AD
+description: My humble understand towards AD.
 toc: false
 authors:
   - host
@@ -8,8 +8,8 @@ tags:
   - optimization
 categories:
 series:
-date: '2020-11-20T22:52:56+08:00'
-lastmod: '2020-11-20T22:52:56+08:00'
+date: '2021-03-17T20:47:18+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---

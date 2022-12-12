@@ -1,12 +1,17 @@
 ---
 title: Detection
-description: This is an example doc layout of Eureka theme
+description:
 toc: true
 authors:
+  - host
 tags:
 categories:
 series:
-date: '2020-10-16'
-lastmod: '2020-10-16'
+date: '2022-11-18T19:12:49+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 draft: false
 ---
+
+_TODO_
+
+The content under this topic will come with _DetectionKit_ library

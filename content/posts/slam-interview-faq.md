@@ -1,6 +1,6 @@
 ---
 title: SLAM Interview FAQs
-description: Questions are collected from Chinese internet
+description: Questions are collected from Chinese internet.
 toc: false
 authors:
   - host
@@ -9,7 +9,7 @@ tags:
 categories:
 series:
 date: '2022-10-27T16:37:56+08:00'
-lastmod: '2020-11-20T22:52:56+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 featuredImage:
 draft: false
 ---

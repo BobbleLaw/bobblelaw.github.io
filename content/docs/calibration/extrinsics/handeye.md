@@ -1,5 +1,5 @@
 ---
-title: LINEMOD
+title: Hand-eye Calibration
 description:
 toc: true
 authors:
@@ -7,7 +7,7 @@ authors:
 tags:
 categories:
 series:
-date: '2022-11-18T19:15:31+08:00'
+date: '2022-11-19T21:04:51+08:00'
 lastmod: '2022-11-20T22:52:56+08:00'
 draft: false
 ---

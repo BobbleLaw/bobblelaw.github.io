@@ -1,15 +1,19 @@
 ---
 title: Structured Light System
-description: This is an example doc layout of Eureka theme
+description: Introduction
 toc: true
 authors:
+  - host
 tags:
 categories:
 series:
-date: '2019-10-15'
-lastmod: '2019-10-15'
+date: '2022-11-16T15:42:51+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
 draft: false
 ---
+
+
+_WIP_
 
 This winter I am going to finish my master degree in UST. In the pass two years, I spent most of my time digging into structured light systems, 3D scanning and object pose estimation, like real deep. Until now two structured light systems, each of which consists of a PointGrey Camera and a TI DLP3000/4500 EVM, are successfully deployed on two manipulators (UR5). With my software, they are capable of 
 1. Project custom patterns designed for different types of objects;

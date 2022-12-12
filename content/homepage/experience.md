@@ -20,7 +20,7 @@ experiences:
     dates: "2016 - 2020"
     location: Hong Kong SAR
     writeup: >
-      Supervised by LI Zexiang
+      Supervised by [LI Zexiang](https://facultyprofiles.hkust.edu.hk/profiles.php?profile=zexiang-li-eezxli#rPgSupervision)
 
   - title: Bachelor in EE
     organization:
