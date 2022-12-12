@@ -1,10 +1,10 @@
-baseURL: /
+baseURL: https://bobblelaw.github.io
 title: Bobble Law
 theme: eureka
 
-paginate: 3
+paginate: 10
 copyright: >
-  &copy; 2022 <a href="https://www.baidu.com/">Bobble Law</a> and <a href="">Stay Inc.</a>
+  &copy; 2022 <a href="#">Bobble Law</a> and <a href="#">Stay Inc.</a>
 enableEmoji: true
 enableGitInfo: false
 summaryLength: 75
