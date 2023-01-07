@@ -510,5 +510,3 @@ In contrast, my `range_ref<std::string_view>` would also create a `string_view` 
 However, it immediately the `string_view` to the callback function, which can safely use it as the temporary `std::string` is destroyed at the end of the expression, i.e. _after_ the callback finished.
 
 Currently, I do not know how to provide a view on a range that works with view type elements and is itself a range again.
-
-(_Title image from [pixabay](https://pixabay.com/photos/nature-animals-butterflies-2769471/)_)

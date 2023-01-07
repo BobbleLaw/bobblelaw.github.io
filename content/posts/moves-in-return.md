@@ -461,6 +461,3 @@ Also, keep in mind that inside a lambda, captures are not considered local varia
 
 The assembly shown in the examples can be considered a kind of worst case scenario, as the compiler has no access to the special member functions of `T`.
 When these functions are visible, they can often be inlined and further optimized.
-
-
-(_Title image from [unsplash](https://unsplash.com/photos/3vlGNkDep4E)_)

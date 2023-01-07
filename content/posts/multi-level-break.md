@@ -88,7 +88,3 @@ And they are more than adequate to solve our problem:
 ```
 
 No need to introduce additional flags, identifiers, labels. Just good old `[&]{}();` and `return`.
-
-> This post is tagged as `C++` and `fun` and is suited best as some mid-week entertainment in turbulent times.
-
-(_Title image from [pixabay](https://pixabay.com/photos/auto-repair-workshop-brake-disc-1954643/)_)

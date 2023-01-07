@@ -1,6 +1,6 @@
 ---
 title: Understanding Perspective-N-Points
-description: 
+description: Discuss and derivation on PnP problem.
 toc: false
 authors:
   - host
@@ -19,9 +19,7 @@ draft: false
 The Perspective-n-Point (PnP) problem is the problem of estimating the relative pose between an object and the camera, given a set of correspondences between 3D points and their projections on the image plane.
 It is a fundamental problem that was first studied in the photogrammetry literature, and later on studied in the context of computer vision.
 
-In this post, I will present a few solvers (among many), discuss their proofs and also show some concise implementations.
-I will focus on the minimal solvers - solutions to the PnP problem that requires the minimal amount of information.
-In this case, we need at least three pairs of correspondences, and the minimal solvers that only require three pairs of correspondences are called P3P solvers.
+In this post, I will present a few solvers (among many), discuss their proofs and also show some concise implementations. I will focus on the minimal solvers - solutions to the PnP problem that requires the minimal amount of information. In this case, we need at least three pairs of correspondences, and the minimal solvers that only require three pairs of correspondences are called P3P solvers.
 
 ## Preliminaries
 

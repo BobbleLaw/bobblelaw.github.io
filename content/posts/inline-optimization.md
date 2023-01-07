@@ -239,5 +239,3 @@ This, in turn, re-enables many optimizations such as [value numbering](https://e
 
 PS: gcc and clang have a variety of [function attributes](https://gcc.gnu.org/onlinedocs/gcc/Common-Function-Attributes.html) that can be used to enable optimizations, even if the implementation is in a different TU.
 The two most important ones are `__attribute__((const))` and `__attribute__((pure))`.
-
-(_Title image from [unsplash](https://unsplash.com/photos/Y-VYK0SDLxs)_)

@@ -485,5 +485,3 @@ struct to_string_t
     operator T() const& { static_assert(always_false<T>, "must not be stored (for lifetime reasons)"); }
 };
 ```
-
-(_Title image from [pixabay](https://pixabay.com/photos/india-merchant-dealer-ox-goods-4780853/)_)

@@ -430,5 +430,3 @@ For a production-grade implementation, there are a few additional concerns:
 * `sort_it`, `ref`, and `val` should be templated on key and value type
 * `sort_it` and `ref` should not use pointers, but other random access iterators
 * the whole system could be made variadic and support arbitrary many value ranges
-
-(_Title image from [pixabay](https://pixabay.com/photos/noodles-pasta-colorful-pasta-food-1312384/)_)

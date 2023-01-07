@@ -251,5 +251,3 @@ This is usually not an exposed metric, though I suppose one could simply write a
 * [Hashmaps Benchmarks - Overview (2019)](https://martin.ankerl.com/2019/04/01/hashmap-benchmarks-01-overview/)
 
 Additional discussion and comments on [reddit](https://www.reddit.com/r/cpp/comments/q551zg/measuring_stdunordered_map_hash_badness/).
-
-(_Title image from [pixabay](https://pixabay.com/photos/europe-travel-map-world-1264062/)_)
