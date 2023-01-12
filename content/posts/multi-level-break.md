@@ -1,5 +1,5 @@
 ---
-title: Multi-Level Break in C++ via IIFE
+title: Multi-Level Loop Break
 description: Ever wanted to break more than one level at once?
 toc: false
 authors:

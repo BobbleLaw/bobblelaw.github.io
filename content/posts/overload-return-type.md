@@ -1,5 +1,5 @@
 ---
-title: Overloading by Return Type in C++
+title: Overload Return Type
 description: Everyone overloads by argument types. But can you do return type?
 toc: false
 authors:

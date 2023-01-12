@@ -1,5 +1,5 @@
 ---
-title: Optimization without Inlining
+title: Inlining Optimization 
 description: Even without inlining, the compiler does not always has to assume the worst case.
 authors:
   - host

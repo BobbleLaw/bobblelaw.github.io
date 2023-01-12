@@ -1,5 +1,5 @@
 ---
-title: Recursive Lambdas in C++
+title: Recursive Lambdas
 description: Ever wondered how to make our beloved [](){}s call themselves?
 toc: false
 authors:

@@ -1,5 +1,5 @@
 ---
-title: Consider deleting your rvalue ref-qualified assignment operators
+title: rvalue ref-qualified assignment operators
 description: Why is foo{} = foo{} working anyways?
 toc: false
 author:
