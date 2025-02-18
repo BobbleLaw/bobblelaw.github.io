@@ -1,2 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Qt on Bobble Law</title><link>https://bobblelaw.github.io/tags/qt/</link><description>Recent content in Qt on Bobble Law</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2022 &lt;a href="#">Bobble Law&lt;/a> and &lt;a href="#">Stay Inc.&lt;/a></copyright><lastBuildDate>Wed, 18 Oct 2017 17:26:42 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/qt/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>A Simple Qt code Here is a hello world code for Qt
-#include &amp;lt;QtCore/QCoreApplication&amp;gt; #include &amp;lt;QtCore/QDebug&amp;gt; int main(int argc, char** argv){ QCoreApplication app(argc, argv); qDebug() &amp;lt;&amp;lt; &amp;quot;Hello, Qt!&amp;quot;; app.exec() } If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4 If we have qmake, all we need is CONFIG +=qt QT -= gui SOURCE += main.cpp If we use cmake, our old friend CMakeList.txt comes to stage PROJECT(example) FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED) INCLUDE(${QT_USE_FILE}) ADD_EXECUTABLE(example main.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Qt on Bobble Law</title><link>https://bobblelaw.github.io/tags/qt/</link><description>Recent content in Qt on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/qt/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
+&lt;p>Here is a hello world code for Qt&lt;/p>
+&lt;pre tabindex="0">&lt;code>#include &amp;lt;QtCore/QCoreApplication&amp;gt;
+#include &amp;lt;QtCore/QDebug&amp;gt;
+int main(int argc, char** argv){
+ QCoreApplication app(argc, argv);
+ qDebug() &amp;lt;&amp;lt; &amp;#34;Hello, Qt!&amp;#34;;
+ app.exec()
+}
+&lt;/code>&lt;/pre>&lt;ol>
+&lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4
+&lt;/code>&lt;/pre>&lt;ol start="2">
+&lt;li>If we have qmake, all we need is&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>CONFIG +=qt
+QT -= gui
+SOURCE += main.cpp
+&lt;/code>&lt;/pre>&lt;ol start="3">
+&lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>PROJECT(example)
+FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED)
+INCLUDE(${QT_USE_FILE})
+ADD_EXECUTABLE(example main.cpp)
+&lt;/code>&lt;/pre>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
+&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item></channel></rss>

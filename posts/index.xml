@@ -1,39 +1,182 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Bobble Law</title><link>https://bobblelaw.github.io/posts/</link><description>Recent content in Posts on Bobble Law</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>&amp;copy; 2022 &lt;a href="#">Bobble Law&lt;/a> and &lt;a href="#">Stay Inc.&lt;/a></copyright><lastBuildDate>Thu, 27 Oct 2022 16:37:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SLAM Interview FAQs</title><link>https://bobblelaw.github.io/posts/slam-interview-faq/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/posts/slam-interview-faq/</guid><description>Linear Algebra 如何求解 $Ax=b$？SVD和QR分解哪个更快？ Depend on the rank of $[A | b]$.
-Solution include QR decomposition, LTLD decomposition, Cholesky decomposition and SVD decomposition.
-Optimization Basics Explain Gradient descent, Gaussian-Newton, LM, Dogleg Computer Vision Basics SIFT vs. SURF
-Parallax and depth
-$ \frac{parallax}{baseline} = \frac{focal~ length}{depth} $
-Edge detection algorithms Filtering, augmentation, and detection. Gaussian filter and some handcrafted kernel to locate pixel gradient.
-Canny Sobel Laplacian Hoffman transform 3D Basics 如何对匹配好的点做进一步的处理，已到达更好的效果？ Compare the distance with experienced threshold RANSAC KNN Explain RANSAC</description></item><item><title>rvalue ref-qualified assignment operators</title><link>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</link><pubDate>Sun, 22 Aug 2021 14:53:21 +0800</pubDate><guid>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</guid><description>The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:
-struct foo { ... }; foo get_my_foo() { ... } // .. some code later: foo f; get_my_foo() = f; This compiles &amp;hellip; and does nothing useful.
-We&amp;rsquo;ve assigned f to a temporary foo. No error, no warning.
-A Real-Life Example In the math library I&amp;rsquo;m writing we have a mat struct for matrices and vec for vectors.</description></item><item><title>Inlining Optimization</title><link>https://bobblelaw.github.io/posts/inline-optimization/</link><pubDate>Wed, 19 May 2021 17:29:41 +0800</pubDate><guid>https://bobblelaw.github.io/posts/inline-optimization/</guid><description>Inlining is one of the most important compiler optimizations. We can often write abstractions and thin wrapper functions without incurring any performance penalty, because the compiler will expand the method for us at call site.
-If a function is not inlined, conventional wisdom says that the compiler has to assume that the method can modify any global state and change the memory behind any pointer or reference that might have &amp;ldquo;escaped&amp;rdquo;.
-In this short post, I&amp;rsquo;ll demonstrate exactly this effect.</description></item><item><title>Multi-Level Loop Break</title><link>https://bobblelaw.github.io/posts/multi-level-break/</link><pubDate>Wed, 12 May 2021 09:57:09 +0800</pubDate><guid>https://bobblelaw.github.io/posts/multi-level-break/</guid><description>I guess we all have been at this point.
-for (auto i : ...) for (auto j : ...) if (condition(i, j)) { break outer??? } You want to search something, and for one reason or another you end up with a nested loop. You find what you searched for and now want to break all the way to the outer loop.
-If only we had multi-level breaks.
-But we don&amp;rsquo;t.
-So people introduce flags:</description></item><item><title>Understanding Perspective-N-Points</title><link>https://bobblelaw.github.io/posts/understanding-pnp/</link><pubDate>Sun, 18 Apr 2021 15:17:26 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-pnp/</guid><description>Introduction The Perspective-n-Point (PnP) problem is the problem of estimating the relative pose between an object and the camera, given a set of correspondences between 3D points and their projections on the image plane. It is a fundamental problem that was first studied in the photogrammetry literature, and later on studied in the context of computer vision.
-In this post, I will present a few solvers (among many), discuss their proofs and also show some concise implementations.</description></item><item><title>Understanding Automatic Differentiation</title><link>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</link><pubDate>Wed, 17 Mar 2021 20:47:18 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</guid><description>Deriving derivatives is not fun. In this post, I will deep dive into the methods for automatic differentiation (AD). After reading this post, I hope you can feel confident with using the various AD techniques, and hopefully never manually calculate derivatives again. Note that this post is not a comparison between AD libraries. For that, a good starting point is here.
-Why Automatic Differentiation? Automatic differentiation is a natural continuation of scientists and engineers’ pursuit for mechanizing computation.</description></item><item><title>Moves in Returns</title><link>https://bobblelaw.github.io/posts/moves-in-return/</link><pubDate>Sat, 19 Dec 2020 14:39:20 +0800</pubDate><guid>https://bobblelaw.github.io/posts/moves-in-return/</guid><description>Today we&amp;rsquo;ll discuss code of the form:
-T work(/* ... */) { /* ... */ return x; } This is a classical &amp;ldquo;return-by-value&amp;rdquo; and (wrongfully) associated with copies and overhead.
-In many cases, this will actually move the result instead of copying it. For modern C++, one could even argue that this will move in most cases (or, as we will see, completely elide the copy and directly construct in the result memory).
-This post discusses several common patterns and if they are moved, copies, or elided.</description></item><item><title>std::unordered_map Performance and Usage</title><link>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</link><pubDate>Fri, 11 Dec 2020 09:36:58 +0800</pubDate><guid>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</guid><description>Origin Story We have always been told that hashmap is the best associative container that offer O(1) insert, delete, and lookup. However, the customization space of it is quite large and depending on the use case, the trade-off space can change radically. std::unordered_map is (in)famous for having an API that basically forces implementers to use &amp;ldquo;buckets with linked lists&amp;rdquo;, also known as separate chaining. Many performance-critical applications swear on open addressing, often storing keys and values directly in arrays (either together or separate).</description></item><item><title>Sort Multiple Ranges</title><link>https://bobblelaw.github.io/posts/sort-multiple-range/</link><pubDate>Sat, 28 Nov 2020 09:45:32 +0800</pubDate><guid>https://bobblelaw.github.io/posts/sort-multiple-range/</guid><description>std::sort is a great utility. You can easily sort subranges and provide custom comparison functions. However, it struggles with the following scenario:
-std::vector&amp;lt;int&amp;gt; keys = ...; std::vector&amp;lt;std::string&amp;gt; values = ...; std::sort(...); // ??? We want to sort by keys but keep the 1-on-1 correspondence with values, i.e. keep the ranges &amp;ldquo;in sync&amp;rdquo; during sorting. A common solution is to allocate a vector of indices, sort these indices, and then apply the resulting permutation. However, the need for an additional allocation and bad cache locality due to indirection make this a suboptimal solution.</description></item><item><title>range_ref&lt;T></title><link>https://bobblelaw.github.io/posts/range-ref/</link><pubDate>Thu, 12 Nov 2020 19:37:43 +0800</pubDate><guid>https://bobblelaw.github.io/posts/range-ref/</guid><description>Passing references to functions is great.
-struct some_user_type; void foo(some_user_type const&amp;amp; v) { // freely read from v } Memory management and lifetime handling is done by the caller. Users of your function / API have a liberating amount of freedom how they organize their data: on the stack, on the heap, in smart pointers, in vectors, it doesn&amp;rsquo;t matter. They can pass a reference to your function. No (potentially expensive) copy is performed.
-From an API perspective, C++ references are views on a single object.</description></item><item><title>Recursive Lambdas</title><link>https://bobblelaw.github.io/posts/recursive-lambda-function/</link><pubDate>Sun, 08 Nov 2020 13:41:36 +0800</pubDate><guid>https://bobblelaw.github.io/posts/recursive-lambda-function/</guid><description>auto fib = [](int n) { if (n &amp;lt;= 1) return n; return fib(n - 1) + fib(n - 2); }; auto i = fib(7); If only it were that simple.
-Obviously, any performance-conscious programmer will compute Fibonacci numbers iteratively (or even explicitly), but this solution will serve as an example for an underappreciated tool: recursive lambdas.
-Lambdas are one of my favorite features in any programming language and while I long for a shorter syntax in C++, I still use them quite ubiquitously, especially for local functions.</description></item><item><title>How to Become a Video Game Designer?</title><link>https://bobblelaw.github.io/posts/how-to-become-a-video-game-designer/</link><pubDate>Thu, 12 Sep 2019 11:14:27 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-become-a-video-game-designer/</guid><description>This is some notes that I used for preparing the Game Designer position in Tencent.
-You will read about
-Career path Education Work experience Game Design vs. Game Development First of all, we need to talk about the difference between game design and game development.
-These two are sometimes interchangeable but distinct.
-Game Designer needs to know
-game concept mechanics storyline while Game developer tends to know
-animation engine programming Here are some websites you defintely should take a look to learn how to become a good game designer.</description></item><item><title>Basic Floating Point Optimizations</title><link>https://bobblelaw.github.io/posts/floating-point-optimizations/</link><pubDate>Wed, 07 Aug 2019 09:08:11 +0800</pubDate><guid>https://bobblelaw.github.io/posts/floating-point-optimizations/</guid><description>Ever seen some people write f * 0.5 when they mean f / 2?
-Or if the compiler is able to optimize the f * 1.0 that you added for clarity?
-Maybe you wrote f + f instead of f * 2 as a clever optimization?
-Modern compilers are basically magic, but do they actually perform these optimizations? And, more importantly, why is f + 0.0 slower than f - 0.0?
-Preliminaries Many posts have been written about elaborate magic involving IEEE 754 floating point numbers.</description></item><item><title>Notes on Linux Development</title><link>https://bobblelaw.github.io/posts/notes-on-linux-dev/</link><pubDate>Fri, 17 Aug 2018 17:41:48 +0800</pubDate><guid>https://bobblelaw.github.io/posts/notes-on-linux-dev/</guid><description>How to use previous version of gcc This problem arises when we try to compile mex file in Matlab. It shows a warning as
-Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. The version currently supported with MEX is '6.4.x'. For a list of currently supported compilers see An easy solution is to do as followed (simply install the target version),
-sudo apt-get update &amp;amp;&amp;amp; \ sudo apt-get install build-essential software-properties-common -y &amp;amp;&amp;amp; \ sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y &amp;amp;&amp;amp; \ sudo apt-get update &amp;amp;&amp;amp; \ sudo apt-get install gcc-6 g++-6 -y &amp;amp;&amp;amp; \ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 &amp;amp;&amp;amp; \ gcc -v But this will affect the global gcc/g++, so we change the configure file for mex only,</description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>A Simple Qt code Here is a hello world code for Qt
-#include &amp;lt;QtCore/QCoreApplication&amp;gt; #include &amp;lt;QtCore/QDebug&amp;gt; int main(int argc, char** argv){ QCoreApplication app(argc, argv); qDebug() &amp;lt;&amp;lt; &amp;quot;Hello, Qt!&amp;quot;; app.exec() } If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4 If we have qmake, all we need is CONFIG +=qt QT -= gui SOURCE += main.cpp If we use cmake, our old friend CMakeList.txt comes to stage PROJECT(example) FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED) INCLUDE(${QT_USE_FILE}) ADD_EXECUTABLE(example main.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Bobble Law</title><link>https://bobblelaw.github.io/posts/</link><description>Recent content in Posts on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SLAM Interview FAQs</title><link>https://bobblelaw.github.io/posts/slam-interview-faq/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/posts/slam-interview-faq/</guid><description>&lt;h2 id="linear-algebra">Linear Algebra&lt;/h2>
+&lt;ul>
+&lt;li>如何求解 $Ax=b$？SVD和QR分解哪个更快？&lt;/li>
+&lt;/ul>
+&lt;p>Depend on the rank of $[A | b]$.&lt;/p>
+&lt;p>Solution include QR decomposition, LTLD decomposition, Cholesky decomposition and SVD decomposition.&lt;/p>
+&lt;h2 id="optimization-basics">Optimization Basics&lt;/h2>
+&lt;ul>
+&lt;li>Explain Gradient descent, Gaussian-Newton, LM, Dogleg&lt;/li>
+&lt;/ul>
+&lt;h2 id="computer-vision-basics">Computer Vision Basics&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>SIFT vs. SURF&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Parallax and depth&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>$ \frac{parallax}{baseline} = \frac{focal~ length}{depth} $&lt;/p>
+&lt;ul>
+&lt;li>Edge detection algorithms&lt;/li>
+&lt;/ul>
+&lt;p>Filtering, augmentation, and detection. Gaussian filter and some handcrafted kernel to locate pixel gradient.&lt;/p>
+&lt;ol>
+&lt;li>Canny&lt;/li>
+&lt;li>Sobel&lt;/li>
+&lt;li>Laplacian&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Hoffman transform&lt;/li>
+&lt;/ul>
+&lt;h2 id="3d-basics">3D Basics&lt;/h2>
+&lt;ul>
+&lt;li>如何对匹配好的点做进一步的处理，已到达更好的效果？&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>Compare the distance with experienced threshold&lt;/li>
+&lt;li>RANSAC&lt;/li>
+&lt;li>KNN&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>
+&lt;p>Explain RANSAC&lt;/p></description></item><item><title>rvalue ref-qualified assignment operators</title><link>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</link><pubDate>Sun, 22 Aug 2021 14:53:21 +0800</pubDate><guid>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</guid><description>&lt;p>The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">struct&lt;/span> &lt;span style="color:#a6e22e">foo&lt;/span> { ... };
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo &lt;span style="color:#a6e22e">get_my_foo&lt;/span>() { ... }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// .. some code later:
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>foo f;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>get_my_foo() &lt;span style="color:#f92672">=&lt;/span> f;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This &lt;a href="https://godbolt.org/z/oh3vFA">compiles&lt;/a> &amp;hellip; and does nothing useful.&lt;/p>
+&lt;p>We&amp;rsquo;ve assigned &lt;code>f&lt;/code> to a temporary &lt;code>foo&lt;/code>.&lt;br>
+No error, no warning.&lt;/p>
+&lt;h2 id="a-real-life-example">A Real-Life Example&lt;/h2>
+&lt;p>In the math library I&amp;rsquo;m writing we have a &lt;code>mat&lt;/code> struct for matrices and &lt;code>vec&lt;/code> for vectors.&lt;br>
+Matrices are stored column-major, i.e. as an array of column vectors.&lt;br>
+Now, sometimes you want to get the row of such matrix and thus &lt;code>mat&lt;/code> has a function &lt;code>vec mat::row(int)&lt;/code> that returns the specified row.&lt;br>
+It has to return the &lt;code>vec&lt;/code> per value because only columns are stored contiguously in &lt;code>mat&lt;/code>:&lt;/p></description></item><item><title>Inlining Optimization</title><link>https://bobblelaw.github.io/posts/inline-optimization/</link><pubDate>Wed, 19 May 2021 17:29:41 +0800</pubDate><guid>https://bobblelaw.github.io/posts/inline-optimization/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Inline_expansion">Inlining&lt;/a> is one of the most important compiler optimizations.&lt;br>
+We can often write abstractions and thin wrapper functions without incurring any performance penalty, because the compiler will expand the method for us at call site.&lt;/p>
+&lt;p>If a function is not inlined, conventional wisdom says that the compiler has to assume that the method can modify any global state and change the memory behind any pointer or reference that might have &amp;ldquo;escaped&amp;rdquo;.&lt;/p></description></item><item><title>Multi-Level Loop Break</title><link>https://bobblelaw.github.io/posts/multi-level-break/</link><pubDate>Wed, 12 May 2021 09:57:09 +0800</pubDate><guid>https://bobblelaw.github.io/posts/multi-level-break/</guid><description>&lt;p>I guess we all have been at this point.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> (&lt;span style="color:#66d9ef">auto&lt;/span> i : ...)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span> (&lt;span style="color:#66d9ef">auto&lt;/span> j : ...)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (condition(i, j))
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span> outer&lt;span style="color:#f92672">???&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You want to search something, and for one reason or another you end up with a nested loop.&lt;br>
+You find what you searched for and now want to &lt;code>break&lt;/code> all the way to the outer loop.&lt;/p>
+&lt;p>If only we had multi-level &lt;code>breaks&lt;/code>.&lt;/p></description></item><item><title>Understanding Perspective-N-Points</title><link>https://bobblelaw.github.io/posts/understanding-pnp/</link><pubDate>Sun, 18 Apr 2021 15:17:26 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-pnp/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>The Perspective-n-Point (PnP) problem is the problem of estimating the relative pose between an object and the camera, given a set of correspondences between 3D points and their projections on the image plane.&lt;br>
+It is a fundamental problem that was first studied in the photogrammetry literature, and later on studied in the context of computer vision.&lt;/p>
+&lt;p>In this post, I will present a few solvers (among many), discuss their proofs and also show some concise implementations. I will focus on the minimal solvers - solutions to the PnP problem that requires the minimal amount of information. In this case, we need at least three pairs of correspondences, and the minimal solvers that only require three pairs of correspondences are called P3P solvers.&lt;/p></description></item><item><title>Understanding Automatic Differentiation</title><link>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</link><pubDate>Wed, 17 Mar 2021 20:47:18 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</guid><description>&lt;p>Deriving derivatives is not fun. In this post, I will deep dive into the methods for automatic differentiation (AD). After reading this post, I hope you can feel confident with using the various AD techniques, and hopefully never manually calculate derivatives again. Note that this post is not a comparison between AD libraries. For that, a good starting point is &lt;a href="">here&lt;/a>.&lt;/p>
+&lt;h2 id="why-automatic-differentiation">Why Automatic Differentiation?&lt;/h2>
+&lt;p>Automatic differentiation is a natural continuation of scientists and engineers’ pursuit for mechanizing computation. After all, we learn how to take derivatives by memorizing a set of rules. Why can’t computers do the same thing?&lt;/p></description></item><item><title>Moves in Returns</title><link>https://bobblelaw.github.io/posts/moves-in-return/</link><pubDate>Sat, 19 Dec 2020 14:39:20 +0800</pubDate><guid>https://bobblelaw.github.io/posts/moves-in-return/</guid><description>&lt;p>Today we&amp;rsquo;ll discuss code of the form:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>T &lt;span style="color:#a6e22e">work&lt;/span>(&lt;span style="color:#75715e">/* ... */&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">/* ... */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> x;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is a classical &amp;ldquo;return-by-value&amp;rdquo; and (wrongfully) associated with copies and overhead.&lt;/p>
+&lt;p>In many cases, this will actually &lt;code>move&lt;/code> the result instead of copying it.&lt;br>
+For modern C++, one could even argue that this will move in &lt;em>most&lt;/em> cases (or, as we will see, completely &lt;em>elide&lt;/em> the copy and directly construct in the result memory).&lt;/p></description></item><item><title>std::unordered_map Performance and Usage</title><link>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</link><pubDate>Fri, 11 Dec 2020 09:36:58 +0800</pubDate><guid>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</guid><description>&lt;h1 id="origin-story">Origin Story&lt;/h1>
+&lt;p>We have always been told that hashmap is the best associative container that offer O(1) insert, delete, and lookup. However, the customization space of it is quite large and depending on the use case, the trade-off space can change radically.&lt;br>
+&lt;code>std::unordered_map&lt;/code> is (in)famous for having an API that basically forces implementers to use &amp;ldquo;buckets with linked lists&amp;rdquo;, also known as &lt;em>separate chaining&lt;/em>.&lt;br>
+Many performance-critical applications swear on &lt;em>open addressing&lt;/em>, often storing keys and values directly in arrays (either together or separate).&lt;br>
+These are often called &lt;code>flat_&lt;/code>maps.&lt;br>
+Many requirements and quality attributes influence which particular type is &amp;ldquo;best&amp;rdquo;:&lt;/p></description></item><item><title>Sort Multiple Ranges</title><link>https://bobblelaw.github.io/posts/sort-multiple-range/</link><pubDate>Sat, 28 Nov 2020 09:45:32 +0800</pubDate><guid>https://bobblelaw.github.io/posts/sort-multiple-range/</guid><description>&lt;p>&lt;code>std::sort&lt;/code> is a great utility.&lt;br>
+You can easily sort subranges and provide custom comparison functions.&lt;br>
+However, it struggles with the following scenario:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>std&lt;span style="color:#f92672">::&lt;/span>vector&lt;span style="color:#f92672">&amp;lt;&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span>&lt;span style="color:#f92672">&amp;gt;&lt;/span> keys &lt;span style="color:#f92672">=&lt;/span> ...;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>std&lt;span style="color:#f92672">::&lt;/span>vector&lt;span style="color:#f92672">&amp;lt;&lt;/span>std&lt;span style="color:#f92672">::&lt;/span>string&lt;span style="color:#f92672">&amp;gt;&lt;/span> values &lt;span style="color:#f92672">=&lt;/span> ...;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>std&lt;span style="color:#f92672">::&lt;/span>sort(...); &lt;span style="color:#75715e">// ???
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We want to sort by &lt;code>keys&lt;/code> but keep the 1-on-1 correspondence with &lt;code>values&lt;/code>, i.e. keep the ranges &amp;ldquo;in sync&amp;rdquo; during sorting.&lt;br>
+A common solution is to allocate a vector of indices, sort these indices, and then apply the resulting permutation.&lt;br>
+However, the need for an additional allocation and bad cache locality due to indirection make this a suboptimal solution.&lt;/p></description></item><item><title>range_ref&lt;T></title><link>https://bobblelaw.github.io/posts/range-ref/</link><pubDate>Thu, 12 Nov 2020 19:37:43 +0800</pubDate><guid>https://bobblelaw.github.io/posts/range-ref/</guid><description>&lt;p>Passing references to functions is great.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">struct&lt;/span> &lt;span style="color:#a6e22e">some_user_type&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">foo&lt;/span>(some_user_type &lt;span style="color:#66d9ef">const&lt;/span>&lt;span style="color:#f92672">&amp;amp;&lt;/span> v)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// freely read from v
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Memory management and lifetime handling is done by the caller.&lt;br>
+Users of your function / API have a liberating amount of freedom how they organize their data: on the stack, on the heap, in smart pointers, in vectors, it doesn&amp;rsquo;t matter.&lt;br>
+They can pass a reference to your function.&lt;br>
+No (potentially expensive) copy is performed.&lt;/p></description></item><item><title>Recursive Lambdas</title><link>https://bobblelaw.github.io/posts/recursive-lambda-function/</link><pubDate>Sun, 08 Nov 2020 13:41:36 +0800</pubDate><guid>https://bobblelaw.github.io/posts/recursive-lambda-function/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">auto&lt;/span> fib &lt;span style="color:#f92672">=&lt;/span> [](&lt;span style="color:#66d9ef">int&lt;/span> n) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (n &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>) &lt;span style="color:#66d9ef">return&lt;/span> n;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">fib&lt;/span>(n &lt;span style="color:#f92672">-&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>) &lt;span style="color:#f92672">+&lt;/span> fib(n &lt;span style="color:#f92672">-&lt;/span> &lt;span style="color:#ae81ff">2&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">auto&lt;/span> i &lt;span style="color:#f92672">=&lt;/span> fib(&lt;span style="color:#ae81ff">7&lt;/span>);
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If only it were that simple.&lt;/p>
+&lt;p>Obviously, any performance-conscious programmer will compute Fibonacci numbers iteratively (or even &lt;a href="https://en.wikipedia.org/wiki/Fibonacci_number#Closed-form_expression">explicitly&lt;/a>), but this solution will serve as an example for an underappreciated tool: &lt;em>recursive lambdas&lt;/em>.&lt;/p>
+&lt;p>Lambdas are one of my favorite features in any programming language and while I long for a &lt;a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0573r1.html">shorter syntax in C++&lt;/a>, I still use them quite ubiquitously, especially for local functions.&lt;br>
+They allow us to abstract behavior into a function while still accessing local variables (through captures) and without leaking new names into the surrounding namespace.&lt;br>
+While already plenty powerful, sometimes we might want to call a lambda recursively.&lt;/p></description></item><item><title>How to Become a Video Game Designer?</title><link>https://bobblelaw.github.io/posts/how-to-become-a-video-game-designer/</link><pubDate>Thu, 12 Sep 2019 11:14:27 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-become-a-video-game-designer/</guid><description>&lt;p>This is some notes that I used for preparing the Game Designer position in Tencent.&lt;/p>
+&lt;p>&lt;strong>You will read about&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Career path&lt;/li>
+&lt;li>Education&lt;/li>
+&lt;li>Work experience&lt;/li>
+&lt;/ul>
+&lt;h3 id="game-design-vs-game-development">Game Design vs. Game Development&lt;/h3>
+&lt;p>First of all, we need to talk about the difference between game design and game development.&lt;/p>
+&lt;p>These two are sometimes interchangeable but distinct.&lt;/p>
+&lt;p>&lt;strong>Game Designer&lt;/strong> needs to know&lt;/p>
+&lt;ul>
+&lt;li>game concept&lt;/li>
+&lt;li>mechanics&lt;/li>
+&lt;li>storyline&lt;/li>
+&lt;/ul>
+&lt;p>while &lt;strong>Game developer&lt;/strong> tends to know&lt;/p>
+&lt;ul>
+&lt;li>animation&lt;/li>
+&lt;li>engine programming&lt;/li>
+&lt;/ul>
+&lt;p>Here are some websites you defintely should take a look to learn how to become a good game designer.&lt;/p></description></item><item><title>Basic Floating Point Optimizations</title><link>https://bobblelaw.github.io/posts/floating-point-optimizations/</link><pubDate>Wed, 07 Aug 2019 09:08:11 +0800</pubDate><guid>https://bobblelaw.github.io/posts/floating-point-optimizations/</guid><description>&lt;p>Ever seen some people write &lt;code>f * 0.5&lt;/code> when they mean &lt;code>f / 2&lt;/code>?&lt;/p>
+&lt;p>Or if the compiler is able to optimize the &lt;code>f * 1.0&lt;/code> that you added for clarity?&lt;/p>
+&lt;p>Maybe you wrote &lt;code>f + f&lt;/code> instead of &lt;code>f * 2&lt;/code> as a clever optimization?&lt;/p>
+&lt;p>Modern compilers are basically magic, &lt;em>but do they actually perform these optimizations?&lt;/em>&lt;br>
+And, more importantly, &lt;em>why is &lt;code>f + 0.0&lt;/code> slower than &lt;code>f - 0.0&lt;/code>?&lt;/em>&lt;/p></description></item><item><title>Notes on Linux Development</title><link>https://bobblelaw.github.io/posts/notes-on-linux-dev/</link><pubDate>Fri, 17 Aug 2018 17:41:48 +0800</pubDate><guid>https://bobblelaw.github.io/posts/notes-on-linux-dev/</guid><description>&lt;h3 id="how-to-use-previous-version-of-gcc">How to use previous version of gcc&lt;/h3>
+&lt;p>This problem arises when we try to compile mex file in Matlab. It shows a &lt;strong>warning&lt;/strong> as&lt;/p>
+&lt;pre>&lt;code>Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. 
+The version currently supported with MEX is '6.4.x'. For a list of currently 
+supported compilers see
+&lt;/code>&lt;/pre>
+&lt;p>An easy solution is to do as followed (simply install the target version),&lt;/p>
+&lt;pre>&lt;code>sudo apt-get update &amp;amp;&amp;amp; \
+sudo apt-get install build-essential software-properties-common -y &amp;amp;&amp;amp; \
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y &amp;amp;&amp;amp; \
+sudo apt-get update &amp;amp;&amp;amp; \
+sudo apt-get install gcc-6 g++-6 -y &amp;amp;&amp;amp; \
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 &amp;amp;&amp;amp; \
+gcc -v
+&lt;/code>&lt;/pre>
+&lt;p>But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p></description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
+&lt;p>Here is a hello world code for Qt&lt;/p>
+&lt;pre tabindex="0">&lt;code>#include &amp;lt;QtCore/QCoreApplication&amp;gt;
+#include &amp;lt;QtCore/QDebug&amp;gt;
+int main(int argc, char** argv){
+ QCoreApplication app(argc, argv);
+ qDebug() &amp;lt;&amp;lt; &amp;#34;Hello, Qt!&amp;#34;;
+ app.exec()
+}
+&lt;/code>&lt;/pre>&lt;ol>
+&lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4
+&lt;/code>&lt;/pre>&lt;ol start="2">
+&lt;li>If we have qmake, all we need is&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>CONFIG +=qt
+QT -= gui
+SOURCE += main.cpp
+&lt;/code>&lt;/pre>&lt;ol start="3">
+&lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
+&lt;/ol>
+&lt;pre tabindex="0">&lt;code>PROJECT(example)
+FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED)
+INCLUDE(${QT_USE_FILE})
+ADD_EXECUTABLE(example main.cpp)
+&lt;/code>&lt;/pre>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
+&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item></channel></rss>
