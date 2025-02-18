@@ -1,0 +1,17 @@
+baseURL: https://bobblelaw.github.io
+title: Bobble Law
+theme: hugo-profile
+
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+enableRobotsTXT: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+      hardWraps: true
+
+pagination:
+  pageSize: 3

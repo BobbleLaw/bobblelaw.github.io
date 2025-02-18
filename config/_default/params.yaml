@@ -1,81 +1,363 @@
-mainSections:
-  - posts
-description: This is Bobble Law personal blog.
+title: "Bob Law"
+description: Bob Law's personal website
 
-repoEditURL:
+# The path to serve the static files from, default is "static"
+# staticPath: "static"
 
-dateFormat:
+# Icon in the window title
+favicon: "/logo.png"
 
-titleSeparator:
+# Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+# serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+# Note the lack of "" in true, it should be of boolean type.
+useBootstrapCDN: false
 
-# [$auto, light, dark]
-colorScheme: dark
+# If you want to load dynamically responsive images from Cloudinary
+# This requires your images to be uploaded + hosted on Cloudinary
+# Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+# cloudinaryCloudName: "YOUR_CLOUD_NAME"
 
-# Colors and fonts. Default style is data/styles/default.yaml/
-style:
+# Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+mathjax: false
 
-# [Person, Organization, LocalBusiness, Project, EducationalOrganization]
-siteType: Person
-icon: images/icon.png
-publisherName: Bob Law
-publisherLogo: 
+# Whether the fade animations on the home page will be enabled
+animate: true
 
-highlight:
-  handler: highlightjs
+# theme:
+#   # Default, false
+#   disableThemeToggle: true
+#   # Default, "dark"
+#   defaultTheme: "light"
 
-  highlightjs:
-    # highlight.js doesn't bundle every language. So please specify additional languages you want here.
-    # See https://github.com/highlightjs/cdn-release/tree/main/build/languages for available languages.
-    languages:
-      - cpp, swift, python
-    # See https://github.com/highlightjs/cdn-release/tree/main/build/styles for available styles.
-    style: base16/solarized-light
+font:
+  fontSize: 1rem
+  fontWeight: 400
+  lineHeight: 1.5
+  textAlign: left
 
-math:
-  handler: katex
+# Color preference
+# When using hex codes for colors, quotations must be used along with the '#' sign
+# color:
+#   textColor: "#343a40"
+#   secondaryTextColor: "#6c757d"
+#   textLinkColor: "#007bff"
+#   backgroundColor: "#eaedf0"
+#   secondaryBackgroundColor: "#64ffda1a"
+#   primaryColor: "#007bff"
+#   secondaryColor: "#f8f9fa"
 
-  # katex:
-  #   # Browse https://katex.org/docs/options.html to see the options available.
-  #   # KaTeX's Auto-render ignores `displayMode` property of the options, so this property will not work.
-  #   # You can list the key and value you want as below.
-  #   # Because Hugo's config params are case-insensitive, you need to add `-` or `_` before the uppercase letters.
-  #   # For example, `throwOnError` should be written as `throw-On-Error` or other acceptable formats.
-  #   leqno:
+# darkmode:
+#   textColor: "#e4e6eb"
+#   secondaryTextColor: "#b0b3b8"
+#   textLinkColor: "#ffffff"
+#   backgroundColor: "#18191a"
+#   secondaryBackgroundColor: "#212529"
+#   primaryColor: "#ffffff"
+#   secondaryColor: "#212529"
 
-comment:
-  # Options: disqus, commento, valine and utterances.
-  handler:
+# Navigation bar
+navbar:
+  # [ *left: ms-auto*, center: mx-auto, right: me-auto ]
+  align: ms-auto
 
-  # disqus:
-  #   shortname:
+  # Website logo
+  brandLogo: "/logo.png"
 
-  # utterances:
-  #   # Browse https://utteranc.es/ to see the options available.
-  #   # If you want the color scheme of utterances to follow eureka's, you can set `theme: eureka`.
-  #   repo:
-  #   issue-term:
-  #   theme:
+  # If show website logo in nav bar, default is *true*
+  # showBrandLogo: false
 
-  # commento:
-  #   # If self-hosting, please enter the url (e.g. https://commento.example.com) here. Otherwise leave empty.
-  #   url:
+  # Website title, default is the `params.title` variable
+  # brandName: "Hugo"
 
-  # valine:
-  #   # Browse https://valine.js.org/en/configuration.html to see the options available.
-  #   # You can list the key and value you want as below.
-  #   # Because Hugo's config params are case-insensitive, you need to add `-` or `_` before the uppercase letters.
-  #   # For example, `appId` should be written as `app-Id` or other acceptable formats.
-  #   app-Id:
-  #   app-Key:
+  disableSearch: false
 
-diagram:
-  handler: mermaid
+  # Search placeholder text, default "Ctrl + k to Search..."
+  searchPlaceholder: "Search..."
 
-  # mermaid:
-  #   # Browse https://mermaid-js.github.io/mermaid/#/Setup to see the options available.
-  #   # You can list the key and value you want as below.
-  #   # Because Hugo's config params are case-insensitive, you need to add `-` or `_` before the uppercase letters.
-  #   # For example, `diagramPadding` should be written as `diagram-Padding` or other acceptable formats.
-  #   theme: 
-  #   flowchart:
-  #     diagram-padding:
+  stickyNavBar:
+    enable: true
+    showOnScrollUp: true
+
+  enableSeparator: false
+
+  menus:
+    disableAbout: false
+    disableExperience: false
+    disableEducation: false
+    disableProjects: false
+    disableAchievements: false
+    disableContact: false
+
+# Contents on the home page. All of these sections are optional.
+
+# Hero
+hero:
+  enable: true
+
+  intro: "Hi, my name is Lo TszWan (try to read it in Cantonese), call me"
+  title: "Bob,"
+  subtitle: "a 3D Computer Vision Engineer. 🪩"
+  content: >
+    Passionate about algorithms that make machines understand space. 
+    I always believe 3D is beyond gaming, and immersive AR/VR will be the game changer in next gen human-computer interface.
+  image: /images/me_ny.png
+  # Make hero image circular, default false
+  # roundImage: true
+
+  # A customisable button
+  button:
+    enable: false
+    name: "Resume"
+    url: "#"
+    download: true
+    newPage: false
+  socialLinks:
+    fontAwesomeIcons:
+      - icon: fa-solid fa-at
+        url: mailto:bobble2579@hotmail.com
+      - icon: fa-brands fa-github
+        url: https://github.com/BobbleLaw
+      - icon: fa-brands fa-linkedin-in
+        url: https://www.linkedin.com/in/boblzy
+    # Custom icons
+    # customIcons:
+    #   - icon: /icon-sample.png
+    #     url: "https://example.com"
+
+# About
+about:
+  enable: true
+
+  title: "About"
+  image: "/images/me_notion.png"
+  content: >
+    Versatile computer vision engineer with 5+ years of cross-disciplinary 
+    experience in 3D reconstruction, SLAM pipelines, and sensor calibration 
+    solutions, combining advanced software development (C++, Qt) with hands-on 
+    hardware prototyping. 
+
+
+    Designed and delivered a scalable sensor calibration system deployed across 
+    100,000+ products in previous roles, demonstrating expertise in end-to-end 
+    system optimization. 
+
+
+    Skilled in bridging theoretical algorithms with practical hardware implementation, 
+    including structured light camera development and desktop application engineering.
+
+  skills:
+    enable: true
+    title: "Key Expertise:"
+    items:
+      - "3D Vision & SLAM: Structured light systems, 3D reconstruction, real-time sensor fusion."
+      - "Software Development: C++ (STL, Boost), Qt frameworks, pipeline optimization."
+      - "Hardware-Software Integration: Prototyping, calibration systems, deployment at scale."
+      - "Problem Solving: Industrial-grade solutions for manufacturing, robotics, or AR/VR applications."
+
+# Experience
+experience:
+  enable: true
+
+  # default "Experience"
+  # title: "Experience"
+
+  items:
+    - job: "Visual SLAM Engineer"
+      company: "Mammotion Tech"
+      companyUrl: "https://uk.mammotion.com"
+      date: "Feb 2023 - Feb 2025"
+      info:
+        enable: false
+        content: ""
+      featuredLink:
+        enable: false
+        name: "Example Project"
+        url: "https://example.com"
+      content: >
+        <ul>
+          <li>Scalable Calibration: Delivered end-to-end calibration systems 
+          deployed across 100,000+ robotic mowers, ensuring consistent accuracy 
+          in mass production.</li>
+          <li>Hardware-Software Synergy: Bridged algorithmic design (SLAM, 3D 
+          reconstruction) with practical implementation (Qt apps, sensor integration).</li>
+          <li>Full-Cycle Impact: Addressed challenges from factory calibration 
+          to post-deployment thermal effects, demonstrating versatility across 
+          the product lifecycle.</li>
+        </ul>
+
+    - job: "Computer Vision Engineer"
+      company: "Mech-Mind Robotics"
+      companyUrl: "https://www.mech-mind.com"
+      date: "Apr 2020 - Dec 2022"
+      info:
+        enable: false
+        content: ""
+      featuredLink:
+        enable: false
+        name: "Example Project"
+        url: "https://example.com"
+      content: >
+        <ul>
+          <li>Full-Stack Vision Expertise: Bridged algorithm design (GMM, point 
+          cloud registration) with industrial-grade software (C++, Qt, VTK) and 
+          sensor calibration.</li>
+          <li>Performance at Scale: Delivered solutions for processing 10M+ point 
+          clouds and calibrating mission-critical sensors in harsh environments.</li>
+          <li>Cross-Functional Impact: Transitioned seamlessly between algorithm 
+          R&D, software optimization, and robotics integration.</li>
+        </ul>
+
+    - job: "Research Intern"
+      company: "DJI Robotics"
+      companyUrl: "https://www.dji.com/uk"
+      date: "Jan 2020 - Aug 2020"
+      info:
+        enable: false
+        content: ""
+      featuredLink:
+        enable: false
+        name: "Example Project"
+        url: "https://example.com"
+      content: >
+        <ul>
+          <li>Bridging Research and Industry: Delivered PhD-level research into a functional prototype for real-world automation, demonstrating full-cycle R&D capability.</li>
+          <li>Multi-Modal Vision Systems: Combined structured light 3D sensing, point cloud processing, and monocular vision for adaptable pose estimation.</li>
+          <li>Hardware-Software Synergy: Designed sensor systems, algorithms, and user-facing tools to solve industrial automation challenges.</li>
+        </ul>
+
+# Education
+education:
+  enable: true
+
+  # default "Education"
+  # title: "Education"
+
+  index: false
+  items:
+    - title: "Master of Philosophy in Electronic and Computer Engineering"
+      school:
+        name: "Hong Kong University of Science and Technology"
+        url: "https://ece.hkust.edu.hk"
+      date: "Sep 2016 - Jan 2020"
+      # GPA: "4.0/4.2"
+      content: >
+        <u>Thesis</u>: Multi-Modality Structured Light System Design for Workpiece 3D Modelling and Pose Estimation, <i>Supervised by LI Zexiang</i>
+      featuredLink:
+        enable: false
+        name: "Sample project"
+        url: "https://example.com"
+
+    - title: "Bachelor of Engineering in Communication Engineering"
+      school:
+        name: "Southern University of Science and Technology"
+        url: "https://www.sustech.edu.cn/en/"
+      date: "Sep 2012 - July 2016"
+      # GPA: "3.6/4.0"
+      content: >
+        <u>Thesis</u>: Real-time 3D Reconstruction with Distributed Depth Sensors, <i>Supervised by HAO Qi</i>
+      featuredLink:
+        enable: false
+        name: "Sample project"
+        url: "https://example.com"
+
+# Projects
+projects:
+  enable: false
+
+  # default "Projects"
+  # title: "Projects"
+
+  items:
+    - title: Torchlight3D
+      image: /images/projects/torchlight.png
+      badges:
+        - "3D Reconstruction"
+        - "C++"
+      content: A C++ 3D reconstruction library.
+      links:
+        - icon: fab fa-github
+          url: https://github.com/orgs/Torchlight3D/torchlight3d
+
+    - title: Beacon Viewer
+      image: /images/projects/beacon.png
+      badges:
+        - "3D Viewer"
+        - "C++"
+      content: A portable 3D viewer.
+      links:
+        - icon: fab fa-github
+          url: https://github.com/orgs/Torchlight3D/beacon-viewer
+
+# Achievements
+achievements:
+  enable: false
+
+  # default "Achievements"
+  # title: "Achievements"
+
+  items:
+    - title: "Achievement Full Template"
+      content: What I did to achieve this.
+      url: https://example.com
+      image: /images/achievment.jpg
+    - title: "Achievement Brief Template"
+      content: What I did to achieve this.
+
+# Contact
+contact:
+  enable: false
+
+  # Default, "Contact"
+  # title: "Contact"
+
+  content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+  btnName: Mail me
+  btnLink: mailto:gurusabarisha@gmail.com
+  # formspree:
+  #   enable: true # `contact.email` value will be ignored
+  #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+  #   emailCaption: "Enter your email address"
+  #   messageCaption: "Enter your message here"
+  #   messageRows: 5
+
+footer:
+  recentPosts:
+    enable: false
+    path: "blogs"
+    count: 3
+    title: "Recent Posts"
+    disableFeaturedImage: false
+  socialNetworks:
+    github: "https://github.com/BobbleLaw"
+    linkedin: "https://www.linkedin.com/in/boblzy"
+
+# List pages like blogs and posts
+listPages:
+  disableFeaturedImage: false
+
+# Single pages like blog and post
+singlePages:
+  socialShare: true
+  readTime:
+    enable: true
+    content: "min read"
+  scrollprogress:
+    enable: true
+  tags:
+    openInNewTab: true
+
+# For translations
+terms:
+  read: "Read"
+  toc: "Table Of Contents"
+  copyright: "All rights reserved"
+  pageNotFound: "Page not found"
+  emailText: "Check out this site"
+
+datesFormat:
+  article: "Jan 2, 2025"
+  articleList: "Jan 2, 2025"
+  articleRecent: "Jan 2, 2025"
+# Custom scripts. Any custom scripts will be added before </body> tag.
+# <script type="text/javascript"><!-- custom script --></script>
+# customScripts:

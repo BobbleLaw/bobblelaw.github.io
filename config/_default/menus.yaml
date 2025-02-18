@@ -1,10 +1,13 @@
 main:
-  - name: About
-    url: '#about'
+  # Dropdown menu items after built-in menu items
+  - identifier: posts
+    name: Posts
+    url: /posts
     weight: 1
-  - name: Posts
-    url: /posts/
+  - identifier: tags
+    name: Tags
+    url: /tags
     weight: 2
   - name: Topics
-    url: /docs/
+    url: /topics
     weight: 3
