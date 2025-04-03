@@ -36,18 +36,18 @@ The goal of the P3P problem is: find the $P_{1}$, $P_{2}$ and $P_{3}$&rsquo;s co
 And PnP problems are the extended version: find $P_{i}$, $i = {1 \ldots n}$'s coordinates in the camera frame.
 To put it in a more algebraic form, we have the following equation:
 
-<div>
-\[\begin{aligned}
+```math
+\begin{aligned}
 P^{C}_{i} = R^{C}_{W} P_{i} + t^{C} \qquad i = {1 \ldots 3}
-\end{aligned}\]
-<div>
+\end{aligned}
+```
 
-<div>
-\[\begin{aligned}
+```math
+\begin{aligned}
 x ={}& a+b+c+{} \\
 &d+e+f+g
-\end{aligned}\]
-</div>
+\end{aligned}
+```
 
 
 where $R^{C}$ and $t^{C}$ are the relative transformation we are trying to solve (so that we can recover $P^{C}_{i}$, the positions of the points in the camera&rsquo;s frame).

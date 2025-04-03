@@ -19,9 +19,10 @@ draft: false
 
 Here is a hello world code for Qt
 
-```
+```cpp
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDebug>
+
 int main(int argc, char** argv){
     QCoreApplication app(argc, argv);
     qDebug() <<  "Hello, Qt!";
@@ -31,13 +32,13 @@ int main(int argc, char** argv){
 
 1. If we don't use IDE or qmake, but compiler, this is the command
 
-```
+```bash
 g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4
 ```
 
 2. If we have qmake, all we need is
 
-```
+```qmake
 CONFIG +=qt
 QT -= gui
 SOURCE += main.cpp
@@ -45,7 +46,7 @@ SOURCE += main.cpp
 
 3. If we use cmake, our old friend CMakeList.txt comes to stage
 
-```
+```cmake
 PROJECT(example)
 FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED)
 INCLUDE(${QT_USE_FILE})
