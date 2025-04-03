@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bobble Law</title><link>https://bobblelaw.github.io/</link><description>Recent content on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hand-eye Calibration</title><link>https://bobblelaw.github.io/topics/calibration/extrinsics/handeye/</link><pubDate>Sat, 19 Nov 2022 21:04:51 +0800</pubDate><guid>https://bobblelaw.github.io/topics/calibration/extrinsics/handeye/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>Camera Models</title><link>https://bobblelaw.github.io/topics/calibration/intrinsics/camera-model/</link><pubDate>Sat, 19 Nov 2022 21:03:21 +0800</pubDate><guid>https://bobblelaw.github.io/topics/calibration/intrinsics/camera-model/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>LINEMOD</title><link>https://bobblelaw.github.io/topics/detection/6d-pose-estimation/linemod/</link><pubDate>Fri, 18 Nov 2022 19:15:31 +0800</pubDate><guid>https://bobblelaw.github.io/topics/detection/6d-pose-estimation/linemod/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>Detection</title><link>https://bobblelaw.github.io/topics/detection/registration/point-pair-feature/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/detection/registration/point-pair-feature/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>SLAM Interview FAQs</title><link>https://bobblelaw.github.io/posts/slam-interview-faq/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/posts/slam-interview-faq/</guid><description>&lt;h2 id="linear-algebra">Linear Algebra&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bobble Law</title><link>https://bobblelaw.github.io/</link><description>Recent content on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hand-eye Calibration</title><link>https://bobblelaw.github.io/topics/calibration/extrinsics/handeye/</link><pubDate>Sat, 19 Nov 2022 21:04:51 +0800</pubDate><guid>https://bobblelaw.github.io/topics/calibration/extrinsics/handeye/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>Camera Models</title><link>https://bobblelaw.github.io/topics/calibration/intrinsics/camera-model/</link><pubDate>Sat, 19 Nov 2022 21:03:21 +0800</pubDate><guid>https://bobblelaw.github.io/topics/calibration/intrinsics/camera-model/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>LINEMOD</title><link>https://bobblelaw.github.io/topics/detection/6d-pose-estimation/linemod/</link><pubDate>Fri, 18 Nov 2022 19:15:31 +0800</pubDate><guid>https://bobblelaw.github.io/topics/detection/6d-pose-estimation/linemod/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>Detection</title><link>https://bobblelaw.github.io/topics/detection/registration/point-pair-feature/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/detection/registration/point-pair-feature/</guid><description>&lt;p>&lt;em>TODO&lt;/em>&lt;/p></description></item><item><title>SLAM Interview Questions</title><link>https://bobblelaw.github.io/topics/interview/slam-interview/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/slam-interview/</guid><description>&lt;h2 id="linear-algebra">Linear Algebra&lt;/h2>
 &lt;ul>
 &lt;li>如何求解 $Ax=b$？SVD和QR分解哪个更快？&lt;/li>
 &lt;/ul>
@@ -154,32 +154,379 @@ gcc -v
 &lt;/code>&lt;/pre>
 &lt;p>But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p></description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
 &lt;p>Here is a hello world code for Qt&lt;/p>
-&lt;pre tabindex="0">&lt;code>#include &amp;lt;QtCore/QCoreApplication&amp;gt;
-#include &amp;lt;QtCore/QDebug&amp;gt;
-int main(int argc, char** argv){
- QCoreApplication app(argc, argv);
- qDebug() &amp;lt;&amp;lt; &amp;#34;Hello, Qt!&amp;#34;;
- app.exec()
-}
-&lt;/code>&lt;/pre>&lt;ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QDebug&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> argc, &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">**&lt;/span> argv){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> QCoreApplication app(argc, argv);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> qDebug() &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello, Qt!&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> app.exec()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
 &lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4
-&lt;/code>&lt;/pre>&lt;ol start="2">
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>g++ main.cpp -I&lt;span style="color:#ae81ff">\\&lt;/span>path&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\i&lt;/span>nclude -o main -L&lt;span style="color:#ae81ff">\p&lt;/span>ath&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\l&lt;/span>ib -lQtCore4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>If we have qmake, all we need is&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>CONFIG +=qt
+&lt;pre tabindex="0">&lt;code class="language-qmake" data-lang="qmake">CONFIG +=qt
 QT -= gui
 SOURCE += main.cpp
 &lt;/code>&lt;/pre>&lt;ol start="3">
 &lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>PROJECT(example)
-FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED)
-INCLUDE(${QT_USE_FILE})
-ADD_EXECUTABLE(example main.cpp)
-&lt;/code>&lt;/pre>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
-&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/01-devices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/01-devices/</guid><description>&lt;h1 id="devices">Devices&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cmake" data-lang="cmake">&lt;span style="display:flex;">&lt;span>PROJECT(&lt;span style="color:#e6db74">example&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>FIND_PACKAGE(&lt;span style="color:#e6db74">Qt4&lt;/span> &lt;span style="color:#e6db74">COMPONENTS&lt;/span> &lt;span style="color:#e6db74">QtCore&lt;/span> &lt;span style="color:#e6db74">REQUIRED&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>INCLUDE(&lt;span style="color:#f92672">${&lt;/span>QT_USE_FILE&lt;span style="color:#f92672">}&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>ADD_EXECUTABLE(&lt;span style="color:#e6db74">example&lt;/span> &lt;span style="color:#e6db74">main.cpp&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
+&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/posts/emojis-in-markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/posts/emojis-in-markdown/</guid><description>&lt;p>People&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:bowtie: &lt;code>:bowtie:&lt;/code>&lt;/th>
+ &lt;th>:smile: &lt;code>:smile:&lt;/code>&lt;/th>
+ &lt;th>:laughing: &lt;code>:laughing:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:blush: &lt;code>:blush:&lt;/code>&lt;/td>
+ &lt;td>:smiley: &lt;code>:smiley:&lt;/code>&lt;/td>
+ &lt;td>:relaxed: &lt;code>:relaxed:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:smirk: &lt;code>:smirk:&lt;/code>&lt;/td>
+ &lt;td>:heart_eyes: &lt;code>:heart_eyes:&lt;/code>&lt;/td>
+ &lt;td>:kissing_heart: &lt;code>:kissing_heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kissing_closed_eyes: &lt;code>:kissing_closed_eyes:&lt;/code>&lt;/td>
+ &lt;td>:flushed: &lt;code>:flushed:&lt;/code>&lt;/td>
+ &lt;td>:relieved: &lt;code>:relieved:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:satisfied: &lt;code>:satisfied:&lt;/code>&lt;/td>
+ &lt;td>:grin: &lt;code>:grin:&lt;/code>&lt;/td>
+ &lt;td>:wink: &lt;code>:wink:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:stuck_out_tongue_winking_eye: &lt;code>:stuck_out_tongue_winking_eye:&lt;/code>&lt;/td>
+ &lt;td>:stuck_out_tongue_closed_eyes: &lt;code>:stuck_out_tongue_closed_eyes:&lt;/code>&lt;/td>
+ &lt;td>:grinning: &lt;code>:grinning:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kissing: &lt;code>:kissing:&lt;/code>&lt;/td>
+ &lt;td>:kissing_smiling_eyes: &lt;code>:kissing_smiling_eyes:&lt;/code>&lt;/td>
+ &lt;td>:stuck_out_tongue: &lt;code>:stuck_out_tongue:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sleeping: &lt;code>:sleeping:&lt;/code>&lt;/td>
+ &lt;td>:worried: &lt;code>:worried:&lt;/code>&lt;/td>
+ &lt;td>:frowning: &lt;code>:frowning:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:anguished: &lt;code>:anguished:&lt;/code>&lt;/td>
+ &lt;td>:open_mouth: &lt;code>:open_mouth:&lt;/code>&lt;/td>
+ &lt;td>:grimacing: &lt;code>:grimacing:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:confused: &lt;code>:confused:&lt;/code>&lt;/td>
+ &lt;td>:hushed: &lt;code>:hushed:&lt;/code>&lt;/td>
+ &lt;td>:expressionless: &lt;code>:expressionless:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:unamused: &lt;code>:unamused:&lt;/code>&lt;/td>
+ &lt;td>:sweat_smile: &lt;code>:sweat_smile:&lt;/code>&lt;/td>
+ &lt;td>:sweat: &lt;code>:sweat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:disappointed_relieved: &lt;code>:disappointed_relieved:&lt;/code>&lt;/td>
+ &lt;td>:weary: &lt;code>:weary:&lt;/code>&lt;/td>
+ &lt;td>:pensive: &lt;code>:pensive:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:disappointed: &lt;code>:disappointed:&lt;/code>&lt;/td>
+ &lt;td>:confounded: &lt;code>:confounded:&lt;/code>&lt;/td>
+ &lt;td>:fearful: &lt;code>:fearful:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cold_sweat: &lt;code>:cold_sweat:&lt;/code>&lt;/td>
+ &lt;td>:persevere: &lt;code>:persevere:&lt;/code>&lt;/td>
+ &lt;td>:cry: &lt;code>:cry:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sob: &lt;code>:sob:&lt;/code>&lt;/td>
+ &lt;td>:joy: &lt;code>:joy:&lt;/code>&lt;/td>
+ &lt;td>:astonished: &lt;code>:astonished:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scream: &lt;code>:scream:&lt;/code>&lt;/td>
+ &lt;td>:neckbeard: &lt;code>:neckbeard:&lt;/code>&lt;/td>
+ &lt;td>:tired_face: &lt;code>:tired_face:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:angry: &lt;code>:angry:&lt;/code>&lt;/td>
+ &lt;td>:rage: &lt;code>:rage:&lt;/code>&lt;/td>
+ &lt;td>:triumph: &lt;code>:triumph:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sleepy: &lt;code>:sleepy:&lt;/code>&lt;/td>
+ &lt;td>:yum: &lt;code>:yum:&lt;/code>&lt;/td>
+ &lt;td>:mask: &lt;code>:mask:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sunglasses: &lt;code>:sunglasses:&lt;/code>&lt;/td>
+ &lt;td>:dizzy_face: &lt;code>:dizzy_face:&lt;/code>&lt;/td>
+ &lt;td>:imp: &lt;code>:imp:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:smiling_imp: &lt;code>:smiling_imp:&lt;/code>&lt;/td>
+ &lt;td>:neutral_face: &lt;code>:neutral_face:&lt;/code>&lt;/td>
+ &lt;td>:no_mouth: &lt;code>:no_mouth:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:innocent: &lt;code>:innocent:&lt;/code>&lt;/td>
+ &lt;td>:alien: &lt;code>:alien:&lt;/code>&lt;/td>
+ &lt;td>:yellow_heart: &lt;code>:yellow_heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:blue_heart: &lt;code>:blue_heart:&lt;/code>&lt;/td>
+ &lt;td>:purple_heart: &lt;code>:purple_heart:&lt;/code>&lt;/td>
+ &lt;td>:heart: &lt;code>:heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:green_heart: &lt;code>:green_heart:&lt;/code>&lt;/td>
+ &lt;td>:broken_heart: &lt;code>:broken_heart:&lt;/code>&lt;/td>
+ &lt;td>:heartbeat: &lt;code>:heartbeat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heartpulse: &lt;code>:heartpulse:&lt;/code>&lt;/td>
+ &lt;td>:two_hearts: &lt;code>:two_hearts:&lt;/code>&lt;/td>
+ &lt;td>:revolving_hearts: &lt;code>:revolving_hearts:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cupid: &lt;code>:cupid:&lt;/code>&lt;/td>
+ &lt;td>:sparkling_heart: &lt;code>:sparkling_heart:&lt;/code>&lt;/td>
+ &lt;td>:sparkles: &lt;code>:sparkles:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:star: &lt;code>:star:&lt;/code>&lt;/td>
+ &lt;td>:star2: &lt;code>:star2:&lt;/code>&lt;/td>
+ &lt;td>:dizzy: &lt;code>:dizzy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:boom: &lt;code>:boom:&lt;/code>&lt;/td>
+ &lt;td>:collision: &lt;code>:collision:&lt;/code>&lt;/td>
+ &lt;td>:anger: &lt;code>:anger:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:exclamation: &lt;code>:exclamation:&lt;/code>&lt;/td>
+ &lt;td>:question: &lt;code>:question:&lt;/code>&lt;/td>
+ &lt;td>:grey_exclamation: &lt;code>:grey_exclamation:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:grey_question: &lt;code>:grey_question:&lt;/code>&lt;/td>
+ &lt;td>:zzz: &lt;code>:zzz:&lt;/code>&lt;/td>
+ &lt;td>:dash: &lt;code>:dash:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sweat_drops: &lt;code>:sweat_drops:&lt;/code>&lt;/td>
+ &lt;td>:notes: &lt;code>:notes:&lt;/code>&lt;/td>
+ &lt;td>:musical_note: &lt;code>:musical_note:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fire: &lt;code>:fire:&lt;/code>&lt;/td>
+ &lt;td>:hankey: &lt;code>:hankey:&lt;/code>&lt;/td>
+ &lt;td>:poop: &lt;code>:poop:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:shit: &lt;code>:shit:&lt;/code>&lt;/td>
+ &lt;td>:+1: &lt;code>:+1:&lt;/code>&lt;/td>
+ &lt;td>:thumbsup: &lt;code>:thumbsup:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:-1: &lt;code>:-1:&lt;/code>&lt;/td>
+ &lt;td>:thumbsdown: &lt;code>:thumbsdown:&lt;/code>&lt;/td>
+ &lt;td>:ok_hand: &lt;code>:ok_hand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:punch: &lt;code>:punch:&lt;/code>&lt;/td>
+ &lt;td>:facepunch: &lt;code>:facepunch:&lt;/code>&lt;/td>
+ &lt;td>:fist: &lt;code>:fist:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:v: &lt;code>:v:&lt;/code>&lt;/td>
+ &lt;td>:wave: &lt;code>:wave:&lt;/code>&lt;/td>
+ &lt;td>:hand: &lt;code>:hand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:raised_hand: &lt;code>:raised_hand:&lt;/code>&lt;/td>
+ &lt;td>:open_hands: &lt;code>:open_hands:&lt;/code>&lt;/td>
+ &lt;td>:point_up: &lt;code>:point_up:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:point_down: &lt;code>:point_down:&lt;/code>&lt;/td>
+ &lt;td>:point_left: &lt;code>:point_left:&lt;/code>&lt;/td>
+ &lt;td>:point_right: &lt;code>:point_right:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:raised_hands: &lt;code>:raised_hands:&lt;/code>&lt;/td>
+ &lt;td>:pray: &lt;code>:pray:&lt;/code>&lt;/td>
+ &lt;td>:point_up_2: &lt;code>:point_up_2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clap: &lt;code>:clap:&lt;/code>&lt;/td>
+ &lt;td>:muscle: &lt;code>:muscle:&lt;/code>&lt;/td>
+ &lt;td>:metal: &lt;code>:metal:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fu: &lt;code>:fu:&lt;/code>&lt;/td>
+ &lt;td>:walking: &lt;code>:walking:&lt;/code>&lt;/td>
+ &lt;td>:runner: &lt;code>:runner:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:running: &lt;code>:running:&lt;/code>&lt;/td>
+ &lt;td>:couple: &lt;code>:couple:&lt;/code>&lt;/td>
+ &lt;td>:family: &lt;code>:family:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:two_men_holding_hands: &lt;code>:two_men_holding_hands:&lt;/code>&lt;/td>
+ &lt;td>:two_women_holding_hands: &lt;code>:two_women_holding_hands:&lt;/code>&lt;/td>
+ &lt;td>:dancer: &lt;code>:dancer:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dancers: &lt;code>:dancers:&lt;/code>&lt;/td>
+ &lt;td>:ok_woman: &lt;code>:ok_woman:&lt;/code>&lt;/td>
+ &lt;td>:no_good: &lt;code>:no_good:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:information_desk_person: &lt;code>:information_desk_person:&lt;/code>&lt;/td>
+ &lt;td>:raising_hand: &lt;code>:raising_hand:&lt;/code>&lt;/td>
+ &lt;td>:bride_with_veil: &lt;code>:bride_with_veil:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:person_with_pouting_face: &lt;code>:person_with_pouting_face:&lt;/code>&lt;/td>
+ &lt;td>:person_frowning: &lt;code>:person_frowning:&lt;/code>&lt;/td>
+ &lt;td>:bow: &lt;code>:bow:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:couplekiss: &lt;code>:couplekiss:&lt;/code>&lt;/td>
+ &lt;td>:couple_with_heart: &lt;code>:couple_with_heart:&lt;/code>&lt;/td>
+ &lt;td>:massage: &lt;code>:massage:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:haircut: &lt;code>:haircut:&lt;/code>&lt;/td>
+ &lt;td>:nail_care: &lt;code>:nail_care:&lt;/code>&lt;/td>
+ &lt;td>:boy: &lt;code>:boy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:girl: &lt;code>:girl:&lt;/code>&lt;/td>
+ &lt;td>:woman: &lt;code>:woman:&lt;/code>&lt;/td>
+ &lt;td>:man: &lt;code>:man:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:baby: &lt;code>:baby:&lt;/code>&lt;/td>
+ &lt;td>:older_woman: &lt;code>:older_woman:&lt;/code>&lt;/td>
+ &lt;td>:older_man: &lt;code>:older_man:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:person_with_blond_hair: &lt;code>:person_with_blond_hair:&lt;/code>&lt;/td>
+ &lt;td>:man_with_gua_pi_mao: &lt;code>:man_with_gua_pi_mao:&lt;/code>&lt;/td>
+ &lt;td>:man_with_turban: &lt;code>:man_with_turban:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:construction_worker: &lt;code>:construction_worker:&lt;/code>&lt;/td>
+ &lt;td>:cop: &lt;code>:cop:&lt;/code>&lt;/td>
+ &lt;td>:angel: &lt;code>:angel:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:princess: &lt;code>:princess:&lt;/code>&lt;/td>
+ &lt;td>:smiley_cat: &lt;code>:smiley_cat:&lt;/code>&lt;/td>
+ &lt;td>:smile_cat: &lt;code>:smile_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heart_eyes_cat: &lt;code>:heart_eyes_cat:&lt;/code>&lt;/td>
+ &lt;td>:kissing_cat: &lt;code>:kissing_cat:&lt;/code>&lt;/td>
+ &lt;td>:smirk_cat: &lt;code>:smirk_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scream_cat: &lt;code>:scream_cat:&lt;/code>&lt;/td>
+ &lt;td>:crying_cat_face: &lt;code>:crying_cat_face:&lt;/code>&lt;/td>
+ &lt;td>:joy_cat: &lt;code>:joy_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pouting_cat: &lt;code>:pouting_cat:&lt;/code>&lt;/td>
+ &lt;td>:japanese_ogre: &lt;code>:japanese_ogre:&lt;/code>&lt;/td>
+ &lt;td>:japanese_goblin: &lt;code>:japanese_goblin:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:see_no_evil: &lt;code>:see_no_evil:&lt;/code>&lt;/td>
+ &lt;td>:hear_no_evil: &lt;code>:hear_no_evil:&lt;/code>&lt;/td>
+ &lt;td>:speak_no_evil: &lt;code>:speak_no_evil:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:guardsman: &lt;code>:guardsman:&lt;/code>&lt;/td>
+ &lt;td>:skull: &lt;code>:skull:&lt;/code>&lt;/td>
+ &lt;td>:feet: &lt;code>:feet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:lips: &lt;code>:lips:&lt;/code>&lt;/td>
+ &lt;td>:kiss: &lt;code>:kiss:&lt;/code>&lt;/td>
+ &lt;td>:droplet: &lt;code>:droplet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ear: &lt;code>:ear:&lt;/code>&lt;/td>
+ &lt;td>:eyes: &lt;code>:eyes:&lt;/code>&lt;/td>
+ &lt;td>:nose: &lt;code>:nose:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tongue: &lt;code>:tongue:&lt;/code>&lt;/td>
+ &lt;td>:love_letter: &lt;code>:love_letter:&lt;/code>&lt;/td>
+ &lt;td>:bust_in_silhouette: &lt;code>:bust_in_silhouette:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:busts_in_silhouette: &lt;code>:busts_in_silhouette:&lt;/code>&lt;/td>
+ &lt;td>:speech_balloon: &lt;code>:speech_balloon:&lt;/code>&lt;/td>
+ &lt;td>:thought_balloon: &lt;code>:thought_balloon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:feelsgood: &lt;code>:feelsgood:&lt;/code>&lt;/td>
+ &lt;td>:finnadie: &lt;code>:finnadie:&lt;/code>&lt;/td>
+ &lt;td>:goberserk: &lt;code>:goberserk:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:godmode: &lt;code>:godmode:&lt;/code>&lt;/td>
+ &lt;td>:hurtrealbad: &lt;code>:hurtrealbad:&lt;/code>&lt;/td>
+ &lt;td>:rage1: &lt;code>:rage1:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rage2: &lt;code>:rage2:&lt;/code>&lt;/td>
+ &lt;td>:rage3: &lt;code>:rage3:&lt;/code>&lt;/td>
+ &lt;td>:rage4: &lt;code>:rage4:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:suspect: &lt;code>:suspect:&lt;/code>&lt;/td>
+ &lt;td>:trollface: &lt;code>:trollface:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Nature&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</guid><description>&lt;h1 id="leetcode-top-interview-questions">LeetCode Top Interview Questions&lt;/h1>
+&lt;h2 id="top-150">Top 150&lt;/h2>
+&lt;h3 id="array--string">Array &amp;amp; String&lt;/h3>
+&lt;h4 id="88-merge-sorted-array">88. Merge Sorted Array&lt;/h4>
+&lt;ul>
+&lt;li>Two pointers, all start from the end&lt;/li>
+&lt;li>Iterate from the end as well&lt;/li>
+&lt;li>Copy the rest&lt;/li>
+&lt;/ul>
+&lt;h4 id="27-remove-item">27. Remove Item&lt;/h4>
+&lt;p>two pointers, one tracks valid number, one iterates.&lt;/p>
+&lt;h4 id="26-remove-duplicates-from-sorted-array">26. Remove Duplicates from Sorted Array&lt;/h4>
+&lt;p>two pointers, one tracks concecutive duplicated, one iterates.&lt;/p>
+&lt;h4 id="80-remove-duplicates-from-sorted-array-ii">80. Remove Duplicates from Sorted Array II&lt;/h4>
+&lt;p>Similar to 26, the starting point and &lt;code>if&lt;/code> condition are different. Generalize to max k duplicated.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/01-devices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/01-devices/</guid><description>&lt;h1 id="devices">Devices&lt;/h1>
 &lt;p>To get started, we will learn about &lt;strong>devices&lt;/strong>.&lt;/p>
 &lt;p>A device is an abstraction of the graphics processing unit, or GPU, inside your iPhone or Mac. The GPU is a separate processor from the CPU and is specialized for different kinds of work. A big part of our job here is learning what GPUs are good at and how to program them.&lt;/p>
 &lt;p>In code, a device is an object that conforms to the MTLDevice protocol. This protocol includes methods for allocating GPU resources, as well as many other kinds of objects. We will see many of these as we progress through our exploration of Metal.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/02-buffer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/02-buffer/</guid><description>&lt;h1 id="buffer">Buffer&lt;/h1>
@@ -197,4 +544,12 @@ ADD_EXECUTABLE(example main.cpp)
 &lt;p>In the previous article, we looked at how to start and end render passes by creating a render command encoder from a view’s render pass descriptor. We also saw how the act of executing a render pass can clear the contents of a texture to a solid color. Finally, we discussed how to present the cleared texture in the view.&lt;/p>
 &lt;p>We are now ready to start writing code that runs on the GPU.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/06-pipelines/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/06-pipelines/</guid><description>&lt;h1 id="pipelines">Pipelines&lt;/h1>
 &lt;p>Let’s recap what we’ve learned in the first five installments of this series.&lt;/p>
-&lt;p>First, we learned about how to get a device object, which lets us allocate resources and create various other objects related to command submission. Then, we talked about creating buffers, a type of resource that holds the data to be used by the GPU in fulfilling our commands. Then, we talked about how to encode commands and submit them to the GPU for execution. Last time, we started to get acquainted with shaders, the programs we write that run on the GPU itself.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/vision/demosaic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/vision/demosaic/</guid><description/></item></channel></rss>
+&lt;p>First, we learned about how to get a device object, which lets us allocate resources and create various other objects related to command submission. Then, we talked about creating buffers, a type of resource that holds the data to be used by the GPU in fulfilling our commands. Then, we talked about how to encode commands and submit them to the GPU for execution. Last time, we started to get acquainted with shaders, the programs we write that run on the GPU itself.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/07-drawing-in-2d/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/07-drawing-in-2d/</guid><description>&lt;h1 id="drawing-in-2d">Drawing in 2D&lt;/h1>
+&lt;p>Last time, we looked at how to create compute pipeline states from kernel functions so we can perform arbitrary computation on the GPU. This time, we’ll focus on a different kind of pipeline state: &lt;em>render pipeline states&lt;/em>.&lt;/p>
+&lt;p>When you have to manage a lot of the moving parts yourself, rendering is a pretty complex task. By now, you probably appreciate just how much more work it is to do anything with Metal than other graphics APIs. Maybe you’ve also gotten a glimpse of how much more powerful and flexible Metal is as a GPU-oriented API. Or maybe not. But pretty soon, you’ll have a much better feel for your latent Metal superpowers.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/08-vertex-attributes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/08-vertex-attributes/</guid><description>&lt;h1 id="vertex-attribute">Vertex Attribute&lt;/h1>
+&lt;p>In the previous article, we crossed the threshold from learning foundational concepts of Metal into actually drawing shapes with the GPU. In this article, we will augment the previous example by adding a new &lt;em>attribute&lt;/em> to our vertices — color — and learn how to simplify our vertex function signatures by using &lt;em>vertex descriptors&lt;/em>.&lt;/p>
+&lt;h2 id="attributes-beyond-vertex-positions">Attributes: Beyond Vertex Positions&lt;/h2>
+&lt;p>When writing our first vertex function, we took two parameters: a pointer to a buffer containing two-element float vectors (positions), and a vertex ID:&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/09-constants/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/09-constants/</guid><description>&lt;h1 id="constants">Constants&lt;/h1>
+&lt;p>Last time, we talked about how to add attributes to vertices so we could fill our triangle with smoothly shaded colors. In this article we will talk about how to pass constant data to shaders, which remains the same for all vertices in a draw call.&lt;/p>
+&lt;h2 id="constant-data">Constant Data&lt;/h2>
+&lt;p>We call this data &lt;em>constant&lt;/em> data because it doesn’t change between invocations of the shader function. This contrasts with both attribute data, which can change per-vertex, and interpolated data, which can change per-fragment. Some APIs (notably OpenGL) call these types of constant values &lt;em>uniforms&lt;/em>, while most others use the term &lt;em>constants&lt;/em>.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/vision/demosaic/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/vision/demosaic/</guid><description/></item></channel></rss>

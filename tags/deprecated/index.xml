@@ -36,29 +36,30 @@ gcc -v
 &lt;/code>&lt;/pre>
 &lt;p>But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p></description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
 &lt;p>Here is a hello world code for Qt&lt;/p>
-&lt;pre tabindex="0">&lt;code>#include &amp;lt;QtCore/QCoreApplication&amp;gt;
-#include &amp;lt;QtCore/QDebug&amp;gt;
-int main(int argc, char** argv){
- QCoreApplication app(argc, argv);
- qDebug() &amp;lt;&amp;lt; &amp;#34;Hello, Qt!&amp;#34;;
- app.exec()
-}
-&lt;/code>&lt;/pre>&lt;ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QDebug&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> argc, &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">**&lt;/span> argv){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> QCoreApplication app(argc, argv);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> qDebug() &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello, Qt!&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> app.exec()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
 &lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4
-&lt;/code>&lt;/pre>&lt;ol start="2">
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>g++ main.cpp -I&lt;span style="color:#ae81ff">\\&lt;/span>path&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\i&lt;/span>nclude -o main -L&lt;span style="color:#ae81ff">\p&lt;/span>ath&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\l&lt;/span>ib -lQtCore4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>If we have qmake, all we need is&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>CONFIG +=qt
+&lt;pre tabindex="0">&lt;code class="language-qmake" data-lang="qmake">CONFIG +=qt
 QT -= gui
 SOURCE += main.cpp
 &lt;/code>&lt;/pre>&lt;ol start="3">
 &lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>PROJECT(example)
-FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED)
-INCLUDE(${QT_USE_FILE})
-ADD_EXECUTABLE(example main.cpp)
-&lt;/code>&lt;/pre>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cmake" data-lang="cmake">&lt;span style="display:flex;">&lt;span>PROJECT(&lt;span style="color:#e6db74">example&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>FIND_PACKAGE(&lt;span style="color:#e6db74">Qt4&lt;/span> &lt;span style="color:#e6db74">COMPONENTS&lt;/span> &lt;span style="color:#e6db74">QtCore&lt;/span> &lt;span style="color:#e6db74">REQUIRED&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>INCLUDE(&lt;span style="color:#f92672">${&lt;/span>QT_USE_FILE&lt;span style="color:#f92672">}&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>ADD_EXECUTABLE(&lt;span style="color:#e6db74">example&lt;/span> &lt;span style="color:#e6db74">main.cpp&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
 &lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item></channel></rss>

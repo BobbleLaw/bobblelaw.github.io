@@ -1,47 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Bobble Law</title><link>https://bobblelaw.github.io/posts/</link><description>Recent content in Posts on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>SLAM Interview FAQs</title><link>https://bobblelaw.github.io/posts/slam-interview-faq/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/posts/slam-interview-faq/</guid><description>&lt;h2 id="linear-algebra">Linear Algebra&lt;/h2>
-&lt;ul>
-&lt;li>如何求解 $Ax=b$？SVD和QR分解哪个更快？&lt;/li>
-&lt;/ul>
-&lt;p>Depend on the rank of $[A | b]$.&lt;/p>
-&lt;p>Solution include QR decomposition, LTLD decomposition, Cholesky decomposition and SVD decomposition.&lt;/p>
-&lt;h2 id="optimization-basics">Optimization Basics&lt;/h2>
-&lt;ul>
-&lt;li>Explain Gradient descent, Gaussian-Newton, LM, Dogleg&lt;/li>
-&lt;/ul>
-&lt;h2 id="computer-vision-basics">Computer Vision Basics&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>SIFT vs. SURF&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Parallax and depth&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>$ \frac{parallax}{baseline} = \frac{focal~ length}{depth} $&lt;/p>
-&lt;ul>
-&lt;li>Edge detection algorithms&lt;/li>
-&lt;/ul>
-&lt;p>Filtering, augmentation, and detection. Gaussian filter and some handcrafted kernel to locate pixel gradient.&lt;/p>
-&lt;ol>
-&lt;li>Canny&lt;/li>
-&lt;li>Sobel&lt;/li>
-&lt;li>Laplacian&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>Hoffman transform&lt;/li>
-&lt;/ul>
-&lt;h2 id="3d-basics">3D Basics&lt;/h2>
-&lt;ul>
-&lt;li>如何对匹配好的点做进一步的处理，已到达更好的效果？&lt;/li>
-&lt;/ul>
-&lt;ol>
-&lt;li>Compare the distance with experienced threshold&lt;/li>
-&lt;li>RANSAC&lt;/li>
-&lt;li>KNN&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>
-&lt;p>Explain RANSAC&lt;/p></description></item><item><title>rvalue ref-qualified assignment operators</title><link>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</link><pubDate>Sun, 22 Aug 2021 14:53:21 +0800</pubDate><guid>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</guid><description>&lt;p>The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Bobble Law</title><link>https://bobblelaw.github.io/posts/</link><description>Recent content in Posts on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>rvalue ref-qualified assignment operators</title><link>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</link><pubDate>Sun, 22 Aug 2021 14:53:21 +0800</pubDate><guid>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</guid><description>&lt;p>The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">struct&lt;/span> &lt;span style="color:#a6e22e">foo&lt;/span> { ... };
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo &lt;span style="color:#a6e22e">get_my_foo&lt;/span>() { ... }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -154,29 +111,362 @@ gcc -v
 &lt;/code>&lt;/pre>
 &lt;p>But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p></description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
 &lt;p>Here is a hello world code for Qt&lt;/p>
-&lt;pre tabindex="0">&lt;code>#include &amp;lt;QtCore/QCoreApplication&amp;gt;
-#include &amp;lt;QtCore/QDebug&amp;gt;
-int main(int argc, char** argv){
- QCoreApplication app(argc, argv);
- qDebug() &amp;lt;&amp;lt; &amp;#34;Hello, Qt!&amp;#34;;
- app.exec()
-}
-&lt;/code>&lt;/pre>&lt;ol>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QDebug&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> argc, &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">**&lt;/span> argv){
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> QCoreApplication app(argc, argv);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> qDebug() &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello, Qt!&amp;#34;&lt;/span>;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> app.exec()
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
 &lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>g++ main.cpp -I\\path\to\Qt\5.13.0\include -o main -L\path\to\Qt\5.13.0\lib -lQtCore4
-&lt;/code>&lt;/pre>&lt;ol start="2">
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>g++ main.cpp -I&lt;span style="color:#ae81ff">\\&lt;/span>path&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\i&lt;/span>nclude -o main -L&lt;span style="color:#ae81ff">\p&lt;/span>ath&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\l&lt;/span>ib -lQtCore4
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>If we have qmake, all we need is&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>CONFIG +=qt
+&lt;pre tabindex="0">&lt;code class="language-qmake" data-lang="qmake">CONFIG +=qt
 QT -= gui
 SOURCE += main.cpp
 &lt;/code>&lt;/pre>&lt;ol start="3">
 &lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
 &lt;/ol>
-&lt;pre tabindex="0">&lt;code>PROJECT(example)
-FIND_PACKAGE(Qt4 COMPONENTS QtCore REQUIRED)
-INCLUDE(${QT_USE_FILE})
-ADD_EXECUTABLE(example main.cpp)
-&lt;/code>&lt;/pre>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
-&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item></channel></rss>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cmake" data-lang="cmake">&lt;span style="display:flex;">&lt;span>PROJECT(&lt;span style="color:#e6db74">example&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>FIND_PACKAGE(&lt;span style="color:#e6db74">Qt4&lt;/span> &lt;span style="color:#e6db74">COMPONENTS&lt;/span> &lt;span style="color:#e6db74">QtCore&lt;/span> &lt;span style="color:#e6db74">REQUIRED&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>INCLUDE(&lt;span style="color:#f92672">${&lt;/span>QT_USE_FILE&lt;span style="color:#f92672">}&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>ADD_EXECUTABLE(&lt;span style="color:#e6db74">example&lt;/span> &lt;span style="color:#e6db74">main.cpp&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
+&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/posts/emojis-in-markdown/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/posts/emojis-in-markdown/</guid><description>&lt;p>People&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:bowtie: &lt;code>:bowtie:&lt;/code>&lt;/th>
+ &lt;th>:smile: &lt;code>:smile:&lt;/code>&lt;/th>
+ &lt;th>:laughing: &lt;code>:laughing:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:blush: &lt;code>:blush:&lt;/code>&lt;/td>
+ &lt;td>:smiley: &lt;code>:smiley:&lt;/code>&lt;/td>
+ &lt;td>:relaxed: &lt;code>:relaxed:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:smirk: &lt;code>:smirk:&lt;/code>&lt;/td>
+ &lt;td>:heart_eyes: &lt;code>:heart_eyes:&lt;/code>&lt;/td>
+ &lt;td>:kissing_heart: &lt;code>:kissing_heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kissing_closed_eyes: &lt;code>:kissing_closed_eyes:&lt;/code>&lt;/td>
+ &lt;td>:flushed: &lt;code>:flushed:&lt;/code>&lt;/td>
+ &lt;td>:relieved: &lt;code>:relieved:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:satisfied: &lt;code>:satisfied:&lt;/code>&lt;/td>
+ &lt;td>:grin: &lt;code>:grin:&lt;/code>&lt;/td>
+ &lt;td>:wink: &lt;code>:wink:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:stuck_out_tongue_winking_eye: &lt;code>:stuck_out_tongue_winking_eye:&lt;/code>&lt;/td>
+ &lt;td>:stuck_out_tongue_closed_eyes: &lt;code>:stuck_out_tongue_closed_eyes:&lt;/code>&lt;/td>
+ &lt;td>:grinning: &lt;code>:grinning:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kissing: &lt;code>:kissing:&lt;/code>&lt;/td>
+ &lt;td>:kissing_smiling_eyes: &lt;code>:kissing_smiling_eyes:&lt;/code>&lt;/td>
+ &lt;td>:stuck_out_tongue: &lt;code>:stuck_out_tongue:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sleeping: &lt;code>:sleeping:&lt;/code>&lt;/td>
+ &lt;td>:worried: &lt;code>:worried:&lt;/code>&lt;/td>
+ &lt;td>:frowning: &lt;code>:frowning:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:anguished: &lt;code>:anguished:&lt;/code>&lt;/td>
+ &lt;td>:open_mouth: &lt;code>:open_mouth:&lt;/code>&lt;/td>
+ &lt;td>:grimacing: &lt;code>:grimacing:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:confused: &lt;code>:confused:&lt;/code>&lt;/td>
+ &lt;td>:hushed: &lt;code>:hushed:&lt;/code>&lt;/td>
+ &lt;td>:expressionless: &lt;code>:expressionless:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:unamused: &lt;code>:unamused:&lt;/code>&lt;/td>
+ &lt;td>:sweat_smile: &lt;code>:sweat_smile:&lt;/code>&lt;/td>
+ &lt;td>:sweat: &lt;code>:sweat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:disappointed_relieved: &lt;code>:disappointed_relieved:&lt;/code>&lt;/td>
+ &lt;td>:weary: &lt;code>:weary:&lt;/code>&lt;/td>
+ &lt;td>:pensive: &lt;code>:pensive:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:disappointed: &lt;code>:disappointed:&lt;/code>&lt;/td>
+ &lt;td>:confounded: &lt;code>:confounded:&lt;/code>&lt;/td>
+ &lt;td>:fearful: &lt;code>:fearful:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cold_sweat: &lt;code>:cold_sweat:&lt;/code>&lt;/td>
+ &lt;td>:persevere: &lt;code>:persevere:&lt;/code>&lt;/td>
+ &lt;td>:cry: &lt;code>:cry:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sob: &lt;code>:sob:&lt;/code>&lt;/td>
+ &lt;td>:joy: &lt;code>:joy:&lt;/code>&lt;/td>
+ &lt;td>:astonished: &lt;code>:astonished:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scream: &lt;code>:scream:&lt;/code>&lt;/td>
+ &lt;td>:neckbeard: &lt;code>:neckbeard:&lt;/code>&lt;/td>
+ &lt;td>:tired_face: &lt;code>:tired_face:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:angry: &lt;code>:angry:&lt;/code>&lt;/td>
+ &lt;td>:rage: &lt;code>:rage:&lt;/code>&lt;/td>
+ &lt;td>:triumph: &lt;code>:triumph:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sleepy: &lt;code>:sleepy:&lt;/code>&lt;/td>
+ &lt;td>:yum: &lt;code>:yum:&lt;/code>&lt;/td>
+ &lt;td>:mask: &lt;code>:mask:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sunglasses: &lt;code>:sunglasses:&lt;/code>&lt;/td>
+ &lt;td>:dizzy_face: &lt;code>:dizzy_face:&lt;/code>&lt;/td>
+ &lt;td>:imp: &lt;code>:imp:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:smiling_imp: &lt;code>:smiling_imp:&lt;/code>&lt;/td>
+ &lt;td>:neutral_face: &lt;code>:neutral_face:&lt;/code>&lt;/td>
+ &lt;td>:no_mouth: &lt;code>:no_mouth:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:innocent: &lt;code>:innocent:&lt;/code>&lt;/td>
+ &lt;td>:alien: &lt;code>:alien:&lt;/code>&lt;/td>
+ &lt;td>:yellow_heart: &lt;code>:yellow_heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:blue_heart: &lt;code>:blue_heart:&lt;/code>&lt;/td>
+ &lt;td>:purple_heart: &lt;code>:purple_heart:&lt;/code>&lt;/td>
+ &lt;td>:heart: &lt;code>:heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:green_heart: &lt;code>:green_heart:&lt;/code>&lt;/td>
+ &lt;td>:broken_heart: &lt;code>:broken_heart:&lt;/code>&lt;/td>
+ &lt;td>:heartbeat: &lt;code>:heartbeat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heartpulse: &lt;code>:heartpulse:&lt;/code>&lt;/td>
+ &lt;td>:two_hearts: &lt;code>:two_hearts:&lt;/code>&lt;/td>
+ &lt;td>:revolving_hearts: &lt;code>:revolving_hearts:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cupid: &lt;code>:cupid:&lt;/code>&lt;/td>
+ &lt;td>:sparkling_heart: &lt;code>:sparkling_heart:&lt;/code>&lt;/td>
+ &lt;td>:sparkles: &lt;code>:sparkles:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:star: &lt;code>:star:&lt;/code>&lt;/td>
+ &lt;td>:star2: &lt;code>:star2:&lt;/code>&lt;/td>
+ &lt;td>:dizzy: &lt;code>:dizzy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:boom: &lt;code>:boom:&lt;/code>&lt;/td>
+ &lt;td>:collision: &lt;code>:collision:&lt;/code>&lt;/td>
+ &lt;td>:anger: &lt;code>:anger:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:exclamation: &lt;code>:exclamation:&lt;/code>&lt;/td>
+ &lt;td>:question: &lt;code>:question:&lt;/code>&lt;/td>
+ &lt;td>:grey_exclamation: &lt;code>:grey_exclamation:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:grey_question: &lt;code>:grey_question:&lt;/code>&lt;/td>
+ &lt;td>:zzz: &lt;code>:zzz:&lt;/code>&lt;/td>
+ &lt;td>:dash: &lt;code>:dash:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sweat_drops: &lt;code>:sweat_drops:&lt;/code>&lt;/td>
+ &lt;td>:notes: &lt;code>:notes:&lt;/code>&lt;/td>
+ &lt;td>:musical_note: &lt;code>:musical_note:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fire: &lt;code>:fire:&lt;/code>&lt;/td>
+ &lt;td>:hankey: &lt;code>:hankey:&lt;/code>&lt;/td>
+ &lt;td>:poop: &lt;code>:poop:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:shit: &lt;code>:shit:&lt;/code>&lt;/td>
+ &lt;td>:+1: &lt;code>:+1:&lt;/code>&lt;/td>
+ &lt;td>:thumbsup: &lt;code>:thumbsup:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:-1: &lt;code>:-1:&lt;/code>&lt;/td>
+ &lt;td>:thumbsdown: &lt;code>:thumbsdown:&lt;/code>&lt;/td>
+ &lt;td>:ok_hand: &lt;code>:ok_hand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:punch: &lt;code>:punch:&lt;/code>&lt;/td>
+ &lt;td>:facepunch: &lt;code>:facepunch:&lt;/code>&lt;/td>
+ &lt;td>:fist: &lt;code>:fist:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:v: &lt;code>:v:&lt;/code>&lt;/td>
+ &lt;td>:wave: &lt;code>:wave:&lt;/code>&lt;/td>
+ &lt;td>:hand: &lt;code>:hand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:raised_hand: &lt;code>:raised_hand:&lt;/code>&lt;/td>
+ &lt;td>:open_hands: &lt;code>:open_hands:&lt;/code>&lt;/td>
+ &lt;td>:point_up: &lt;code>:point_up:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:point_down: &lt;code>:point_down:&lt;/code>&lt;/td>
+ &lt;td>:point_left: &lt;code>:point_left:&lt;/code>&lt;/td>
+ &lt;td>:point_right: &lt;code>:point_right:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:raised_hands: &lt;code>:raised_hands:&lt;/code>&lt;/td>
+ &lt;td>:pray: &lt;code>:pray:&lt;/code>&lt;/td>
+ &lt;td>:point_up_2: &lt;code>:point_up_2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clap: &lt;code>:clap:&lt;/code>&lt;/td>
+ &lt;td>:muscle: &lt;code>:muscle:&lt;/code>&lt;/td>
+ &lt;td>:metal: &lt;code>:metal:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fu: &lt;code>:fu:&lt;/code>&lt;/td>
+ &lt;td>:walking: &lt;code>:walking:&lt;/code>&lt;/td>
+ &lt;td>:runner: &lt;code>:runner:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:running: &lt;code>:running:&lt;/code>&lt;/td>
+ &lt;td>:couple: &lt;code>:couple:&lt;/code>&lt;/td>
+ &lt;td>:family: &lt;code>:family:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:two_men_holding_hands: &lt;code>:two_men_holding_hands:&lt;/code>&lt;/td>
+ &lt;td>:two_women_holding_hands: &lt;code>:two_women_holding_hands:&lt;/code>&lt;/td>
+ &lt;td>:dancer: &lt;code>:dancer:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dancers: &lt;code>:dancers:&lt;/code>&lt;/td>
+ &lt;td>:ok_woman: &lt;code>:ok_woman:&lt;/code>&lt;/td>
+ &lt;td>:no_good: &lt;code>:no_good:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:information_desk_person: &lt;code>:information_desk_person:&lt;/code>&lt;/td>
+ &lt;td>:raising_hand: &lt;code>:raising_hand:&lt;/code>&lt;/td>
+ &lt;td>:bride_with_veil: &lt;code>:bride_with_veil:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:person_with_pouting_face: &lt;code>:person_with_pouting_face:&lt;/code>&lt;/td>
+ &lt;td>:person_frowning: &lt;code>:person_frowning:&lt;/code>&lt;/td>
+ &lt;td>:bow: &lt;code>:bow:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:couplekiss: &lt;code>:couplekiss:&lt;/code>&lt;/td>
+ &lt;td>:couple_with_heart: &lt;code>:couple_with_heart:&lt;/code>&lt;/td>
+ &lt;td>:massage: &lt;code>:massage:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:haircut: &lt;code>:haircut:&lt;/code>&lt;/td>
+ &lt;td>:nail_care: &lt;code>:nail_care:&lt;/code>&lt;/td>
+ &lt;td>:boy: &lt;code>:boy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:girl: &lt;code>:girl:&lt;/code>&lt;/td>
+ &lt;td>:woman: &lt;code>:woman:&lt;/code>&lt;/td>
+ &lt;td>:man: &lt;code>:man:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:baby: &lt;code>:baby:&lt;/code>&lt;/td>
+ &lt;td>:older_woman: &lt;code>:older_woman:&lt;/code>&lt;/td>
+ &lt;td>:older_man: &lt;code>:older_man:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:person_with_blond_hair: &lt;code>:person_with_blond_hair:&lt;/code>&lt;/td>
+ &lt;td>:man_with_gua_pi_mao: &lt;code>:man_with_gua_pi_mao:&lt;/code>&lt;/td>
+ &lt;td>:man_with_turban: &lt;code>:man_with_turban:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:construction_worker: &lt;code>:construction_worker:&lt;/code>&lt;/td>
+ &lt;td>:cop: &lt;code>:cop:&lt;/code>&lt;/td>
+ &lt;td>:angel: &lt;code>:angel:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:princess: &lt;code>:princess:&lt;/code>&lt;/td>
+ &lt;td>:smiley_cat: &lt;code>:smiley_cat:&lt;/code>&lt;/td>
+ &lt;td>:smile_cat: &lt;code>:smile_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heart_eyes_cat: &lt;code>:heart_eyes_cat:&lt;/code>&lt;/td>
+ &lt;td>:kissing_cat: &lt;code>:kissing_cat:&lt;/code>&lt;/td>
+ &lt;td>:smirk_cat: &lt;code>:smirk_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scream_cat: &lt;code>:scream_cat:&lt;/code>&lt;/td>
+ &lt;td>:crying_cat_face: &lt;code>:crying_cat_face:&lt;/code>&lt;/td>
+ &lt;td>:joy_cat: &lt;code>:joy_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pouting_cat: &lt;code>:pouting_cat:&lt;/code>&lt;/td>
+ &lt;td>:japanese_ogre: &lt;code>:japanese_ogre:&lt;/code>&lt;/td>
+ &lt;td>:japanese_goblin: &lt;code>:japanese_goblin:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:see_no_evil: &lt;code>:see_no_evil:&lt;/code>&lt;/td>
+ &lt;td>:hear_no_evil: &lt;code>:hear_no_evil:&lt;/code>&lt;/td>
+ &lt;td>:speak_no_evil: &lt;code>:speak_no_evil:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:guardsman: &lt;code>:guardsman:&lt;/code>&lt;/td>
+ &lt;td>:skull: &lt;code>:skull:&lt;/code>&lt;/td>
+ &lt;td>:feet: &lt;code>:feet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:lips: &lt;code>:lips:&lt;/code>&lt;/td>
+ &lt;td>:kiss: &lt;code>:kiss:&lt;/code>&lt;/td>
+ &lt;td>:droplet: &lt;code>:droplet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ear: &lt;code>:ear:&lt;/code>&lt;/td>
+ &lt;td>:eyes: &lt;code>:eyes:&lt;/code>&lt;/td>
+ &lt;td>:nose: &lt;code>:nose:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tongue: &lt;code>:tongue:&lt;/code>&lt;/td>
+ &lt;td>:love_letter: &lt;code>:love_letter:&lt;/code>&lt;/td>
+ &lt;td>:bust_in_silhouette: &lt;code>:bust_in_silhouette:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:busts_in_silhouette: &lt;code>:busts_in_silhouette:&lt;/code>&lt;/td>
+ &lt;td>:speech_balloon: &lt;code>:speech_balloon:&lt;/code>&lt;/td>
+ &lt;td>:thought_balloon: &lt;code>:thought_balloon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:feelsgood: &lt;code>:feelsgood:&lt;/code>&lt;/td>
+ &lt;td>:finnadie: &lt;code>:finnadie:&lt;/code>&lt;/td>
+ &lt;td>:goberserk: &lt;code>:goberserk:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:godmode: &lt;code>:godmode:&lt;/code>&lt;/td>
+ &lt;td>:hurtrealbad: &lt;code>:hurtrealbad:&lt;/code>&lt;/td>
+ &lt;td>:rage1: &lt;code>:rage1:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rage2: &lt;code>:rage2:&lt;/code>&lt;/td>
+ &lt;td>:rage3: &lt;code>:rage3:&lt;/code>&lt;/td>
+ &lt;td>:rage4: &lt;code>:rage4:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:suspect: &lt;code>:suspect:&lt;/code>&lt;/td>
+ &lt;td>:trollface: &lt;code>:trollface:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Nature&lt;/p></description></item></channel></rss>
