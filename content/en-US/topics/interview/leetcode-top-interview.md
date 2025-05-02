@@ -5,9 +5,11 @@
 ![Google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)
 
-## Array & String
+## Array & Hashing
 
-### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+#### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Two-Pointer
 
@@ -21,33 +23,49 @@
 
 Time: O(m+n), Space: O(1)
 
-### [27. Remove Item](https://leetcode.com/problems/remove-element/)
+#### [27. Remove Item](https://leetcode.com/problems/remove-element/)
 
 **Keyword**: Two-Pointer
 
 two pointers, one tracks valid number, one iterates.
 
-### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+#### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Two-Pointer
 
-one tracks concecutive duplicated, one iterates.
+**Intuition**
++ Slow pointer track the position of unique number, fast pointer to iterate array
 
-### [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
+**Steps**
++ `slow` start at 0
++ `fast` start at 1
++ Whenever find a unique element, increase `slow`, update value at `slow`
+
+#### [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 
 Similar to 26, the starting point and `if` condition are different. Generalize to max k duplicated.
 + First k element always valid.
 
-### [169. Majority Element](https://leetcode.com/problems/majority-element/)
+#### [169. Majority Element](https://leetcode.com/problems/majority-element/)
 
-+ Appears more than n / 2
-+ Sort and return the median
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-### [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+**Intuition**
++ Because the majority element appears more than n / 2, so just sort and return the value at median
+
+**Steps**
++ Sort
++ Return the value at median
+
+#### [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
 
 + Rotate all -> rotate first k -> rotate remaining
 
-### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+#### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Observations**
 + Buy and sell should happen on different day
@@ -64,7 +82,7 @@ Similar to 26, the starting point and `if` condition are different. Generalize t
 
 Time: O(N), Space: O(1)
 
-### [122: Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+#### [122: Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 
 **Observations**
 + Buy and sell can happen in the same day
@@ -83,30 +101,81 @@ Time: O(N), Space: O(1)
 
 Time: O(N), Space: O(1)
 
-### [55. Jump Game](https://leetcode.com/problems/jump-game/)
+#### [55. Jump Game](https://leetcode.com/problems/jump-game/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Greedy
+
+**Intuition**
++ Always try to find out the max jump position from current position
+
+**Steps**
 + Track the max reachable index
 + Iterate the jumps
-  + If index > max reach -> return false
+  + If current index > max reachable index, return false
   + Update max reachable index from current index
-  + If new max reachable index is over the total -> return true
+  + If new max reachable index is over the total, return true
++ Default return true
 
-### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+#### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
 
 + The difference between this question and [Jump Game](#55-jump-game) is to **return the minimum jump**
 + **Greedy**: At each level, try to extend the jump range as far as possible
-+ Steps:
-  + Track the farthest index we can reach by `farthest`
-  + Track the current range of jump by `currentRange`
-  + When we reach `currentRange`, we must jump, so increase the `jump` counter, and update `currentRange`
+
+**Steps**
++ Track the farthest index we can reach by `farthest`
++ Track the current range of jump by `currentRange`
++ When we reach `currentRange`, we must jump, so increase the `jump` counter, and update `currentRange`
+
 + **BE CAREFUL**: Iterate to the **second last index**, because as long as we can reach the second last index, we can jump
 
-### [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
+#### [11. Container with Most Water](https://leetcode.com/problems/container-with-most-water/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Two-Pointer
+
+**Intuition**
++ `area = std::min(heights[left] + height[right]) * (heights[right] - height[left])`
++ Move the lower height to maximize the area
+
+**Steps**
++ `left`: 0, `right`: n - 1
++ Declare `maxArea`
++ While `left` and `right` not cross
+  + Calculate and update `maxArea`
+  + Update bound
+
+#### [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Two-Pointer
+
+**Observations**
++ Water that can be trapping at index i is `std::min(leftMax, rightMax) - h[i]`
+
+**Steps**
++ Two pointers start at begining and end
++ When the two pointers not cross, loop
+  + If left is smaller, check left side
+    + Check if need to update `leftMax`
+    + Calculate water at current index
+    + Move left pointer
+  + If right is small, check right side
+    + Check if need to update `rightMax`
+    + Calculate water at current index
+    + Move right pointer
+
+Time: O(N), Space: O(1)
+
+#### [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
 
 + Use hash table to count occurrence of each letter
 + Knowing all the characters are letter, we can use array instead of hash table
 
-### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+#### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
 + Two pointer, slow and fast
 
@@ -123,6 +192,8 @@ Time: O(N), Space: O(1)
 
 #### [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
+**Keyword**: DFS/BFS on Tree
+
 + Small tree use DFS, deep trees use **BFS**.
 
 #### [100. Same Tree](https://leetcode.com/problems/same-tree/)
@@ -133,9 +204,97 @@ Time: O(N), Space: O(1)
 
 #### [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
-+ DFS. Traverse grid, mark (try to sink) visited cell
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-## Binary
+**Keyword**: BFS/DFS on Graph
+
+**Intuition**
++ When we meet a land, try to sink its adjacent lands until we can't
+
+**Steps: DFS**
++ Define DFS
+  + Input: grid, and coordinate (row, col), Output: void
+  + If coordinate in range, and current cell is a land
+    + Sink it
+    + Explore adjcent cells
++ Iterate the grid
+  + If current cell is land
+    + Count up
+    + Use DFS to sink its adjacent cells
+
+**Steps: BFS**
++ Declare queue to keep pending **lands**
++ Iterate the grid
+  + If current cell is land
+    + Sink
+    + Count up
+    + Add to queue
+    + Iterate pending lands (if appplicable)
+      + For each land, try 4 directions
+        + If cell is in range and is a land
+          + Sink
+          + Add to queue
++ Return count
+
+Time: O(m x n), Space: O(m x n)
+
+#### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: BFS on Graph
+
+**Steps**
++ Put words into hash set
++ Return if `endWord` is not in the set
++ Declare queue of {string, depth} pair for later BFS
++ Declare hash set of visited strings
++ BFS loop
+  + For each word, try to replace each character from 'a' to 'z' (two loops)
+  + If new word is end word, return `depth + 1`
+  + If new word is inside the set, and never visited, append to queue
+
+#### [207. Course Schedule](https://leetcode.com/problems/course-schedule/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: BFS on Graph
+
+**Key Idea**
++ "In Degree"
+  + Definition: In a directed graph, the in-degree of a node is the number of edges pointing into it. The out-degree is the number of edges leaving it.
+  + In topological sort, we
+    + Start with the node that have 0 in-degree
+    + Then process and reduce the in-degree of the neighbor nodes
+
+**Intuition**
++ All the prerequisities form a **directed graph**
++ Start from the courses with no prerequisities (0 degree)
++ Return true if we can iterate all the nodes
+
+**Steps**
++ Iterate the prerequisites, to
+  + Build a graph, from pre course point to course
+  + Track in-degree of the course
++ Start with the course having 0 in-degree
++ BFS
+  + Process: Count up the taken course
+  + Reduce the in-degree of the next courses (neighbors)
++ The taken courses count should be equal to number of courses
+
+Time: O(N + E), Space: O(N + E)
+
+#### [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
++ Same as [207. Course Schedule](#207-course-schedule)
++ Change BFS Process: append current course
+
+Time: O(N + E), Space: O(N + E)
+
+## Binary Operation
 
 #### [67. Add Binary](https://leetcode.com/problems/add-binary/)
 
@@ -143,7 +302,7 @@ Time: O(N), Space: O(1)
 
 ## Binary Tree
 
-### [314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+#### [314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
 
 **PROBLEM STATEMENT**
 
@@ -212,7 +371,7 @@ public:
 
 Time: O($Nlog(N)$), Space: O(N)
 
-### [987. Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
+#### [987. Vertical Order Traversal of a Binary Tree](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 
 **HARD**
 
@@ -233,7 +392,7 @@ Time: O($Nlog(N)$), Space: O(N)
 
 Time: O($Nlog(N)$), Space: O(N)
 
-### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+#### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
 **Keyword**: DFS
 
@@ -290,7 +449,7 @@ private:
 }
 ```
 
-### [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
+#### [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
 
 **PROBLEM STATEMENT**
 
@@ -335,7 +494,7 @@ public:
 
 Time: O(H), Space: O(1)
 
-### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
+#### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 
 **Keyword**: BFS
 
@@ -354,7 +513,7 @@ Time: O(N), Space: O(N)
 **Variants**
 + Left Side View: Same structure, but save the first node of the layer
 
-### [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+#### [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 
 **Keyword**: DFS
 
@@ -372,7 +531,9 @@ Time: O(N), Space: O(N)
 
 Time: O(N), Space: O(H)
 
-### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
+#### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **MEDIUM BUT HARD!**
 
@@ -380,7 +541,9 @@ Time: O(N), Space: O(H)
 + Use BFS to traverse the graph from target node to level `K`
 + Return the elements in level K
 
-### [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+#### [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **HARD**
 
@@ -389,7 +552,7 @@ Time: O(N), Space: O(H)
   + The maxPath return to parent node (single path)
 + While traversing, ignore path has negative sum
 
-### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+#### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 **HARD**
 
@@ -399,7 +562,7 @@ Time: O(N), Space: O(H)
 + Deserialization
   + Get familiar with `int std::getline(std::stringstream, std::string, char)`
 
-### [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
+#### [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 
 **Keyword**: DFS
 
@@ -416,7 +579,7 @@ Time: O(N), Space: O(H)
 
 ## Binary Search Tree(BST)
 
-### [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
+#### [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 
 **Keyword**: DFS on DFS
 
@@ -428,14 +591,50 @@ Time: O(N), Space: O(H)
 
 Time: O(N), Space: O(H)
 
+## Binary Search
+
+#### [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ The more bananas Koko eats per hour, the fewer hours she needs.
++ We can binary search for the minimum valid speed `k` between 1 and the maximum in `piles`.
+
+**Steps**
++ Write a helper function: Given eating speed `k`, check can eat all or not?
+  + Iterate piles
+    + Use `(pile + k - 1)` to efficiently calculate `std::ceil(pile / (double)k)`
++ Binary search loop
+  + Start at 1, end at max of pile
+  + If can eat all, slow down, move right
+  + Else, speed up, move left
++ Return left
+
+Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space: O(1)
+
 ## String
 
-### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+#### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
-+ Use stack to hold the iterated characters
-+ Closing bracket at the front, e.g. {'}', '{'}
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+**Keyword**: Stack, Parentheses
+
+**Steps**
++ Define hash map to store Parentheses. {close, open}
++ Use a stack to hold the pending open brackets
++ Iterate string
+  + If open, push to stack
+  + If close
+    + If stack empty, or stack top (last) not equal to corresponding open, return false
+    + Else pop
+
+#### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Backtrack
 
@@ -446,12 +645,12 @@ Time: O(N), Space: O(H)
 **Steps**
 + Define `backtrack` function
   + Parameters: current string, open count, close count, total parenthese need, combination so far
-  + If current string size is equal to `2*n`
+  + If current string size is equal to `2*n` 
     + Append current string and return
   + If open count is less than total need, append open
   + If close count is less than open count, append close
 
-### [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
+#### [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 
 **Approach I: Two-Pass with Stack**
 1. Use stack to store '(', and unordered_set for invalid indices for quick access
@@ -461,7 +660,7 @@ Time: O(N), Space: O(H)
 
 Time: O(N), Space: O(N)
 
-### [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)
+#### [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)
 
 **Approach: Simulate Stack**
 + Traverse from left to right
@@ -470,7 +669,7 @@ Time: O(N), Space: O(N)
   + There's '(' left, decrease counter
   + Otherwise, increase right counter 
 
-### [408. Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/)
+#### [408. Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/)
 
 **PROBLEM STATEMENT**
 
@@ -544,7 +743,7 @@ public:
 
 Time: O(len(word) + len(abbr)), Space: O(1)
 
-### [791. Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
+#### [791. Custom Sort String](https://leetcode.com/problems/custom-sort-string/)
 
 **Intuition**
 + `order` has less character, and it defines the order, so build final string from `order` based on `s` frequency
@@ -557,7 +756,7 @@ Time: O(len(word) + len(abbr)), Space: O(1)
 
 Time: O(N), Space: O(N)
 
-### [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+#### [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
@@ -581,7 +780,9 @@ TODO
 
 Time: O(N) average, O($N^2$) worst, Space: O(1)
 
-### [227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+#### [227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Stack
 
@@ -603,7 +804,7 @@ Time: O(N) average, O($N^2$) worst, Space: O(1)
 
 Time: O(N), Space: O(N)
 
-### [528. Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
+#### [528. Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
 
 **Keyword**: Prefix Sum, Binary Search
 
@@ -626,7 +827,7 @@ std::uniform_int_distribution<int> dist{kLow, kHigh};
 auto num = dist(rd);a
 ```
 
-### [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+#### [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
 
 **IMPORTANT!!!**
 
@@ -646,7 +847,7 @@ auto num = dist(rd);a
 
 Time: O($log(N)$), Space: O(1)
 
-### [50. Pow(x, n)](https://leetcode.com/problems/powx-n/)
+#### [50. Pow(x, n)](https://leetcode.com/problems/powx-n/)
 
 **Keyword**: Divide and Conquer
 
@@ -664,7 +865,7 @@ Time: O($log(N)$), Space: O(1)
 
 Time: O($Log(N)$), Space: recursive O($Log(N)$); Iteration: O(1)
 
-### [71. Simplify Path](https://leetcode.com/problems/simplify-path/)
+#### [71. Simplify Path](https://leetcode.com/problems/simplify-path/)
 
 **Keyword**: Stack
 
@@ -683,7 +884,7 @@ Time: O($Log(N)$), Space: recursive O($Log(N)$); Iteration: O(1)
 
 Time: O(N), Space: O(N)
 
-### [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+#### [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
 
 **Keyword**: BFS
 
@@ -710,7 +911,7 @@ Time: O(N), Space: O(N)
 
 Time: O($N^2$), Space: O($N^2$), Worst case: visit all the nodes
 
-### [1570. Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/)
+#### [1570. Dot Product of Two Sparse Vectors](https://leetcode.com/problems/dot-product-of-two-sparse-vectors/)
 
 **PROBLEM STATEMENT**
 
@@ -765,7 +966,7 @@ public:
 
 Time: O(N), Space: O(K), where K is non zero element count.
 
-### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
+#### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 **Keyword**: Two-Pointer
 
@@ -778,7 +979,7 @@ Time: O(N), Space: O(K), where K is non zero element count.
 
 Time: O(N), Space: O(1)
 
-### [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+#### [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
 
 **Keyword**: Two-Pointer
 
@@ -791,6 +992,24 @@ Time: O(N), Space: O(1)
 
 Time: O(N), Space: O(1)
 
+#### [9. Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
++ Convert to string, then two pointers (not optimal)
++ Reverse the last half of the number and compare it to the first half
+  + If `x == reversedHalf` (even digits) or `x == reversedHalf / 10` (odd digits), it's a palindrome.
+
+**Steps**
++ Negative number and number ends with 0, return false
++ `while x > reverse_half`
+  + Use last digit to assemble reverse_half
+  + Remove last digit
++ Compare first half and last half
+
+Time: O(log(N))
+
 #### [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 
 **Keyword**: Two-Pointer
@@ -801,7 +1020,12 @@ Time: O(N), Space: O(1)
 
 Time: O($N^2$), Space: O(1)
 
-### [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+#### [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
++ Expand string from center to get longest palindrom
 
 **Steps**
 + Iterate all characters
@@ -812,50 +1036,65 @@ Time: O($N^2$), Space: O(1)
 
 Time: O(N^2), Space: O(1)
 
-### [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
+#### [767. Reorganize String](https://leetcode.com/problems/reorganize-string/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Greedy, Max-Heap
 
 **Steps**
 + Count frequency of each character. (Use hash map or array)
 + Prepare max heap to track the two most frequent characters
+  + Push {count, char} pairs to max heap
 + Always keep two, start loop
   + Retrive the most count two characters
-  + Push them back
-  + Decrementing count
+  + Append to the result
+  + Decrease count, and push back to max heap if applicable
 + If at the end, there's a character with `count > 1`, it's impossible
 
-### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+Time: O(Nlog(A)) - N is length of string, A is alphabet size, Space: O(A)
+
+#### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Character Stats
 
 **Steps**
-+ Sort the key. Or use a 26 length array to count frequency, turn frequency to string as key
-+ Value is the string matched that key
++ Declare groups, {key: encoded character frequency, value: strings}
++ Iterate all strings
+  + Calculate the character frequency (Or use a 26 length array)
+  + Turn frequency to string
+  + Update groups
++ Flatten the groups
 
 Time: O(N * K), Space: O(N * K), K is string length
 
-### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+#### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Sliding Window
 
 **Intuition**
-Use the sliding window technique to maintain a substring without repeating characters while iterating through the string.
++ Use the sliding window technique to maintain a substring without repeating characters while iterating through the string.
 If a character is repeated, move the left pointer of the window forward to exclude the previous occurrence.
 
 **Steps**
-+ Use two points, `left` and `right` start at `0`
-+ Declare hash map to record the last seen character index
++ Use two pointers, `left` and `right` start at `0`
++ Declare hash map to record the last seen character index, {character, index}
 + Iterate the string (with `right`)
   + If current character is seen and in range of the window
-    + Update `left` to next index of seen
-  + Update `lastSeen` to current position(`right`)
+    + Update `left` to next index of the seen character index
+  + Update `lastSeen` of current position (`right`)
   + Update max length
 + Return max length
 
 Time: O(N), Space: O(A), where A is the size of the character size
 
-### [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+#### [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Prefix Sum
 
@@ -864,7 +1103,7 @@ Time: O(N), Space: O(A), where A is the size of the character size
   + If $sum[j] - sum[i] = k$, then subarray `nums[i+1: j]` sums to k
 
 **Steps**
-+ Use a hash table to store Prefix Sum Value -> Indices Count
++ Use a hash table to store {Prefix Sum Value -> Count}
   + Base case: Prefix 0 occurs once
 + Iterate numbers
   + If find `Current prefix sum - k` in the hash table, accumulate count
@@ -872,72 +1111,81 @@ Time: O(N), Space: O(A), where A is the size of the character size
 
 Time: O(N), Space: O(N)
 
-### [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
+#### [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
 
 + Use BFS, traverse from top to bottom, left to right, ignore the right most node in each layer
 + Make use of `next` pointer. Two while loop, outer use leftMost, inner use head
 
-### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+#### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Intervals
 
 **Steps**
 + Sort the input intervals **by the mins**
-+ Iterate the sorted intervals and merge based on overlapping between the last interval in result and the current interval
++ Iterate the sorted intervals
+  + If result is empty, append current interval
+  + If the end of last interval in results is less than beginning of current interval, append current interval
+  + Else, update the end of last interval in results
 
 Time: O(NLog(N)), Space: O(N)
 
-### [146. LRU Cache](https://leetcode.com/problems/lru-cache)
+#### [146. LRU Cache](https://leetcode.com/problems/lru-cache)
 
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: Linked-List
+**Keyword**: Doubly Linked-List
 
 **Observations**
 + Both `get()` and `put()` are considered "used", So we use doubly linked list for efficient ordering
 + We can't use index to manipulate value in linked list, so we create a hash map {key, iterator}
 
 **Steps**
-+ Declare a doubly linked list for the main underlying container
++ Declare a doubly linked list (of {key, value} pairs) for the underlying container, front is the most used, end is the least used
 + Declare a hash map {key, iterator} to fast access data
 + `get()`
   + If not exist in map, return -1
   + If exist
     + Use the iterator to get value
-    + Remove the iterator
-    + Push new node to the front
-    + Update map
+    + Move this {key, value} to the front
+      + Remove the iterator
+      + Push new node to the front
+      + Update map
 + `put()`
   + If exist in map
-    + Use iterator to remove
-    + Push new node to the front
-    + Update map
+    + Use iterator to remove the existed one
   + If not exist
     + If exceed
       + Get the last key
       + Pop last element
       + Remove from map
-      + Push new node to the front
-      + Update map
-    + If not exceed
-      + Push new node to the front
-      + Update map
+  + Push new node to the front
+  + Update map
 
 Time: O(1), Space: O(N)
 
-### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
+#### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Min-Heap
 
+**Intuition**
++ Use min heap to track the k largest number by contraint the size to k
+
 **Steps**
-+ Use hashtable to store the frequency
-+ Use min heap to track top k largest elements (pop when size exceeds k)
++ Declare hash map to store the number frequency
++ Iterate the hash map
+  + Push current {count, number} pair to min heap
+  + If min heap size is more than k, pop the top (smallest one)
 + Build results
 
 Time: O(NLog(K)), Space: O(N)
 
-### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+#### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 
 **Keyword**: Max-Heap
 
@@ -957,7 +1205,7 @@ Time: O(NLog(K)), Space: O(K)
 
 Time: O(N) for average, O($N^2$), Space: O(1)
 
-### [1762. Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/)
+#### [1762. Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/)
 
 **PROBLEM STATEMENT**
 
@@ -999,7 +1247,7 @@ public:
 
 Time: O(N), Space: O(1)
 
-### [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+#### [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
 
 **Keyword**: Two-Pointer
 
@@ -1011,17 +1259,24 @@ Time: O(N), Space: O(1)
 
 Time: O(N+M), Space: O(1)
 
-### [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+#### [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 
-**WARNING**
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**MEDIUM BUT HARD**
+
+**Keyword**: Linked-List
 
 **Intuition**
 + The easiest way is to use an extra hash map to store {Old Node -> New Node}
-  + 1st pass: Create the mapping from {Old Node -> New Node}
-  + 2nd pass: Based on the hash map, link the new nodes
 + The optimal solution is not easy to come up
 
-**Approah: Interleaving**
+**Approach: Hash map**
++ Declare hash map {Old Node -> New Node}
++ 1st pass: Copy node one by one, and update hash map
++ 2nd pass: Iterate the hash map, link next and random node of new node
+
+**Approach: Interleaving**
 + 1st pass: Copy each node right after the original node (don't care random pointer)
 + 2nd pass: Link random pointer in the copied nodes
 + 3rd pass: Separate the copied nodes and original nodes, and recover the original nodes links.
@@ -1029,24 +1284,28 @@ Time: O(N+M), Space: O(1)
 
 Time: O(N), Space: O(1)
 
-### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+#### [23. Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Min-Heap
 
 **Steps**
 + Declare a min heap
-+ Iterate lists, insert starting nodes into min heap, so smallest node starts first
-+ Use dummy node
++ Iterate lists
+  + Insert starting nodes into min heap, so smallest node starts first
++ Create dummy node
 + Loop
   + Pop the smallest (pop)
-  + Link to this node
+  + Link next to this node
   + Move to this node
-  + Push to current next (if there is)
+  + Push to next of current node (if there is)
 + Return dummy's next
 
 Time: O(NLog(K)), Space: O(k)
 
-### [339. Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)
+#### [339. Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)
 
 **PROBLEM STATEMENT**
 
@@ -1102,7 +1361,7 @@ public:
 
 Time: O(N), Space: O(Depth)
 
-### [346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)
+#### [346. Moving Average from Data Stream](https://leetcode.com/problems/moving-average-from-data-stream/)
 
 **PROBLEM STATEMENT**
 
@@ -1143,11 +1402,11 @@ private:
 
 Time: O(1), Space: O(capacity)
 
-### [282. Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)
+#### [282. Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)
 
 **HARD!!!**
 
-### [670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)
+#### [670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)
 
 **Keyword**: Greedy
 
@@ -1171,7 +1430,7 @@ Time: O(N), Capacity: O(1)
   + Build the largest number first
   + Iterate from right to left, swap the first number pair that's not equal, similar to [31. Next Permutation](#31-next-permutation)
   
-### [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
+#### [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
 
 **MEDIUM, BUT HARD**
 
@@ -1224,27 +1483,6 @@ Time: O(N), Capacity: O(1)
 
 Time: O(len(string), len(template)), Space: O(len(template))
 
-#### [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
-
-**Keyword**: Two-Pointer
-
-**Observations**
-+ Water that can be trapping at index i is `std::min(leftMax, rightMax) - h[i]`
-
-**Steps**
-+ Two pointers start at begining and end
-+ When the two pointers not cross, loop
-  + If left is smaller, check left side
-    + Check if need to update `leftMax`
-    + Calculate water at current index
-    + Move left pointer
-  + If right is small, check right side
-    + Check if need to update `rightMax`
-    + Calculate water at current index
-    + Move right pointer
-
-Time: O(N), Space: O(1)
-
 ### Meeting Rooms
 
 #### [252. Meeting Rooms I](https://leetcode.com/problems/meeting-rooms/)
@@ -1273,6 +1511,8 @@ public:
 ```
 
 #### [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **PROBLEM STATEMENT**
 
@@ -1337,11 +1577,26 @@ public:
 
 #### [79. Word Search](https://leetcode.com/problems/word-search/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DFS on Matrix, Backtracking
+
+**Intuition**
 + Because we need to search to the end of the word to find a word, so use DFS
+
+**Steps**
++ Define DFS
+  + Carriers: `board`, current row&col, `word`, current index
+  + Return: Find word or not
+  + Terminate Condition: 
+    + Current index equal to 'word` size, return true
+    + Not in range, and character of current coord is not the same as word current index, return false
+  + Backtrack
+    + Mark current character visited
+    + Explore 4 adjacent directions, and next index
+    + Recover current character
+  + Return found
 + Iterate through `board`, search from the first letter
-+ Use DFS to explore four directions
-+ Mark visited cell before DFS (temporarily)
-+ If index is equal to word len (iterate all characters)
 
 #### [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
@@ -1354,23 +1609,84 @@ public:
 
 #### [1. Two Sums](https://leetcode.com/problems/two-sum/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Hash
+
 **Steps**
-+ Use hashtable to store the visited value and its index
++ Use hash map to store the visited value and its index
 + Iterate the numbers
   + If `target - nums[i]` exists in hashtable, append to result
   + Else insert new pair
 
 #### [167. Two Sums II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
-+ The difference with previous question is input array is sorted
-+ Use two pointers, starts from the beginning and end
-+ If sum is less than `target`, move left; greater than `target` move right, or return index pair
+**Keyword**: Binary Search
+
+**Intuition**
++ The difference with [Two Sums](#1-two-sums) is the input array is sorted
++ We can use binary search to find the two sums pair
++ The other difference is given array is **1-indexed**
+
+**Steps**
++ Two pointers, `left` at 0, `right` at end
++ While `left` and `right` don't cross
+  + If current sum is target, return index
+  + If current sum is less, move left
+  + If current sum is more, move right
 
 #### [15. 3Sums](https://leetcode.com/problems/3sum/)
 
-+ Sort the values
-+ The rest is similar to [Two Sums II](#two-sums-ii)
-+ Be careful about the duplicated numbers, skip them in the outer loop as well as the inner loop after find one combination
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ Need to return **all** triplets
++ Fixed one number, and the rest is [Two Sums II](#167-two-sums-ii)
+
+**Steps**
++ Sort the numbers
++ Iterate the numbers
+  + Skip if current number is dupliacted (use the first one in duplicated sequence)
+  + Break if current number is positive (not possible to find triplet in the rest sorted array)
+  + Start [Two Sums II](#167-two-sums-ii), with
+    + `target = -num[i]`
+    + `left = i + 1`, `right = end`
+    + If less ...
+    + If more ...
+    + If equal, remember to keep moving `left` and `right` until no duplicated
+
+Sorting: O(nlogn)
+Searching: O(n^2)
+
+#### [18. 4Sum](https://leetcode.com/problems/4sum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Binary Search
+
+**Inuition**
++ Similar to [3Sum](#15-3sums), but try to fix two positions
++ **BE CAREFUL** of
+  + Duplicated numbers
+  + Sum overflow
+
+**Steps**
++ Sort the numbers
++ First index loop
+  + Skip the duplicated numbers
+  + Second index loop
+    + Skip the duplicated numbers
+    + Binary Search
+      + `left`: j + 1, `right`: n - 1
+      + Start loop
+        + If sum == target, append to results, skip duplicated numbers
+        + If sum < target, move left
+        + If sum > target, move right
++ Return results
+
+Time: O(n^3)
 
 #### [827. Making A Large Island](https://leetcode.com/problems/making-a-large-island/)
 
@@ -1531,6 +1847,10 @@ private:
 
 #### [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Linked-List
+
 **Intuition**
 + Since numbers are stored in reverse order, adding them from head to tail is same as adding numbers
 
@@ -1543,15 +1863,27 @@ private:
 
 #### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Keyword**: Binary Search
 
 **Intuition**
-+ Modified binart search. Even though rotated, on each side, the arrays are still sorted
++ Even though rotated, one half of it is still sorted (ascendingly), we can use modified binary search
+  + Check which side is sorted
+  + Narrow search
 
 **Steps**
-+ Binary search loop
-+ Check which side is sorted
-  + Classic binary search
++ `left` at 0, `right` at end
++ While `left <= right`
+  + Calculate `mid`
+  + If `nums[mid] == target`, return `mid`
+  + If 'nums[left] <= nums[mid]` (left side sorted)
+    + If `target` also in left range, move right
+    + Else, move left
+  + Else (right side sorted)
+    + If `target` also in right range, move left
+    + Else, move right
++ Return invalid
 
 #### [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
@@ -1577,7 +1909,7 @@ private:
 
 **HARD**
 
-### [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
+#### [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 
 **Observation**
 + The `row + col` of element on diagonal is the same.
@@ -1621,6 +1953,23 @@ private:
 
 **Notes**
 + `while` condition, and how to update `left` and `right`
+
+#### [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Array
+
+**Intuition**
++ Goal is to find the **smallest positive integer not present** in the array
++ Try to place each number in its correct index if it's in range [1, n]. e.g. we want `nums[i] == i + 1`
+
+**Steps**
++ Iterate all numbers
+  + For the numbers in range [1, n], if `nums[i] != i + 1`, swap to correct position
++ Iterate all numbers from left to right again to find out which number doesn't satisfy `nums[i] == i + 1`, return `i + 1`
++ Or return `n + 1`
+
 
 #### [708. Insert into a Sorted Circular Linked List](https://leetcode.com/problems/insert-into-a-sorted-circular-linked-list/)
 
@@ -1701,35 +2050,6 @@ Time: O(N + E), Space: O(N)
 
 **Keyword**: BFS
 
-#### [207. Course Schedule](https://leetcode.com/problems/course-schedule/)
-
-**Keyword**: BFS on Graph
-
-**Key Idea**
-+ "In Degree"
-  + Definition: In a directed graph, the in-degree of a node is the number of edges pointing into it. The out-degree is the number of edges leaving it.
-  + In topological sort, we
-    + Start with the node that have 0 in-degree
-    + Then process and reduce the in-degree of the neighbor nodes
-
-**Steps**
-+ Iterate the prerequisites, to
-  + Build a graph, from pre course point to course
-  + Track in-degree of the course
-+ Start with the course having 0 in-degree
-+ BFS
-  + Process: Count up the taken course
-  + Reduce the in-degree of the next courses
-+ The taken courses count should be equal to number of courses
-
-Time: O(N + E), Space: O(N + E)
-
-#### [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
-
-**Intuition**
-+ Same as [207. Course Schedule](#207-course-schedule)
-+ Change BFS Process: append course
-
 #### [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/)
 
 #### [398. Random Pick Index](https://leetcode.com/problems/random-pick-index/)
@@ -1752,11 +2072,19 @@ Time: O(N + E), Space: O(N + E)
 
 #### [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Keyword**: Two-Pointer
 
 **Intuition**
 + **Don't need to use extra variable** to decide which letter to append
   + Add one by one from word1 to word2 will do the job
+
+**Steps**
++ Two pointers start at 0
++ Loop when not both pointers arrive the end
+  + If i not to the end, append value at i, count up i
+  + If j not to the end, append value at j, count up j
 
 #### [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
 
@@ -1769,16 +2097,103 @@ Time: O(N + E), Space: O(N + E)
 
 #### [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
+**HARD!!!**
+
+**Keyword**: Binary Search
+
+**Intuition**
++ We are required to finish in O(log(m + n)), so we can't merge and sort (O(nlog(n)))
++ Try to partion both arrays at index `AMid` and `BMid`, such that: `AMid + BMid == (m + n + 1) / 2`
++ Check if all the left parts are less equal than all the right parts
++ Tricks
+  + Always binary search the shorter one
+  + Be careful about the edge cases at start and end
+
+**Steps**
++ Always binary search on the smaller array.
++ Partition both arrays at index i and j such that: `i + j == (m + n + 1) / 2` (ensures left and right parts are balanced)
++ Use INT_MIN and INT_MAX to avoid boundary issues.
++ Check if:
+  + Aleft <= Bright and Bleft <= Aright
+  + If not, adjust binary search (low/high)
++ Once the correct partition is found:
+  + If total length is odd: return max(left parts)
+  + If even: return average of max(left parts) and min(right parts)
+
 #### [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
 
 #### [1152. Analyze User Website Visit Pattern](https://leetcode.com/problems/analyze-user-website-visit-pattern/)
 
 **PROBLEM STATEMENT**
+You are given three arrays: username, timestamp, and website, where each entry represents a user's website visit at specific time. A 3-sequence is a list of three websites visited in order by a user. Your task is to find the 3-sequence visited by the largest number of users. If multiple sequences have the same highest count, return the lexicographically smallest one.
 
+```
+Input:
+username = ["joe","joe","joe", "james","james","james","james","mary","mary","mary"]
+timestamp = [1,2,3,4,5,6,7,8,9,10]
+website = ["home","about","career","home","cart","maps","home","home","about","career"]
+```
+
+**Solution**
+```cpp
+std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& usernames, const std::vector<int>& timestamps, const std::vector<std::string>& websites) {
+    const int n = usernames.size();
+
+    // 1. Combine all data, and sort with timestamp
+    // [timestamp, username, website]
+    std::vector<std::tuple<int, std::string, std::string>> data;
+    data.reserve(n);
+    for (int i = 0; i < n; ++i) {
+        data.emplace_back(timestamps[i], usernames[i], websites[i]);
+    }
+
+    std::sort(data.begin(), data.end());
+
+    // User visited pattern
+    std::unordered_map<std::string, std::vector<std::string>> userToWebsites;
+    for (const auto& [_, username, website]: data) {
+        userToWebsites[username].push_back(website);
+    }
+
+    // 3 sequences
+    std::map<std::vector<std::string>, std::set<std::string>> seqsToUsers;
+    for (const auto& [user, websites]: userToWebsites) {
+        if (websites.size() < 3) {
+            continue;
+        }
+
+        std::set<std::vector<std::string>> seqs;
+        const int sz = websites.size();
+        for (int i = 0; i < sz; ++i) {
+            for (int j = i + 1; j < sz; ++j) {
+                for (int k = j + 1; k < sz; ++k) {
+                    seqs.insert({websites[i], websites[j], websites[k]});
+                }
+            }
+        }
+
+        for (const auto& seq: seqs) {
+            seqsToUsers[seq].insert(user);
+        }
+    }
+
+    // Find the most visited
+    int maxCount = 0;
+    std::vector<std::string> res;
+    for (const auto& [seqs, users]: seqsToUsers) {
+        if (int count = users.size(); count > maxCount || (count == maxCount && seqs < res)) {
+            maxCount = count;
+            res = seqs;
+        }
+    }
+
+    return res;
+}
+```
 
 #### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 
-**Keyword**: BFS, Flood-Fill
+**Keyword**: BFS on Matrix, Flood-Fill
 
 **Intuition**
 + Classic BFS flood-fill problem
@@ -1800,6 +2215,8 @@ Time: O(N + E), Space: O(N + E)
 
 #### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Intuition**
 + Since the time complexity should be O(n), so we can't sort
 + We try to use hash set to make the query faster O(1)
@@ -1807,7 +2224,7 @@ Time: O(N + E), Space: O(N + E)
 **Steps**
 + Declare hash set, transform the nums into hash set
 + Iterate the **set** (IMPORTANT!!! As the test case may contain a lots of duplicated values)
-  + Start only when current number is start (`num - 1` not inside hash set)
+  + Start only when current number is **start** (`num - 1` not inside hash set)
     + Count the length of the sequence starts with this number
     + Update longest length
 
@@ -1818,7 +2235,15 @@ Time: O(N + E), Space: O(N + E)
 **Keyword**: Stack
 
 **Intuition**
++ Collisions only occur when a positive asteroid (moving right) is followed by a negative asteroid (moving left).
++ Use a stack to simulate the process, handling collisions in a Last-In-First-Out (LIFO) manner.
 
+**Steps**
++ Iterate through each asteroid
+  + For each asteroid, check if it collides with the top of the stack (i.e., current asteroid is negative and top of stack is positive).
+  + If the top asteroid is smaller, it is destroyed (pop from stack).
+  + If they are equal, both are destroyed (pop from stack and mark current asteroid as destroyed).
+  + If the top asteroid is larger, the current asteroid is destroyed.
 
 #### [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
 
@@ -1841,6 +2266,8 @@ Time: O(N + E), Space: O(N + E)
   + Swap _value's index_ and _last index_
   + Update new Value -> Index
   + Remove last value, and old Value -> Index
++ `getRandom()`
+  + Return value at random index
 
 #### [3371. Identify the Largest Outlier in an Array](https://leetcode.com/problems/identify-the-largest-outlier-in-an-array/)
 
@@ -1851,11 +2278,89 @@ Time: O(N + E), Space: O(N + E)
 + So we can iterate the `nums`, and find if outlier exists in `nums`, and find the max possible outlier
 + Be careful, the sum of special numbers should be on different index of outlier
 
+**Steps**
++ Declare a hash map for number frequency
++ Iterate the nums to get number frequency and sum
++ Iterate number frequency {num, freq}
+  + Calculate outlier assume the current number is special sum
+  + If outlier exists
+    + If outlier is not the same as special sum or outlier value appears multiple times, update max outlier
++ Return max outlier
+
+## Dynamic Programming
+
 #### [322. Coin Change](https://leetcode.com/problems/coin-change/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: Dynamic Programming
+**Keyword**: DP
+
+**Steps**
++ Define the DP
+  + 
+
+#### [139. Word Break](https://leetcode.com/problems/word-break/)
+
+**Keyword**: DP
+
+**Steps**
++ Define DP
+  + Given word `s` of length `n`
+  + `dp[i] == 1` means the substring `s[0...i-1]` can be broken into words
++ Loop `[1...n]`
+  + Loop `[0...n)`
+    + Try to split the word at `j`, and check if `dp[j]` is valid and the suffix `s[j, i - j]` is in the dictionary
++ Return `dp[n]`
+
+Time: O(n^2), Space: O(n + d)
+
+#### [472. Concatenated Words](https://leetcode.com/problems/concatenated-words/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DP
+
+**Intuition**
++ Similar to [Word Break](#139-word-break), except we need to iterate all the words
+
+**Steps**
++ Write a helper function to check if a word can be formed by a dictionary, exactly the same as [Word Break](#139-word-break)
++ Sort the words based on length
++ Iterate words
+  + If current word can be formed with dictionary, append word to result
+  + Update dictionary
+
+Time: O(N*L^2), Space: O(N*L)
+
+#### [198. House Robber](https://leetcode.com/problems/house-robber/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DP
+
+**Steps**
++ Define DP
+  + `dp[i]`: max amount of money to get on day i
+  + Transition:
+    + `dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])`
+  + Base cases:
+    + `dp[0] = nums[0]`
+    + `dp[1] = max(nums[0], nums[1])`
+
+#### [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DP
+
+**Steps**
++ Define DP
+  + `dp[i]`: Distinct ways to climb to the top
+  + Transition:
+    + `dp[i] = dp[i - 1] + dp[i - 2]`
+  + Base cases:
+    + `dp[0] = 1`
+    + `dp[1] = 2`
 
 #### [78. Subsets](https://leetcode.com/problems/subsets/)
 
@@ -1881,9 +2386,23 @@ Time: O(N + E), Space: O(N + E)
   + Update number occurance
 + Return true
 
----
+#### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
-## Amazon
+**Keyword**: Backtrack
+
+**Intuition**
++ A very classic combinatorics problem involving backtracking
+
+**Steps**
++ Use a hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
++ Backtracking
+  + Base case: If the digits iteration finish, append current word
+  + Recursive case: append each letter for current word
++ Start with
+  + Empty word
+  + Index 0
+  + Input `digits`
+  + Output `res`
 
 ### Bit Manipulation
 
@@ -1929,6 +2448,8 @@ int hammingWeight(uint32_t n) {
 
 #### [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Intuition**
 + Each operation removes **one unique non-zero number** from the set of values in the array.
 + Since subtracting the smallest non-zero value will eventually turn elements zero, **the number of unique non-zero values** in the array is exactly the number of operations needed.
@@ -1939,20 +2460,190 @@ int hammingWeight(uint32_t n) {
 
 #### [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Intuition**
 + We can't use divide
 + We compute the product of at index i from left product and right product
 
+**Steps**
++ Declare the `res` array of size n, initialize with 1
++ Iterate from left to right, starting at 1 to calculate
+  + res[i] = res[0] * res[1] * ... * res[i - 1]
++ Iterate from right to left, starting at n - 1 to calculate
+  + Multiply the values in right parts
+
 #### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Intuition**
 + Similar to [Best Time to Buy and Sell Stock](#121-best-time-to-buy-and-sell-stock)
++ Append vs. Start new
 
 **Steps**
 + Declare `curSum` as the first element, and `maxSum` as `curSum`
 + Loop from the second element
-  + Update `curSum` based on append element or start new subarray
+  + Update `curSum` based on **append element** or **start new subarray**
   + Update `maxSum`
+
+#### [2790. Maximum Number of Groups With Increasing Length](https://leetcode.com/problems/maximum-number-of-groups-with-increasing-length/)
+
+**HARD!!!**
+
+**Keyword**: Greedy
+
+#### [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
+**Keyword**:
+
+**Intuition**
+
+#### [2214. Minimum Health to Beat Game](https://leetcode.com/problems/minimum-health-to-beat-game/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**PROBLEM STATEMENT**
+You're given an array damage where `damage[i]` represents the health lost upon completing level i. Additionally, you have an armor that can be **used once** to absorb up to armor damage on a single level. Your health must always above 0. Determine the minimum initial health required to complete all levels.
+
+**Keyword**: Greedy
+
+**Intuition**
++ Total Damage: sum up
++ Optimal Armor Usage: Use armor on the level with highest damage
++ Effective Armor: The armor can absorb up to armor damage, but not more than the max damage
+
+**Solution**
+```cpp
+class Solution {
+public:
+    long long minimumHealth(const std::vector<int>& damage, int armor) {
+      auto totalDamage = std::accumulate(damage.begin(), damage.end(), 0ll);
+      auto maxDamage = *std::max_element(damage.begin(), damage.end());
+      auto effectiveArmor = std::min(armor, maxDamage);
+      return totalDamage - effectiveArmor + 1;
+    }
+};
+```
+
+#### [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Min/Max Heap
+
+**Intuition**
++ We don't want to sort the the entire list every time
++ Instead, we use two heaps to store two halves:
+  + A max heap for the smaller half
+  + A min heap for the larger half
++ We also need to keep two heaps balanced so
+  + left == right
+  + left == right + 1
+
+**Steps**
++ `add()`
+  + Add to left first
+  + Move the largest from left to right to maintain order (???)
+  + Rebalance: if right more than left, move smallest back to left
++ `findMedian()`
+  + If left > right, return left top
+  + return half of left top and right top
+
+#### [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+
+**Keyword**: BFS on Tree
+
+**Intuition**
++ Classic BFS
+
+#### [2551. Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/)
+
+#### [3462. Maximum Sum with at Most K Elements](https://leetcode.com/problems/maximum-sum-with-at-most-k-elements/)
+
+#### [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
++ The structure is very easy, keep extract the last digit, and append to the new number
++ Be carefult about the **overflow problem**
+  + INT_MAX: 2^31 - 1, ***7
+  + INT_MIN: -2^31, -***8
+
+**Steps**
++ While x is not zero
+  + d = x % 10, x /= 10
+  + To prevent overflow, pre-check if multiplying by 10 and adding a digit would exceed limits.
+  + res = res * 10 + d
+
+#### [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Stack
+
+**Intuition**
+Use a monotonic stack to remember indices of days with unresolved warmer temperatures.
+As soon as we find a warmer temperature, we can resolve previous days.
+
+**Steps**
++ Declare stack for the decresing temperature **indices**
++ Initialize results with 0s
++ Iterate temperatures
+  + If we find current temp is higher than the temps in the stack
+    + Pop out
+    + Append the index diff as result
+  + Push temp to stack
++ Return results
+
+Time: O(N), Space: O(N)
+
+#### [907. Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+
+#### [1492. The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
++ Instead of finding all factors of n, we can count them as we iterate up to n. Once we find the kth, we return it immediately.
+
+**Steps**
++ Use `k` as counter
++ Iterate from 1 to `n`
+  + If `n % i == 0`, decrease counter
+  + If `counter == 0`, reutrn `i`
++ Return invalid
+
+#### [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Linked-List
+
+**Intuition**
+Since both lists are sorted, we can iterate through both using two pointers and merge them in order, much like the merge step in merge sort.
+
+**Steps**
++ Create dummy node, current node starts at dummy
++ while both list not to the end
+  + Link the smaller node, and move forward
++ Link the rest list
+
+Time: O(n+m), Space: O(1)
+
+#### [62. Unique Paths](https://leetcode.com/problems/unique-paths/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
+This is a combinatorics problem. The robot has to make exactly `m-1` down moves and `n-1` right moves. The total number of unique paths is equivalent to choosing m-1 downs out of (m+n-2) total moves.
+
+**Steps**
++ Calculate $C_{m+n-2}^{m-1}$
 
 ## LeetCode Roadmap
 
@@ -2019,7 +2710,8 @@ int dfs(int startIndex, std::vector<T>& target) {
             update([...additional states]);
         }
 
-        ans = aggregate(ans, dfs(startIndex + edge.length(), [...additional states])
+        ans = aggregate(ans, dfs(startIndex + edge.length(), [...additional states]));
+
         if (additional states) {
             revert([...additional states]);
         }
@@ -2035,11 +2727,14 @@ int dfs(int startIndex, std::vector<T>& target) {
     if (isValid(target[startIndex:])) {
         return 1;
     }
+
     for (auto edge : getEdges(startIndex, [...additional states])) {
         if (additional states) {
             update([...additional states]);
         }
-        ans = aggregate(ans, dfs(startIndex + edge.length(), [...additional states])
+
+        ans = aggregate(ans, dfs(startIndex + edge.length(), [...additional states]));
+
         if (additional states) {
             revert([...additional states]);
         }
@@ -2193,7 +2888,7 @@ void bfs(Coordinate starting_node) {
 ### Prefix Sum
 
 ```cpp
-std::vector<int> buildPrefixSum(const std::vector<int>& arr) {
+std::vector<int> BuildPrefixSum(const std::vector<int>& arr) {
     int n = arr.size();
     std::vector<int> prefixSum(n);
     prefixSum[0] = arr[0];
@@ -2204,7 +2899,7 @@ std::vector<int> buildPrefixSum(const std::vector<int>& arr) {
 }
 
 // Query sum of range [left, right] (inclusive)
-int queryRange(const std::vector<int>& prefixSum, int left, int right) {
+int QueryRange(const std::vector<int>& prefixSum, int left, int right) {
     if (left == 0) {
         return prefixSum[right];
     }
@@ -2215,7 +2910,7 @@ int queryRange(const std::vector<int>& prefixSum, int left, int right) {
 ### Sliding Window - Fixed Size
 
 ```cpp
-W sliding_window_fixed(std::vector<T> input, int window_size) {
+W SlidingWindowFixed(std::vector<T> input, int window_size) {
     W ans = window = std::vector<T>(input.begin(), input.begin() + window_size);
     for (int right = window_size; right < input.size(); ++right) {
         int left = right - window_size;
@@ -2229,7 +2924,7 @@ W sliding_window_fixed(std::vector<T> input, int window_size) {
 ### Sliding Window - Longest
 
 ```cpp
-W sliding_window_flexible_longest(std::vector<T> input) {
+W SlidingWindowLongest(std::vector<T> input) {
     initialize window, ans
     int left = 0;
     for (int right = 0; right < input.size(); ++right) {
@@ -2247,7 +2942,7 @@ W sliding_window_flexible_longest(std::vector<T> input) {
 ### Sliding Window - Shortest
 
 ```cpp
-W sliding_window_flexible_shortest(std::vector<T> input) {
+W SlidingWindowShortest(std::vector<T> input) {
     initialize window, ans
     int left = 0;
     for (int right = 0; right < input.size(); ++right) {
@@ -2265,7 +2960,7 @@ W sliding_window_flexible_shortest(std::vector<T> input) {
 ### Two Pointers - Opposite Direction
 
 ```cpp
-void two_pointers_opposite(vector<int>& arr) {
+void TwoPointersOppositeDirection(std::vector<int>& arr) {
     int left = 0, right = arr.size() - 1;
     while (left < right) {
         // Process current elements
@@ -2284,7 +2979,7 @@ void two_pointers_opposite(vector<int>& arr) {
 ### Two Pointers - Same Direction
 
 ```cpp
-void two_pointers_same(vector<int>& arr) {
+void TwoPointersSameDirection(std::vector<int>& arr) {
     int slow = 0, fast = 0;
     while (fast < arr.size()) {
         // Process current elements
@@ -2300,3 +2995,40 @@ void two_pointers_same(vector<int>& arr) {
     }
 }
 ```
+
+## Binary Search
+
+### Most Generalize Binary Search
+
+Suppose we have a search space. It could be an array, a range, etc. Usually it's sorted in ascending order. For most tasks, we can transform the requirement into the following generalized form:
+
+Minimize k , s.t. condition(k) is True
+
+The following code is the most generalized binary search template:
+
+```python
+def binary_search(array) -> int:
+    def condition(value) -> bool:
+        pass
+
+    left, right = min(search_space), max(search_space) # could be [0, n], [1, n] etc. Depends on problem
+    while left < right:
+        mid = left + (right - left) // 2
+        if condition(mid):
+            right = mid
+        else:
+            left = mid + 1
+    return left
+```
+
+What's really nice of this template is that, for most of the binary search problems, we only need to modify three parts after copy-pasting this template, and never need to worry about corner cases and bugs in code any more:
+
++ Correctly initialize the boundary variables left and right to specify search space. Only one rule: set up the boundary to **include all possible elements**;
++ Decide return value. Is it return left or return left - 1? Remember this: **after exiting the while loop, left is the minimal k​ satisfying the condition function**;
++ Design the condition function. This is the most difficult and most beautiful part. Needs lots of practice.
+
+### Advanced Application
+
+The above problems are quite easy to solve, because they already give us the array to be searched. We'd know that we should use binary search to solve them at first glance. However, more often are the situations where the search space and search target are not so readily available. Sometimes we won't even realize that the problem should be solved with binary search -- we might just turn to dynamic programming or DFS and get stuck for a very long time.
+
+As for the question "When can we use binary search?", my answer is that, If we can discover some kind of monotonicity, for example, if condition(k) is True then condition(k + 1) is True, then we can consider binary search.
