@@ -512,13 +512,71 @@ SOURCE += main.cpp
  &lt;/tr>
  &lt;/tbody>
 &lt;/table>
-&lt;p>Nature&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</guid><description>&lt;h1 id="leetcode-top-interview-questions">LeetCode Top Interview Questions&lt;/h1>
+&lt;p>Nature&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/behavioral-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/behavioral-interview/</guid><description>&lt;h1 id="behavioral-interviews">Behavioral Interviews&lt;/h1>
+&lt;h2 id="amazon-leadership-principles">Amazon Leadership Principles&lt;/h2>
+&lt;h3 id="customer-obsession">Customer Obsession&lt;/h3>
+&lt;p>Amazonians are encouraged to find ways to delight the customer before they know they’d like to be delighted.&lt;/p>
+&lt;ul>
+&lt;li>Tell me about a time when you strongly disagreed with your manager or peer on something you considered very important to the business.&lt;/li>
+&lt;li>To try to meet the high expectations of our customers, we sometimes promise more than we can deliver. Tell me about a time when you overcommitted yourself or your company.&lt;/li>
+&lt;li>Tell me about one of your projects where you put customer fist.&lt;/li>
+&lt;li>Describe a time when you went above and beyond to ensure a customer was satisfied with your service&lt;/li>
+&lt;li>Tell me about a time you had to deal with a difficult customer&lt;/li>
+&lt;/ul>
+&lt;h3 id="invent-and-simplify">Invent and Simplify&lt;/h3>
+&lt;p>Engineers at Amazon are encouraged to innovate as well as cut costs.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
+&lt;h2 id="embedded-software-development-engineer">Embedded Software Development Engineer&lt;/h2>
+&lt;h3 id="difference-between-serial-communication-protocols-like-i2c-spi-and-uart">Difference between Serial Communication protocols like I2C, SPI and UART&lt;/h3>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>Feature&lt;/th>
+ &lt;th>UART&lt;br>(Universal Asynchronous Receiver Transmitter)&lt;/th>
+ &lt;th>I2C&lt;br>(Inter-Integrated Circuit)&lt;/th>
+ &lt;th>SPI&lt;br>(Serial Peripheral Interface)&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>Wire&lt;/td>
+ &lt;td>2 - TX(transmit), RX(receive)&lt;/td>
+ &lt;td>2 - SDA(data), SCL(clock)&lt;/td>
+ &lt;td>4+ - MOSI, MOSO, SCLK, SS (chip select), one CS per slave&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Speed&lt;/td>
+ &lt;td>Low&lt;/td>
+ &lt;td>Medium&lt;/td>
+ &lt;td>High&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Communication&lt;/td>
+ &lt;td>Asynchronous (no shared clock); devices must agree on baud rate&lt;/td>
+ &lt;td>Synchronous, multi-master/multi-slave&lt;/td>
+ &lt;td>Synchronous, full-duplex&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Topology&lt;/td>
+ &lt;td>Point-to-Point&lt;/td>
+ &lt;td>Multi-Slave&lt;/td>
+ &lt;td>Multi-Slave with Chip Select(CS)&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>Use Case&lt;/td>
+ &lt;td>Simple point-to-point communication (e.g. debug console, GPS modules)&lt;/td>
+ &lt;td>Connecting multiple low-speed peripherals (e.g. sensors, EEPROM)&lt;/td>
+ &lt;td>High-speed communication with sensors, flash, displays&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>Answer:&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</guid><description>&lt;h1 id="leetcode-top-interview-questions">LeetCode Top Interview Questions&lt;/h1>
 &lt;p>&lt;img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&amp;amp;logo=Meta&amp;amp;logoColor=white" alt="Meta">&lt;br>
 &lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS">&lt;br>
 &lt;img src="https://img.shields.io/badge/google-4285F4?style=for-the-badge&amp;amp;logo=google&amp;amp;logoColor=white" alt="Google">&lt;br>
 &lt;img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&amp;amp;logo=apple&amp;amp;logoColor=white" alt="Apple">&lt;/p>
-&lt;h2 id="array--string">Array &amp;amp; String&lt;/h2>
-&lt;h3 id="88-merge-sorted-array">&lt;a href="https://leetcode.com/problems/merge-sorted-array/">88. Merge Sorted Array&lt;/a>&lt;/h3>
+&lt;h2 id="array--hashing">Array &amp;amp; Hashing&lt;/h2>
+&lt;h4 id="88-merge-sorted-array">&lt;a href="https://leetcode.com/problems/merge-sorted-array/">88. Merge Sorted Array&lt;/a>&lt;/h4>
+&lt;p>&lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS">&lt;/p>
 &lt;p>&lt;strong>Keyword&lt;/strong>: Two-Pointer&lt;/p>
 &lt;p>&lt;strong>Steps&lt;/strong>&lt;/p>
 &lt;ul>
@@ -533,7 +591,7 @@ SOURCE += main.cpp
 &lt;li>Copy the rest from &lt;code>nums&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;p>Time: O(m+n), Space: O(1)&lt;/p>
-&lt;h3 id="27-remove-item">&lt;a href="https://leetcode.com/problems/remove-element/">27. Remove Item&lt;/a>&lt;/h3>
+&lt;h4 id="27-remove-item">&lt;a href="https://leetcode.com/problems/remove-element/">27. Remove Item&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Keyword&lt;/strong>: Two-Pointer&lt;/p>
 &lt;p>two pointers, one tracks valid number, one iterates.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1></description></item><item><title/><link>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/01-devices/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/metal/thirty-days-of-metal/01-devices/</guid><description>&lt;h1 id="devices">Devices&lt;/h1>
 &lt;p>To get started, we will learn about &lt;strong>devices&lt;/strong>.&lt;/p>
