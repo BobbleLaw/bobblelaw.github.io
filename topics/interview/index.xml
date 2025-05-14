@@ -56,6 +56,7 @@
 &lt;p>Engineers at Amazon are encouraged to innovate as well as cut costs.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
 &lt;h2 id="embedded-software-development-engineer">Embedded Software Development Engineer&lt;/h2>
 &lt;h3 id="difference-between-serial-communication-protocols-like-i2c-spi-and-uart">Difference between Serial Communication protocols like I2C, SPI and UART&lt;/h3>
+&lt;p>&lt;img src="https://media.licdn.com/dms/image/v2/D5612AQHZQKpJFd0INA/article-inline_image-shrink_1000_1488/B56ZU2XcHoHQAQ-/0/1740373869897?e=1752105600&amp;amp;v=beta&amp;amp;t=_1Jye7I5u_mmeYXEgkDqoFNYldSpvhXkZJmtMEVu3hY" alt="I2C, SPI and UART">&lt;/p>
 &lt;table>
  &lt;thead>
  &lt;tr>
@@ -122,4 +123,19 @@
 &lt;p>Time: O(m+n), Space: O(1)&lt;/p>
 &lt;h4 id="27-remove-item">&lt;a href="https://leetcode.com/problems/remove-element/">27. Remove Item&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Keyword&lt;/strong>: Two-Pointer&lt;/p>
-&lt;p>two pointers, one tracks valid number, one iterates.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1></description></item></channel></rss>
+&lt;p>two pointers, one tracks valid number, one iterates.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/system-design-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/system-design-interview/</guid><description>&lt;h1 id="system-design-interview">System Design Interview&lt;/h1>
+&lt;h2 id="embedded">Embedded&lt;/h2>
+&lt;ul>
+&lt;li>Design a state machine for a traffic light controller(Amazon)&lt;/li>
+&lt;li>Design the LED behaviour of Apple Airpods(Apple)&lt;/li>
+&lt;li>Design alexa for weather information(Amazon)&lt;/li>
+&lt;li>Design VR glass(Meta)&lt;/li>
+&lt;li>Design oculus game controller(Meta)&lt;/li>
+&lt;li>Design apple pencil(Apple)&lt;/li>
+&lt;li>Design an audio mixer (Asked at Meta Reality Lab)&lt;/li>
+&lt;li>Design a microkernel-based system which can load a file and start execution. (Asked at Meta Reality Labs)&lt;/li>
+&lt;li>Design a state machine for a vending machine at your office(Google)&lt;/li>
+&lt;li>Design a telemetry service (Asked at Meta for Embedded Software Engineering role)&lt;/li>
+&lt;li>Design a protocol to send data from the host to the device x bytes at a time. (Asked at Meta)&lt;/li>
+&lt;li>Design a throwable Panoramic Ball Camera that Shoots 360-Degree Photos.&lt;/li>
+&lt;/ul></description></item></channel></rss>
