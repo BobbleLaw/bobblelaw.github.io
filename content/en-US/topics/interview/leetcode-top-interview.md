@@ -40,8 +40,8 @@ two pointers, one tracks valid number, one iterates.
 
 **Steps**
 + `slow` start at 0
-+ `fast` start at 1
-+ Whenever find a unique element, increase `slow`, update value at `slow`
++ `fast` start at 1, iterate `fast`
++ Whenever find a unique element, increase `slow`, update value at `slow` to value as fast
 
 #### [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 
@@ -120,15 +120,25 @@ Time: O(N), Space: O(1)
 
 #### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
 
-+ The difference between this question and [Jump Game](#55-jump-game) is to **return the minimum jump**
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Greedy
+
+**Intuition**
++ The difference between this question and [Jump Game](#55-jump-game) is
+  + **Return the minimum jump**
+  + Destination is `nums[n - 1]`
 + **Greedy**: At each level, try to extend the jump range as far as possible
 
 **Steps**
-+ Track the farthest index we can reach by `farthest`
-+ Track the current range of jump by `currentRange`
-+ When we reach `currentRange`, we must jump, so increase the `jump` counter, and update `currentRange`
-
-+ **BE CAREFUL**: Iterate to the **second last index**, because as long as we can reach the second last index, we can jump
++ Declare the farthest index we can reach by `farthest`
++ Declare the current range of jump by `currentRange`
++ Declare jump count
++ Iterate `[0... n-1)`
+  + Update `farthest`
+  + If we reach `currentRange`, we must jump
+    + Increase the `jump` counter
+    + Update `currentRange`
 
 #### [11. Container with Most Water](https://leetcode.com/problems/container-with-most-water/)
 
@@ -145,7 +155,9 @@ Time: O(N), Space: O(1)
 + Declare `maxArea`
 + While `left` and `right` not cross
   + Calculate and update `maxArea`
-  + Update bound
+  + Move the smaller side to update bound
+
+Time: O(N), Space: O(1)
 
 #### [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 
@@ -174,10 +186,6 @@ Time: O(N), Space: O(1)
 
 + Use hash table to count occurrence of each letter
 + Knowing all the characters are letter, we can use array instead of hash table
-
-#### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
-
-+ Two pointer, slow and fast
 
 ## Intervals
 
@@ -394,11 +402,23 @@ Time: O($Nlog(N)$), Space: O(N)
 
 #### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Keyword**: DFS
 
+**Intuition**
++ Use DFS to traverse the tree and locate LCA
++ Try [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii), and you would find that if the node can access its parent, everything is better.
++ So the other option is to build a hash map of nodes and their parent first, and the problem is the same as [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii)
+
 **Steps**
-+ DFS recursion
-  + `p` and `q` are on different sides of the `node`, LCA is `node`
++ DFS function
+  + Return: the LCA
+  + Inputs: node, taget1, target2
+  + If `node` is null, return null
+  + If any of `p` and `q` is `node`, return `node`
+  + Recursively get left LCA and right LCA from left and right branch
+  + If LCA exists on both sides, return `node`
   + Either `p` or `q` on one side of the `node`, LCA should be in that side of the `node`
 + Use DFS on left and right
 
@@ -413,6 +433,12 @@ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes `p
 + If either `p` or `q` is missing from the tree, return `nullptr` instead of the LCA.
 
 **Keyword**: DFS
+
+**Intuition**
++ Similar to [236. Lowest Common Ancestor of a Binary Tree](#236-lowest-common-ancestor-of-a-binary-tree)
++ The `dfs` function carries more infos
+
+**Solution**
 ```cpp
 // Reuse the structure of basic LCA, but in dfs(), we carry the result if q and p exist in the tree, 
 class Solution {
@@ -496,6 +522,8 @@ Time: O(H), Space: O(1)
 
 #### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Keyword**: BFS
 
 **Intuition**
@@ -504,9 +532,15 @@ Time: O(H), Space: O(1)
 + Optional: DFS. Add the right node first, so when list size is same as the depth, that's the right most node
 
 **Steps**
-+ Classic BFS pattern, declare queue (of Node), push root, start loop
-+ Track the last element in this layer
-+ Insert left and right if neccessary
++ Prepare BFS
+  + Declare queue of Node
+  + Push root
++ BFS loop
+  + Iterate elements in layer
+    + Update the last element
+    + Insert left and right (if neccessary)
+  + Append last number of this layer
++ Return result
 
 Time: O(N), Space: O(N)
 
@@ -537,9 +571,28 @@ Time: O(N), Space: O(H)
 
 **MEDIUM BUT HARD!**
 
-+ Because we need to go up and down, and the binary tree node doesn't have parent, so we **build a undirected graph from tree**
-+ Use BFS to traverse the graph from target node to level `K`
-+ Return the elements in level K
+**Keyword**: Binary Tree, BFS on Graph
+
+**Intuition**
++ We are given a tree, but the problem is more like a graph, so we **build a undirected graph from tree**
++ Use BFS to traverse the graph, and find all the paths of length k
+
+**Steps**
++ Build undirected graph from tree
+  + Inputs: node, parent
+  + Append parent to node's neigbors, append node to parent's neigbors
+  + Recursively build left and right
++ Prepare BFS queue, and visited set
++ Declare distance (depth), init as 0
++ Start the loop
+  + If distance is k, break
+  + Else iterate elements in current distance
+    + Pop the front
+    + Insert its neigbors (is not visited)
+  + Distance count up
++ Return the elements in the queue
+
+Time: O(N) + O(N), Space: O(N)
 
 #### [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 
@@ -547,10 +600,24 @@ Time: O(N), Space: O(H)
 
 **HARD**
 
-+ Traverse the tree with DFS, while tracking
-  + The accumulate `maxSum` so far
-  + The maxPath return to parent node (single path)
-+ While traversing, ignore path has negative sum
+**Keyword**: Binary Tree, DFS
+
+**Intuition**
++ We want to know the **max** sum, so think of DFS
++ DFS function track the max sum and the max gain (from single side)
+
+**Steps**
++ DFS function
+  + Return: Max Gain.
+  + Inputs: Node, max sum
+  + If node is null, return 0
+  + Calculate sum of left and right node
+  + Calculate current sum
+  + Update max sum
+  + Return max gain
++ Traverse the tree with DFS, start with root, and max sum is 0
+
+Time: O(N), Space: O(H)
 
 #### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
@@ -608,12 +675,18 @@ Time: O(N), Space: O(H)
   + Iterate piles
     + Use `(pile + k - 1)` to efficiently calculate `std::ceil(pile / (double)k)`
 + Binary search loop
-  + Start at 1, end at max of pile
+  + `left`: 1 (min eat one banana), `right`: max of pile
   + If can eat all, slow down, move right
   + Else, speed up, move left
 + Return left
 
 Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space: O(1)
+
+#### [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+
+**Keyword**: Binary Search
+
+
 
 ## String
 
@@ -780,8 +853,13 @@ TODO
 
 Time: O(N) average, O($N^2$) worst, Space: O(1)
 
+#### [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
+
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+
 #### [227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
 
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Stack
@@ -792,15 +870,16 @@ Time: O(N) average, O($N^2$) worst, Space: O(1)
 + So we use stack to achieve this
 
 **Steps**
++ Declare stack, (current) number, and last operator
 + Iterate the string while tracking the current number and last operator
   + If digit, convert to number
-  + If operator, or last digit
+  + If (not digit and not space), or it's last digit
     + +: Push number to stack
     + -: Push neg number to stack
     + *: Calculate stack.top() * num, pop, and push result
     + /: Calculate stack.top() / num, pop, and push result
     + Update last operator, clear number
-+ Sum up the elements in stack
++ Sum up all the elements in stack
 
 Time: O(N), Space: O(N)
 
@@ -848,6 +927,8 @@ auto num = dist(rd);a
 Time: O($log(N)$), Space: O(1)
 
 #### [50. Pow(x, n)](https://leetcode.com/problems/powx-n/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Divide and Conquer
 
@@ -1002,8 +1083,10 @@ Time: O(N), Space: O(1)
   + If `x == reversedHalf` (even digits) or `x == reversedHalf / 10` (odd digits), it's a palindrome.
 
 **Steps**
-+ Negative number and number ends with 0, return false
-+ `while x > reverse_half`
++ Corner case, return false
+  + Negative number
+  + Number ends with 0
++ `while x > reverse_half`, we want x is larger or equal to rev
   + Use last digit to assemble reverse_half
   + Remove last digit
 + Compare first half and last half
@@ -1115,22 +1198,6 @@ Time: O(N), Space: O(N)
 
 + Use BFS, traverse from top to bottom, left to right, ignore the right most node in each layer
 + Make use of `next` pointer. Two while loop, outer use leftMost, inner use head
-
-#### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-
-![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Intervals
-
-**Steps**
-+ Sort the input intervals **by the mins**
-+ Iterate the sorted intervals
-  + If result is empty, append current interval
-  + If the end of last interval in results is less than beginning of current interval, append current interval
-  + Else, update the end of last interval in results
-
-Time: O(NLog(N)), Space: O(N)
 
 #### [146. LRU Cache](https://leetcode.com/problems/lru-cache)
 
@@ -1294,7 +1361,7 @@ Time: O(N), Space: O(1)
 **Steps**
 + Declare a min heap
 + Iterate lists
-  + Insert starting nodes into min heap, so smallest node starts first
+  + Insert starting nodes into min heap, so list with smallest node starts first
 + Create dummy node
 + Loop
   + Pop the smallest (pop)
@@ -1483,7 +1550,21 @@ Time: O(N), Capacity: O(1)
 
 Time: O(len(string), len(template)), Space: O(len(template))
 
-### Meeting Rooms
+#### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Intervals
+
+**Steps**
++ Sort the input intervals **by the mins**
++ Iterate the sorted intervals
+  + If result is empty, append current interval
+  + If the end of last interval in results is less than beginning of current interval, append current interval
+  + Else, update the end of last interval in results
+
+Time: O(NLog(N)), Space: O(N)
 
 #### [252. Meeting Rooms I](https://leetcode.com/problems/meeting-rooms/)
 
@@ -1534,7 +1615,7 @@ public:
         minHeap.push(intervals[0][1]);
 
         for (size_t i{1}; i < intervals.size(); ++i) {
-            // If current meeting starts after (larger than) the earliest ending time
+            // If current meeting starts after (larger than) the earliest ending time, reuse room
             if (intervals[i][0] >= minHeap.top()) {
                 minHeap.pop();
             }
@@ -1546,11 +1627,15 @@ public:
 }
 ```
 
+Time: O(nlogn) + O(nlogn)
+
 #### [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
 
 **HARD**
 
 #### [75. Sort Colors](https://leetcode.com/problems/sort-colors/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 + We need to partition the array into 3 parts
 + Because in-place sort, so we need to swap
@@ -1856,7 +1941,7 @@ private:
 
 **Steps**
 + Declare a dummy pointer
-+ Delcare `curr` and `carrier`
++ Declare `curr` and `carrier`
 + Loop while `l1` and `l2` both valid
 + Loop either `l1` or `l2` valid
 + Append carrier node if it exists
@@ -2092,8 +2177,6 @@ Time: O(N + E), Space: O(N)
 + Use a hash map to track **the latest index where each number appeared**
 
 #### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
-
-#### [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
 #### [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
@@ -2364,16 +2447,49 @@ Time: O(N*L^2), Space: O(N*L)
 
 #### [78. Subsets](https://leetcode.com/problems/subsets/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Keyword**: Backtrack
 
+**Intuition**
+Classic backtrack problem
+
+**Steps**
++ Declare `backtrack` function
+  + Return: void
+  + Inputs: nums (optional), current index, current sequence, current results
+  + Base condition: append current sequence
+  + Backtrack condition:
+    + Iterate `[current index, nums' size)`
+      + Append num to current sequence
+      + backtrack
+      + Remove the last from current sequence
++ Start backtrack with
+  + numbers
+  + index 0
+  + sequence
+  + results
+
 #### [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Intuition**
 + Simulate the process
 
 **Steps**
++ Declare top, bottom, left, right
++ Loop while left and right, top and bottom don't cross
+  + Loop from left to right, top add up
+  + Loop from top to bottom, right count down
+  + If top and bottom not cross
+    + Loop from right to left, bottom count down
+  + If left and right not cross
+    + Loop from bottom to top, left add up
 
 #### [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Intuition**
 + Simulate how human check Sudoku valid
@@ -2383,10 +2499,14 @@ Time: O(N*L^2), Space: O(N*L)
 + Iterate the elements
   + If char is '.', skip
   + If number exists in any row, col, or boxes, return false
-  + Update number occurance
+  + Update number occurances
 + Return true
 
+Time: O(9x9), Space: O(9x9x3)
+
 #### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Keyword**: Backtrack
 
@@ -2394,15 +2514,21 @@ Time: O(N*L^2), Space: O(N*L)
 + A very classic combinatorics problem involving backtracking
 
 **Steps**
-+ Use a hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
-+ Backtracking
-  + Base case: If the digits iteration finish, append current word
-  + Recursive case: append each letter for current word
-+ Start with
++ The `backtrack` function
+  + Return: void
+  + Carry: (optional)digits, current index in digits, current word, current results
+  + Declare a static hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
+  + Base case: If current index is equal to digits size (iteration finishes), append current word, return
+  + Recursive case: 
+    + Get possible letters for current digit
+    + Append each letter to current word
++ Start backtrackwith
+  + Input `digits`
   + Empty word
   + Index 0
-  + Input `digits`
   + Output `res`
+
+Time: 
 
 ### Bit Manipulation
 
@@ -2489,15 +2615,33 @@ int hammingWeight(uint32_t n) {
 
 #### [2790. Maximum Number of Groups With Increasing Length](https://leetcode.com/problems/maximum-number-of-groups-with-increasing-length/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **HARD!!!**
 
 **Keyword**: Greedy
 
+**Intuition**
+No idea???
+
+**Steps**
+
 #### [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 
-**Keyword**:
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Sliding Window
 
 **Intuition**
++ Brutal force: scan each window, cost O(nk)
++ Use `deque` to store `indices` of useful elements in window
+
+**Steps**
++ Declare a deque to keep indices of elements that are candidates for max
++ Iterate `nums`
+  + Remove the outside indices from the front
+  + Remove small indices from the back
+  + If i in range, append deque front (indices with larger value)
 
 #### [2214. Minimum Health to Beat Game](https://leetcode.com/problems/minimum-health-to-beat-game/)
 
@@ -2552,6 +2696,8 @@ public:
 
 #### [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **Keyword**: BFS on Tree
 
 **Intuition**
@@ -2559,14 +2705,49 @@ public:
 
 #### [2551. Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: List
+
+**Intuition**
++ The score is **only determined** by the sum of **the first and last** element in each group
++ Each cut affects two adjacent elements, their sum is important
++ Don't need to care about the first and last element
+
+**Steps**
+1. For each adjacent pair of weights, calculate `pairSums`
+2. Sort the `pairSums`
+3. Accumulate the smallest k sums to `minScore`, and the largest k sums to `maxScore`
+4. Return `maxScore - minScore`
+
+Time: O(N) * 2 + O(NlogN), Space: O(N)
+
 #### [3462. Maximum Sum with at Most K Elements](https://leetcode.com/problems/maximum-sum-with-at-most-k-elements/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Min-Heap, Greedy
+
+**Intuition**
++ "Most K" thinks of min heap
++ Add as bigger number as possible of a row into the min heap
+
+**Steps**
++ Declare min heap to store global max k element
++ Iterate all rows
+  + Sort current row (we want to append from max value)
+  + Try to add `top row limit` elements into the heap
+  + Always keep k element (the max k) in min heap
++ Sum up the elements in min heap
+
+Time: O(m*nlogn), Space: O(k)
 
 #### [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Intuition**
-+ The structure is very easy, keep extract the last digit, and append to the new number
++ The structure is very easy, keep extract the last digit by mod, and append to the new number
 + Be carefult about the **overflow problem**
   + INT_MAX: 2^31 - 1, ***7
   + INT_MIN: -2^31, -***8
@@ -2577,6 +2758,8 @@ public:
   + To prevent overflow, pre-check if multiplying by 10 and adding a digit would exceed limits.
   + res = res * 10 + d
 
+Time: O(logn), Space: O(1)
+
 #### [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -2584,12 +2767,12 @@ public:
 **Keyword**: Stack
 
 **Intuition**
-Use a monotonic stack to remember indices of days with unresolved warmer temperatures.
-As soon as we find a warmer temperature, we can resolve previous days.
+Use a **monotonic stack** to remember **indices** of days with cooler (or same) temperatures.
+As soon as we find a warmer temperature, we can pop previous days.
 
 **Steps**
 + Declare stack for the decresing temperature **indices**
-+ Initialize results with 0s
++ Declare results, initialize with 0
 + Iterate temperatures
   + If we find current temp is higher than the temps in the stack
     + Pop out
@@ -2603,6 +2786,23 @@ Time: O(N), Space: O(N)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
+**HARD!!!**
+
+**Intuition**
++ Each element may be the minimum for some subarray
++ The problem becomes **how many subarrays** each element serves as the minimum
++ Use monotonic stack to find
+  + How many elements on the left are bigger
+  + How many elements on the right are bigger
+
+**Steps**
++ For each elements, use monotonic stack to find, use -1 to indicate no less element
+  + Index of previous smaller element, `[0...n)`, use `>`
+  + Index of next smaller element, `[n-1, 0]`, use `>=`
++ Sum up the element based on contribution (and mod). `sum = (sum + arr[i] * left * right) % 10
++ Return sum
+
+Time: 3 * O(n), Space: 2 * O(n)
 
 #### [1492. The kth Factor of n](https://leetcode.com/problems/the-kth-factor-of-n/)
 
@@ -2629,7 +2829,7 @@ Since both lists are sorted, we can iterate through both using two pointers and 
 
 **Steps**
 + Create dummy node, current node starts at dummy
-+ while both list not to the end
++ While both list not to the end
   + Link the smaller node, and move forward
 + Link the rest list
 
@@ -2640,10 +2840,70 @@ Time: O(n+m), Space: O(1)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **Intuition**
-This is a combinatorics problem. The robot has to make exactly `m-1` down moves and `n-1` right moves. The total number of unique paths is equivalent to choosing m-1 downs out of (m+n-2) total moves.
+This is a **combinatorics** problem. The robot has to make exactly `m-1` down moves and `n-1` right moves. The total number of unique paths is equivalent to choosing m-1 downs out of (m+n-2) total moves.
 
 **Steps**
 + Calculate $C_{m+n-2}^{m-1}$
+
+#### [2055. Plates Between Candles](https://leetcode.com/problems/plates-between-candles/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Prefix Sum
+
+**Intuition**
++ Precompute the prefix sum of plates to quickly calculate the number of plates between any two indices.
++ For each position, determine the nearest candle to the left and the nearest candle to the right.
+
+**Steps**
++ Create an array `prefixSum` where `prefixSum[i]` represents the total number of plates from the start up to index `i`.
++ Create an array `leftCandle` where `leftCandle[i]` stores the index of the nearest candle to the left of or at position `i`. If there's no candle to the left, store `-1`.
++ Create an array `rightCandle` where `rightCandle[i]` stores the index of the nearest candle to the right of or at position `i`. If there's no candle to the right, store `-1`.
++ Iterate all the queries. For each query [left, right]:
+  + Find the index of the nearest candle to the right of left using rightCandle[left].
+  + Find the index of the nearest candle to the left of right using leftCandle[right].
+  + If both candles exist and the right of left is less than the left of right, calculate the number of plates between these two candles using the prefix sum `prefixSum[rightCandleIndex] - prefixSum[leftCandleIndex]`
+  + Otherwise, the answer for this query is 0.
+
+Time: O(n + q), Space: O(n)
+
+#### [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+**Keyword**: Linked-List
+
+#### [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Difference with [206. Reverse Linked List](#206-reverse-linked-list) is reverse list in a range
+
+#### [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Slow and fast pointer. When fast meets the end, return the slow
+
+#### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Slow and fast pointer. When fast meets slow, then there's a cycle
+
+#### [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Difference with [141. Linked List Cycle](#141-linked-list-cycle) is the problem requires return the entry of the loop
++ Detect loop part is the same. After we find a loop, place a node in the beginning, and move together with slow
+
+#### [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+
+
+
 
 ## LeetCode Roadmap
 
@@ -2995,6 +3255,30 @@ void TwoPointersSameDirection(std::vector<int>& arr) {
     }
 }
 ```
+
+## How to Answer Coding Questions in Interview
+
+This approach can be used for many company interviews. So here it goes:
+
++ When asked to provide a solution, first **define and frame the problem** as you see it.
++ If you don’t understand — ask for help or clarification.
++ If you need to assume something — verbally check its a correct assumption!
++ Always let your interviewer know what you are thinking as he/she will be as interested in your process of thought as your solution.
++ Also, if you’re stuck, they may provide hints if they know what you’re doing.
++ Finally, listen — don’t miss a hint if your interviewer is trying to assist you!
+
+Interviewers will be looking at the approach to questions as much as the answer:
+
++ Does the candidate listen carefully and comprehend the question?
++ Are the correct questions asked before proceeding? (important!)
++ Is brute force used to solve a problem? (not good!)
++ Are things assumed without first checking? (not good!)
++ Are hints heard and needed?
++ Is the candidate slow to comprehend / solve problems? (not good!)
++ Does the candidate enjoy finding multiple solutions before choosing the best one?
++ Are new ideas and methods of tackling a problem sought?
++ Is the candidate inventive and flexible in their solutions and open to new ideas?
++ Can questioning move up to more complex problem solving?
 
 ## Binary Search
 
