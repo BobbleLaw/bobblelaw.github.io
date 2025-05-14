@@ -15,3 +15,7 @@ markup:
 
 pagination:
   pageSize: 3
+
+services:
+  googleAnalytics:
+    id: G-7GMTK23CS7
