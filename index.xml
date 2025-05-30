@@ -518,13 +518,8 @@ SOURCE += main.cpp
 &lt;p>Amazonians are encouraged to find ways to delight the customer before they know they’d like to be delighted.&lt;/p>
 &lt;ul>
 &lt;li>Tell me about a time when you strongly disagreed with your manager or peer on something you considered very important to the business.&lt;/li>
-&lt;li>To try to meet the high expectations of our customers, we sometimes promise more than we can deliver. Tell me about a time when you overcommitted yourself or your company.&lt;/li>
-&lt;li>Tell me about one of your projects where you put customer fist.&lt;/li>
-&lt;li>Describe a time when you went above and beyond to ensure a customer was satisfied with your service&lt;/li>
-&lt;li>Tell me about a time you had to deal with a difficult customer&lt;/li>
 &lt;/ul>
-&lt;h3 id="invent-and-simplify">Invent and Simplify&lt;/h3>
-&lt;p>Engineers at Amazon are encouraged to innovate as well as cut costs.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
+&lt;p>S: During development of our factory calibration pipeline for robotic mowers, I strongly disagreed with my manager&amp;rsquo;s proposal to skip the camera reprojection validation step to save time in production.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
 &lt;h2 id="embedded-software-development-engineer">Embedded Software Development Engineer&lt;/h2>
 &lt;h3 id="difference-between-serial-communication-protocols-like-i2c-spi-and-uart">Difference between Serial Communication protocols like I2C, SPI and UART&lt;/h3>
 &lt;p>&lt;img src="https://media.licdn.com/dms/image/v2/D5612AQHZQKpJFd0INA/article-inline_image-shrink_1000_1488/B56ZU2XcHoHQAQ-/0/1740373869897?e=1752105600&amp;amp;v=beta&amp;amp;t=_1Jye7I5u_mmeYXEgkDqoFNYldSpvhXkZJmtMEVu3hY" alt="I2C, SPI and UART">&lt;/p>
@@ -594,7 +589,19 @@ SOURCE += main.cpp
 &lt;p>Time: O(m+n), Space: O(1)&lt;/p>
 &lt;h4 id="27-remove-item">&lt;a href="https://leetcode.com/problems/remove-element/">27. Remove Item&lt;/a>&lt;/h4>
 &lt;p>&lt;strong>Keyword&lt;/strong>: Two-Pointer&lt;/p>
-&lt;p>two pointers, one tracks valid number, one iterates.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/system-design-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/system-design-interview/</guid><description>&lt;h1 id="system-design-interview">System Design Interview&lt;/h1>
+&lt;p>two pointers, one tracks valid number, one iterates.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1>
+&lt;ol>
+&lt;li>&lt;strong>What is stratified cross-validation and when should we use it?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Why do ensembles typically have higher scores than individual models?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>What is regularization? Can you give some examples of regularization techniques?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>What is an imbalanced dataset? Can you list some ways to deal with it?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Why do we need a validation set and test set? What is the difference between them?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>Can you explain the differences between supervised, unsupervised, and reinforcement learning?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>What are some factors that explain the success and recent rise of deep learning?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>What is data augmentation? Can you give some examples?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>What are convolutional networks? Where can we use them?&lt;/strong>&lt;/li>
+&lt;li>&lt;strong>What is the curse of dimensionality? Can you list some ways to deal with it?&lt;/strong>&lt;/li>
+&lt;/ol></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/system-design-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/system-design-interview/</guid><description>&lt;h1 id="system-design-interview">System Design Interview&lt;/h1>
 &lt;h2 id="embedded">Embedded&lt;/h2>
 &lt;ul>
 &lt;li>Design a state machine for a traffic light controller(Amazon)&lt;/li>
