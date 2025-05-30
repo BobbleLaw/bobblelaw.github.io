@@ -163,9 +163,12 @@ Time: O(N), Space: O(1)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
+**HARD!!!**
+
 **Keyword**: Two-Pointer
 
 **Observations**
++ Water volumn can be trapped depends on the lower side
 + Water that can be trapping at index i is `std::min(leftMax, rightMax) - h[i]`
 
 **Steps**
@@ -230,7 +233,8 @@ Time: O(N), Space: O(1)
     + Count up
     + Use DFS to sink its adjacent cells
 
-**Steps: BFS**
+**Steps: BFS (Recommend)**
++ Return if `grid` is empty
 + Declare queue to keep pending **lands**
 + Iterate the grid
   + If current cell is land
@@ -245,6 +249,36 @@ Time: O(N), Space: O(1)
 + Return count
 
 Time: O(m x n), Space: O(m x n)
+
+#### [934. Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DFS, BFS on Grid
+
+**Intuition**
++ Try to locate and mark the first island (using 2) with DFS
++ Use BFS from all the boundary points of the first island to expand toward the second
++ The first point touch the second island is the shortest bridges
+
+**Steps**
++ Find and mark the first island
+  + Declare `dfs()` function
+    + Input: grid, row, col, queue
+    + Output: None
+    + If not in range or not island, return
+    + Mark visited as 2, and push land into queue
+    + Explore 4 directions
++ Start BFS loop
+  + Retrieve island in queue
+  + Try 4 directions
+    + If not in range, skip
+    + If meet island, return `len`
+    + If meet sea
+      + Mark as visited
+      + Append to queue
+
+Time: O(n^2), Space: O(n^2)
 
 #### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
@@ -309,6 +343,40 @@ Time: O(N + E), Space: O(N + E)
 + Simulate binary addition (with two pointers)
 
 ## Binary Tree
+
+#### [638. Shopping Offers](https://leetcode.com/problems/shopping-offers/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DFS
+
+**Intuition**
++ Try **ALL** possible combinations of special offers to minimize the cost
++ Use DFS (recursion) with memoization to explore state space
+
+**Steps**
++ Declare `dfs(...)` function
+  + Input: prices, offers, needs
+  + Output: min cost
+  + If in memo, retrieve and return
+  + Base case: without special offers
+  + Try each offer
+    + Offer valid if all the needs is greater and equal to item in offer
+    + Deduct the offer item count from need
+    + Try to calculate new min cost with new needs
+  + Update min cost of current need
+  + Return min cost
++ Start dfs with given prices, offers and needs
+
+#### [103. Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: BFS on Tree
+
+**Intuition**
++ Almost the same as binary tree level traverse
++ Except we need one more boolean to indicate the direction, reverse the values in level based on the direction
 
 #### [314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
 
@@ -648,7 +716,7 @@ Time: O(N), Space: O(H)
 
 #### [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 
-**Keyword**: DFS on DFS
+**Keyword**: DFS on BST
 
 **Steps**
 + DFS function: Return sum
@@ -657,6 +725,30 @@ Time: O(N), Space: O(H)
   + If current val in range, return the sum of left and rigth branches, and current value
 
 Time: O(N), Space: O(H)
+
+#### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: In-order Traversal on BST
+
+**Intuition**
++ In order traversal on BST, and carrying the counter, stop when `counter == k`
+
+**Steps**
++ Declare `traverse()` function
+  + Input: node, k
+  + Carry: count, result
+  + Output: void
+  + If `node` is null or count meet/exceed k, return
+  + Traverse left node
+  + `count` add up
+  + If `counter == k`, save current val to result, and return
+  + Traverse left node
++ Start from root, k, count = 0, res = -1
+
+Time: O(H + N), Space: O(H)
+
 
 ## Binary Search
 
@@ -1127,13 +1219,16 @@ Time: O(N^2), Space: O(1)
 
 **Steps**
 + Count frequency of each character. (Use hash map or array)
-+ Prepare max heap to track the two most frequent characters
++ Declare a max heap to sort the characters by count, so later we can track the **two most frequent** characters
   + Push {count, char} pairs to max heap
-+ Always keep two, start loop
++ Start loop while make sure at least 2 elements in queue
   + Retrive the most count two characters
   + Append to the result
   + Decrease count, and push back to max heap if applicable
-+ If at the end, there's a character with `count > 1`, it's impossible
++ If some element left in the queue at the end, 
+  + If the element has more than 1 count, it's invalid, return empty
+  + Else append the last character
++ Return result
 
 Time: O(Nlog(A)) - N is length of string, A is alphabet size, Space: O(A)
 
@@ -1194,6 +1289,44 @@ Time: O(N), Space: O(A), where A is the size of the character size
 
 Time: O(N), Space: O(N)
 
+#### [974. Subarray Sums Divisible by K](https://leetcode.com/problems/subarray-sums-divisible-by-k/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Prefix Sum
+
+**Intuition**
++ If the sum of a subarray(i, j) is divisible by k, then: `prefix[j + 1] % k == prefix[i] % k`
+
+**Steps**
++ Declare hash map to count the modulo
+  + Init `map[0] = 1` to handle the case where the subarray starts from 0
++ Iterate the numbers
+  + Update prefix sum
+  + Calculate modulo
+  + Count up how many times this modulo seen before
+  + Count up the current modulo
+
+Time: O(N), Space: O(K)
+
+#### [1010. Pairs of Songs With Total Durations Divisible by 60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Modulo
+
+**Intuition**
++ No return order required, not duplicated position. So just simply find all the possible combinations
+
+**Steps**
++ Use a 60 size array for the occurance of different modulos
++ Three cases
+  + 0 + 0
+  + 30 + 30
+  + i + (60 - i), where i in [1, 30)
+
+Time: O(N), Space: O(K)
+
 #### [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/)
 
 + Use BFS, traverse from top to bottom, left to right, ignore the right most node in each layer
@@ -1224,8 +1357,8 @@ Time: O(N), Space: O(N)
 + `put()`
   + If exist in map
     + Use iterator to remove the existed one
-  + If not exist
-    + If exceed
+  + If not exist in map
+    + If exceed capacity
       + Get the last key
       + Pop last element
       + Remove from map
@@ -1706,11 +1839,11 @@ Time: O(nlogn) + O(nlogn)
 
 #### [167. Two Sums II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
-**Keyword**: Binary Search
+**Keyword**: Two-Pointer
 
 **Intuition**
 + The difference with [Two Sums](#1-two-sums) is the input array is sorted
-+ We can use binary search to find the two sums pair
++ We can use two pointer method to find the two sums pair
 + The other difference is given array is **1-indexed**
 
 **Steps**
@@ -1724,7 +1857,7 @@ Time: O(nlogn) + O(nlogn)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: Binary Search
+**Keyword**: Two-Pointer
 
 **Intuition**
 + Need to return **all** triplets
@@ -1962,7 +2095,7 @@ private:
 + While `left <= right`
   + Calculate `mid`
   + If `nums[mid] == target`, return `mid`
-  + If 'nums[left] <= nums[mid]` (left side sorted)
+  + If `nums[left] <= nums[mid]` (left side sorted)
     + If `target` also in left range, move right
     + Else, move left
   + Else (right side sorted)
@@ -2445,6 +2578,17 @@ Time: O(N*L^2), Space: O(N*L)
     + `dp[0] = 1`
     + `dp[1] = 2`
 
+#### [120. Triangle](https://leetcode.com/problems/triangle/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DP
+
+**Steps**
++ Start from the second last row and go upward.
++ For each element, update it with the sum of itself and the min of its two children (below it).
++ The top element becomes the answer.
+
 #### [78. Subsets](https://leetcode.com/problems/subsets/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -2503,6 +2647,40 @@ Classic backtrack problem
 + Return true
 
 Time: O(9x9), Space: O(9x9x3)
+
+#### [1138. Alphabet Board Path](https://leetcode.com/problems/alphabet-board-path/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Simulation
+
+**Steps**
+
+#### [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Simulation
+
+**Steps**
+
+
+#### [1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**PROBLEM STATEMENT**
+
+
+#### [795. Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+
+#### [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 
 #### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 
@@ -2571,6 +2749,20 @@ int hammingWeight(uint32_t n) {
 
 #### [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
 
+**Key Idea**
++ `ones = (ones ^ num) & ~twos`, meaning appear once, and not twice
++ `twos = (twos ^ num) & ~ones`, meaning appear twice, and not once
++ The numbers appear three times will cancel out, left the one appears once
++ Return `ones`
+
+#### [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
+
+**Key Idea**
++ Same as [136. Single Number](#136-single-number), XOR will cancel out all the duplicated numbers
++ But the final result is `a^b`, the XOR of two unique numbers
++ Use `diff = a_b & (-a_b);` to extract the **lowest diff bits** of `a_b`
++ Use this diff to separate the numbers into two group, and xor will cancel out the numbers appear twice
++ Return a and b
 
 #### [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
@@ -2648,6 +2840,7 @@ No idea???
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **PROBLEM STATEMENT**
+
 You're given an array damage where `damage[i]` represents the health lost upon completing level i. Additionally, you have an armor that can be **used once** to absorb up to armor damage on a single level. Your health must always above 0. Determine the minimum initial health required to complete all levels.
 
 **Keyword**: Greedy
@@ -2825,15 +3018,36 @@ Time: 3 * O(n), Space: 2 * O(n)
 **Keyword**: Linked-List
 
 **Intuition**
-Since both lists are sorted, we can iterate through both using two pointers and merge them in order, much like the merge step in merge sort.
++ Since both lists are sorted, we can iterate through both and merge them in order.
 
 **Steps**
-+ Create dummy node, current node starts at dummy
++ Create `dummy` node
++ Declare `current` node starts at dummy
 + While both list not to the end
   + Link the smaller node, and move forward
 + Link the rest list
 
 Time: O(n+m), Space: O(1)
+
+#### [148. Sort List](https://leetcode.com/problems/sort-list/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Naturally think of merge sort
++ Split the linked-list with fast-slow pointer
++ Merge two part, check [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
+
+**Steps**
++ If `head` is `nullptr` or one head, return `head`
++ Use fast-slow pointer to split the list
++ Recursively call `sortList` on `head` and `slow`
++ Merge the result
+
+Time: O(nlogn), Space: O(logn) of stack
+
 
 #### [62. Unique Paths](https://leetcode.com/problems/unique-paths/)
 
@@ -2900,10 +3114,378 @@ Time: O(n + q), Space: O(n)
 + Difference with [141. Linked List Cycle](#141-linked-list-cycle) is the problem requires return the entry of the loop
 + Detect loop part is the same. After we find a loop, place a node in the beginning, and move together with slow
 
+#### [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Linked-List
+
+**Intuition**:
++ Can't access head, and we don't know prev, so we can't simply unlink this node
++ We can **copy the next node** into current node, and delete next node
+
 #### [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
 
+#### [2221. Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
+**Keyword**: Math
+
+**Intuition**
++ Simulate the process
++ Dont use extra vector, put new result in nums[i], `nums[i] = (nums[i] + nums[i+1]) % 10`
+
+#### [2268. Minimum Number of Keypresses](https://leetcode.com/problems/minimum-number-of-keypresses/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**PROBLEM STATEMENT**
+
+You have a keypad with 9 buttons, numbered from 1 to 9, each mapped to lowercase English letters. You can choose which characters each button is matched to as long as:
++ All 26 lowercase English letters are mapped to.
++ Each character is mapped to by exactly 1 button.
++ Each button maps to at most 3 characters.
++ To type the first character matched to a button, you press the button once. To type the second character, you press the button twice, and so on.
+
+Given a string s, return the minimum number of keypresses needed to type s using your keypad.
+
+Note that the characters mapped to by each button, and the order they are mapped in cannot be changed.
+
+**Keyword**: Sort, Simulation
+
+**Intuition**
++ To minimize the total keypresses
+  + Put the most frequent letters in the positions with lower cost
+  + Then put the next most frequent letters into positions with 2 or 3 presses.
+
+**Steps**
++ Count the frequencies of each letter
++ Sort them by descending order
++ Assign the most frequent 9 letters to cost 1, then next 9 to cost 2, then next 9 to cost 3
+
+**Solution**
+```cpp
+class Solution {
+public:
+    int minimumKeypresses(const std::string& str) {
+        std::array<int, 26> freq(0);
+        for (const auto& ch: str) {
+            freq[ch - 'a']++;
+        }
+
+        std::sort(freq.begin(), freq.end(), std::greater<int>());
+
+        int res = 0;
+        for (int i = 0; i < 26 && freq[i] > 0; ++i) {
+            const int press = i / 9 + 1;
+            res += press * freq[i];
+        }
+        return res;
+    }
+}
+```
+
+Time: O(n) + O(26log26), Space: O(1)
+
+#### [366. Find Leaves of Binary Tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**PROBLEM STATEMENT**
+Given a binary tree, collect a tree's nodes as if you were doing this: Collect and remove all leaves, repeat until the tree is empty.
+
+**Keyword**: DFS on Tree
+
+**Intuition**
++ Simulate "removing" leaves by grouping nodes by their height from the bottom
++ The leaves have height of 0, and their parent have height 1, and so on...
+
+**Steps**
++ Define `dfs` function
+  + Input: node
+  + Carrying: result
+  + Output: height
+  + nullptr has height -1
+  + Height is the max of left and right height, add one
+  + Nodes at same height at result[h]
+  + Push current node to result[h]
+  + Return height
++ Start with given root node, and results
+
+**Solution**
+```cpp
+class Solution {
+    std::vector<std::vector<int>> findLeaves(TreeNode* root) {
+        std::vector<std::vector<int>> res;
+        dfs(root, res);
+        return res;
+    }
+
+private:
+    int dfs(TreeNode* node, std::vector<std::vector<int>>& res) {
+        if (!node) {
+            return -1;
+        }
+
+        const int h = std::max(dfs(node->left, dfs(node->right, res)), right) + 1;
+
+        if (res.size() <= height) {
+            res.push_back({});
+        }
+        
+        res[h].push_back(node->val);
+        return h;
+    }
+}
+```
+
+#### [692. Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Min-Heap
+
+**Intuition**
++ Top k problem, use min heap
+
+**Steps**
++ Calculate the word frequency
++ Declare a min heap of [count->word] pairs
++ Keep pushing item into min heap while keep heap size not larger than k
++ Assemble the result
++ Reverse the result
+
+Time: O(nlogk + mlogm), Space: O(n+k)
+
+#### [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: DFS on Tree, Backtrack
+
+**Intuition**
++ From node to leave, so we need to go to the end, think of DFS
++ Use DFS to traverse the tree and carrying the current path, current sum, and result
+
+**Steps**
++ Define `dfs` function
+  + Input: node, target
+  + Carrying: current path, current sum, result
+  + Output: none
+  + nullptr return
+  + Push the node, add up current value to current sum
+    + If current is leaf, and meet target, append current path to result
+    + Find left/right
+  + Pop back (end backtrack)
++ Start with given root, target, and empty path, 0 sum, result
+
+Time: O(N), Space: O(H)
+
+#### [1730. Shortest Path to Get Food](https://leetcode.com/problems/shortest-path-to-get-food/)
+
+**PROBLEM STATEMENT**
+
+You are starving and you want to eat food as quickly as possible. You want to find the shortest path to arrive at any food cell.
+
+You are given an `m x n` character matrix, `grid`, of these different types of cells:
++ '*' is your location. There is exactly one '*' cell.
++ '#' is a food cell. There may be multiple food cells.
++ 'O' is free space, and you can travel through these cells.
++ 'X' is an obstacle, and you cannot travel through these cells.
+
+You can travel to any adjacent cell north, east, south, or west of your current location if there is not an obstacle.
+
+Return the length of the shortest path for you to reach any food cell. If there is no path for you to reach food, return -1.
+
+**Keyword**: BFS on Grid
+
+**Intuition**
+
+**Solution**
+```cpp
+class Solution {
+public:
+    int getFood(std::vector<std::vector<char>>& grid) {
+        const int rows = grid.size();
+        const int cols = grid[0].size();
+        
+        std::queue<std::pair<int, int>> q;
+        std::vector<std::vector<bool>> visited(rows, std::vector<bool>(cols, false));
+
+        // Find starting point
+        for (int r = 0; r < rows; ++r) {
+            for (int c = 0; c < cols; ++c) {
+                if (grid[r][c] == '*') {
+                    q.emplace(r, c);
+                    visited[r][c] = true;
+                    break;
+                }
+            }
+        }
+
+        constexpr std::array kDirs{-1, 0, 1, 0, -1};
+
+        int steps = 0;
+        while (!q.empty()) {
+            const int n = q.size();
+            for (int i = 0; i < n; ++i) {
+                auto [r, c] = q.front();
+                q.pop();
+
+                if (grid[r][c] == '#') {
+                    return steps;
+                }
+
+                for (int d = 0; d < 4; ++d) {
+                    int rr = r + kDirs[d];
+                    int cc = c + kDirs[d + 1];
+
+                    if (rr >=0 && cc >= 0 && rr < rows && cc < cols &&
+                        !visited[rr][cc] &&
+                        grid[rr][cc] != 'X') {
+                          q.emplace(rr, cc);
+                          visited[rr][cc] = true;
+                        }
+                }
+            }
+            steps++;
+        }
+
+        return -1;
+    }
+}
+```
+
+Time: O(mxn), Space: (mxn)
+
+#### [716. Max Stack](https://leetcode.com/problems/max-stack/)
+
+**PROBLEM STATEMENT**
+Design a max stack that supports push, pop, top, peekMax and popMax.
++ push(x) -- Push element x onto stack.
++ pop() -- Remove the element on top of the stack and return it.
++ top() -- Get the element on the top.
++ peekMax() -- Retrieve the maximum element in the stack.
++ popMax() -- Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.
+
+**Keyword**: Stack
+
+**Solution**
+```cpp
+class MaxStack {
+public:
+    void push(int x) {
+        _data.push_back(x);
+        _valToIt[x].push_back(_data.rbegin());
+    }
+
+    int pop() {
+        auto val = _data.back();
+        _data.pop_back();
+
+        _valToIt[val].pop_back();
+        if (_valToIt[val].empty()) {
+            _valToIt.erase(val);
+        }
+
+        return val;
+    }
+
+    int top() const {
+        return _data.back();
+    }
+
+    int peekMax() const {
+        return _valToIt.rbegin()->first;
+    }
+
+    int popMax() {
+        auto it = _valToIt.rbegin();
+        int max = it->first;
+
+        auto lastIt = it->second.back();
+        _data.erase(lastIt);
+        it->second.pop_back();
+        if (it->second.empty()) {
+            _valToIt.erase(max);
+        }
+
+        return max;
+    }
+
+private:
+    using _Container = std::vector<int>;
+    _Container _data;
+    std::map<int, std::vector<_Container::iterator>> _valToIt;
+};
+```
+
+**Variant**
++ What if we don't need `popMax()`, how can we improve the algorithm?
+
+```cpp
+namespace {
+
+class MaxStack {
+public:
+    void push(int x) {
+        if (_data.empty()) {
+            _max = x;
+            _data.push(x);
+        } else if (x > _max) {
+            _data.push(encode(x));
+            _max = x
+        } else {
+            _data.push(x);
+        }
+    }
+
+    void pop() {
+        if (_data.empty()) {
+            return; 
+        }
+
+        auto top = _data.top();
+        _data.pop();
+
+        if (top > _max) {
+            _max = decode(top);
+        }
+    }
+
+    int top() const {
+        if (_data.empty()) {
+            // ... throw Exception();
+        }
+
+        auto top = _data.top();
+
+        return top > _max ? _max : top;
+    }
+
+    int peekMax() const {
+        if (_data.empty()) {
+            // ... throw Exception();
+        }
+
+        return _max;
+    }
+  
+private:
+    int encode(int x) const {
+        return 2 * x - _max;
+    }
+
+    int decode(int top) const {
+        return 2 * _max - top;
+    }
+private:
+    using _Container = std::stack<int>;
+    _Container _data;
+    int _max = -1;
+};
+```
 
 ## LeetCode Roadmap
 

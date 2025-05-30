@@ -628,26 +628,344 @@ True. Solutions:
 53. CFS uses 'nanosecond' granularity accounting, the atomic units by which individual process share the CPU instead of previous notion of 'timeslice' - True/False.
 
 54. When will you choose busy-wait instead of context switch?
+
 55. What are the possible scenarios in which context switching of threads can occur?
+
 56. Can you use mutex/semaphore inside an ISR?
+
 57. Explain a scenari that could cause deadlock? What is the best solution for a deadlock?
+
 58. Will the performance of your application improve if it has only a single thread and it is running on multiple cores of a processor?
+
 59. What will happen if there are more threads requesting for CPU resource such as time?
+
 60. What is Gang Scheduling and how is it useful?
+
 61. Can you sleep in interrupt handler?
+
 62. What is the main drawback for not considering Linux as realtime / RTOS?
+
 63. What is the drawback in using semaphore for synchronization ? How does spinlock help in overcoming it?
+
 64. What does a semaphore consist of ? and What does a spinlock consist of?
+
 65. Why spinlocks are useless in uniprocessor systems?
+
 66. What is the difference between multiprogramming and multiprocessing?
+
 67. What is parallel programming?
+
 68. What are the types of IPC mechanisms?
+
 69. What are the types of synchronization problems and what are the resources that can cause such problems?
+
 70. What is data race?
+
 71. What is Indefinite Postponement / Indefinite blocking or starvation?
+
 72. What are the synchronization relationships that are present in a multithreaded or mulitprogramming applications?
-73. How Many Processes or Threads Are Enough for an application?
+
+73. How many processes or threads are enough for an application?
+
 74. Tell the advantages and disadvantages of Co-operative multitasking.
+
 75. When should we use mutex and when should we use semaphore?
-76. How do you select a scheduler for your project
+
+Use a mutex when:
++ You need to **protect shared resources** (like memory, I/O devices, or global variables).
++ **Only one task** at a time should access a critical section.
++ You want to **avoid priority inversion** — mutexes in FreeRTOS support priority inheritance.
++ You expect **only tasks** to give/take the lock (not from ISRs).
++ You may need **recursive locking** (e.g., a task calling a library that also uses the same mutex).
++ e.g. Shared UART access across multiple tasks
+
+Use binary semaphore when:
++ You want to signal from **an ISR to a task**.
++ You need **event notification** (e.g., button press, DMA complete, sensor ready).
++ You don't need priority inheritance or ownership.
+Use counting semaphore when:
++ You have **a pool of identical resources** (e.g., N buffers, N UART channels).
++ You want to count availability or usage of those resources.
+
+76. How do you select a scheduler for your project?
+
 77. What are the types of approach for designing a scheduler
+
+78. Which endianness is: A. x86 families; B. ARM families; C. internet protocols; D. other processors? 
+
+79. Explain how interrupts work. What are some things that you should never do in an interrupt function?
+
+80. Explain when you should use "volatile" in C.
+
+81. Explain UART, SPI, I2C buses. Describe some of the signals in each. At a high-level describe each. Have you ever used any? Where? How? What type of test equipment would you want to use to debug these types of buses? Have you ever used test equipment to do it? Which?
+
+82. Explain how DMA works. What are some of the issues that you need to worry about when using DMA?
+
+83. Where does the interrupt table reside in the memory map for various processor families?
+
+84. In which direction does the stack grow in various processor families?
+
+85. Implement a Count Leading Zero (CLZ) bit algorithm, but don't use the assembler instruction. What optimizations to make it faster? What are some uses of CLZ?
+
+86. What is RISC-V? What is it's claimed pros or cons?
+
+87. List some ARM cores. For embedded use, which cores were most commonly used in the past? now?
+
+88. Explain processor pipelines, and the pro/cons of shorter or longer pipelines.
+
+89. Explain fixed-point math. How do you convert a number into a fixed-point, and back again? Have you ever written any C functions or algorithms that used fixed-point math? Why did you?
+
+90. What is a pull-up or pull-down resistor? When might you need to use them?
+
+91. What is "zero copy" or "zero buffer" concept?
+
+92. How do you determine if a memory address is aligned on a 4 byte boundary in C?
+
+93. What hardware debugging protocols are used to communicate with ARM microcontrollers?
+
+94. What processor architecture was the original Arduino based on?
+
+95. What are the basic concepts of what happens before main() is called in C?
+
+96. What are the basic concepts of how printf() works? List and describe some of the special format characters? Show some simple C coding examples.
+
+97. Describe each of the following? SRAM, Pseudo-SRAM, DRAM, ROM, PROM, EPROM, EEPROM, MRAM, FRAM, ...
+
+98. Show how to declare a pointer to constant data in C. Show how to declare a function pointer in C.
+
+99.  How do you multiply without using multiply or divide instructions for a multiplier constant of 10, 31, 132?
+
+100. When do you use memmove() instead of memcpy() in C? Describe why.
+
+101. Why is strlen() sometimes not considered "safe" in C? How to make it safer? What is the newer safer function name?
+
+102. When is the best time to malloc() large blocks of memory in embedded processors? Describe alternate approach if malloc() isn't available or desired to not use it, and describe some things you will need to do to ensure it safely works.
+
+103. Describe symbols on a schematic? What is a printed circuit board?
+
+104. Do you know how to use a logic probe? multimeter? oscilloscope? logic analyzer? function generator? spectrum analyzer? other test equipment? Describe when you might want to use each of these. Have you hooked up and used any of these?
+
+105. What processors or microcontrollers are considered 4-bit? 8-bit? 16-bit? 24-bit? 32-bit? Which have you used in each size group? Which is your favorite or hate?
+
+106. What is Ohm's law?
+
+107. What is Nyquist frequency (rate)? When is this important?
+
+108. What is "wait state"?
+
+109. What are some common logic voltages?
+
+110. What are some common logic famlies?
+
+111. What is a CPLD? an FPGA? Describe why they might be used in an embedded system?
+
+112. List some types of connectors found on test equipment.
+
+113. What is AC? What is DC? Describe the voltage in the wall outlet? Describe the voltage in USB 1.x and 2.x cables?
+
+114. What is RS232? RS432? RS485? MIDI? What do these have in common?
+
+115. What is ESD? Describe the purpose of "pink" ESD bags? black or silvery ESD bag? How do you properly use a ground strap? When should you use a ground strap? How critical is it to use ESD protections? How do you safely move ESD-sensitive boards between different parts of a building?
+
+116. What is "Lockout-Tagout"?
+
+117. What is ISO9001? What is a simple summary of it's concepts?
+
+118. What is A/D? D/A? OpAmp? Comparator Other Components Here? Describe each. What/when might each be used?
+
+119. What host O/S have you used? List experience from most to least used.
+
+120. What embedded RTOS have you used? Have you ever written your own from scratch?
+
+121. Have you ever implemented from scratch any functions from the C Standard Library (that ships with most compilers)? Created your own because functions in C library didn't support something you needed?
+
+122. Have you ever used any encryption algorithms? Did you write your own from scratch or use a library (which one)? Describe which type of algorithms you used and in what situations you used them?
+
+123. What is a CRC algorithm? Why would you use it? What are some CRC algorithms? What issues do you need to worry about when using CRC algorithms that might cause problems? Have you ever written a CRC algorithm from scratch?
+
+124. Do you know how to solder? Have you ever soldered surface mount devices?
+
+125. How do you permanently archive source code? project? what should be archived? what should be documented? have you ever written any procedures of how to archive or build a project? How about describing how to install software tools and configuring them from scratch on a brand new computer that was pulled out of a box?
+
+126. What issues are a concern for algorithms that read/write data to DRAM instead of SRAM?
+
+127. What is the "escape sequence" for "Hayes Command Set"? Where was this used in the past? Where is it used today?
+
+128. What is the "escape character" for "Epson ESC/P"? Where is this used?
+129. After powerup, have you ever initialized a character display using C code? From scratch or library calls?
+130. Have you ever written a RAM test from scratch? What are some issues you need to test?
+131. Have you ever written code to initialize (configure) low-power self-refreshing DRAM memory after power up (independent of BIOS or other code that did it for the system)? It's likely that most people have never done this.
+132. Write code in C to "round up" any number to the next "power of 2", unless the number is already a power of 2. For example, 5 rounds up to 8, 42 rounds up to 64, 128 rounds to 128. When is this algorithm useful?
+133. What are two of the hardware protocols used to communicate with SD cards? Which will most likely work with more microcontrollers?
+134. What issues concerns software when you WRITE a value to EEPROM memory? FLASH memory?
+135. What is NOR-Flash and NAND-Flash memory? Are there any unique software concerns for either?
+136. Conceptually, what do you need to do after reconfiguring a digital PLL? What if the digital PLL sources the clock for your microcontroller (and other concerns)?
+137. What topics or categories of jokes shouldn't you discuss, tell, forward at work?
+138. Have you ever used any power tools for woodworking or metalworking?
+139. What is a common expression said when cutting anything to a specific length? (old expression for woodworking)
+140. Have you ever 3D printed anything? Have you ever created a 3D model for anything? List one or more 3D file extensions.
+141. Do you know how to wire an AC wall outlet or ceiling light? Have you ever done either?
+142. Have you ever installed a new hard drive / RAM / CPU in a desktop computer?
+143. Have you ever installed Windows or Linux from scratch on a computer that has a brand-new hard drive?
+144. Have you ever "burned" a CD-R or DVD-R disc? Have you ever created an ISO image of a CD or DVD or USB drive or hard drive?
+145. Have you ever read the contents of a serial-EEPROM chip from a dead system (though EEPROM chip is ok)?
+146. Have you ever written data to a serial-EEPROM chip before it is soldered down to a PCB?
+147. How do you erase an "old school" EPROM chip? (has a glass window on top of the chip)
+148. Describe any infrared protocols, either for data or remote controlling a TV.
+149. What is the most common protocol is used to communicate with a "smart card"? Have you ever written any software to communicate with a "smart card" in an embedded product?
+150. What is I2S? Where is it used? Why might you want to use I2S in an embedded system? Have you ever used it?
+151. What is CAN, LIN, FlexRay? Where are they used? Have you ever used any?
+152. What is ARINC 429? Where is it commonly used? Have you ever used it?
+153. What in-circuit debuggers or programmers have you used? Which one do you like or hate?
+154. Do you know any assembler code? For which processor? What assembler code is your favorite or hate? Have you ever written an assembler from scratch?
+155. What is "duff's device"? Have you ever used it?
+156. What is dual-port RAM? Why would it be useful in some embedded systems? What concerns do you need to worry about when using it? Have you ever used it? How?
+157. Have you ever soldered any electronic kits? Have you ever designed your own PCB(s)? Describe. What is a Gerber file?
+158. If you create a circular buffer, what size of buffer might optimized code be slightly faster to execute? why?
+159. Describe how to multiply two 256-bit numbers using any 32-bit processor without FPU or special instructions. Two or more methods?
+
++ implement memcpy (followed by "now optimize it")
++ implement a circular buffer
++ determine whether a given number is a power of two (without using arithmetic operators, if you want)
++ rarely some basic assembly stuff, really just looking for out loud discussion of addressing
++ what is a segmentation fault (this one has lead to some interesting discussions), what other kinds of processor error conditions/exceptions exist?
++ what is an mmu, what sorts of architectures utilize them, why/why not
+
+160. How is static keyword different in C++ than C?
+
+161. Difference between pass by reference and pass by pointer?
+
+162. How is const used differently in C++ and what is constexpr?
+
+163. Give a simple example of virtual keyword works. (If they can write some simple classes like Shape, Square, Circle to demonstrate, it is bonus).
+
+Then, some microcontroller specific questions (Like internals - ISR, pipelines, peripherals, etc.)
+
+And some RTOS specific questions (Slightly higher level - mutex vs semaphore, scheduling policies, context switches)
+
+And then Linux questions(OS tools used - ssh, vim, bash/python scripting, git, gcc, man pages? Systems level knowledge - use of read(), write(), poll(), sockets, fork(), system calls, Device drivers - very very high level idea only)
+
+### Aspects
+
+#### C Language
+
++ Pointers
++ Addresses
++ Multithreading
++ Data Structures
+
+#### Embedded Software Programming
+
+#### Focus
+
++ Super loop, while loop
++ GPIOs
++ DAC/ADC
++ Interupts
++ Hardware Communication Protocol: SPI/I2C/UART
++ DMA
++ Memory Management
++ RTOS
+
++ What is SPI?
+4 data lines, MISO, MOSI, clock, chip select. When the chip select pull low, the device is activated. Fully synchronized interface, sending and receiving at the same time, parallel
+
++ How DMA works?
+
+CPU can configurate the DMA to transfer data from peripheral to memory, memory to memory, and memory to peripheral. After configure, CPU don't need to care about this data transfer
+
++ What is semaphore, how is it different from mutex
+
+Ownership. Access limit
+
++ How to collect data in parallel and in sync?
+
+Use timer(for sync) and DMA (for parallelism)
+
++ When to use `volatile`
+
+For variables that are used in critical section such as interupt, memory mapped register, or variables that are used between threads
+
++ How to minimize MCU power consumption
+
+Use power mode offered by the MCU. 
+Lowering the CPU clock speed when it's not needed. 
+Optimize the code so that it runs in few clock cycles.
+Turn off peripherals when they are not used.
+Tickless idle mode
+
++ Why RTOS?
+
+Scheduler
+
++ ISR
+
+Keep short, dont log, print, delay inside. Dont use semaphore or mutex, not crazy loop
+
++ Big/Little endianness
+
++ Pull up/down resistor
+
+Pull up resistor is to keep an unused input pin at a high value
+
+1. **Describe the pros and cons of using a generic real-time operating system (RTOS) on a mid-range microcontroller.**
+2. **What are some common issues when handling interrupts?**
+3. **In platforms with significant constraints on memory size, is it more preferable to allocate memory statically or dynamically?**
+4. **Why are C and C++ still very popular and widely supported in embedded firmware development?**
+5. **How many wires are required to reliably implement TTL-like serial communication between two devices, and why?**
+6. **Since 32-bit and 64-bit microcontrollers exist, why are 8-bit ones still in use?**
+7. **Is firmware and data embedded in microcontrollers generally safe from downloading, tampering, or hacking?**
+8. **Describe the role of a watchdog timer.**
+9. **What are the most important characteristics of UART-based, I2C, and SPI serial communication?**
+10. **Discuss a couple of options for wireless communication between embedded devices.**
+
+These questions cover essential concepts relevant to embedded systems engineering. Let me know if you'd like to explore answers or dive deeper into any of them!
+
+## General
+
+1. Is there a difference between `class` and `struct`?
+2. What will the following code print out and why?  
+   ```cpp
+   #include <iostream>  
+   int main(int argc, char **argv) {  
+       std::cout << 25u - 50;  
+       return 0;  
+   }
+   ```
+3. What is the error in the following code, and how should it be corrected?  
+   ```cpp
+   my_struct_t *bar;  
+   /* ... do stuff, including setting bar to point to a defined my_struct_t object ... */  
+   memset(bar, 0, sizeof(bar));
+   ```
+4. What will `i` and `j` equal after the following code is executed? Explain your answer.  
+   ```cpp
+   int i = 5;  
+   int j = i++;
+   ```
+5. Assuming `buf` is a valid pointer, what is the problem in the following code? What alternative implementation would avoid this problem?  
+   ```cpp
+   size_t sz = buf->size();  
+   while (--sz >= 0) {  
+       /* do something */  
+   }
+   ```
+6. Consider the two code snippets for printing a `vector`. Is one approach better than the other? Explain.  
+7. Implement a template function `IsDerivedFrom()` that checks if class `C` is derived from class `P`.
+8. Implement a template boolean function `IsSameClass()` that compares two classes.
+9. Is it possible to have a recursive inline function?
+10. What will be the output of the following code?  
+11. Given the `Something` class, implement a method to retrieve `topSecretValue` without relying on `sizeof(int, bool, string)`.
+12. Implement a function `F` that takes two integer arrays (`A` and `B`) and size `N`, ensuring `B[i]` is the product of all elements in `A` except `A[i]`.
+13. When should virtual inheritance be used?
+14. What is the output of the following code?  
+15. What is the output of the following C++ program that involves virtual functions and destructors?
+16. How many times will this loop execute? Explain your answer.
+17. How can you ensure a function can only be called with specific parameter types?
+18. What is the problem with the following inheritance structure?
+19. What is a storage class?
+20. How can a C function be called from a C++ program?
+21. What will be the output of the following program using struct and pointer manipulation?
+22. Are static const member functions allowed? Explain your answer.
+23. Explain the `volatile` and `mutable` keywords.
+24. What is the "diamond problem" in multiple inheritance? Provide an example.
