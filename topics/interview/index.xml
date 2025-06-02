@@ -44,11 +44,20 @@
 &lt;p>Explain RANSAC&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/behavioral-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/behavioral-interview/</guid><description>&lt;h1 id="behavioral-interviews">Behavioral Interviews&lt;/h1>
 &lt;h2 id="amazon-leadership-principles">Amazon Leadership Principles&lt;/h2>
 &lt;h3 id="customer-obsession">Customer Obsession&lt;/h3>
-&lt;p>Amazonians are encouraged to find ways to delight the customer before they know they’d like to be delighted.&lt;/p>
+&lt;blockquote>
+&lt;p>Amazonians are encouraged to find ways to delight the customer before they know they’d like to be delighted.&lt;/p>&lt;/blockquote>
 &lt;ul>
-&lt;li>Tell me about a time when you strongly disagreed with your manager or peer on something you considered very important to the business.&lt;/li>
+&lt;li>
+&lt;p>Tell me about a time when you strongly &lt;strong>disagreed&lt;/strong> with your manager or peer on something you considered very important to the business.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>S&lt;/strong>: During development of our factory calibration pipeline for robotic mowers, I strongly disagreed with my manager&amp;rsquo;s proposal to skip the camera reprojection validation step to save time in production.&lt;/li>
+&lt;li>&lt;strong>T&lt;/strong>: The manager argued that since the calibration passed initial optimization with low residuals, we didn’t need a final projection check. But I believed that skipping this step could let silent failures (e.g. bad feature matches or incorrect chessboard detection) leak into production, which would degrade localization and ultimately hurt customer trust.&lt;/li>
+&lt;li>&lt;strong>A&lt;/strong>: I respectfully raised my concern in our calibration review, backed by data from a recent batch where two units had excellent residuals but failed real-world testing due to wrong board detections. I showed how reprojection visualization would’ve caught those immediately. I also proposed a fast implementation of this check that added just 2 seconds per unit. I emphasized that catching bad units early avoids costly field returns and rework.&lt;/li>
+&lt;li>&lt;strong>R&lt;/strong>: My manager agreed to test my proposal on the next 100 units. The check caught 3 failures that would’ve passed otherwise. It became a required step in our calibration line. This reinforced the value of speaking up with data—and balancing efficiency with long-term quality.&lt;/li>
 &lt;/ul>
-&lt;p>S: During development of our factory calibration pipeline for robotic mowers, I strongly disagreed with my manager&amp;rsquo;s proposal to skip the camera reprojection validation step to save time in production.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
+&lt;/li>
+&lt;li>
+&lt;p>Tell me about a time when you overcommitted yourself or your company.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
 &lt;h2 id="embedded-software-development-engineer">Embedded Software Development Engineer&lt;/h2>
 &lt;h3 id="difference-between-serial-communication-protocols-like-i2c-spi-and-uart">Difference between Serial Communication protocols like I2C, SPI and UART&lt;/h3>
 &lt;p>&lt;img src="https://media.licdn.com/dms/image/v2/D5612AQHZQKpJFd0INA/article-inline_image-shrink_1000_1488/B56ZU2XcHoHQAQ-/0/1740373869897?e=1752105600&amp;amp;v=beta&amp;amp;t=_1Jye7I5u_mmeYXEgkDqoFNYldSpvhXkZJmtMEVu3hY" alt="I2C, SPI and UART">&lt;/p>
