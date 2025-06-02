@@ -712,7 +712,7 @@ Time: O(N), Space: O(H)
 
 Time: O(N), Space: O(H)
 
-## Binary Search Tree(BST)
+### Binary Search Tree (BST)
 
 #### [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 
@@ -749,6 +749,11 @@ Time: O(N), Space: O(H)
 
 Time: O(H + N), Space: O(H)
 
+#### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+
+**Keyword**: BST Inorder Traverse
+
+**Steps**
 
 ## Binary Search
 
@@ -1366,6 +1371,16 @@ Time: O(N), Space: O(K)
   + Update map
 
 Time: O(1), Space: O(N)
+
+#### [460. LFU Cache](https://leetcode.com/problems/lfu-cache/)
+
+**HARD**
+
+**Keyword**:
+
+**Intuition**
+
+**Steps**
 
 #### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
 
@@ -2123,6 +2138,23 @@ private:
   + To remove the nth from the end, we need to arrive at the one before last nth node
   + The `first` pointer stops at pos n
 
+#### [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Two-Pointer
+
+**Intuition**
++ Similar to [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii)
+
+**Steps**
++ Delcare `pA` for `headA`, and `pB` for `headB`
++ Loop until `pA` meets `pB`
+  + If `pA` goes to the end, move to `headB`
+  + If `pB` goes to the end, move to `headA`
++ Return `pA` (or `pB`)
+
+
 #### [282. Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)
 
 **HARD**
@@ -2308,8 +2340,6 @@ Time: O(N + E), Space: O(N)
 
 **Intuition**
 + Use a hash map to track **the latest index where each number appeared**
-
-#### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
 
 #### [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
@@ -2503,7 +2533,7 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
     + If outlier is not the same as special sum or outlier value appears multiple times, update max outlier
 + Return max outlier
 
-## Dynamic Programming
+### Dynamic Programming
 
 #### [322. Coin Change](https://leetcode.com/problems/coin-change/)
 
@@ -2596,6 +2626,7 @@ Time: O(N*L^2), Space: O(N*L)
 **Keyword**: Backtrack
 
 **Intuition**
+
 Classic backtrack problem
 
 **Steps**
@@ -3193,6 +3224,7 @@ Time: O(n) + O(26log26), Space: O(1)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **PROBLEM STATEMENT**
+
 Given a binary tree, collect a tree's nodes as if you were doing this: Collect and remove all leaves, repeat until the tree is empty.
 
 **Keyword**: DFS on Tree
@@ -3284,12 +3316,14 @@ Time: O(N), Space: O(H)
 
 #### [1730. Shortest Path to Get Food](https://leetcode.com/problems/shortest-path-to-get-food/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **PROBLEM STATEMENT**
 
 You are starving and you want to eat food as quickly as possible. You want to find the shortest path to arrive at any food cell.
 
 You are given an `m x n` character matrix, `grid`, of these different types of cells:
-+ '*' is your location. There is exactly one '*' cell.
++ '\*' is your location. There is exactly one '\*' cell.
 + '#' is a food cell. There may be multiple food cells.
 + 'O' is free space, and you can travel through these cells.
 + 'X' is an obstacle, and you cannot travel through these cells.
@@ -3361,7 +3395,10 @@ Time: O(mxn), Space: (mxn)
 
 #### [716. Max Stack](https://leetcode.com/problems/max-stack/)
 
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
 **PROBLEM STATEMENT**
+
 Design a max stack that supports push, pop, top, peekMax and popMax.
 + push(x) -- Push element x onto stack.
 + pop() -- Remove the element on top of the stack and return it.
@@ -3486,6 +3523,41 @@ private:
     int _max = -1;
 };
 ```
+
+#### [2502. Design Memory Allocator]()
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Map
+
+**Intuition**
++ Naive brutal force.
++ Use map to make search faster
+
+**Steps: Map**
++ Declare members
+  + allocated ranges, map of {start, end}
+  + hash map of {id, [ranges]}
++ `allocate()`
+  + Declare `rangeEnd`, init with 0
+  + Iterate all the allocated ranges
+    + If `start > rangeEnd`
+      + Allocate the range
+      + Update id to range map
+      + Return
+    + Update rangeEnd
+  + Check if the last range fit the size
+    + Allocate the range
+    + Update id to range map
+    + Return 
+  + Return invalid
++ `free()`
+  + If id doesn't exist, return 0
+  + If id exists, iterate ranges of id
+    + Erase range
+    + Count up range element number
+  + Return total element count
+
 
 ## LeetCode Roadmap
 
