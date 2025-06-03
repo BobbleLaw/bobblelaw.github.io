@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sample on Bobble Law</title><link>https://bobblelaw.github.io/tags/sample/</link><description>Recent content in Sample on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Tue, 03 Jun 2025 22:38:00 +0100</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/sample/index.xml" rel="self" type="application/rss+xml"/><item><title>Emojis in Markdown</title><link>https://bobblelaw.github.io/posts/emojis-in-markdown/</link><pubDate>Tue, 03 Jun 2025 22:38:00 +0100</pubDate><guid>https://bobblelaw.github.io/posts/emojis-in-markdown/</guid><description>&lt;p>Reference: &lt;a href="https://gist.github.com/rxaviers/7360908">Complete list of github markdown emoji markup&lt;/a>&lt;/p>
+&lt;h2 id="people">People&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:bowtie: &lt;code>:bowtie:&lt;/code>&lt;/th>
+ &lt;th>:smile: &lt;code>:smile:&lt;/code>&lt;/th>
+ &lt;th>:laughing: &lt;code>:laughing:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:blush: &lt;code>:blush:&lt;/code>&lt;/td>
+ &lt;td>:smiley: &lt;code>:smiley:&lt;/code>&lt;/td>
+ &lt;td>:relaxed: &lt;code>:relaxed:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:smirk: &lt;code>:smirk:&lt;/code>&lt;/td>
+ &lt;td>:heart_eyes: &lt;code>:heart_eyes:&lt;/code>&lt;/td>
+ &lt;td>:kissing_heart: &lt;code>:kissing_heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kissing_closed_eyes: &lt;code>:kissing_closed_eyes:&lt;/code>&lt;/td>
+ &lt;td>:flushed: &lt;code>:flushed:&lt;/code>&lt;/td>
+ &lt;td>:relieved: &lt;code>:relieved:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:satisfied: &lt;code>:satisfied:&lt;/code>&lt;/td>
+ &lt;td>:grin: &lt;code>:grin:&lt;/code>&lt;/td>
+ &lt;td>:wink: &lt;code>:wink:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:stuck_out_tongue_winking_eye: &lt;code>:stuck_out_tongue_winking_eye:&lt;/code>&lt;/td>
+ &lt;td>:stuck_out_tongue_closed_eyes: &lt;code>:stuck_out_tongue_closed_eyes:&lt;/code>&lt;/td>
+ &lt;td>:grinning: &lt;code>:grinning:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kissing: &lt;code>:kissing:&lt;/code>&lt;/td>
+ &lt;td>:kissing_smiling_eyes: &lt;code>:kissing_smiling_eyes:&lt;/code>&lt;/td>
+ &lt;td>:stuck_out_tongue: &lt;code>:stuck_out_tongue:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sleeping: &lt;code>:sleeping:&lt;/code>&lt;/td>
+ &lt;td>:worried: &lt;code>:worried:&lt;/code>&lt;/td>
+ &lt;td>:frowning: &lt;code>:frowning:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:anguished: &lt;code>:anguished:&lt;/code>&lt;/td>
+ &lt;td>:open_mouth: &lt;code>:open_mouth:&lt;/code>&lt;/td>
+ &lt;td>:grimacing: &lt;code>:grimacing:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:confused: &lt;code>:confused:&lt;/code>&lt;/td>
+ &lt;td>:hushed: &lt;code>:hushed:&lt;/code>&lt;/td>
+ &lt;td>:expressionless: &lt;code>:expressionless:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:unamused: &lt;code>:unamused:&lt;/code>&lt;/td>
+ &lt;td>:sweat_smile: &lt;code>:sweat_smile:&lt;/code>&lt;/td>
+ &lt;td>:sweat: &lt;code>:sweat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:disappointed_relieved: &lt;code>:disappointed_relieved:&lt;/code>&lt;/td>
+ &lt;td>:weary: &lt;code>:weary:&lt;/code>&lt;/td>
+ &lt;td>:pensive: &lt;code>:pensive:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:disappointed: &lt;code>:disappointed:&lt;/code>&lt;/td>
+ &lt;td>:confounded: &lt;code>:confounded:&lt;/code>&lt;/td>
+ &lt;td>:fearful: &lt;code>:fearful:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cold_sweat: &lt;code>:cold_sweat:&lt;/code>&lt;/td>
+ &lt;td>:persevere: &lt;code>:persevere:&lt;/code>&lt;/td>
+ &lt;td>:cry: &lt;code>:cry:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sob: &lt;code>:sob:&lt;/code>&lt;/td>
+ &lt;td>:joy: &lt;code>:joy:&lt;/code>&lt;/td>
+ &lt;td>:astonished: &lt;code>:astonished:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scream: &lt;code>:scream:&lt;/code>&lt;/td>
+ &lt;td>:neckbeard: &lt;code>:neckbeard:&lt;/code>&lt;/td>
+ &lt;td>:tired_face: &lt;code>:tired_face:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:angry: &lt;code>:angry:&lt;/code>&lt;/td>
+ &lt;td>:rage: &lt;code>:rage:&lt;/code>&lt;/td>
+ &lt;td>:triumph: &lt;code>:triumph:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sleepy: &lt;code>:sleepy:&lt;/code>&lt;/td>
+ &lt;td>:yum: &lt;code>:yum:&lt;/code>&lt;/td>
+ &lt;td>:mask: &lt;code>:mask:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sunglasses: &lt;code>:sunglasses:&lt;/code>&lt;/td>
+ &lt;td>:dizzy_face: &lt;code>:dizzy_face:&lt;/code>&lt;/td>
+ &lt;td>:imp: &lt;code>:imp:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:smiling_imp: &lt;code>:smiling_imp:&lt;/code>&lt;/td>
+ &lt;td>:neutral_face: &lt;code>:neutral_face:&lt;/code>&lt;/td>
+ &lt;td>:no_mouth: &lt;code>:no_mouth:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:innocent: &lt;code>:innocent:&lt;/code>&lt;/td>
+ &lt;td>:alien: &lt;code>:alien:&lt;/code>&lt;/td>
+ &lt;td>:yellow_heart: &lt;code>:yellow_heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:blue_heart: &lt;code>:blue_heart:&lt;/code>&lt;/td>
+ &lt;td>:purple_heart: &lt;code>:purple_heart:&lt;/code>&lt;/td>
+ &lt;td>:heart: &lt;code>:heart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:green_heart: &lt;code>:green_heart:&lt;/code>&lt;/td>
+ &lt;td>:broken_heart: &lt;code>:broken_heart:&lt;/code>&lt;/td>
+ &lt;td>:heartbeat: &lt;code>:heartbeat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heartpulse: &lt;code>:heartpulse:&lt;/code>&lt;/td>
+ &lt;td>:two_hearts: &lt;code>:two_hearts:&lt;/code>&lt;/td>
+ &lt;td>:revolving_hearts: &lt;code>:revolving_hearts:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cupid: &lt;code>:cupid:&lt;/code>&lt;/td>
+ &lt;td>:sparkling_heart: &lt;code>:sparkling_heart:&lt;/code>&lt;/td>
+ &lt;td>:sparkles: &lt;code>:sparkles:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:star: &lt;code>:star:&lt;/code>&lt;/td>
+ &lt;td>:star2: &lt;code>:star2:&lt;/code>&lt;/td>
+ &lt;td>:dizzy: &lt;code>:dizzy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:boom: &lt;code>:boom:&lt;/code>&lt;/td>
+ &lt;td>:collision: &lt;code>:collision:&lt;/code>&lt;/td>
+ &lt;td>:anger: &lt;code>:anger:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:exclamation: &lt;code>:exclamation:&lt;/code>&lt;/td>
+ &lt;td>:question: &lt;code>:question:&lt;/code>&lt;/td>
+ &lt;td>:grey_exclamation: &lt;code>:grey_exclamation:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:grey_question: &lt;code>:grey_question:&lt;/code>&lt;/td>
+ &lt;td>:zzz: &lt;code>:zzz:&lt;/code>&lt;/td>
+ &lt;td>:dash: &lt;code>:dash:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sweat_drops: &lt;code>:sweat_drops:&lt;/code>&lt;/td>
+ &lt;td>:notes: &lt;code>:notes:&lt;/code>&lt;/td>
+ &lt;td>:musical_note: &lt;code>:musical_note:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fire: &lt;code>:fire:&lt;/code>&lt;/td>
+ &lt;td>:hankey: &lt;code>:hankey:&lt;/code>&lt;/td>
+ &lt;td>:poop: &lt;code>:poop:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:shit: &lt;code>:shit:&lt;/code>&lt;/td>
+ &lt;td>:+1: &lt;code>:+1:&lt;/code>&lt;/td>
+ &lt;td>:thumbsup: &lt;code>:thumbsup:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:-1: &lt;code>:-1:&lt;/code>&lt;/td>
+ &lt;td>:thumbsdown: &lt;code>:thumbsdown:&lt;/code>&lt;/td>
+ &lt;td>:ok_hand: &lt;code>:ok_hand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:punch: &lt;code>:punch:&lt;/code>&lt;/td>
+ &lt;td>:facepunch: &lt;code>:facepunch:&lt;/code>&lt;/td>
+ &lt;td>:fist: &lt;code>:fist:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:v: &lt;code>:v:&lt;/code>&lt;/td>
+ &lt;td>:wave: &lt;code>:wave:&lt;/code>&lt;/td>
+ &lt;td>:hand: &lt;code>:hand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:raised_hand: &lt;code>:raised_hand:&lt;/code>&lt;/td>
+ &lt;td>:open_hands: &lt;code>:open_hands:&lt;/code>&lt;/td>
+ &lt;td>:point_up: &lt;code>:point_up:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:point_down: &lt;code>:point_down:&lt;/code>&lt;/td>
+ &lt;td>:point_left: &lt;code>:point_left:&lt;/code>&lt;/td>
+ &lt;td>:point_right: &lt;code>:point_right:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:raised_hands: &lt;code>:raised_hands:&lt;/code>&lt;/td>
+ &lt;td>:pray: &lt;code>:pray:&lt;/code>&lt;/td>
+ &lt;td>:point_up_2: &lt;code>:point_up_2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clap: &lt;code>:clap:&lt;/code>&lt;/td>
+ &lt;td>:muscle: &lt;code>:muscle:&lt;/code>&lt;/td>
+ &lt;td>:metal: &lt;code>:metal:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fu: &lt;code>:fu:&lt;/code>&lt;/td>
+ &lt;td>:walking: &lt;code>:walking:&lt;/code>&lt;/td>
+ &lt;td>:runner: &lt;code>:runner:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:running: &lt;code>:running:&lt;/code>&lt;/td>
+ &lt;td>:couple: &lt;code>:couple:&lt;/code>&lt;/td>
+ &lt;td>:family: &lt;code>:family:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:two_men_holding_hands: &lt;code>:two_men_holding_hands:&lt;/code>&lt;/td>
+ &lt;td>:two_women_holding_hands: &lt;code>:two_women_holding_hands:&lt;/code>&lt;/td>
+ &lt;td>:dancer: &lt;code>:dancer:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dancers: &lt;code>:dancers:&lt;/code>&lt;/td>
+ &lt;td>:ok_woman: &lt;code>:ok_woman:&lt;/code>&lt;/td>
+ &lt;td>:no_good: &lt;code>:no_good:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:information_desk_person: &lt;code>:information_desk_person:&lt;/code>&lt;/td>
+ &lt;td>:raising_hand: &lt;code>:raising_hand:&lt;/code>&lt;/td>
+ &lt;td>:bride_with_veil: &lt;code>:bride_with_veil:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:person_with_pouting_face: &lt;code>:person_with_pouting_face:&lt;/code>&lt;/td>
+ &lt;td>:person_frowning: &lt;code>:person_frowning:&lt;/code>&lt;/td>
+ &lt;td>:bow: &lt;code>:bow:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:couplekiss: &lt;code>:couplekiss:&lt;/code>&lt;/td>
+ &lt;td>:couple_with_heart: &lt;code>:couple_with_heart:&lt;/code>&lt;/td>
+ &lt;td>:massage: &lt;code>:massage:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:haircut: &lt;code>:haircut:&lt;/code>&lt;/td>
+ &lt;td>:nail_care: &lt;code>:nail_care:&lt;/code>&lt;/td>
+ &lt;td>:boy: &lt;code>:boy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:girl: &lt;code>:girl:&lt;/code>&lt;/td>
+ &lt;td>:woman: &lt;code>:woman:&lt;/code>&lt;/td>
+ &lt;td>:man: &lt;code>:man:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:baby: &lt;code>:baby:&lt;/code>&lt;/td>
+ &lt;td>:older_woman: &lt;code>:older_woman:&lt;/code>&lt;/td>
+ &lt;td>:older_man: &lt;code>:older_man:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:person_with_blond_hair: &lt;code>:person_with_blond_hair:&lt;/code>&lt;/td>
+ &lt;td>:man_with_gua_pi_mao: &lt;code>:man_with_gua_pi_mao:&lt;/code>&lt;/td>
+ &lt;td>:man_with_turban: &lt;code>:man_with_turban:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:construction_worker: &lt;code>:construction_worker:&lt;/code>&lt;/td>
+ &lt;td>:cop: &lt;code>:cop:&lt;/code>&lt;/td>
+ &lt;td>:angel: &lt;code>:angel:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:princess: &lt;code>:princess:&lt;/code>&lt;/td>
+ &lt;td>:smiley_cat: &lt;code>:smiley_cat:&lt;/code>&lt;/td>
+ &lt;td>:smile_cat: &lt;code>:smile_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heart_eyes_cat: &lt;code>:heart_eyes_cat:&lt;/code>&lt;/td>
+ &lt;td>:kissing_cat: &lt;code>:kissing_cat:&lt;/code>&lt;/td>
+ &lt;td>:smirk_cat: &lt;code>:smirk_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scream_cat: &lt;code>:scream_cat:&lt;/code>&lt;/td>
+ &lt;td>:crying_cat_face: &lt;code>:crying_cat_face:&lt;/code>&lt;/td>
+ &lt;td>:joy_cat: &lt;code>:joy_cat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pouting_cat: &lt;code>:pouting_cat:&lt;/code>&lt;/td>
+ &lt;td>:japanese_ogre: &lt;code>:japanese_ogre:&lt;/code>&lt;/td>
+ &lt;td>:japanese_goblin: &lt;code>:japanese_goblin:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:see_no_evil: &lt;code>:see_no_evil:&lt;/code>&lt;/td>
+ &lt;td>:hear_no_evil: &lt;code>:hear_no_evil:&lt;/code>&lt;/td>
+ &lt;td>:speak_no_evil: &lt;code>:speak_no_evil:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:guardsman: &lt;code>:guardsman:&lt;/code>&lt;/td>
+ &lt;td>:skull: &lt;code>:skull:&lt;/code>&lt;/td>
+ &lt;td>:feet: &lt;code>:feet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:lips: &lt;code>:lips:&lt;/code>&lt;/td>
+ &lt;td>:kiss: &lt;code>:kiss:&lt;/code>&lt;/td>
+ &lt;td>:droplet: &lt;code>:droplet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ear: &lt;code>:ear:&lt;/code>&lt;/td>
+ &lt;td>:eyes: &lt;code>:eyes:&lt;/code>&lt;/td>
+ &lt;td>:nose: &lt;code>:nose:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tongue: &lt;code>:tongue:&lt;/code>&lt;/td>
+ &lt;td>:love_letter: &lt;code>:love_letter:&lt;/code>&lt;/td>
+ &lt;td>:bust_in_silhouette: &lt;code>:bust_in_silhouette:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:busts_in_silhouette: &lt;code>:busts_in_silhouette:&lt;/code>&lt;/td>
+ &lt;td>:speech_balloon: &lt;code>:speech_balloon:&lt;/code>&lt;/td>
+ &lt;td>:thought_balloon: &lt;code>:thought_balloon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:feelsgood: &lt;code>:feelsgood:&lt;/code>&lt;/td>
+ &lt;td>:finnadie: &lt;code>:finnadie:&lt;/code>&lt;/td>
+ &lt;td>:goberserk: &lt;code>:goberserk:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:godmode: &lt;code>:godmode:&lt;/code>&lt;/td>
+ &lt;td>:hurtrealbad: &lt;code>:hurtrealbad:&lt;/code>&lt;/td>
+ &lt;td>:rage1: &lt;code>:rage1:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rage2: &lt;code>:rage2:&lt;/code>&lt;/td>
+ &lt;td>:rage3: &lt;code>:rage3:&lt;/code>&lt;/td>
+ &lt;td>:rage4: &lt;code>:rage4:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:suspect: &lt;code>:suspect:&lt;/code>&lt;/td>
+ &lt;td>:trollface: &lt;code>:trollface:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="nature">Nature&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:sunny: &lt;code>:sunny:&lt;/code>&lt;/th>
+ &lt;th>:umbrella: &lt;code>:umbrella:&lt;/code>&lt;/th>
+ &lt;th>:cloud: &lt;code>:cloud:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:snowflake: &lt;code>:snowflake:&lt;/code>&lt;/td>
+ &lt;td>:snowman: &lt;code>:snowman:&lt;/code>&lt;/td>
+ &lt;td>:zap: &lt;code>:zap:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cyclone: &lt;code>:cyclone:&lt;/code>&lt;/td>
+ &lt;td>:foggy: &lt;code>:foggy:&lt;/code>&lt;/td>
+ &lt;td>:ocean: &lt;code>:ocean:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cat: &lt;code>:cat:&lt;/code>&lt;/td>
+ &lt;td>:dog: &lt;code>:dog:&lt;/code>&lt;/td>
+ &lt;td>:mouse: &lt;code>:mouse:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:hamster: &lt;code>:hamster:&lt;/code>&lt;/td>
+ &lt;td>:rabbit: &lt;code>:rabbit:&lt;/code>&lt;/td>
+ &lt;td>:wolf: &lt;code>:wolf:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:frog: &lt;code>:frog:&lt;/code>&lt;/td>
+ &lt;td>:tiger: &lt;code>:tiger:&lt;/code>&lt;/td>
+ &lt;td>:koala: &lt;code>:koala:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bear: &lt;code>:bear:&lt;/code>&lt;/td>
+ &lt;td>:pig: &lt;code>:pig:&lt;/code>&lt;/td>
+ &lt;td>:pig_nose: &lt;code>:pig_nose:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cow: &lt;code>:cow:&lt;/code>&lt;/td>
+ &lt;td>:boar: &lt;code>:boar:&lt;/code>&lt;/td>
+ &lt;td>:monkey_face: &lt;code>:monkey_face:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:monkey: &lt;code>:monkey:&lt;/code>&lt;/td>
+ &lt;td>:horse: &lt;code>:horse:&lt;/code>&lt;/td>
+ &lt;td>:racehorse: &lt;code>:racehorse:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:camel: &lt;code>:camel:&lt;/code>&lt;/td>
+ &lt;td>:sheep: &lt;code>:sheep:&lt;/code>&lt;/td>
+ &lt;td>:elephant: &lt;code>:elephant:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:panda_face: &lt;code>:panda_face:&lt;/code>&lt;/td>
+ &lt;td>:snake: &lt;code>:snake:&lt;/code>&lt;/td>
+ &lt;td>:bird: &lt;code>:bird:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:baby_chick: &lt;code>:baby_chick:&lt;/code>&lt;/td>
+ &lt;td>:hatched_chick: &lt;code>:hatched_chick:&lt;/code>&lt;/td>
+ &lt;td>:hatching_chick: &lt;code>:hatching_chick:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:chicken: &lt;code>:chicken:&lt;/code>&lt;/td>
+ &lt;td>:penguin: &lt;code>:penguin:&lt;/code>&lt;/td>
+ &lt;td>:turtle: &lt;code>:turtle:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bug: &lt;code>:bug:&lt;/code>&lt;/td>
+ &lt;td>:honeybee: &lt;code>:honeybee:&lt;/code>&lt;/td>
+ &lt;td>:ant: &lt;code>:ant:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:beetle: &lt;code>:beetle:&lt;/code>&lt;/td>
+ &lt;td>:snail: &lt;code>:snail:&lt;/code>&lt;/td>
+ &lt;td>:octopus: &lt;code>:octopus:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tropical_fish: &lt;code>:tropical_fish:&lt;/code>&lt;/td>
+ &lt;td>:fish: &lt;code>:fish:&lt;/code>&lt;/td>
+ &lt;td>:whale: &lt;code>:whale:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:whale2: &lt;code>:whale2:&lt;/code>&lt;/td>
+ &lt;td>:dolphin: &lt;code>:dolphin:&lt;/code>&lt;/td>
+ &lt;td>:cow2: &lt;code>:cow2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ram: &lt;code>:ram:&lt;/code>&lt;/td>
+ &lt;td>:rat: &lt;code>:rat:&lt;/code>&lt;/td>
+ &lt;td>:water_buffalo: &lt;code>:water_buffalo:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tiger2: &lt;code>:tiger2:&lt;/code>&lt;/td>
+ &lt;td>:rabbit2: &lt;code>:rabbit2:&lt;/code>&lt;/td>
+ &lt;td>:dragon: &lt;code>:dragon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:goat: &lt;code>:goat:&lt;/code>&lt;/td>
+ &lt;td>:rooster: &lt;code>:rooster:&lt;/code>&lt;/td>
+ &lt;td>:dog2: &lt;code>:dog2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pig2: &lt;code>:pig2:&lt;/code>&lt;/td>
+ &lt;td>:mouse2: &lt;code>:mouse2:&lt;/code>&lt;/td>
+ &lt;td>:ox: &lt;code>:ox:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dragon_face: &lt;code>:dragon_face:&lt;/code>&lt;/td>
+ &lt;td>:blowfish: &lt;code>:blowfish:&lt;/code>&lt;/td>
+ &lt;td>:crocodile: &lt;code>:crocodile:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dromedary_camel: &lt;code>:dromedary_camel:&lt;/code>&lt;/td>
+ &lt;td>:leopard: &lt;code>:leopard:&lt;/code>&lt;/td>
+ &lt;td>:cat2: &lt;code>:cat2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:poodle: &lt;code>:poodle:&lt;/code>&lt;/td>
+ &lt;td>:paw_prints: &lt;code>:paw_prints:&lt;/code>&lt;/td>
+ &lt;td>:bouquet: &lt;code>:bouquet:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cherry_blossom: &lt;code>:cherry_blossom:&lt;/code>&lt;/td>
+ &lt;td>:tulip: &lt;code>:tulip:&lt;/code>&lt;/td>
+ &lt;td>:four_leaf_clover: &lt;code>:four_leaf_clover:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rose: &lt;code>:rose:&lt;/code>&lt;/td>
+ &lt;td>:sunflower: &lt;code>:sunflower:&lt;/code>&lt;/td>
+ &lt;td>:hibiscus: &lt;code>:hibiscus:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:maple_leaf: &lt;code>:maple_leaf:&lt;/code>&lt;/td>
+ &lt;td>:leaves: &lt;code>:leaves:&lt;/code>&lt;/td>
+ &lt;td>:fallen_leaf: &lt;code>:fallen_leaf:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:herb: &lt;code>:herb:&lt;/code>&lt;/td>
+ &lt;td>:mushroom: &lt;code>:mushroom:&lt;/code>&lt;/td>
+ &lt;td>:cactus: &lt;code>:cactus:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:palm_tree: &lt;code>:palm_tree:&lt;/code>&lt;/td>
+ &lt;td>:evergreen_tree: &lt;code>:evergreen_tree:&lt;/code>&lt;/td>
+ &lt;td>:deciduous_tree: &lt;code>:deciduous_tree:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:chestnut: &lt;code>:chestnut:&lt;/code>&lt;/td>
+ &lt;td>:seedling: &lt;code>:seedling:&lt;/code>&lt;/td>
+ &lt;td>:blossom: &lt;code>:blossom:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ear_of_rice: &lt;code>:ear_of_rice:&lt;/code>&lt;/td>
+ &lt;td>:shell: &lt;code>:shell:&lt;/code>&lt;/td>
+ &lt;td>:globe_with_meridians: &lt;code>:globe_with_meridians:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sun_with_face: &lt;code>:sun_with_face:&lt;/code>&lt;/td>
+ &lt;td>:full_moon_with_face: &lt;code>:full_moon_with_face:&lt;/code>&lt;/td>
+ &lt;td>:new_moon_with_face: &lt;code>:new_moon_with_face:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:new_moon: &lt;code>:new_moon:&lt;/code>&lt;/td>
+ &lt;td>:waxing_crescent_moon: &lt;code>:waxing_crescent_moon:&lt;/code>&lt;/td>
+ &lt;td>:first_quarter_moon: &lt;code>:first_quarter_moon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:waxing_gibbous_moon: &lt;code>:waxing_gibbous_moon:&lt;/code>&lt;/td>
+ &lt;td>:full_moon: &lt;code>:full_moon:&lt;/code>&lt;/td>
+ &lt;td>:waning_gibbous_moon: &lt;code>:waning_gibbous_moon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:last_quarter_moon: &lt;code>:last_quarter_moon:&lt;/code>&lt;/td>
+ &lt;td>:waning_crescent_moon: &lt;code>:waning_crescent_moon:&lt;/code>&lt;/td>
+ &lt;td>:last_quarter_moon_with_face: &lt;code>:last_quarter_moon_with_face:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:first_quarter_moon_with_face: &lt;code>:first_quarter_moon_with_face:&lt;/code>&lt;/td>
+ &lt;td>:moon: &lt;code>:moon:&lt;/code>&lt;/td>
+ &lt;td>:earth_africa: &lt;code>:earth_africa:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:earth_americas: &lt;code>:earth_americas:&lt;/code>&lt;/td>
+ &lt;td>:earth_asia: &lt;code>:earth_asia:&lt;/code>&lt;/td>
+ &lt;td>:volcano: &lt;code>:volcano:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:milky_way: &lt;code>:milky_way:&lt;/code>&lt;/td>
+ &lt;td>:partly_sunny: &lt;code>:partly_sunny:&lt;/code>&lt;/td>
+ &lt;td>:octocat: &lt;code>:octocat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:squirrel: &lt;code>:squirrel:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="objects">Objects&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:bamboo: &lt;code>:bamboo:&lt;/code>&lt;/th>
+ &lt;th>:gift_heart: &lt;code>:gift_heart:&lt;/code>&lt;/th>
+ &lt;th>:dolls: &lt;code>:dolls:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:school_satchel: &lt;code>:school_satchel:&lt;/code>&lt;/td>
+ &lt;td>:mortar_board: &lt;code>:mortar_board:&lt;/code>&lt;/td>
+ &lt;td>:flags: &lt;code>:flags:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fireworks: &lt;code>:fireworks:&lt;/code>&lt;/td>
+ &lt;td>:sparkler: &lt;code>:sparkler:&lt;/code>&lt;/td>
+ &lt;td>:wind_chime: &lt;code>:wind_chime:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rice_scene: &lt;code>:rice_scene:&lt;/code>&lt;/td>
+ &lt;td>:jack_o_lantern: &lt;code>:jack_o_lantern:&lt;/code>&lt;/td>
+ &lt;td>:ghost: &lt;code>:ghost:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:santa: &lt;code>:santa:&lt;/code>&lt;/td>
+ &lt;td>:christmas_tree: &lt;code>:christmas_tree:&lt;/code>&lt;/td>
+ &lt;td>:gift: &lt;code>:gift:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bell: &lt;code>:bell:&lt;/code>&lt;/td>
+ &lt;td>:no_bell: &lt;code>:no_bell:&lt;/code>&lt;/td>
+ &lt;td>:tanabata_tree: &lt;code>:tanabata_tree:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tada: &lt;code>:tada:&lt;/code>&lt;/td>
+ &lt;td>:confetti_ball: &lt;code>:confetti_ball:&lt;/code>&lt;/td>
+ &lt;td>:balloon: &lt;code>:balloon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:crystal_ball: &lt;code>:crystal_ball:&lt;/code>&lt;/td>
+ &lt;td>:cd: &lt;code>:cd:&lt;/code>&lt;/td>
+ &lt;td>:dvd: &lt;code>:dvd:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:floppy_disk: &lt;code>:floppy_disk:&lt;/code>&lt;/td>
+ &lt;td>:camera: &lt;code>:camera:&lt;/code>&lt;/td>
+ &lt;td>:video_camera: &lt;code>:video_camera:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:movie_camera: &lt;code>:movie_camera:&lt;/code>&lt;/td>
+ &lt;td>:computer: &lt;code>:computer:&lt;/code>&lt;/td>
+ &lt;td>:tv: &lt;code>:tv:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:iphone: &lt;code>:iphone:&lt;/code>&lt;/td>
+ &lt;td>:phone: &lt;code>:phone:&lt;/code>&lt;/td>
+ &lt;td>:telephone: &lt;code>:telephone:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:telephone_receiver: &lt;code>:telephone_receiver:&lt;/code>&lt;/td>
+ &lt;td>:pager: &lt;code>:pager:&lt;/code>&lt;/td>
+ &lt;td>:fax: &lt;code>:fax:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:minidisc: &lt;code>:minidisc:&lt;/code>&lt;/td>
+ &lt;td>:vhs: &lt;code>:vhs:&lt;/code>&lt;/td>
+ &lt;td>:sound: &lt;code>:sound:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:speaker: &lt;code>:speaker:&lt;/code>&lt;/td>
+ &lt;td>:mute: &lt;code>:mute:&lt;/code>&lt;/td>
+ &lt;td>:loudspeaker: &lt;code>:loudspeaker:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:mega: &lt;code>:mega:&lt;/code>&lt;/td>
+ &lt;td>:hourglass: &lt;code>:hourglass:&lt;/code>&lt;/td>
+ &lt;td>:hourglass_flowing_sand: &lt;code>:hourglass_flowing_sand:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:alarm_clock: &lt;code>:alarm_clock:&lt;/code>&lt;/td>
+ &lt;td>:watch: &lt;code>:watch:&lt;/code>&lt;/td>
+ &lt;td>:radio: &lt;code>:radio:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:satellite: &lt;code>:satellite:&lt;/code>&lt;/td>
+ &lt;td>:loop: &lt;code>:loop:&lt;/code>&lt;/td>
+ &lt;td>:mag: &lt;code>:mag:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:mag_right: &lt;code>:mag_right:&lt;/code>&lt;/td>
+ &lt;td>:unlock: &lt;code>:unlock:&lt;/code>&lt;/td>
+ &lt;td>:lock: &lt;code>:lock:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:lock_with_ink_pen: &lt;code>:lock_with_ink_pen:&lt;/code>&lt;/td>
+ &lt;td>:closed_lock_with_key: &lt;code>:closed_lock_with_key:&lt;/code>&lt;/td>
+ &lt;td>:key: &lt;code>:key:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bulb: &lt;code>:bulb:&lt;/code>&lt;/td>
+ &lt;td>:flashlight: &lt;code>:flashlight:&lt;/code>&lt;/td>
+ &lt;td>:high_brightness: &lt;code>:high_brightness:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:low_brightness: &lt;code>:low_brightness:&lt;/code>&lt;/td>
+ &lt;td>:electric_plug: &lt;code>:electric_plug:&lt;/code>&lt;/td>
+ &lt;td>:battery: &lt;code>:battery:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:calling: &lt;code>:calling:&lt;/code>&lt;/td>
+ &lt;td>:email: &lt;code>:email:&lt;/code>&lt;/td>
+ &lt;td>:mailbox: &lt;code>:mailbox:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:postbox: &lt;code>:postbox:&lt;/code>&lt;/td>
+ &lt;td>:bath: &lt;code>:bath:&lt;/code>&lt;/td>
+ &lt;td>:bathtub: &lt;code>:bathtub:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:shower: &lt;code>:shower:&lt;/code>&lt;/td>
+ &lt;td>:toilet: &lt;code>:toilet:&lt;/code>&lt;/td>
+ &lt;td>:wrench: &lt;code>:wrench:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:nut_and_bolt: &lt;code>:nut_and_bolt:&lt;/code>&lt;/td>
+ &lt;td>:hammer: &lt;code>:hammer:&lt;/code>&lt;/td>
+ &lt;td>:seat: &lt;code>:seat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:moneybag: &lt;code>:moneybag:&lt;/code>&lt;/td>
+ &lt;td>:yen: &lt;code>:yen:&lt;/code>&lt;/td>
+ &lt;td>:dollar: &lt;code>:dollar:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pound: &lt;code>:pound:&lt;/code>&lt;/td>
+ &lt;td>:euro: &lt;code>:euro:&lt;/code>&lt;/td>
+ &lt;td>:credit_card: &lt;code>:credit_card:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:money_with_wings: &lt;code>:money_with_wings:&lt;/code>&lt;/td>
+ &lt;td>:e-mail: &lt;code>:e-mail:&lt;/code>&lt;/td>
+ &lt;td>:inbox_tray: &lt;code>:inbox_tray:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:outbox_tray: &lt;code>:outbox_tray:&lt;/code>&lt;/td>
+ &lt;td>:envelope: &lt;code>:envelope:&lt;/code>&lt;/td>
+ &lt;td>:incoming_envelope: &lt;code>:incoming_envelope:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:postal_horn: &lt;code>:postal_horn:&lt;/code>&lt;/td>
+ &lt;td>:mailbox_closed: &lt;code>:mailbox_closed:&lt;/code>&lt;/td>
+ &lt;td>:mailbox_with_mail: &lt;code>:mailbox_with_mail:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:mailbox_with_no_mail: &lt;code>:mailbox_with_no_mail:&lt;/code>&lt;/td>
+ &lt;td>:door: &lt;code>:door:&lt;/code>&lt;/td>
+ &lt;td>:smoking: &lt;code>:smoking:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bomb: &lt;code>:bomb:&lt;/code>&lt;/td>
+ &lt;td>:gun: &lt;code>:gun:&lt;/code>&lt;/td>
+ &lt;td>:hocho: &lt;code>:hocho:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pill: &lt;code>:pill:&lt;/code>&lt;/td>
+ &lt;td>:syringe: &lt;code>:syringe:&lt;/code>&lt;/td>
+ &lt;td>:page_facing_up: &lt;code>:page_facing_up:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:page_with_curl: &lt;code>:page_with_curl:&lt;/code>&lt;/td>
+ &lt;td>:bookmark_tabs: &lt;code>:bookmark_tabs:&lt;/code>&lt;/td>
+ &lt;td>:bar_chart: &lt;code>:bar_chart:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:chart_with_upwards_trend: &lt;code>:chart_with_upwards_trend:&lt;/code>&lt;/td>
+ &lt;td>:chart_with_downwards_trend: &lt;code>:chart_with_downwards_trend:&lt;/code>&lt;/td>
+ &lt;td>:scroll: &lt;code>:scroll:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clipboard: &lt;code>:clipboard:&lt;/code>&lt;/td>
+ &lt;td>:calendar: &lt;code>:calendar:&lt;/code>&lt;/td>
+ &lt;td>:date: &lt;code>:date:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:card_index: &lt;code>:card_index:&lt;/code>&lt;/td>
+ &lt;td>:file_folder: &lt;code>:file_folder:&lt;/code>&lt;/td>
+ &lt;td>:open_file_folder: &lt;code>:open_file_folder:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scissors: &lt;code>:scissors:&lt;/code>&lt;/td>
+ &lt;td>:pushpin: &lt;code>:pushpin:&lt;/code>&lt;/td>
+ &lt;td>:paperclip: &lt;code>:paperclip:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:black_nib: &lt;code>:black_nib:&lt;/code>&lt;/td>
+ &lt;td>:pencil2: &lt;code>:pencil2:&lt;/code>&lt;/td>
+ &lt;td>:straight_ruler: &lt;code>:straight_ruler:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:triangular_ruler: &lt;code>:triangular_ruler:&lt;/code>&lt;/td>
+ &lt;td>:closed_book: &lt;code>:closed_book:&lt;/code>&lt;/td>
+ &lt;td>:green_book: &lt;code>:green_book:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:blue_book: &lt;code>:blue_book:&lt;/code>&lt;/td>
+ &lt;td>:orange_book: &lt;code>:orange_book:&lt;/code>&lt;/td>
+ &lt;td>:notebook: &lt;code>:notebook:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:notebook_with_decorative_cover: &lt;code>:notebook_with_decorative_cover:&lt;/code>&lt;/td>
+ &lt;td>:ledger: &lt;code>:ledger:&lt;/code>&lt;/td>
+ &lt;td>:books: &lt;code>:books:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bookmark: &lt;code>:bookmark:&lt;/code>&lt;/td>
+ &lt;td>:name_badge: &lt;code>:name_badge:&lt;/code>&lt;/td>
+ &lt;td>:microscope: &lt;code>:microscope:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:telescope: &lt;code>:telescope:&lt;/code>&lt;/td>
+ &lt;td>:newspaper: &lt;code>:newspaper:&lt;/code>&lt;/td>
+ &lt;td>:football: &lt;code>:football:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:basketball: &lt;code>:basketball:&lt;/code>&lt;/td>
+ &lt;td>:soccer: &lt;code>:soccer:&lt;/code>&lt;/td>
+ &lt;td>:baseball: &lt;code>:baseball:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tennis: &lt;code>:tennis:&lt;/code>&lt;/td>
+ &lt;td>:8ball: &lt;code>:8ball:&lt;/code>&lt;/td>
+ &lt;td>:rugby_football: &lt;code>:rugby_football:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bowling: &lt;code>:bowling:&lt;/code>&lt;/td>
+ &lt;td>:golf: &lt;code>:golf:&lt;/code>&lt;/td>
+ &lt;td>:mountain_bicyclist: &lt;code>:mountain_bicyclist:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bicyclist: &lt;code>:bicyclist:&lt;/code>&lt;/td>
+ &lt;td>:horse_racing: &lt;code>:horse_racing:&lt;/code>&lt;/td>
+ &lt;td>:snowboarder: &lt;code>:snowboarder:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:swimmer: &lt;code>:swimmer:&lt;/code>&lt;/td>
+ &lt;td>:surfer: &lt;code>:surfer:&lt;/code>&lt;/td>
+ &lt;td>:ski: &lt;code>:ski:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:spades: &lt;code>:spades:&lt;/code>&lt;/td>
+ &lt;td>:hearts: &lt;code>:hearts:&lt;/code>&lt;/td>
+ &lt;td>:clubs: &lt;code>:clubs:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:diamonds: &lt;code>:diamonds:&lt;/code>&lt;/td>
+ &lt;td>:gem: &lt;code>:gem:&lt;/code>&lt;/td>
+ &lt;td>:ring: &lt;code>:ring:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:trophy: &lt;code>:trophy:&lt;/code>&lt;/td>
+ &lt;td>:musical_score: &lt;code>:musical_score:&lt;/code>&lt;/td>
+ &lt;td>:musical_keyboard: &lt;code>:musical_keyboard:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:violin: &lt;code>:violin:&lt;/code>&lt;/td>
+ &lt;td>:space_invader: &lt;code>:space_invader:&lt;/code>&lt;/td>
+ &lt;td>:video_game: &lt;code>:video_game:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:black_joker: &lt;code>:black_joker:&lt;/code>&lt;/td>
+ &lt;td>:flower_playing_cards: &lt;code>:flower_playing_cards:&lt;/code>&lt;/td>
+ &lt;td>:game_die: &lt;code>:game_die:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dart: &lt;code>:dart:&lt;/code>&lt;/td>
+ &lt;td>:mahjong: &lt;code>:mahjong:&lt;/code>&lt;/td>
+ &lt;td>:clapper: &lt;code>:clapper:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:memo: &lt;code>:memo:&lt;/code>&lt;/td>
+ &lt;td>:pencil: &lt;code>:pencil:&lt;/code>&lt;/td>
+ &lt;td>:book: &lt;code>:book:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:art: &lt;code>:art:&lt;/code>&lt;/td>
+ &lt;td>:microphone: &lt;code>:microphone:&lt;/code>&lt;/td>
+ &lt;td>:headphones: &lt;code>:headphones:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:trumpet: &lt;code>:trumpet:&lt;/code>&lt;/td>
+ &lt;td>:saxophone: &lt;code>:saxophone:&lt;/code>&lt;/td>
+ &lt;td>:guitar: &lt;code>:guitar:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:shoe: &lt;code>:shoe:&lt;/code>&lt;/td>
+ &lt;td>:sandal: &lt;code>:sandal:&lt;/code>&lt;/td>
+ &lt;td>:high_heel: &lt;code>:high_heel:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:lipstick: &lt;code>:lipstick:&lt;/code>&lt;/td>
+ &lt;td>:boot: &lt;code>:boot:&lt;/code>&lt;/td>
+ &lt;td>:shirt: &lt;code>:shirt:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tshirt: &lt;code>:tshirt:&lt;/code>&lt;/td>
+ &lt;td>:necktie: &lt;code>:necktie:&lt;/code>&lt;/td>
+ &lt;td>:womans_clothes: &lt;code>:womans_clothes:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:dress: &lt;code>:dress:&lt;/code>&lt;/td>
+ &lt;td>:running_shirt_with_sash: &lt;code>:running_shirt_with_sash:&lt;/code>&lt;/td>
+ &lt;td>:jeans: &lt;code>:jeans:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kimono: &lt;code>:kimono:&lt;/code>&lt;/td>
+ &lt;td>:bikini: &lt;code>:bikini:&lt;/code>&lt;/td>
+ &lt;td>:ribbon: &lt;code>:ribbon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tophat: &lt;code>:tophat:&lt;/code>&lt;/td>
+ &lt;td>:crown: &lt;code>:crown:&lt;/code>&lt;/td>
+ &lt;td>:womans_hat: &lt;code>:womans_hat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:mans_shoe: &lt;code>:mans_shoe:&lt;/code>&lt;/td>
+ &lt;td>:closed_umbrella: &lt;code>:closed_umbrella:&lt;/code>&lt;/td>
+ &lt;td>:briefcase: &lt;code>:briefcase:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:handbag: &lt;code>:handbag:&lt;/code>&lt;/td>
+ &lt;td>:pouch: &lt;code>:pouch:&lt;/code>&lt;/td>
+ &lt;td>:purse: &lt;code>:purse:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:eyeglasses: &lt;code>:eyeglasses:&lt;/code>&lt;/td>
+ &lt;td>:fishing_pole_and_fish: &lt;code>:fishing_pole_and_fish:&lt;/code>&lt;/td>
+ &lt;td>:coffee: &lt;code>:coffee:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tea: &lt;code>:tea:&lt;/code>&lt;/td>
+ &lt;td>:sake: &lt;code>:sake:&lt;/code>&lt;/td>
+ &lt;td>:baby_bottle: &lt;code>:baby_bottle:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:beer: &lt;code>:beer:&lt;/code>&lt;/td>
+ &lt;td>:beers: &lt;code>:beers:&lt;/code>&lt;/td>
+ &lt;td>:cocktail: &lt;code>:cocktail:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tropical_drink: &lt;code>:tropical_drink:&lt;/code>&lt;/td>
+ &lt;td>:wine_glass: &lt;code>:wine_glass:&lt;/code>&lt;/td>
+ &lt;td>:fork_and_knife: &lt;code>:fork_and_knife:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:pizza: &lt;code>:pizza:&lt;/code>&lt;/td>
+ &lt;td>:hamburger: &lt;code>:hamburger:&lt;/code>&lt;/td>
+ &lt;td>:fries: &lt;code>:fries:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:poultry_leg: &lt;code>:poultry_leg:&lt;/code>&lt;/td>
+ &lt;td>:meat_on_bone: &lt;code>:meat_on_bone:&lt;/code>&lt;/td>
+ &lt;td>:spaghetti: &lt;code>:spaghetti:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:curry: &lt;code>:curry:&lt;/code>&lt;/td>
+ &lt;td>:fried_shrimp: &lt;code>:fried_shrimp:&lt;/code>&lt;/td>
+ &lt;td>:bento: &lt;code>:bento:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sushi: &lt;code>:sushi:&lt;/code>&lt;/td>
+ &lt;td>:fish_cake: &lt;code>:fish_cake:&lt;/code>&lt;/td>
+ &lt;td>:rice_ball: &lt;code>:rice_ball:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rice_cracker: &lt;code>:rice_cracker:&lt;/code>&lt;/td>
+ &lt;td>:rice: &lt;code>:rice:&lt;/code>&lt;/td>
+ &lt;td>:ramen: &lt;code>:ramen:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:stew: &lt;code>:stew:&lt;/code>&lt;/td>
+ &lt;td>:oden: &lt;code>:oden:&lt;/code>&lt;/td>
+ &lt;td>:dango: &lt;code>:dango:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:egg: &lt;code>:egg:&lt;/code>&lt;/td>
+ &lt;td>:bread: &lt;code>:bread:&lt;/code>&lt;/td>
+ &lt;td>:doughnut: &lt;code>:doughnut:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:custard: &lt;code>:custard:&lt;/code>&lt;/td>
+ &lt;td>:icecream: &lt;code>:icecream:&lt;/code>&lt;/td>
+ &lt;td>:ice_cream: &lt;code>:ice_cream:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:shaved_ice: &lt;code>:shaved_ice:&lt;/code>&lt;/td>
+ &lt;td>:birthday: &lt;code>:birthday:&lt;/code>&lt;/td>
+ &lt;td>:cake: &lt;code>:cake:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cookie: &lt;code>:cookie:&lt;/code>&lt;/td>
+ &lt;td>:chocolate_bar: &lt;code>:chocolate_bar:&lt;/code>&lt;/td>
+ &lt;td>:candy: &lt;code>:candy:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:lollipop: &lt;code>:lollipop:&lt;/code>&lt;/td>
+ &lt;td>:honey_pot: &lt;code>:honey_pot:&lt;/code>&lt;/td>
+ &lt;td>:apple: &lt;code>:apple:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:green_apple: &lt;code>:green_apple:&lt;/code>&lt;/td>
+ &lt;td>:tangerine: &lt;code>:tangerine:&lt;/code>&lt;/td>
+ &lt;td>:lemon: &lt;code>:lemon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cherries: &lt;code>:cherries:&lt;/code>&lt;/td>
+ &lt;td>:grapes: &lt;code>:grapes:&lt;/code>&lt;/td>
+ &lt;td>:watermelon: &lt;code>:watermelon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:strawberry: &lt;code>:strawberry:&lt;/code>&lt;/td>
+ &lt;td>:peach: &lt;code>:peach:&lt;/code>&lt;/td>
+ &lt;td>:melon: &lt;code>:melon:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:banana: &lt;code>:banana:&lt;/code>&lt;/td>
+ &lt;td>:pear: &lt;code>:pear:&lt;/code>&lt;/td>
+ &lt;td>:pineapple: &lt;code>:pineapple:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sweet_potato: &lt;code>:sweet_potato:&lt;/code>&lt;/td>
+ &lt;td>:eggplant: &lt;code>:eggplant:&lt;/code>&lt;/td>
+ &lt;td>:tomato: &lt;code>:tomato:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:corn: &lt;code>:corn:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="places">Places&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:house: &lt;code>:house:&lt;/code>&lt;/th>
+ &lt;th>:house_with_garden: &lt;code>:house_with_garden:&lt;/code>&lt;/th>
+ &lt;th>:school: &lt;code>:school:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:office: &lt;code>:office:&lt;/code>&lt;/td>
+ &lt;td>:post_office: &lt;code>:post_office:&lt;/code>&lt;/td>
+ &lt;td>:hospital: &lt;code>:hospital:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bank: &lt;code>:bank:&lt;/code>&lt;/td>
+ &lt;td>:convenience_store: &lt;code>:convenience_store:&lt;/code>&lt;/td>
+ &lt;td>:love_hotel: &lt;code>:love_hotel:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:hotel: &lt;code>:hotel:&lt;/code>&lt;/td>
+ &lt;td>:wedding: &lt;code>:wedding:&lt;/code>&lt;/td>
+ &lt;td>:church: &lt;code>:church:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:department_store: &lt;code>:department_store:&lt;/code>&lt;/td>
+ &lt;td>:european_post_office: &lt;code>:european_post_office:&lt;/code>&lt;/td>
+ &lt;td>:city_sunrise: &lt;code>:city_sunrise:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:city_sunset: &lt;code>:city_sunset:&lt;/code>&lt;/td>
+ &lt;td>:japanese_castle: &lt;code>:japanese_castle:&lt;/code>&lt;/td>
+ &lt;td>:european_castle: &lt;code>:european_castle:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:tent: &lt;code>:tent:&lt;/code>&lt;/td>
+ &lt;td>:factory: &lt;code>:factory:&lt;/code>&lt;/td>
+ &lt;td>:tokyo_tower: &lt;code>:tokyo_tower:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:japan: &lt;code>:japan:&lt;/code>&lt;/td>
+ &lt;td>:mount_fuji: &lt;code>:mount_fuji:&lt;/code>&lt;/td>
+ &lt;td>:sunrise_over_mountains: &lt;code>:sunrise_over_mountains:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sunrise: &lt;code>:sunrise:&lt;/code>&lt;/td>
+ &lt;td>:stars: &lt;code>:stars:&lt;/code>&lt;/td>
+ &lt;td>:statue_of_liberty: &lt;code>:statue_of_liberty:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bridge_at_night: &lt;code>:bridge_at_night:&lt;/code>&lt;/td>
+ &lt;td>:carousel_horse: &lt;code>:carousel_horse:&lt;/code>&lt;/td>
+ &lt;td>:rainbow: &lt;code>:rainbow:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ferris_wheel: &lt;code>:ferris_wheel:&lt;/code>&lt;/td>
+ &lt;td>:fountain: &lt;code>:fountain:&lt;/code>&lt;/td>
+ &lt;td>:roller_coaster: &lt;code>:roller_coaster:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ship: &lt;code>:ship:&lt;/code>&lt;/td>
+ &lt;td>:speedboat: &lt;code>:speedboat:&lt;/code>&lt;/td>
+ &lt;td>:boat: &lt;code>:boat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sailboat: &lt;code>:sailboat:&lt;/code>&lt;/td>
+ &lt;td>:rowboat: &lt;code>:rowboat:&lt;/code>&lt;/td>
+ &lt;td>:anchor: &lt;code>:anchor:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rocket: &lt;code>:rocket:&lt;/code>&lt;/td>
+ &lt;td>:airplane: &lt;code>:airplane:&lt;/code>&lt;/td>
+ &lt;td>:helicopter: &lt;code>:helicopter:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:steam_locomotive: &lt;code>:steam_locomotive:&lt;/code>&lt;/td>
+ &lt;td>:tram: &lt;code>:tram:&lt;/code>&lt;/td>
+ &lt;td>:mountain_railway: &lt;code>:mountain_railway:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bike: &lt;code>:bike:&lt;/code>&lt;/td>
+ &lt;td>:aerial_tramway: &lt;code>:aerial_tramway:&lt;/code>&lt;/td>
+ &lt;td>:suspension_railway: &lt;code>:suspension_railway:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:mountain_cableway: &lt;code>:mountain_cableway:&lt;/code>&lt;/td>
+ &lt;td>:tractor: &lt;code>:tractor:&lt;/code>&lt;/td>
+ &lt;td>:blue_car: &lt;code>:blue_car:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:oncoming_automobile: &lt;code>:oncoming_automobile:&lt;/code>&lt;/td>
+ &lt;td>:car: &lt;code>:car:&lt;/code>&lt;/td>
+ &lt;td>:red_car: &lt;code>:red_car:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:taxi: &lt;code>:taxi:&lt;/code>&lt;/td>
+ &lt;td>:oncoming_taxi: &lt;code>:oncoming_taxi:&lt;/code>&lt;/td>
+ &lt;td>:articulated_lorry: &lt;code>:articulated_lorry:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bus: &lt;code>:bus:&lt;/code>&lt;/td>
+ &lt;td>:oncoming_bus: &lt;code>:oncoming_bus:&lt;/code>&lt;/td>
+ &lt;td>:rotating_light: &lt;code>:rotating_light:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:police_car: &lt;code>:police_car:&lt;/code>&lt;/td>
+ &lt;td>:oncoming_police_car: &lt;code>:oncoming_police_car:&lt;/code>&lt;/td>
+ &lt;td>:fire_engine: &lt;code>:fire_engine:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ambulance: &lt;code>:ambulance:&lt;/code>&lt;/td>
+ &lt;td>:minibus: &lt;code>:minibus:&lt;/code>&lt;/td>
+ &lt;td>:truck: &lt;code>:truck:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:train: &lt;code>:train:&lt;/code>&lt;/td>
+ &lt;td>:station: &lt;code>:station:&lt;/code>&lt;/td>
+ &lt;td>:train2: &lt;code>:train2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:bullettrain_front: &lt;code>:bullettrain_front:&lt;/code>&lt;/td>
+ &lt;td>:bullettrain_side: &lt;code>:bullettrain_side:&lt;/code>&lt;/td>
+ &lt;td>:light_rail: &lt;code>:light_rail:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:monorail: &lt;code>:monorail:&lt;/code>&lt;/td>
+ &lt;td>:railway_car: &lt;code>:railway_car:&lt;/code>&lt;/td>
+ &lt;td>:trolleybus: &lt;code>:trolleybus:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ticket: &lt;code>:ticket:&lt;/code>&lt;/td>
+ &lt;td>:fuelpump: &lt;code>:fuelpump:&lt;/code>&lt;/td>
+ &lt;td>:vertical_traffic_light: &lt;code>:vertical_traffic_light:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:traffic_light: &lt;code>:traffic_light:&lt;/code>&lt;/td>
+ &lt;td>:warning: &lt;code>:warning:&lt;/code>&lt;/td>
+ &lt;td>:construction: &lt;code>:construction:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:beginner: &lt;code>:beginner:&lt;/code>&lt;/td>
+ &lt;td>:atm: &lt;code>:atm:&lt;/code>&lt;/td>
+ &lt;td>:slot_machine: &lt;code>:slot_machine:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:busstop: &lt;code>:busstop:&lt;/code>&lt;/td>
+ &lt;td>:barber: &lt;code>:barber:&lt;/code>&lt;/td>
+ &lt;td>:hotsprings: &lt;code>:hotsprings:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:checkered_flag: &lt;code>:checkered_flag:&lt;/code>&lt;/td>
+ &lt;td>:crossed_flags: &lt;code>:crossed_flags:&lt;/code>&lt;/td>
+ &lt;td>:izakaya_lantern: &lt;code>:izakaya_lantern:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:moyai: &lt;code>:moyai:&lt;/code>&lt;/td>
+ &lt;td>:circus_tent: &lt;code>:circus_tent:&lt;/code>&lt;/td>
+ &lt;td>:performing_arts: &lt;code>:performing_arts:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:round_pushpin: &lt;code>:round_pushpin:&lt;/code>&lt;/td>
+ &lt;td>:triangular_flag_on_post: &lt;code>:triangular_flag_on_post:&lt;/code>&lt;/td>
+ &lt;td>:jp: &lt;code>:jp:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:kr: &lt;code>:kr:&lt;/code>&lt;/td>
+ &lt;td>:cn: &lt;code>:cn:&lt;/code>&lt;/td>
+ &lt;td>:us: &lt;code>:us:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:fr: &lt;code>:fr:&lt;/code>&lt;/td>
+ &lt;td>:es: &lt;code>:es:&lt;/code>&lt;/td>
+ &lt;td>:it: &lt;code>:it:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ru: &lt;code>:ru:&lt;/code>&lt;/td>
+ &lt;td>:gb: &lt;code>:gb:&lt;/code>&lt;/td>
+ &lt;td>:uk: &lt;code>:uk:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:de: &lt;code>:de:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h2 id="symbols">Symbols&lt;/h2>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>:one: &lt;code>:one:&lt;/code>&lt;/th>
+ &lt;th>:two: &lt;code>:two:&lt;/code>&lt;/th>
+ &lt;th>:three: &lt;code>:three:&lt;/code>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>:four: &lt;code>:four:&lt;/code>&lt;/td>
+ &lt;td>:five: &lt;code>:five:&lt;/code>&lt;/td>
+ &lt;td>:six: &lt;code>:six:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:seven: &lt;code>:seven:&lt;/code>&lt;/td>
+ &lt;td>:eight: &lt;code>:eight:&lt;/code>&lt;/td>
+ &lt;td>:nine: &lt;code>:nine:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:keycap_ten: &lt;code>:keycap_ten:&lt;/code>&lt;/td>
+ &lt;td>:1234: &lt;code>:1234:&lt;/code>&lt;/td>
+ &lt;td>:zero: &lt;code>:zero:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:hash: &lt;code>:hash:&lt;/code>&lt;/td>
+ &lt;td>:symbols: &lt;code>:symbols:&lt;/code>&lt;/td>
+ &lt;td>:arrow_backward: &lt;code>:arrow_backward:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_down: &lt;code>:arrow_down:&lt;/code>&lt;/td>
+ &lt;td>:arrow_forward: &lt;code>:arrow_forward:&lt;/code>&lt;/td>
+ &lt;td>:arrow_left: &lt;code>:arrow_left:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:capital_abcd: &lt;code>:capital_abcd:&lt;/code>&lt;/td>
+ &lt;td>:abcd: &lt;code>:abcd:&lt;/code>&lt;/td>
+ &lt;td>:abc: &lt;code>:abc:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_lower_left: &lt;code>:arrow_lower_left:&lt;/code>&lt;/td>
+ &lt;td>:arrow_lower_right: &lt;code>:arrow_lower_right:&lt;/code>&lt;/td>
+ &lt;td>:arrow_right: &lt;code>:arrow_right:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_up: &lt;code>:arrow_up:&lt;/code>&lt;/td>
+ &lt;td>:arrow_upper_left: &lt;code>:arrow_upper_left:&lt;/code>&lt;/td>
+ &lt;td>:arrow_upper_right: &lt;code>:arrow_upper_right:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_double_down: &lt;code>:arrow_double_down:&lt;/code>&lt;/td>
+ &lt;td>:arrow_double_up: &lt;code>:arrow_double_up:&lt;/code>&lt;/td>
+ &lt;td>:arrow_down_small: &lt;code>:arrow_down_small:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_heading_down: &lt;code>:arrow_heading_down:&lt;/code>&lt;/td>
+ &lt;td>:arrow_heading_up: &lt;code>:arrow_heading_up:&lt;/code>&lt;/td>
+ &lt;td>:leftwards_arrow_with_hook: &lt;code>:leftwards_arrow_with_hook:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_right_hook: &lt;code>:arrow_right_hook:&lt;/code>&lt;/td>
+ &lt;td>:left_right_arrow: &lt;code>:left_right_arrow:&lt;/code>&lt;/td>
+ &lt;td>:arrow_up_down: &lt;code>:arrow_up_down:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:arrow_up_small: &lt;code>:arrow_up_small:&lt;/code>&lt;/td>
+ &lt;td>:arrows_clockwise: &lt;code>:arrows_clockwise:&lt;/code>&lt;/td>
+ &lt;td>:arrows_counterclockwise: &lt;code>:arrows_counterclockwise:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:rewind: &lt;code>:rewind:&lt;/code>&lt;/td>
+ &lt;td>:fast_forward: &lt;code>:fast_forward:&lt;/code>&lt;/td>
+ &lt;td>:information_source: &lt;code>:information_source:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ok: &lt;code>:ok:&lt;/code>&lt;/td>
+ &lt;td>:twisted_rightwards_arrows: &lt;code>:twisted_rightwards_arrows:&lt;/code>&lt;/td>
+ &lt;td>:repeat: &lt;code>:repeat:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:repeat_one: &lt;code>:repeat_one:&lt;/code>&lt;/td>
+ &lt;td>:new: &lt;code>:new:&lt;/code>&lt;/td>
+ &lt;td>:top: &lt;code>:top:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:up: &lt;code>:up:&lt;/code>&lt;/td>
+ &lt;td>:cool: &lt;code>:cool:&lt;/code>&lt;/td>
+ &lt;td>:free: &lt;code>:free:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ng: &lt;code>:ng:&lt;/code>&lt;/td>
+ &lt;td>:cinema: &lt;code>:cinema:&lt;/code>&lt;/td>
+ &lt;td>:koko: &lt;code>:koko:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:signal_strength: &lt;code>:signal_strength:&lt;/code>&lt;/td>
+ &lt;td>:u5272: &lt;code>:u5272:&lt;/code>&lt;/td>
+ &lt;td>:u5408: &lt;code>:u5408:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:u55b6: &lt;code>:u55b6:&lt;/code>&lt;/td>
+ &lt;td>:u6307: &lt;code>:u6307:&lt;/code>&lt;/td>
+ &lt;td>:u6708: &lt;code>:u6708:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:u6709: &lt;code>:u6709:&lt;/code>&lt;/td>
+ &lt;td>:u6e80: &lt;code>:u6e80:&lt;/code>&lt;/td>
+ &lt;td>:u7121: &lt;code>:u7121:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:u7533: &lt;code>:u7533:&lt;/code>&lt;/td>
+ &lt;td>:u7a7a: &lt;code>:u7a7a:&lt;/code>&lt;/td>
+ &lt;td>:u7981: &lt;code>:u7981:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:sa: &lt;code>:sa:&lt;/code>&lt;/td>
+ &lt;td>:restroom: &lt;code>:restroom:&lt;/code>&lt;/td>
+ &lt;td>:mens: &lt;code>:mens:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:womens: &lt;code>:womens:&lt;/code>&lt;/td>
+ &lt;td>:baby_symbol: &lt;code>:baby_symbol:&lt;/code>&lt;/td>
+ &lt;td>:no_smoking: &lt;code>:no_smoking:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:parking: &lt;code>:parking:&lt;/code>&lt;/td>
+ &lt;td>:wheelchair: &lt;code>:wheelchair:&lt;/code>&lt;/td>
+ &lt;td>:metro: &lt;code>:metro:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:baggage_claim: &lt;code>:baggage_claim:&lt;/code>&lt;/td>
+ &lt;td>:accept: &lt;code>:accept:&lt;/code>&lt;/td>
+ &lt;td>:wc: &lt;code>:wc:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:potable_water: &lt;code>:potable_water:&lt;/code>&lt;/td>
+ &lt;td>:put_litter_in_its_place: &lt;code>:put_litter_in_its_place:&lt;/code>&lt;/td>
+ &lt;td>:secret: &lt;code>:secret:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:congratulations: &lt;code>:congratulations:&lt;/code>&lt;/td>
+ &lt;td>:m: &lt;code>:m:&lt;/code>&lt;/td>
+ &lt;td>:passport_control: &lt;code>:passport_control:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:left_luggage: &lt;code>:left_luggage:&lt;/code>&lt;/td>
+ &lt;td>:customs: &lt;code>:customs:&lt;/code>&lt;/td>
+ &lt;td>:ideograph_advantage: &lt;code>:ideograph_advantage:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:cl: &lt;code>:cl:&lt;/code>&lt;/td>
+ &lt;td>:sos: &lt;code>:sos:&lt;/code>&lt;/td>
+ &lt;td>:id: &lt;code>:id:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:no_entry_sign: &lt;code>:no_entry_sign:&lt;/code>&lt;/td>
+ &lt;td>:underage: &lt;code>:underage:&lt;/code>&lt;/td>
+ &lt;td>:no_mobile_phones: &lt;code>:no_mobile_phones:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:do_not_litter: &lt;code>:do_not_litter:&lt;/code>&lt;/td>
+ &lt;td>:non-potable_water: &lt;code>:non-potable_water:&lt;/code>&lt;/td>
+ &lt;td>:no_bicycles: &lt;code>:no_bicycles:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:no_pedestrians: &lt;code>:no_pedestrians:&lt;/code>&lt;/td>
+ &lt;td>:children_crossing: &lt;code>:children_crossing:&lt;/code>&lt;/td>
+ &lt;td>:no_entry: &lt;code>:no_entry:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:eight_spoked_asterisk: &lt;code>:eight_spoked_asterisk:&lt;/code>&lt;/td>
+ &lt;td>:eight_pointed_black_star: &lt;code>:eight_pointed_black_star:&lt;/code>&lt;/td>
+ &lt;td>:heart_decoration: &lt;code>:heart_decoration:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:vs: &lt;code>:vs:&lt;/code>&lt;/td>
+ &lt;td>:vibration_mode: &lt;code>:vibration_mode:&lt;/code>&lt;/td>
+ &lt;td>:mobile_phone_off: &lt;code>:mobile_phone_off:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:chart: &lt;code>:chart:&lt;/code>&lt;/td>
+ &lt;td>:currency_exchange: &lt;code>:currency_exchange:&lt;/code>&lt;/td>
+ &lt;td>:aries: &lt;code>:aries:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:taurus: &lt;code>:taurus:&lt;/code>&lt;/td>
+ &lt;td>:gemini: &lt;code>:gemini:&lt;/code>&lt;/td>
+ &lt;td>:cancer: &lt;code>:cancer:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:leo: &lt;code>:leo:&lt;/code>&lt;/td>
+ &lt;td>:virgo: &lt;code>:virgo:&lt;/code>&lt;/td>
+ &lt;td>:libra: &lt;code>:libra:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:scorpius: &lt;code>:scorpius:&lt;/code>&lt;/td>
+ &lt;td>:sagittarius: &lt;code>:sagittarius:&lt;/code>&lt;/td>
+ &lt;td>:capricorn: &lt;code>:capricorn:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:aquarius: &lt;code>:aquarius:&lt;/code>&lt;/td>
+ &lt;td>:pisces: &lt;code>:pisces:&lt;/code>&lt;/td>
+ &lt;td>:ophiuchus: &lt;code>:ophiuchus:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:six_pointed_star: &lt;code>:six_pointed_star:&lt;/code>&lt;/td>
+ &lt;td>:negative_squared_cross_mark: &lt;code>:negative_squared_cross_mark:&lt;/code>&lt;/td>
+ &lt;td>:a: &lt;code>:a:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:b: &lt;code>:b:&lt;/code>&lt;/td>
+ &lt;td>:ab: &lt;code>:ab:&lt;/code>&lt;/td>
+ &lt;td>:o2: &lt;code>:o2:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:diamond_shape_with_a_dot_inside: &lt;code>:diamond_shape_with_a_dot_inside:&lt;/code>&lt;/td>
+ &lt;td>:recycle: &lt;code>:recycle:&lt;/code>&lt;/td>
+ &lt;td>:end: &lt;code>:end:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:on: &lt;code>:on:&lt;/code>&lt;/td>
+ &lt;td>:soon: &lt;code>:soon:&lt;/code>&lt;/td>
+ &lt;td>:clock1: &lt;code>:clock1:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock130: &lt;code>:clock130:&lt;/code>&lt;/td>
+ &lt;td>:clock10: &lt;code>:clock10:&lt;/code>&lt;/td>
+ &lt;td>:clock1030: &lt;code>:clock1030:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock11: &lt;code>:clock11:&lt;/code>&lt;/td>
+ &lt;td>:clock1130: &lt;code>:clock1130:&lt;/code>&lt;/td>
+ &lt;td>:clock12: &lt;code>:clock12:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock1230: &lt;code>:clock1230:&lt;/code>&lt;/td>
+ &lt;td>:clock2: &lt;code>:clock2:&lt;/code>&lt;/td>
+ &lt;td>:clock230: &lt;code>:clock230:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock3: &lt;code>:clock3:&lt;/code>&lt;/td>
+ &lt;td>:clock330: &lt;code>:clock330:&lt;/code>&lt;/td>
+ &lt;td>:clock4: &lt;code>:clock4:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock430: &lt;code>:clock430:&lt;/code>&lt;/td>
+ &lt;td>:clock5: &lt;code>:clock5:&lt;/code>&lt;/td>
+ &lt;td>:clock530: &lt;code>:clock530:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock6: &lt;code>:clock6:&lt;/code>&lt;/td>
+ &lt;td>:clock630: &lt;code>:clock630:&lt;/code>&lt;/td>
+ &lt;td>:clock7: &lt;code>:clock7:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock730: &lt;code>:clock730:&lt;/code>&lt;/td>
+ &lt;td>:clock8: &lt;code>:clock8:&lt;/code>&lt;/td>
+ &lt;td>:clock830: &lt;code>:clock830:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:clock9: &lt;code>:clock9:&lt;/code>&lt;/td>
+ &lt;td>:clock930: &lt;code>:clock930:&lt;/code>&lt;/td>
+ &lt;td>:heavy_dollar_sign: &lt;code>:heavy_dollar_sign:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:copyright: &lt;code>:copyright:&lt;/code>&lt;/td>
+ &lt;td>:registered: &lt;code>:registered:&lt;/code>&lt;/td>
+ &lt;td>:tm: &lt;code>:tm:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:x: &lt;code>:x:&lt;/code>&lt;/td>
+ &lt;td>:heavy_exclamation_mark: &lt;code>:heavy_exclamation_mark:&lt;/code>&lt;/td>
+ &lt;td>:bangbang: &lt;code>:bangbang:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:interrobang: &lt;code>:interrobang:&lt;/code>&lt;/td>
+ &lt;td>:o: &lt;code>:o:&lt;/code>&lt;/td>
+ &lt;td>:heavy_multiplication_x: &lt;code>:heavy_multiplication_x:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:heavy_plus_sign: &lt;code>:heavy_plus_sign:&lt;/code>&lt;/td>
+ &lt;td>:heavy_minus_sign: &lt;code>:heavy_minus_sign:&lt;/code>&lt;/td>
+ &lt;td>:heavy_division_sign: &lt;code>:heavy_division_sign:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:white_flower: &lt;code>:white_flower:&lt;/code>&lt;/td>
+ &lt;td>:100: &lt;code>:100:&lt;/code>&lt;/td>
+ &lt;td>:heavy_check_mark: &lt;code>:heavy_check_mark:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:ballot_box_with_check: &lt;code>:ballot_box_with_check:&lt;/code>&lt;/td>
+ &lt;td>:radio_button: &lt;code>:radio_button:&lt;/code>&lt;/td>
+ &lt;td>:link: &lt;code>:link:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:curly_loop: &lt;code>:curly_loop:&lt;/code>&lt;/td>
+ &lt;td>:wavy_dash: &lt;code>:wavy_dash:&lt;/code>&lt;/td>
+ &lt;td>:part_alternation_mark: &lt;code>:part_alternation_mark:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:trident: &lt;code>:trident:&lt;/code>&lt;/td>
+ &lt;td>:black_square: &lt;code>:black_square:&lt;/code>&lt;/td>
+ &lt;td>:white_square: &lt;code>:white_square:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:white_check_mark: &lt;code>:white_check_mark:&lt;/code>&lt;/td>
+ &lt;td>:black_square_button: &lt;code>:black_square_button:&lt;/code>&lt;/td>
+ &lt;td>:white_square_button: &lt;code>:white_square_button:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:black_circle: &lt;code>:black_circle:&lt;/code>&lt;/td>
+ &lt;td>:white_circle: &lt;code>:white_circle:&lt;/code>&lt;/td>
+ &lt;td>:red_circle: &lt;code>:red_circle:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:large_blue_circle: &lt;code>:large_blue_circle:&lt;/code>&lt;/td>
+ &lt;td>:large_blue_diamond: &lt;code>:large_blue_diamond:&lt;/code>&lt;/td>
+ &lt;td>:large_orange_diamond: &lt;code>:large_orange_diamond:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:small_blue_diamond: &lt;code>:small_blue_diamond:&lt;/code>&lt;/td>
+ &lt;td>:small_orange_diamond: &lt;code>:small_orange_diamond:&lt;/code>&lt;/td>
+ &lt;td>:small_red_triangle: &lt;code>:small_red_triangle:&lt;/code>&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>:small_red_triangle_down: &lt;code>:small_red_triangle_down:&lt;/code>&lt;/td>
+ &lt;td>:shipit: &lt;code>:shipit:&lt;/code>&lt;/td>
+ &lt;td>&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table></description></item></channel></rss>
