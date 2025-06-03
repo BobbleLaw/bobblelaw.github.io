@@ -3558,6 +3558,44 @@ private:
     + Count up range element number
   + Return total element count
 
+#### Amazon Coding
+
+**PROBLEM STATEMENT**
+
+Write a function that counts the number of words in a string.
+
+```cpp
+// "#%#$^%^ 34636 34636 asdfasdf"  return 4
+```
+**Solutions**
+```cpp
+int countWords(const std::string& input) {
+    int count = 0;
+    bool meetWord = false;
+    for (const auto& ch: input) {
+        if (ch == ' ') {
+            if (meetWord) {
+                count++;
+                meetWord = false;
+            } else {
+                // do nothing
+            }
+        } else {
+            meetWord = true; 
+        }
+    }
+    
+    if (meetWord) {
+        count++;
+    }
+
+    return count;
+}
+```
+
+**Variants**
++ Unique words
++ Most frequent word
 
 ## LeetCode Roadmap
 
