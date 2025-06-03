@@ -1,17 +1,12 @@
 ---
 title: Notes on Linux Development
 description: A place for problems and solutions encountered in Linux development
-toc: false
-authors:
-  - host
-tags: 
-  - note
-  - deprecated
-categories:
-series:
 date: '2018-08-17T17:41:48+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+authors: "Bob Law"
+tags: 
+  - Note
+image:
+toc: false
 draft: false
 ---
 

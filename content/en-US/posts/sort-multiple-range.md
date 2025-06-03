@@ -1,16 +1,12 @@
 ---
 title: Sort Multiple Ranges
 description: Sorting a range of keys while keeping a range of values in sync.
-toc: false
-authors:
-  - host
+date: '2020-11-28T09:45:32+08:00'
+authors: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2020-11-28T09:45:32+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 

@@ -1,16 +1,12 @@
 ---
 title: Understanding Perspective-N-Points
 description: Discuss and derivation on PnP problem.
-toc: false
-authors:
-  - host
+date: '2021-04-18T15:17:26+08:00'
+authors: "Bob Law"
 tags:
   - registration
-categories:
-series:
-date: '2021-04-18T15:17:26+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 

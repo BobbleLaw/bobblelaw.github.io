@@ -1,21 +1,16 @@
 ---
 title: std::unordered_map Performance and Usage
 description: How well is your hashmap?
-toc: true
-authors:
-  - host
+date: '2020-12-11T09:36:58+08:00'
+authors: "Bob Law"
 tags:
   - C++
-categories:
-series:
-  - C++ Tips
-date: '2020-12-11T09:36:58+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: true
 draft: false
 ---
 
-# Origin Story
+## Origin Story
 
 We have always been told that hashmap is the best associative container that offer O(1) insert, delete, and lookup. However, the customization space of it is quite large and depending on the use case, the trade-off space can change radically.
 `std::unordered_map` is (in)famous for having an API that basically forces implementers to use "buckets with linked lists", also known as _separate chaining_.
@@ -55,7 +50,7 @@ Instead of the three `float`s whose bit pattern I scrambled together via `boost:
 
 The result: 50x improved performance.
 
-# Hash vs. Bucket Collisions
+## Hash vs. Bucket Collisions
 
 I did not need more evidence that something with the hash was wrong.
 Just to provide the context, these were my hash functions:
@@ -129,7 +124,7 @@ It turned out that more than 98.6% of the keys had "bucket collisions", i.e. had
 With `myhash_int`, this was still 86.2%.
 
 
-# Optimal Behavior
+## Optimal Behavior
 
 Before trying to quantify how bad my first hash was, let's briefly talk about what is the best-case scenario.
 Zero bucket collisions are the realm of perfect hashes, which require heavy precomputation and in general only work with known input data.
@@ -152,7 +147,7 @@ This follows a [Poisson distribution](https://en.wikipedia.org/wiki/Poisson_dist
 What load factor is optimal is a different discussion, but given a fixed load factor (typically between 0.5 and 1.0), if our hash function produces roughly the same number of collisions as the corresponding Poisson distribution predicts, I would consider it "optimal enough".
 
 
-# Measuring Badness
+## Measuring Badness
 
 So, how does my hash compare to an optimal one?
 How do we measure that?
@@ -206,7 +201,7 @@ We subtract 1 and clamp it to 0 from below so it's a bit easier to read:
 A badness of roughly 0 means that the current bucket distribution is close to optimal.
 1 means that on average 100% more comparisons than optimal are required.
 
-# "Fixing" my Issue
+## "Fixing" my Issue
 
 Turns out, `myhash_float` has a badness of 550 on my data. Ouch.
 
@@ -232,7 +227,7 @@ size_t fix_my_hash(size_t h)
 }
 ```
 
-# Conclusion
+## Conclusion
 
 In my opinion, hash maps are among the most interesting data structures.
 The only container that is more useful is the array, but apart from abstractions like `vector` and `span`, arrays are quite compact in design space.
@@ -244,7 +239,7 @@ With the bucket API of `std::unordered_map`, we can actually quantify how far fr
 My little snipped can be adapted to hash maps with open addressing by measuring the number of comparisons needed until a key is found.
 This is usually not an exposed metric, though I suppose one could simply write a counting equality comparer for that.
 
-# Further Reading
+##r Further Reading
 
 * [Benchmark of major hash maps implementations (2016)](https://tessil.github.io/2016/08/29/benchmark-hopscotch-map.html)
 * [I Wrote The Fastest Hashtable (2017)](https://probablydance.com/2017/02/26/i-wrote-the-fastest-hashtable/)

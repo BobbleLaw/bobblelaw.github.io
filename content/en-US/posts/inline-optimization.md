@@ -1,15 +1,12 @@
 ---
 title: Inlining Optimization 
 description: Even without inlining, the compiler does not always has to assume the worst case.
-authors:
-  - host
+date: '2021-05-19T17:29:41+08:00'
+authors: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2021-05-19T17:29:41+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc:
 draft: false
 ---
 
@@ -21,7 +18,7 @@ If a function is not inlined, conventional wisdom says that the compiler has to 
 In this short post, I'll demonstrate exactly this effect.
 Furthermore, we will see that even if a function is not inlined, as long as the implementation is visible, some optimizations are still performed and sometimes to great effect.
 
-# Example
+## Example
 
 Let us consider this simple `test` function,
 
@@ -95,7 +92,7 @@ test(int const&):
 
 Not only is the call to `foo` inlined, further optimizations made sure that `n * n` is not computed twice.
 
-# To Inline or not to Inline
+## To Inline or not to Inline
 
 If `foo` is part of a different TU, the compiler can obviously not inline the call.
 Should you have enough patience, [link-time optimization](https://en.wikipedia.org/wiki/Interprocedural_optimization) might come to the rescue.
@@ -148,7 +145,7 @@ Pure functions return the same result if given the same input.
 Pure functions do not modify global state, they work solely on their input values.
 Thus, `foo(n) + foo(n)` was simplified to `tmp = foo(n); tmp + tmp`, even without inlining.
 
-# Fun with Loops
+## Fun with Loops
 
 The difference becomes even larger with loops:
 
@@ -231,7 +228,7 @@ test(int const&):
 So gcc is able to optimize the whole thing to basically `foo(n) * (n + 1)`, without inlining.
 Funnily enough, clang tries (and fails) to be clever with lots of SIMD.
 
-# Conclusion
+## Conclusion
 
 This is not a long post, but it shows that while inlining is a very important optimization, a non-inlined function is not the end of ~~the world~~ optimization.
 As long as the function implementation is visible, compilers can and will analyze them so that they don't have to assume the worst case.

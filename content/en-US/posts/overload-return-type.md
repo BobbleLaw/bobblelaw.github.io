@@ -1,16 +1,12 @@
 ---
 title: Overload Return Type
 description: Everyone overloads by argument types. But can you do return type?
-toc: false
-authors:
-  - host
+date: '2021-02-11T10:43:29+08:00'
+authors: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2021-02-11T10:43:29+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: true
 ---
 

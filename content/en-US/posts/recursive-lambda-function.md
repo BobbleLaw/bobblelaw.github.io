@@ -1,16 +1,12 @@
 ---
 title: Recursive Lambdas
 description: Ever wondered how to make our beloved [](){}s call themselves?
-toc: false
-authors:
-  - host
+date: '2020-11-08T13:41:36+08:00'
+authors: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2020-11-08T13:41:36+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 

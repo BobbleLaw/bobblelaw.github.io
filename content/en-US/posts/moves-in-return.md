@@ -1,16 +1,12 @@
 ---
 title: Moves in Returns
 description: Mini guide to 'when is my return a move?'
-toc: false
-authors:
-  - host
+date: '2020-12-19T14:39:20+08:00'
+authors: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2020-12-19T14:39:20+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 

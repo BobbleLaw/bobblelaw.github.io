@@ -1,16 +1,12 @@
 ---
 title: Basic Floating Point Optimizations
 description: Why is "f + 0.0" slower than "f - 0.0"?
-toc: false
-author:
-  - host
+date: 2019-08-07T09:08:11+08:00
+author: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2019-08-07T09:08:11+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 
@@ -74,10 +70,10 @@ It turns out that IEEE 754 has a special rule for sums of values with equal magn
 
 Let's make a small table what this means for different operations:
 
-| f | f + 0.0 | f - 0.0 | f + -0.0 | f - -0.0 |
-| ---------- |
-| +0.0 | +0.0 | +0.0 | +0.0 | +0.0 |
-| -0.0 | **+0.0** | -0.0 | -0.0 | **+0.0** |
+| f    | f + 0.0  | f - 0.0 | f + -0.0 | f - -0.0 |
+| ---- |
+| +0.0 | +0.0     | +0.0    | +0.0     | +0.0     |
+| -0.0 | **+0.0** | -0.0    | -0.0     | **+0.0** |
 
 (Cases where the expression cannot be legally replaced by `f` are **bold**.)
 
@@ -105,19 +101,19 @@ Though overall, the usefulness of these special values can be doubted and if you
 
 Here are the results of a few common "trivial" operations: ([godbolt](https://godbolt.org/z/1v0-RC))
 
-| expression | compiled | notes |
-| -------------- |
-| `f + 0.0` | `f + 0.0` | optimized if `-fno-signed-zeros`
-| `f - 0.0` | `f` |
-| `f + -0.0` | `f` |
-| `f - -0.0` | `f + 0.0` | optimized if `-fno-signed-zeros`
-| `f * 1.0` | `f` |
-| `f / 1.0` | `f` |
-| `f / 2.0` | `f * 0.5` |
-| `f / 3.0` | `f / 3.0` | cannot guarantee same rounding if `f * 0.333..` were used
-| `f * 0.0` | `f * 0.0` | optimized if `-fno-signed-zeros` and `-ffinite-math-only`
-| `f * -1.0` | `-f` | actually implemented via flipping the sign bit with `xor`
-| `f - f` | `f - f` | optimized if `-ffinite-math-only`
+| expression | compiled  | notes                                                     |
+| ---------- |
+| `f + 0.0`  | `f + 0.0` | optimized if `-fno-signed-zeros`                          |
+| `f - 0.0`  | `f`       |
+| `f + -0.0` | `f`       |
+| `f - -0.0` | `f + 0.0` | optimized if `-fno-signed-zeros`                          |
+| `f * 1.0`  | `f`       |
+| `f / 1.0`  | `f`       |
+| `f / 2.0`  | `f * 0.5` |
+| `f / 3.0`  | `f / 3.0` | cannot guarantee same rounding if `f * 0.333..` were used |
+| `f * 0.0`  | `f * 0.0` | optimized if `-fno-signed-zeros` and `-ffinite-math-only` |
+| `f * -1.0` | `-f`      | actually implemented via flipping the sign bit with `xor` |
+| `f - f`    | `f - f`   | optimized if `-ffinite-math-only`                         |
 
 
 ## Conclusion

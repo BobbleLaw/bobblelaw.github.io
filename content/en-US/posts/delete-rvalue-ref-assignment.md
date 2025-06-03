@@ -1,16 +1,12 @@
 ---
 title: rvalue ref-qualified assignment operators
 description: Why is foo{} = foo{} working anyways?
-toc: false
-author:
-  - host
+date: 2021-08-22T14:53:21+08:00
+author: "Bob Law"
 tags: 
   - C++
-categories:
-series:
-date: '2021-08-22T14:53:21+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 

@@ -1,17 +1,12 @@
 ---
 title: How to Use CMake to Configure a Qt Project?
 description: Configurate Qt project with CMake.
-toc: false
-authors:
-  - host
+date: '2017-10-18T17:26:42+08:00'
+authors: "Bob Law"
 tags:
   - Qt
-  - deprecated
-categories:
-series:
-date: '2017-10-18T17:26:42+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
+image:
+toc: false
 draft: false
 ---
 

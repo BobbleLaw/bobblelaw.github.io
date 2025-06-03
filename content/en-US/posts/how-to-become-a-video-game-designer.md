@@ -1,18 +1,13 @@
 ---
 title: How to Become a Video Game Designer?
 description: Random notes on the way to ametuer game designer.
-toc: false
-authors:
-  - host
-tags: 
-  - note
-  - deprecated
-categories:
-series:
 date: '2019-09-12T11:14:27+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
-draft: false
+authors: "Bob Law"
+tags: 
+  - Note
+image:
+toc: false
+draft: true
 ---
 
 This is some notes that I used for preparing the Game Designer position in Tencent. 
