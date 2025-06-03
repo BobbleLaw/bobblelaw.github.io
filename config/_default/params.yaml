@@ -355,9 +355,9 @@ terms:
   emailText: "Check out this site"
 
 datesFormat:
-  article: "Jan 2, 2025"
-  articleList: "Jan 2, 2025"
-  articleRecent: "Jan 2, 2025"
+  article: "Jan 2, 2006"
+  articleList: "Jan 2, 2006"
+  articleRecent: "Jan 2, 2006"
 # Custom scripts. Any custom scripts will be added before </body> tag.
 # <script type="text/javascript"><!-- custom script --></script>
 # customScripts:
