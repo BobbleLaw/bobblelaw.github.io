@@ -1,19 +1,3 @@
----
-title: How VINS works? -- Theories
-description: Breif introduction of VINS theories
-toc: false
-authors:
-  - host
-tags: 
-  - SLAM
-categories:
-series:
-date: '2022-09-02T15:41:45+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
-draft: true
----
-
 _WIP_
 
 ```math

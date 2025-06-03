@@ -1,19 +1,3 @@
----
-title: How MSCKF Works? -- Preliminaries
-description: Before diving into filter-based VIO.
-toc: true
-authors:
-  - host
-tags: 
-  - SLAM
-categories:
-series:
-date: '2022-08-20T13:45:32+08:00'
-lastmod: '2022-11-20T22:52:56+08:00'
-featuredImage:
-draft: true
----
-
 ## Notations
 
 ## Review of Extended Kalman Filter
