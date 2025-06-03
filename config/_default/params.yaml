@@ -262,31 +262,31 @@ education:
 
 # Projects
 projects:
-  enable: false
+  enable: true
 
   # default "Projects"
   # title: "Projects"
 
   items:
     - title: Torchlight3D
-      image: /images/projects/torchlight.png
+      image: /images/torchlight3d_v2_github.png
       badges:
-        - "3D Reconstruction"
+        - "3D Vision"
         - "C++"
-      content: A C++ 3D reconstruction library.
+      content: A 3D vision library. Stay tuned for more updates!
       links:
         - icon: fab fa-github
-          url: https://github.com/orgs/Torchlight3D/torchlight3d
+          url: https://github.com/orgs/Torchlight3D
 
-    - title: Beacon Viewer
-      image: /images/projects/beacon.png
-      badges:
-        - "3D Viewer"
-        - "C++"
-      content: A portable 3D viewer.
-      links:
-        - icon: fab fa-github
-          url: https://github.com/orgs/Torchlight3D/beacon-viewer
+    # - title: Beacon Viewer
+    #   image: /images/projects/beacon.png
+    #   badges:
+    #     - "3D Viewer"
+    #     - "C++"
+    #   content: A portable 3D viewer.
+    #   links:
+    #     - icon: fab fa-github
+    #       url: https://github.com/orgs/Torchlight3D/beacon-viewer
 
 # Achievements
 achievements:
