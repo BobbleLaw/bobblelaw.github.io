@@ -1,11 +1,18 @@
 # LeetCode Top Interview Questions
 
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)
 
 ## Array & Hashing
+
+#### [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: HashSet
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -213,11 +220,27 @@ Time: O(N), Space: O(1)
 
 ### Graph General
 
+#### [733. Flood Fill](https://leetcode.com/problems/flood-fill/)
+
+**Keyword**: BFS on Grid
+
+**Steps**
++ Declare queue of position
++ Insert starting point
++ while queue not empty loop
+  + Retrieve front position
+  + Save old color
+  + Assign new color
+  + Try 4 directions
+    + If out of boundary, or not same color, or same as new color, skip
+    + Append position
++ Return results
+
 #### [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: BFS/DFS on Graph
+**Keyword**: BFS/DFS on Grid
 
 **Intuition**
 + When we meet a land, try to sink its adjacent lands until we can't
@@ -279,6 +302,17 @@ Time: O(m x n), Space: O(m x n)
       + Append to queue
 
 Time: O(n^2), Space: O(n^2)
+
+#### [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid
+
+**Intuition**
++ Multicore BFS
++ Start BFS from 0s (instead of 1s), which is faster
++ Initialize all the 1s to INT_MAX to indicate "no visited"
 
 #### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
@@ -343,6 +377,16 @@ Time: O(N + E), Space: O(N + E)
 + Simulate binary addition (with two pointers)
 
 ## Binary Tree
+
+#### [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+
+**Keyword**: DFS/BFS
+
+**Steps**
++ If nullptr, return nullptr
++ Swap `left` and `right`
++ `invertTree` on `left` and `right`
++ Return `root`
 
 #### [638. Shopping Offers](https://leetcode.com/problems/shopping-offers/)
 
@@ -588,6 +632,20 @@ public:
 
 Time: O(H), Space: O(1)
 
+#### [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+**Keyword**: BST
+
+**Intuition**
++ Make use of the properties of BST, *Nodes on the left are always smaller than nodes on the right"
+
+**Steps**
++ `while` loop on root
+  + If `p` and `q` are both smaller than `root`, `lca` on the left, move `root` to left
+  + If `p` and `q` are both larger than `root`, `lca` on the right, move `root` to right
+  + Return `root`
++ Default return `nullptr`
+
 #### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -757,6 +815,39 @@ Time: O(H + N), Space: O(H)
 
 ## Binary Search
 
+#### [704. Binary Search](https://leetcode.com/problems/binary-search/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuitions**
++ Classic binary search
+
+**Steps**
++ `left` at 0, `right` at `size - 1`
++ while `left` and `right` not cross
+  + Calculate `mid`
+  + If val at `mid` is `target`, return `mid`
+  + Else if small than `target`, move left to `mid+1`
+  + Else if larger than `target`, move right to `mid-1`
+
+#### [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuitions**
++ Classic binary search
+
+**Steps**
++ `left` at 0, `right` at `n`
++ while `left` and `right` not cross
+  + Calculate `mid`
+  + If `mid` is `isBadVersion`, move right to `mid`
+  + If `mid` is not `isBadVersion`, move left to `mid+1`
+
 #### [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -783,9 +874,41 @@ Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space
 
 **Keyword**: Binary Search
 
-
-
 ## String
+
+#### [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ The rules are
+  + If current `val` is smaller than the next val, substract current `val`
+  + Or add current `val`
+
+#### [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ Option 1: Use two stack (vector) to hold the new string, then compare. Both time and space complexity is O(m + n)
++ Option 2: Use two pointer, start from the end of two strings, update the next valid index based on the '#'
+
+**Steps: Two Pointer**
++ Define `nextValidIndex()`
+  + Check if current char is '#', backspace count up
+  + Else check if there's backspace left, backspace count down
+  + Or break the loop, this is the index
+  + `index` count down (move left)
++ Two pointers start at the end of both string
++ while loop with any one of the index is valid
+  + Calculate the next valid index
+  + If both new indices are valid
+    + If char is not the same, reutrn false
+  + Else if only one of the indices are valid, return false (because one finish early)
+  + Count down both indices
++ Return true by default
+
+Time: O(m + n), Space: O(1)
 
 #### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 
@@ -949,6 +1072,16 @@ Time: O($Nlog(K)$), Space: O(K). Good for big K, or streaming data
 TODO
 
 Time: O(N) average, O($N^2$) worst, Space: O(1)
+
+#### [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Stack
+
+**Intuition**
++ Use stack to hold the pending numbers
++ Follow Polish Notation operation
 
 #### [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
@@ -1144,6 +1277,15 @@ public:
 
 Time: O(N), Space: O(K), where K is non zero element count.
 
+#### [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Steps**
++ Calculate characters frequency
++ For each `count`, we can extend `(count / 2) * 2` length
++ If there are odd `count`, add one in the end
+
 #### [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
 
 **Keyword**: Two-Pointer
@@ -1236,6 +1378,20 @@ Time: O(N^2), Space: O(1)
 + Return result
 
 Time: O(Nlog(A)) - N is length of string, A is alphabet size, Space: O(A)
+
+#### [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+
+**Keyword**: Character Stats
+
+**Intuition**
++ Use `std::array` to calculate the frequency of characters
+
+**Steps**
++ If not same size, return false
++ Declare array of `freqs`
++ For the first string, add up
++ For the second string, count down
++ Check if all the elements in `freqs`
 
 #### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
@@ -1461,18 +1617,6 @@ public:
 ```
 
 Time: O(N), Space: O(1)
-
-#### [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
-
-**Keyword**: Two-Pointer
-
-**Steps**
-+ Declare two pointers, start from the begining
-+ Loop
-  + An intersection exists if $max(start_1, start_2) \leq min(end_1, end_2)$
-  + Move the pointer from the list where the interval ends first (smaller ending).
-
-Time: O(N+M), Space: O(1)
 
 #### [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 
@@ -1713,6 +1857,31 @@ Time: O(len(string), len(template)), Space: O(len(template))
   + Else, update the end of last interval in results
 
 Time: O(NLog(N)), Space: O(N)
+
+#### [57. Insert Interval](https://leetcode.com/problems/insert-interval/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ 3 steps
+  1. interval end < newInterval start, directly push back
+  2. interval start <= newInterval end, merge into one
+  3. interval start > newInterval end (else condition), directly push back
+
+**Steps**
++ Use while loop to implement the idea 
+
+#### [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
+
+**Keyword**: Two-Pointer
+
+**Steps**
++ Declare two pointers, start from the begining
++ Loop
+  + An intersection exists if $max(start_1, start_2) \leq min(end_1, end_2)$
+  + Move the pointer from the list where the interval ends first (smaller ending).
+
+Time: O(N+M), Space: O(1)
 
 #### [252. Meeting Rooms I](https://leetcode.com/problems/meeting-rooms/)
 

@@ -1008,6 +1008,67 @@ Pull up resistor is to keep an unused input pin at a high value
 
 These questions cover essential concepts relevant to embedded systems engineering. Let me know if you'd like to explore answers or dive deeper into any of them!
 
+## Multithreading
+
+### IPC with ZeroMQ and Protobuf
+
+```protobuf
+syntax = "proto3";
+
+enum MessageType {
+  NONE = 0;
+  DEBUG = 1;
+  WARNING = 2;
+  ERROR = 3;
+}
+
+message Message {
+  string text = 1;
+  MessageType = 2;
+}
+
+message Info {
+  string date = 1;
+  int32 id = 2;
+  repeated Message messages = 3;
+}
+```
+
+App A as publisher
+
+```cpp
+#include <iostream>
+
+#include "zmq.hpp"
+#include "generated/message.ph.h"
+
+int main() {
+  zmq::context_t context{1};
+
+  // Socket to clients
+  zmq::socket_t publisher{context, zmq::socket_type::pub};
+
+  // What is High Water Mark?
+  int sndhwm = 0;
+  publisher.set(zmq::socketopt::sndwhm, sndwhm);
+
+  publisher.bind("tcp://*:5561");
+
+  zmq::socket_t syncService{context, zmq::socket_type::rep};
+  syncService.bind("tcp://*:5562");
+  
+  constexpr auto kExpectedSubscribers = 10;
+  int subscribers = 0;
+  zmq::message_t syncMessage;
+  while (subscribers < kExpectedSubscribers) {
+    std::cout << "Wait for sync req";
+    syncService.recv(syncMessage);
+
+    std::cout << "Send sync reply";
+    syncService.send(syncMessage, zmq::send_flags::none);
+  }
+}
+```
 ## General
 
 1. Is there a difference between `class` and `struct`?
