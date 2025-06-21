@@ -5,6 +5,7 @@
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
 ## Array & Hashing
 
@@ -12,140 +13,426 @@
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
-**Keyword**: HashSet
+**Keyword**: Hashing
 
-#### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+**Steps**
++ Keep pushing element into `std::unordered_set` until we find duplicated one
+
+#### [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
+
+**Keyword**: Hashing
+
+**Steps**
++ Use hash table to count occurrence of each letter
++ Knowing all the characters are letter, we can use array instead of hash table
+
+#### [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Hashing
+
+**Intuition**
++ Use `std::array` to calculate the frequency of characters
+
+**Steps**
++ If not same size, return false
++ Declare array of `freqs`
++ For the first string, add up
++ For the second string, count down
++ Check if all the elements in `freqs`
+
+#### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: Two-Pointer
+**Keyword**: Hashing
 
 **Steps**
-+ Two pointers, all start from two end (`m-1` and `n-1`)
-+ Iteration pointer starts from the very (`m+n-1`) end
-  + If `nums[i1] > nums[i2]`, use `nums[i1]`, move i1
-  + Else, use `nums[i2]`, move i2
-  + Move i
-+ Copy the rest from `nums`
++ Declare groups, {key: encoded character frequency, value: strings}
++ Iterate all strings
+  + Calculate the character frequency (Or use a 26 length array)
+  + Turn frequency to string
+  + Update groups
++ Flatten the groups
 
-Time: O(m+n), Space: O(1)
+Time: O(N * K), Space: O(N * K), K is string length
 
-#### [27. Remove Item](https://leetcode.com/problems/remove-element/)
+#### [1. Two Sums](https://leetcode.com/problems/two-sum/)
 
-**Keyword**: Two-Pointer
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
-two pointers, one tracks valid number, one iterates.
+**Keyword**: Hashing
 
-#### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+**Steps**
++ Use hash map to store the visited value and its index
++ Iterate the numbers
+  + If `target - nums[i]` exists in hashtable, append to result
+  + Else insert new pair
+
+#### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Min-Heap
+
+**Intuition**
++ Use min heap to track the k largest number by contraint the size to k
+
+**Steps**
++ Declare hash map to store the number frequency
++ Iterate the hash map
+  + Push current {count, number} pair to min heap
+  + If min heap size is more than k, pop the top (smallest one)
++ Build results
+
+Time: O(NLog(K)), Space: O(N)
+
+#### [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**PROBLEM STATEMENT**
+
+Design an algorithm to encode a list of strings to a single string, and decode it back to the original list.
+Implement two functions:
++ `string encode(const vector<string>& strs)`
++ `vector<string> decode(const string& s)`
+
+**Keyword**: Array, String
+
+**Intuition**
++ Encode by string length and '#'
+
+**Solution**
+```cpp
+class Codec {
+public:
+    std::string encode(const std::vector<std::string>& strs) {
+        std::string s;
+        for (const auto& str: strs) {
+            s += std::to_string(str.size()) + "#" + str;
+        }
+        return s;
+    }
+
+    std::vector<std::string> decode(const std::string& s) {
+        std::vector<std::string> strs;
+        int i = 0;
+        while (i < s.size()) {
+            auto j = i;
+            while (s[j] != '#') {
+                j++;
+            }
+
+            const auto len = std::stoi(s.substr(i, j - i));
+            strs.push_back(s.substr(j + 1, len));
+            i = j + 1 + len;
+        }
+
+        return strs;
+    }
+}
+```
+
+#### [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Array
+
+**Intuition**
++ We can't use divide
++ We compute the product of at index i from left product and right product
+
+**Steps**
++ Declare the `res` array of size n, initialize with 1
++ Iterate from left to right, starting at 1 to calculate
+  + res[i] = res[0] * res[1] * ... * res[i - 1]
++ Iterate from right to left, starting at n - 1 to calculate
+  + Multiply the values in right parts
+
+#### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Array
+
+**Intuition**
++ Since the time complexity should be O(n), so we can't sort
++ We try to use hash set to make the query faster O(1)
++ Try to find the starting value, and extend as much as possible
+
+**Steps**
++ Declare hash set, transform the nums into hash set
++ Iterate the **set** (IMPORTANT!!! As the test case may contain a lots of duplicated values)
+  + Start only when current number is **start** (`num - 1` not inside hash set)
+    + Count the length of the sequence starts with this number
+    + Update longest length
+
+## Stack
+
+#### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Stack, Two-Pointer
+
+**Steps**
++ Define hash map to store Parentheses. {close -> open}
++ Use a stack to hold the pending open brackets
++ Iterate string
+  + If open, push to stack
+  + If close
+    + If stack empty, or stack top (last) not equal to corresponding open, return false
+    + Else pop
+
+#### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Stack, Backtrack
+
+**Intuition**
++ Add open as much as possible (less than n)
++ Add close when close is less than open
+
+**Steps**
++ Define `dfs` function
+  + Input: current string, open count, close count, total parenthese need, combination so far
+  + Output: void
+  + Base condition: If current string size is equal to `2*n` 
+    + Append current string and return
+  + If open count is less than total need, append open
+  + If close count is less than open count, append close
++ Start with `"", 0, 0, n, res`
+
+#### [155. Min Stack](https://leetcode.com/problems/min-stack/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Stack
+
+**Intuition**
++ We can sort every time when we want to get the min, so we need to cache the min
++ When we insert element, we also insert the min at that moment
+
+**Steps**
++ Declare internal container: `std::stack<std::pair<int, int>>`
++ When we insert the value, also insert current min
+
+**Variant**
++ [716. Max Stack](#716-max-stack)
+
+#### [716. Max Stack](https://leetcode.com/problems/max-stack/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: Two-Pointer
+**PROBLEM STATEMENT**
+
+Design a max stack that supports push, pop, top, peekMax and popMax.
++ push(x) -- Push element x onto stack.
++ pop() -- Remove the element on top of the stack and return it.
++ top() -- Get the element on the top.
++ peekMax() -- Retrieve the maximum element in the stack.
++ popMax() -- Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.
+
+**Keyword**: Stack
+
+**Solution**
+```cpp
+class MaxStack {
+public:
+    void push(int x) {
+        _data.push_back(x);
+        _valToIt[x].push_back(_data.rbegin());
+    }
+
+    int pop() {
+        auto val = _data.back();
+        _data.pop_back();
+
+        _valToIt[val].pop_back();
+        if (_valToIt[val].empty()) {
+            _valToIt.erase(val);
+        }
+
+        return val;
+    }
+
+    int top() const {
+        return _data.back();
+    }
+
+    int peekMax() const {
+        return _valToIt.rbegin()->first;
+    }
+
+    int popMax() {
+        auto it = _valToIt.rbegin();
+        int max = it->first;
+
+        auto lastIt = it->second.back();
+        _data.erase(lastIt);
+        it->second.pop_back();
+        if (it->second.empty()) {
+            _valToIt.erase(max);
+        }
+
+        return max;
+    }
+
+private:
+    using _Container = std::vector<int>;
+    _Container _data;
+    std::map<int, std::vector<_Container::iterator>> _valToIt;
+};
+```
+
+**Variant**
++ What if we don't need `popMax()`, how can we improve the algorithm?
+
+```cpp
+namespace {
+
+class MaxStack {
+public:
+    void push(int x) {
+        if (_data.empty()) {
+            _max = x;
+            _data.push(x);
+        } else if (x > _max) {
+            _data.push(encode(x));
+            _max = x
+        } else {
+            _data.push(x);
+        }
+    }
+
+    void pop() {
+        if (_data.empty()) {
+            return; 
+        }
+
+        auto top = _data.top();
+        _data.pop();
+
+        if (top > _max) {
+            _max = decode(top);
+        }
+    }
+
+    int top() const {
+        if (_data.empty()) {
+            // ... throw Exception();
+        }
+
+        auto top = _data.top();
+
+        return top > _max ? _max : top;
+    }
+
+    int peekMax() const {
+        if (_data.empty()) {
+            // ... throw Exception();
+        }
+
+        return _max;
+    }
+  
+private:
+    int encode(int x) const {
+        return 2 * x - _max;
+    }
+
+    int decode(int top) const {
+        return 2 * _max - top;
+    }
+private:
+    using _Container = std::stack<int>;
+    _Container _data;
+    int _max = -1;
+};
+```
+
+#### [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Stack
 
 **Intuition**
-+ Slow pointer track the position of unique number, fast pointer to iterate array
++ Use stack to hold the pending numbers
++ Follow Polish Notation operation
 
-**Steps**
-+ `slow` start at 0
-+ `fast` start at 1, iterate `fast`
-+ Whenever find a unique element, increase `slow`, update value at `slow` to value as fast
-
-#### [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
-
-Similar to 26, the starting point and `if` condition are different. Generalize to max k duplicated.
-+ First k element always valid.
-
-#### [169. Majority Element](https://leetcode.com/problems/majority-element/)
+#### [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Stack
 
 **Intuition**
-+ Because the majority element appears more than n / 2, so just sort and return the value at median
++ Use a **monotonic stack** to remember **indices** of days with cooler (or same) temperatures.
+As soon as we find a warmer temperature, we can pop previous days.
 
 **Steps**
-+ Sort
-+ Return the value at median
++ Declare stack for the decresing temperature **indices**
++ Declare results, initialize with 0
++ Iterate temperatures
+  + If we find current temp is higher than the temps in the stack
+    + Pop out
+    + Append the index diff as result
+  + Push temp to stack
++ Return results
 
-#### [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+Time: O(N), Space: O(N)
 
-+ Rotate all -> rotate first k -> rotate remaining
+#### [853. Car Fleet](https://leetcode.com/problems/car-fleet/)
 
-#### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+*Question?*
 
-**Observations**
-+ Buy and sell should happen on different day
-+ One operation
+**Keyword**: Stack
 
 **Intuition**
-+ Buy low, sell high
 
-**Steps**
-+ Track min price and max profit so far
-+ Iterate prices
-  + Update min price
-  + Update potential max profit
+#### [84. Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
-Time: O(N), Space: O(1)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
-#### [122: Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+*Question?*
 
-**Observations**
-+ Buy and sell can happen in the same day
-+ Hold at most one stock
-+ Multiple operations
+**HARD**
+
+**Keyword**: Stack
 
 **Intuition**
-+ Capture All Uptrends: buy at every valley, sell at every peak
-+ Avoid Overlapping Trade
-  + Even it's possible stock increases for several day, but we should make use of the rule from the question
++ Compare with [11. Contain with Most Water](#11-container-with-most-water), which is different
++ Each bar has the potential to be the smallest bar
++ We try to extend current as much as possible until we meet a smaller bar
++ Use min stack for this
 
 **Steps**
-+ Iterate prices
-  + Every increase is an oppotunity to make profit
-  + Sum up all the increase
++ Push a 0 to input heights (**IMPORTANT**)
++ Declare mono up stack, max area
++ Iterate the heights
+  + If stack not empty, current height is smaller than the highest so far (top of the stack)
+      + Need to update the max area
+      + height is the stack top
+      + w is `i - 2nd highest index - 1` (bcs not include the current index)
+      + Update max area
+  + Push current index (default)
++ Return max area
 
-Time: O(N), Space: O(1)
-
-#### [55. Jump Game](https://leetcode.com/problems/jump-game/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Greedy
-
-**Intuition**
-+ Always try to find out the max jump position from current position
-
-**Steps**
-+ Track the max reachable index
-+ Iterate the jumps
-  + If current index > max reachable index, return false
-  + Update max reachable index from current index
-  + If new max reachable index is over the total, return true
-+ Default return true
-
-#### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Greedy
-
-**Intuition**
-+ The difference between this question and [Jump Game](#55-jump-game) is
-  + **Return the minimum jump**
-  + Destination is `nums[n - 1]`
-+ **Greedy**: At each level, try to extend the jump range as far as possible
-
-**Steps**
-+ Declare the farthest index we can reach by `farthest`
-+ Declare the current range of jump by `currentRange`
-+ Declare jump count
-+ Iterate `[0... n-1)`
-  + Update `farthest`
-  + If we reach `currentRange`, we must jump
-    + Increase the `jump` counter
-    + Update `currentRange`
+## Two-Pointer
 
 #### [11. Container with Most Water](https://leetcode.com/problems/container-with-most-water/)
 
@@ -192,19 +479,500 @@ Time: O(N), Space: O(1)
 
 Time: O(N), Space: O(1)
 
-#### [383. Ransom Note](https://leetcode.com/problems/ransom-note/)
+## Binary Search
 
-+ Use hash table to count occurrence of each letter
-+ Knowing all the characters are letter, we can use array instead of hash table
+#### [704. Binary Search](https://leetcode.com/problems/binary-search/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuitions**
++ Classic binary search
+
+**Steps**
++ `left` at 0, `right` at `size - 1`
++ while `left` and `right` not cross
+  + Calculate `mid`
+  + If val at `mid` is `target`, return `mid`
+  + Else if small than `target`, move left to `mid+1`
+  + Else if larger than `target`, move right to `mid-1`
+
+#### [74. Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuitions**
++ Classic 2d binary search
+
+**Steps**
++ All the processes are the same as [704. Binary Search](#704-binary-search)
++ Except the total length is `m*n`, and we need to use length to get row and col
+
+#### [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ The more bananas Koko eats per hour, the fewer hours she needs.
++ We can binary search for the minimum valid speed `k` between 1 and the maximum in `piles`.
+
+**Steps**
++ Write a helper function: Given eating speed `k`, check can eat all or not?
+  + Iterate piles
+    + Use `(pile + k - 1)` to efficiently calculate `std::ceil(pile / (double)k)`
++ Binary search loop
+  + `left`: 1 (min eat one banana), `right`: max of pile
+  + If can eat all, slow down, move right
+  + Else, speed up, move left
++ Return left
+
+Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space: O(1)
+
+#### [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*REVISIT*
+
+**Keyword**: Binary Search
+
+**Intuition**
++ We compare with nums[right], not nums[left], to detect rotation direction.
++ When nums[mid] > nums[right], rotation point is on the right side.
++ When nums[mid] <= nums[right], we include mid in the next search (could be the minimum).
+
+**Steps**
++ Translate the intuition into code
+
+#### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ Even though rotated, one half of it is still sorted (ascendingly), we can use modified binary search
+  + Check which side is sorted
+  + Narrow search
+
+**Steps**
++ `left` at 0, `right` at end
++ While `left <= right`
+  + Calculate `mid`
+  + If `nums[mid] == target`, return `mid`
+  + If `nums[left] <= nums[mid]` (left side sorted)
+    + If `target` also in left range, move right
+    + Else, move left
+  + Else (right side sorted)
+    + If `target` also in right range, move left
+    + Else, move right
++ Return invalid
+
+#### [981. Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ The input timestamps are **strictly increasing**, so we don't need to sort the value
++ Among a sorted array, find the biggest value smaller than target
+
+**Steps**
++ Internal container: `std::unordered_map<std::string, std::vector<std::pair<int, std::string>>>`
++ Use binary search to find the result
+
+#### [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD!!!**
+
+**Keyword**: Binary Search
+
+**Intuition**
++ We are required to finish in O(log(m + n)), so we can't merge and sort (O(nlog(n)))
++ Try to partion both arrays at index `AMid` and `BMid`, such that: `AMid + BMid == (m + n + 1) / 2`
++ Check if all the left parts are less equal than all the right parts
++ Tricks
+  + Always binary search the shorter one
+  + Be careful about the edge cases at start and end
+
+**Steps**
++ Always binary search on the smaller array.
++ Partition both arrays at index i and j such that: `i + j == (m + n + 1) / 2` (ensures left and right parts are balanced)
++ Use INT_MIN and INT_MAX to avoid boundary issues.
++ Check if:
+  + Aleft <= Bright and Bleft <= Aright
+  + If not, adjust binary search (low/high)
++ Once the correct partition is found:
+  + If total length is odd: return max(left parts)
+  + If even: return average of max(left parts) and min(right parts)
+
+#### [167. Two Sums II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ The difference with [1. Two Sums](#1-two-sums) is the input array is sorted
++ We can use two pointer method to find the two sums pair
++ The other difference is given array is **1-indexed**
+
+**Steps**
++ Two pointers, `left` at 0, `right` at end
++ While `left` and `right` don't cross
+  + If current sum is target, return index
+  + If current sum is less, move left
+  + If current sum is more, move right
+
+#### [15. 3Sums](https://leetcode.com/problems/3sum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Binary Search
+
+**Intuition**
++ Need to return **all** triplets
++ Fixed one number, and the rest is [167. Two Sums II](#167-two-sums-ii)
+
+**Steps**
++ Sort the numbers
++ Iterate the numbers
+  + Skip if current number is dupliacted (use the first one in duplicated sequence)
+  + Break if current number is positive (not possible to find triplet in the rest sorted array)
+  + Start [Two Sums II](#167-two-sums-ii), with
+    + `target = -num[i]`
+    + `left = i + 1`, `right = end`
+    + If less ...
+    + If more ...
+    + If equal, remember to keep moving `left` and `right` until no duplicated
+
+Sorting: O(nlogn)
+Searching: O(n^2)
+
+#### [18. 4Sum](https://leetcode.com/problems/4sum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Binary Search
+
+**Inuition**
++ Similar to [15. 3Sum](#15-3sums), but try to fix two positions
++ **BE CAREFUL** of
+  + Duplicated numbers
+  + Sum overflow
+
+**Steps**
++ Sort the numbers
++ First index loop
+  + Skip the duplicated numbers
+  + Second index loop
+    + Skip the duplicated numbers
+    + Binary Search
+      + `left`: j + 1, `right`: n - 1
+      + Start loop
+        + If sum == target, append to results, skip duplicated numbers
+        + If sum < target, move left
+        + If sum > target, move right
++ Return results
+
+Time: O(n^3)
+
+## Sliding Window
+
+#### [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Sliding Window
+
+**Observations**
++ Buy and sell should happen on different day
++ One operation
+
+**Intuition**
++ Buy low, sell high
+
+**Steps**
++ Track min price and max profit so far
++ Iterate prices
+  + Update min price
+  + Update potential max profit
+
+Time: O(N), Space: O(1)
+
+#### [122: Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+
+**Observations**
++ Buy and sell can happen in the same day
++ Hold at most one stock
++ Multiple operations
+
+**Intuition**
++ Capture All Uptrends: buy at every valley, sell at every peak
++ Avoid Overlapping Trade
+  + Even it's possible stock increases for several day, but we should make use of the rule from the question
+
+**Steps**
++ Iterate prices
+  + Every increase is an oppotunity to make profit
+  + Sum up all the increase
+
+Time: O(N), Space: O(1)
+
+#### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Sliding Window
+
+**Intuition**
++ Use the sliding window technique to maintain a substring without repeating characters while iterating through the string.
+If a character is repeated, move the left pointer of the window forward to exclude the previous occurrence.
+
+**Steps**
++ Use two pointers, `left` and `right` start at `0`
++ Declare hash map to record the last seen character index, {character, index}
++ Iterate the string (with `right`)
+  + If current character is seen and in range of the window
+    + Update `left` to next index of the seen character index
+  + Update `lastSeen` of current position (`right`)
+  + Update max length
++ Return max length
+
+Time: O(N), Space: O(A), where A is the size of the character size
+
+#### [424. Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Sliding Window
+
+**Intuition**
++ Track the max count letter inside window so far
++ We try to change the rest of the letters into the max count letter
++ If not enough chances to change, shrink left
+
+**Steps**
++ Declare window letter frequency, max window letter frequency, left at 0, max window len
++ Iterate the string
+  + Update window letter frequency
+  + Update max window letter frequency
+  + while not enough chances to change the rest of letters
+    + Decrease left letter frequency
+    + Shrink left
+  + Update max window length
++ Return max window length
+
+#### [567. Permutation in String](https://leetcode.com/problems/permutation-in-string/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Sliding Window
+
+**Intuition**
++ A classic sliding window problem to calculate the frequency of string
++ A permutation should have **same size and size frequency**
++ Use `std::array` instead of `std::unordered_map`, because we would decrease the value, when value goes to 0, the entry still exists
+
+**Steps**
++ Calculate the frequency of target string
++ Calculate the frequency of the first window of target string size
++ If the window frequency is the same, return true
++ Else iterate from the next index, move window
+  + Increase the new element count
+  + Decrease the last element count
+  + If the window frequency is the same, return true
++ Default return false
+
+#### [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+**Keyword**: Sliding Window
+
+**Intuition**
++ Count the frequency in `template`
++ Using sliding window to expand and contract as needed
++ Track how many characters have met required count
+
+**Steps**
++ Declare template frequency map: {char -> int}
++ Count the frequency in `template`
++ Declare sliding window
+  + Window frequency map: {char -> int}
+  + Window start
+  + Window length
++ Two pointers loop. `right` as expand iterator, `left` as contract iterator
+  + Get current `right`, and move on (expand)
+    + If this character is needed
+      + Window frequency increase
+      + If the frequency is same, match counter increase
+  + If match counter is same as need (meaning we have all the characters, but frequency may not correct), try to contract
+    + If current length is smaller, update min window length
+    + Get current `left`, and move on (expand)
+      + If this character is needed
+        + If the frequency is same, match counter decrease
+        + Window frequency decrease
++ Return substring
+
+Time: O(len(string), len(template)), Space: O(len(template))
+
+#### [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+**Keyword**: Sliding Window
+
+**Intuition**
++ Brutal force: scan each window, cost O(nk)
++ Use `deque` to store `indices` of useful elements in window
+
+**Steps**
++ Declare a deque to keep indices of elements that are candidates for max
++ Iterate `nums`
+  + Remove the outside indices from the front
+  + Remove small indices from the back
+  + If i in range, append deque front (indices with larger value)
+
+#### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Two-Pointer
+
+**Steps**
++ Two pointers, all start from two end (`m-1` and `n-1`)
++ Iteration pointer starts from the very (`m+n-1`) end
+  + If `nums[i1] > nums[i2]`, use `nums[i1]`, move i1
+  + Else, use `nums[i2]`, move i2
+  + Move i
++ Copy the rest from `nums`
+
+Time: O(m+n), Space: O(1)
+
+#### [27. Remove Item](https://leetcode.com/problems/remove-element/)
+
+**Keyword**: Two-Pointer
+
+**Intuition**
++ In-place
++ Only care about the elements that are not the same as target
++ Use an index to track the elements that are not the same as target
+
+**Steps**
++ Declare `index`
++ Loop all the numbers
+  + If not equal to `target`
+    + Overwrite index
+    + Index count up
+
+#### [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Two-Pointer
+
+**Intuition**
++ Slow pointer track the position of unique number, fast pointer to iterate array
+
+**Steps**
++ `slow` start at 0
++ `fast` start at 1, iterate `fast`
++ Whenever find a unique element, increase `slow`, update value at `slow` to value as fast
+
+#### [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
+
+**Keyword**: Two-Pointer
+
+**Intuition**
++ Similar to [26. Remove Duplicates from Sorted Array](#26-remove-duplicates-from-sorted-array)
++ The starting point and `if` condition are different. Generalize to max k duplicated.
++ First k element always valid.
+
+#### [169. Majority Element](https://leetcode.com/problems/majority-element/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Intuition**
++ Because the majority element appears more than n / 2, so just sort and return the value at median
+
+**Steps**
++ Sort
++ Return the value at median
+
+#### [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+
+**Steps**
++ Rotate all
++ Rotate first k
++ Rotate remaining
+
+#### [55. Jump Game](https://leetcode.com/problems/jump-game/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Greedy
+
+**Intuition**
++ Always try to find out the max jump position from current position
+
+**Steps**
++ Track the max reachable index
++ Iterate the jumps
+  + If current index > max reachable index, return false
+  + Update max reachable index from current index
+  + If new max reachable index is over the total, return true
++ Default return true
+
+#### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Greedy
+
+**Intuition**
++ The difference between this question and [Jump Game](#55-jump-game) is
+  + **Return the minimum jump**
+  + Destination is `nums[n - 1]`
++ **Greedy**: At each level, try to extend the jump range as far as possible
+
+**Steps**
++ Declare the farthest index we can reach by `farthest`
++ Declare the current range of jump by `currentRange`
++ Declare jump count
++ Iterate `[0... n-1)`
+  + Update `farthest`
+  + If we reach `currentRange`, we must jump
+    + Increase the `jump` counter
+    + Update `currentRange`
 
 ## Intervals
 
 #### [228. Summary Ranges](https://leetcode.com/problems/summary-ranges/)
 
-+ Two pointer, one point to the range start, one is iterating
-+ **Be creaful of the condition**
+**Keyword**: Two-Poiner
 
-## Stack
+**Steps**
++ one point to the range start, one is iterating
++ **Be creaful of the condition**
 
 ## Binary Tree General
 
@@ -313,6 +1081,30 @@ Time: O(n^2), Space: O(n^2)
 + Multicore BFS
 + Start BFS from 0s (instead of 1s), which is faster
 + Initialize all the 1s to INT_MAX to indicate "no visited"
+
+#### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid, Flood-Fill
+
+**Intuition**
++ Classic BFS flood-fill problem
+  + Multi sources, starts from rotten oranges
+  + Process layer by layer (min by min)
+  + Count min as BFS depth
+
+**Steps**
++ Traverse grid to prepare BFS
+  + Push rotten pos into queue
+  + Count fresh count
++ BFS loop
+  + Iterate all the rotten oranges in this layer
+    + Try 4 directions
+      + If out of range or not fresh, skip
+      + Else rotten, push back to queue, decrease fresh count
+  + Minute add up
++ Return if no fresh left or not
 
 #### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
@@ -632,20 +1424,6 @@ public:
 
 Time: O(H), Space: O(1)
 
-#### [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
-
-**Keyword**: BST
-
-**Intuition**
-+ Make use of the properties of BST, *Nodes on the left are always smaller than nodes on the right"
-
-**Steps**
-+ `while` loop on root
-  + If `p` and `q` are both smaller than `root`, `lca` on the left, move `root` to left
-  + If `p` and `q` are both larger than `root`, `lca` on the right, move `root` to right
-  + Return `root`
-+ Default return `nullptr`
-
 #### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -726,7 +1504,7 @@ Time: O(N) + O(N), Space: O(N)
 
 **HARD**
 
-**Keyword**: Binary Tree, DFS
+**Keyword**: DFS on Tree
 
 **Intuition**
 + We want to know the **max** sum, so think of DFS
@@ -770,7 +1548,45 @@ Time: O(N), Space: O(H)
 
 Time: O(N), Space: O(H)
 
+#### [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+
+**Keyword**: Traversal on Tree
+
+**Intuition**
++ **Each node represents a character**.
++ Each node keeps track of **whether it ends a valid word**.
++ Search word (or prefix) is traveral on tree
+
 ### Binary Search Tree (BST)
+
+#### [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+
+**Keyword**: DFS on BST
+
+**Intuition**
++ Properties of BST is all the elements on the left are smaller than root, while all the elements on the right are larger than root
+
+**Steps**
++ `dfs`
+  + Input: Node, min, max
+  + Output: Valid or not?
+  + If node is null, return true (think of why)
+  + If node val is not in bound, return false
+  + Check if left and right branches are valid
+
+#### [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+**Keyword**: BST
+
+**Intuition**
++ Make use of the properties of BST, *Nodes on the left are always smaller than nodes on the right"
+
+**Steps**
++ `while` loop on root
+  + If `p` and `q` are both smaller than `root`, `lca` on the left, move `root` to left
+  + If `p` and `q` are both larger than `root`, `lca` on the right, move `root` to right
+  + Return `root`
++ Default return `nullptr`
 
 #### [938. Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 
@@ -813,24 +1629,13 @@ Time: O(H + N), Space: O(H)
 
 **Steps**
 
-## Binary Search
+#### [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)
 
-#### [704. Binary Search](https://leetcode.com/problems/binary-search/)
+**PROBLEM STATEMENT**
 
-![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+#### [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/)
 
-**Keyword**: Binary Search
-
-**Intuitions**
-+ Classic binary search
-
-**Steps**
-+ `left` at 0, `right` at `size - 1`
-+ while `left` and `right` not cross
-  + Calculate `mid`
-  + If val at `mid` is `target`, return `mid`
-  + Else if small than `target`, move left to `mid+1`
-  + Else if larger than `target`, move right to `mid-1`
+**PROBLEM STATEMENT**
 
 #### [278. First Bad Version](https://leetcode.com/problems/first-bad-version/)
 
@@ -848,27 +1653,58 @@ Time: O(H + N), Space: O(H)
   + If `mid` is `isBadVersion`, move right to `mid`
   + If `mid` is not `isBadVersion`, move left to `mid+1`
 
-#### [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+#### [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 
 **Keyword**: Binary Search
 
 **Intuition**
-+ The more bananas Koko eats per hour, the fewer hours she needs.
-+ We can binary search for the minimum valid speed `k` between 1 and the maximum in `piles`.
++ We can do a binary search to land in the target set, then expand outward
++ **BUT!!!** That works only when we know targets is a small cluster, The worst cast is that, all the values are target, then time complexity is O(N)
++ So a more general solution would be **binary search twice**, don't stop after we find the target, continue search left and right half
+
+**Steps: Binary Search Twice**
++ Custom binary search
+  + When target is found
+    + If want to find low bound, `right = mid - 1`
+    + If want to find high bound, `left = mid + 1`
+  + We could even use template
+
+```cpp
+template<bool _isLow>
+int findBound(const std::vector<int>& nums, int target) {
+    ...
+}
+
+// Use case
+constexpr auto kLow{true};
+constexpr auto kHigh{false};
+// ...
+if constexpr (kLow) {
+    right = mid - 1;
+} else {
+    left = mid + 1;
+}
+// ...
+return {findBound<kLow>(...), findBound<kHigh>(...)};
+```
+
+#### [1539. Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)
+
+**Keyword**: Binary Search
+
+**Observations**
++ For index `i`, the num of missing number before arr[i] is `arr[i] - i - 1`
+  + If no missing, number `arr[i]` should be at index `arr[i] - 1`, but now at index `i`, so missing `arr[i] - i - 1`
++ We could use line scan. In case of large n, we use binary search
 
 **Steps**
-+ Write a helper function: Given eating speed `k`, check can eat all or not?
-  + Iterate piles
-    + Use `(pile + k - 1)` to efficiently calculate `std::ceil(pile / (double)k)`
-+ Binary search loop
-  + `left`: 1 (min eat one banana), `right`: max of pile
-  + If can eat all, slow down, move right
-  + Else, speed up, move left
-+ Return left
++ `left` at 0, `right` at n
++ Calculate `mid`, and missing at `mid`
+  + If less than `k`, move `left`
+  + Else, move `right`
 
-Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space: O(1)
+**Notes**
++ `while` condition, and how to update `left` and `right`
 
 #### [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
 
@@ -909,39 +1745,6 @@ Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space
 + Return true by default
 
 Time: O(m + n), Space: O(1)
-
-#### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Stack, Parentheses
-
-**Steps**
-+ Define hash map to store Parentheses. {close, open}
-+ Use a stack to hold the pending open brackets
-+ Iterate string
-  + If open, push to stack
-  + If close
-    + If stack empty, or stack top (last) not equal to corresponding open, return false
-    + Else pop
-
-#### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ Add open as much as possible (less than n)
-+ Add close when close is less than open
-
-**Steps**
-+ Define `backtrack` function
-  + Parameters: current string, open count, close count, total parenthese need, combination so far
-  + If current string size is equal to `2*n` 
-    + Append current string and return
-  + If open count is less than total need, append open
-  + If close count is less than open count, append close
 
 #### [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
 
@@ -1073,16 +1876,6 @@ TODO
 
 Time: O(N) average, O($N^2$) worst, Space: O(1)
 
-#### [150. Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
-
-![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
-
-**Keyword**: Stack
-
-**Intuition**
-+ Use stack to hold the pending numbers
-+ Follow Polish Notation operation
-
 #### [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
@@ -1115,7 +1908,7 @@ Time: O(N), Space: O(N)
 
 #### [528. Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
 
-**Keyword**: Prefix Sum, Binary Search
+**Keyword**: Prefix Sum
 
 **Intuition**
 + Prefix sum can map the range into prefix sum array
@@ -1379,58 +2172,6 @@ Time: O(N^2), Space: O(1)
 
 Time: O(Nlog(A)) - N is length of string, A is alphabet size, Space: O(A)
 
-#### [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/)
-
-**Keyword**: Character Stats
-
-**Intuition**
-+ Use `std::array` to calculate the frequency of characters
-
-**Steps**
-+ If not same size, return false
-+ Declare array of `freqs`
-+ For the first string, add up
-+ For the second string, count down
-+ Check if all the elements in `freqs`
-
-#### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Character Stats
-
-**Steps**
-+ Declare groups, {key: encoded character frequency, value: strings}
-+ Iterate all strings
-  + Calculate the character frequency (Or use a 26 length array)
-  + Turn frequency to string
-  + Update groups
-+ Flatten the groups
-
-Time: O(N * K), Space: O(N * K), K is string length
-
-#### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Sliding Window
-
-**Intuition**
-+ Use the sliding window technique to maintain a substring without repeating characters while iterating through the string.
-If a character is repeated, move the left pointer of the window forward to exclude the previous occurrence.
-
-**Steps**
-+ Use two pointers, `left` and `right` start at `0`
-+ Declare hash map to record the last seen character index, {character, index}
-+ Iterate the string (with `right`)
-  + If current character is seen and in range of the window
-    + Update `left` to next index of the seen character index
-  + Update `lastSeen` of current position (`right`)
-  + Update max length
-+ Return max length
-
-Time: O(N), Space: O(A), where A is the size of the character size
-
 #### [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -1537,24 +2278,6 @@ Time: O(1), Space: O(N)
 **Intuition**
 
 **Steps**
-
-#### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Min-Heap
-
-**Intuition**
-+ Use min heap to track the k largest number by contraint the size to k
-
-**Steps**
-+ Declare hash map to store the number frequency
-+ Iterate the hash map
-  + Push current {count, number} pair to min heap
-  + If min heap size is more than k, pop the top (smallest one)
-+ Build results
-
-Time: O(NLog(K)), Space: O(N)
 
 #### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 
@@ -1809,38 +2532,56 @@ Time: O(N), Capacity: O(1)
     + Instead of finding a valley, we find a peak
     + Instead of finding next higher to the right, we **find next lower after the peak**
 
-#### [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
+#### Shortest Unique Substring (Hawk-Eye Innovations)
 
-**HARD**
+![PlayStation Network](https://img.shields.io/badge/PSN-%230070D1.svg?style=for-the-badge&logo=Playstation&logoColor=white)
 
-**Keyword**: Two-Pointer, Sliding Window
+**PROBLEM STATEMENT**
++ **Input:** A string input (e.g., "abcdaefbca")
++ **Output:** The shortest substring of input that contains all unique letters from input at least once.
 
-**Intuition**
-+ Count the frequency in `template`
-+ Using sliding window to expand and contract as needed
-+ Track how many characters have met required count
+**Solution**
+```cpp
+std::string shortestUniqueSubstring(const std::string& input) {
+    if (input.empty()) {
+        return {};
+    }
 
-**Steps**
-+ Declare template frequency map: {char -> int}
-+ Count the frequency in `template`
-+ Declare sliding window
-  + Window frequency map: {char -> int}
-  + Window start
-  + Window length
-+ Two pointers loop. `right` as expand iterator, `left` as contract iterator
-  + Get current `right`, and move on (expand)
-    + If this character is needed
-      + Window frequency increase
-      + If the frequency is same, match counter increase
-  + If match counter is same as need (meaning we have all the characters, but frequency may not correct), try to contract
-    + If current length is smaller, update min window length
-    + Get current `left`, and move on (expand)
-      + If this character is needed
-        + If the frequency is same, match counter decrease
-        + Window frequency decrease
-+ Return substring
+    const std::unordered_set requiredCharacters(input.cbegin(), input.cend());
+    const int requiredLen = requiredCharacters.size();
+    
+    int left{0};
+    int right{0};
+    int uniqueLen{0};
+    int minStart = 0;
+    int minLen = std::numeric_limits<int>::max();
+    std::unordered_map<char, int> freqsInWindow;
+    while (right < input.size()) {
+        const auto& ch = input[right];
+        right++;
+        freqsInWindow[ch]++;
+        if (freqsInWindow[ch] == 1) {
+            uniqueLen++;
+        }
 
-Time: O(len(string), len(template)), Space: O(len(template))
+        while (uniqueLen == requiredLen) {
+            if (auto len = right - left; len < minLen) {
+                minLen = len;
+                minStart = left;
+            }
+
+            const auto& ch_l = input[left];
+            left++;
+            freqsInWindow[ch_l]--;
+            if (freqsInWindow[ch_l] == 0) {
+                uniqueLen--;
+            }
+        }
+    }
+
+    return minLen == std::numeric_limits<int>::max() ? std::string{} : input.substr(minStart, minLen);
+}
+```
 
 #### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
@@ -2007,89 +2748,6 @@ Time: O(nlogn) + O(nlogn)
 + `fast` find the non-zero elements
 + If found, swap
 
-### Two Sums
-
-#### [1. Two Sums](https://leetcode.com/problems/two-sum/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Hash
-
-**Steps**
-+ Use hash map to store the visited value and its index
-+ Iterate the numbers
-  + If `target - nums[i]` exists in hashtable, append to result
-  + Else insert new pair
-
-#### [167. Two Sums II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
-
-**Keyword**: Two-Pointer
-
-**Intuition**
-+ The difference with [Two Sums](#1-two-sums) is the input array is sorted
-+ We can use two pointer method to find the two sums pair
-+ The other difference is given array is **1-indexed**
-
-**Steps**
-+ Two pointers, `left` at 0, `right` at end
-+ While `left` and `right` don't cross
-  + If current sum is target, return index
-  + If current sum is less, move left
-  + If current sum is more, move right
-
-#### [15. 3Sums](https://leetcode.com/problems/3sum/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Two-Pointer
-
-**Intuition**
-+ Need to return **all** triplets
-+ Fixed one number, and the rest is [Two Sums II](#167-two-sums-ii)
-
-**Steps**
-+ Sort the numbers
-+ Iterate the numbers
-  + Skip if current number is dupliacted (use the first one in duplicated sequence)
-  + Break if current number is positive (not possible to find triplet in the rest sorted array)
-  + Start [Two Sums II](#167-two-sums-ii), with
-    + `target = -num[i]`
-    + `left = i + 1`, `right = end`
-    + If less ...
-    + If more ...
-    + If equal, remember to keep moving `left` and `right` until no duplicated
-
-Sorting: O(nlogn)
-Searching: O(n^2)
-
-#### [18. 4Sum](https://leetcode.com/problems/4sum/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Binary Search
-
-**Inuition**
-+ Similar to [3Sum](#15-3sums), but try to fix two positions
-+ **BE CAREFUL** of
-  + Duplicated numbers
-  + Sum overflow
-
-**Steps**
-+ Sort the numbers
-+ First index loop
-  + Skip the duplicated numbers
-  + Second index loop
-    + Skip the duplicated numbers
-    + Binary Search
-      + `left`: j + 1, `right`: n - 1
-      + Start loop
-        + If sum == target, append to results, skip duplicated numbers
-        + If sum < target, move left
-        + If sum > target, move right
-+ Return results
-
-Time: O(n^3)
-
 #### [827. Making A Large Island](https://leetcode.com/problems/making-a-large-island/)
 
 **HARD**
@@ -2161,42 +2819,6 @@ Time: O(N), Space: O(1)
   + Other -> Quit
 + Return Meet numberic or not
 
-#### [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-
-**Keyword**: Binary search
-
-**Intuition**
-+ We can do a binary search to land in the target set, then expand outward
-+ **BUT!!!** That works only when we know targets is a small cluster, The worst cast is that, all the values are target, then time complexity is O(N)
-+ So a more general solution would be **binary search twice**, don't stop after we find the target, continue search left and right half
-
-**Steps: Binary Search Twice**
-+ Custom binary search
-  + When target is found
-    + If want to find low bound, `right = mid - 1`
-    + If want to find high bound, `left = mid + 1`
-  + We could even use template
-
-
-```cpp
-template<bool _isLow>
-int findBound(const std::vector<int>& nums, int target) {
-    ...
-}
-
-// Use case
-constexpr auto kLow{true};
-constexpr auto kHigh{false};
-// ...
-if constexpr (kLow) {
-    right = mid - 1;
-} else {
-    left = mid + 1;
-}
-// ...
-return {findBound<kLow>(...), findBound<kHigh>(...)};
-```
-
 #### [249. Group Shifted Strings](https://leetcode.com/problems/group-shifted-strings/)
 
 **PROBLEM STATEMENT**
@@ -2262,30 +2884,6 @@ private:
 + Loop while `l1` and `l2` both valid
 + Loop either `l1` or `l2` valid
 + Append carrier node if it exists
-
-#### [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Binary Search
-
-**Intuition**
-+ Even though rotated, one half of it is still sorted (ascendingly), we can use modified binary search
-  + Check which side is sorted
-  + Narrow search
-
-**Steps**
-+ `left` at 0, `right` at end
-+ While `left <= right`
-  + Calculate `mid`
-  + If `nums[mid] == target`, return `mid`
-  + If `nums[left] <= nums[mid]` (left side sorted)
-    + If `target` also in left range, move right
-    + Else, move left
-  + Else (right side sorted)
-    + If `target` also in right range, move left
-    + Else, move right
-+ Return invalid
 
 #### [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 
@@ -2355,24 +2953,6 @@ private:
 \end{matrix}
 ```
 
-#### [1539. Kth Missing Positive Number](https://leetcode.com/problems/kth-missing-positive-number/)
-
-**Keyword**: Binary search
-
-**Observations**
-+ For index `i`, the num of missing number before arr[i] is `arr[i] - i - 1`
-  + If no missing, number `arr[i]` should be at index `arr[i] - 1`, but now at index `i`, so missing `arr[i] - i - 1`
-+ We could use line scan. In case of large n, we use binary search
-
-**Steps**
-+ `left` at 0, `right` at n
-+ Calculate `mid`, and missing at `mid`
-  + If less than `k`, move `left`
-  + Else, move `right`
-
-**Notes**
-+ `while` condition, and how to update `left` and `right`
-
 #### [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -2423,14 +3003,6 @@ Time: O(N), Space: O(N)
     + No, insert result
 
 Time: O(N), Space: O(N)
-
-#### [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)
-
-**PROBLEM STATEMENT**
-
-#### [426. Convert Binary Search Tree to Sorted Doubly Linked List](https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked-list/)
-
-**PROBLEM STATEMENT**
 
 #### [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/)
 
@@ -2510,31 +3082,6 @@ Time: O(N + E), Space: O(N)
 **Intuition**
 + Use a hash map to track **the latest index where each number appeared**
 
-#### [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
-
-**HARD!!!**
-
-**Keyword**: Binary Search
-
-**Intuition**
-+ We are required to finish in O(log(m + n)), so we can't merge and sort (O(nlog(n)))
-+ Try to partion both arrays at index `AMid` and `BMid`, such that: `AMid + BMid == (m + n + 1) / 2`
-+ Check if all the left parts are less equal than all the right parts
-+ Tricks
-  + Always binary search the shorter one
-  + Be careful about the edge cases at start and end
-
-**Steps**
-+ Always binary search on the smaller array.
-+ Partition both arrays at index i and j such that: `i + j == (m + n + 1) / 2` (ensures left and right parts are balanced)
-+ Use INT_MIN and INT_MAX to avoid boundary issues.
-+ Check if:
-  + Aleft <= Bright and Bleft <= Aright
-  + If not, adjust binary search (low/high)
-+ Once the correct partition is found:
-  + If total length is odd: return max(left parts)
-  + If even: return average of max(left parts) and min(right parts)
-
 #### [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
 
 #### [1152. Analyze User Website Visit Pattern](https://leetcode.com/problems/analyze-user-website-visit-pattern/)
@@ -2605,43 +3152,6 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
     return res;
 }
 ```
-
-#### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
-
-**Keyword**: BFS on Matrix, Flood-Fill
-
-**Intuition**
-+ Classic BFS flood-fill problem
-  + Multi sources, starts from rotten oranges
-  + Process layer by layer (min by min)
-  + Count min as BFS depth
-
-**Steps**
-+ Traverse grid to prepare BFS
-  + Push rotten pos into queue
-  + Count fresh count
-+ BFS loop
-  + Iterate all the rotten oranges in this layer
-    + Try 4 directions
-      + If out of range or not fresh, skip
-      + Else rotten, push back to queue, decrease fresh count
-  + Minute add up
-+ Return if no fresh left or not
-
-#### [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Intuition**
-+ Since the time complexity should be O(n), so we can't sort
-+ We try to use hash set to make the query faster O(1)
-
-**Steps**
-+ Declare hash set, transform the nums into hash set
-+ Iterate the **set** (IMPORTANT!!! As the test case may contain a lots of duplicated values)
-  + Start only when current number is **start** (`num - 1` not inside hash set)
-    + Count the length of the sequence starts with this number
-    + Update longest length
 
 #### [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
 
@@ -2788,6 +3298,30 @@ Time: O(N*L^2), Space: O(N*L)
 + For each element, update it with the sum of itself and the min of its two children (below it).
 + The top element becomes the answer.
 
+#### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Classic backtrack problem
++ Be careful all the numbers can be **reused**
+
+**Steps**
++ Define `dfs`
+  + Input: candidates, target
+  + Carry: start index, combination, combinations
+  + Output: void
+  + If target is 0, end tracking, push combination to combinations
+  + Loop in range [start, size]
+    + If current number larger than target, skip (pruning)
+    + Push current number
+    + Recursively call dfs with `(..., target - current number, combination, combinations)`
+    + Pop last
++ Start with initial values
++ Return result
+
 #### [78. Subsets](https://leetcode.com/problems/subsets/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -2795,13 +3329,12 @@ Time: O(N*L^2), Space: O(N*L)
 **Keyword**: Backtrack
 
 **Intuition**
-
-Classic backtrack problem
++ Classic backtrack problem
 
 **Steps**
-+ Declare `backtrack` function
-  + Return: void
-  + Inputs: nums (optional), current index, current sequence, current results
++ Declare `dfs` function
+  + Input: nums (optional), current index, current sequence, current results
+  + Output: void
   + Base condition: append current sequence
   + Backtrack condition:
     + Iterate `[current index, nums' size)`
@@ -2813,6 +3346,106 @@ Classic backtrack problem
   + index 0
   + sequence
   + results
+
+#### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ A very classic combinatorics problem involving backtracking
+
+**Steps**
++ The `dfs` function
+  + Return: void
+  + Carry: (optional)digits, current index in digits, current word, current results
+  + Declare a static hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
+  + Base case: If current index is equal to digits size (iteration finishes), append current word, return
+  + Recursive case: 
+    + Get possible letters for current digit
+    + Append each letter to current word
++ Start backtrack with
+  + Input `digits`
+  + Empty word
+  + Index 0
+  + Output `res`
+
+Time: 
+
+#### [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ From node to leave, so we need to go to the end, think of DFS
++ Use DFS to traverse the tree and carrying the current path, current sum, and result
+
+**Steps**
++ Define `dfs` function
+  + Input: node, target
+  + Carrying: current path, current sum, result
+  + Output: none
+  + nullptr return
+  + Push the node, add up current value to current sum
+    + If current is leaf, and meet target, append current path to result
+    + Find left/right
+  + Pop back (end backtrack)
++ Start with given root, target, and empty path, 0 sum, result
+
+Time: O(N), Space: O(H)
+
+#### [679. 24 Game](https://leetcode.com/problems/24-game/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**HARD!!!**
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Combination problem
++ No duplicated elements, no duplicated selection
++ Because support bracket, don't need to consider operation order
+
+**Steps**
++ Define `dfs`
+  + Input: numbers
+  + Output: can make or not (bool)
+  + Base condition: only one number
+    + Return true when this number is the same as 24
+  + Loop the two combinations of numbers: for example, [1, 2, 3] -> [1, 2], [1, 3], [2, 3]
+    + Declare new numbers
+    + The two combination is num1 and num2
+    + Append the rest numbers to new numbers
+    + Append the result of num1 and num2 to new numbers
+    + Backtrack new numbers
+    + Pop last new numbers
++ Start with input numbers (convert to floating number because of '/')
+
+#### [46. Permutations](https://leetcode.com/problems/permutations/)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Classics backtrack problem, permutations type
++ Use a container to avoid duplicated numbers (std::set or std::vector<bool>)
+
+**Steps**
++ Define `dfs`
+  + Input: numbers
+  + Carry: used, combination, result
+  + Output: void
+  + Base condition: combination size equal to numbers size, push combination to result, and return
+  + Loop all the numbers
+    + If used contains number, skip
+    + Append number to combination, insert number to used
+    + Recursively call `dfs`
+    + Remove last number, erase number
++ Start void initial values, and empty used, combination, result
++ Return result
 
 #### [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
@@ -2835,8 +3468,11 @@ Classic backtrack problem
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
+**Keyword**: Hashing
+
 **Intuition**
 + Simulate how human check Sudoku valid
++ Use 3 array groups to store if a number in rows, cols, and grid
 
 **Steps**
 + Declare three `int[9][9]` to track if number occurance in rows, cols, and boxes
@@ -2864,49 +3500,19 @@ Time: O(9x9), Space: O(9x9x3)
 
 **Steps**
 
-
 #### [1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 **PROBLEM STATEMENT**
 
-
 #### [795. Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-
 #### [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-
-#### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ A very classic combinatorics problem involving backtracking
-
-**Steps**
-+ The `backtrack` function
-  + Return: void
-  + Carry: (optional)digits, current index in digits, current word, current results
-  + Declare a static hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
-  + Base case: If current index is equal to digits size (iteration finishes), append current word, return
-  + Recursive case: 
-    + Get possible letters for current digit
-    + Append each letter to current word
-+ Start backtrackwith
-  + Input `digits`
-  + Empty word
-  + Index 0
-  + Output `res`
-
-Time: 
 
 ### Bit Manipulation
 
@@ -2976,21 +3582,6 @@ int hammingWeight(uint32_t n) {
 + Declare a set to track unique numbers
 + Return size
 
-#### [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Intuition**
-+ We can't use divide
-+ We compute the product of at index i from left product and right product
-
-**Steps**
-+ Declare the `res` array of size n, initialize with 1
-+ Iterate from left to right, starting at 1 to calculate
-  + res[i] = res[0] * res[1] * ... * res[i - 1]
-+ Iterate from right to left, starting at n - 1 to calculate
-  + Multiply the values in right parts
-
 #### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -3011,29 +3602,13 @@ int hammingWeight(uint32_t n) {
 
 **HARD!!!**
 
+*TODO*
+
 **Keyword**: Greedy
 
 **Intuition**
-No idea???
 
 **Steps**
-
-#### [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Sliding Window
-
-**Intuition**
-+ Brutal force: scan each window, cost O(nk)
-+ Use `deque` to store `indices` of useful elements in window
-
-**Steps**
-+ Declare a deque to keep indices of elements that are candidates for max
-+ Iterate `nums`
-  + Remove the outside indices from the front
-  + Remove small indices from the back
-  + If i in range, append deque front (indices with larger value)
 
 #### [2214. Minimum Health to Beat Game](https://leetcode.com/problems/minimum-health-to-beat-game/)
 
@@ -3063,7 +3638,7 @@ public:
 };
 ```
 
-#### [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/)
+#### [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
@@ -3152,28 +3727,6 @@ Time: O(m*nlogn), Space: O(k)
   + res = res * 10 + d
 
 Time: O(logn), Space: O(1)
-
-#### [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Stack
-
-**Intuition**
-Use a **monotonic stack** to remember **indices** of days with cooler (or same) temperatures.
-As soon as we find a warmer temperature, we can pop previous days.
-
-**Steps**
-+ Declare stack for the decresing temperature **indices**
-+ Declare results, initialize with 0
-+ Iterate temperatures
-  + If we find current temp is higher than the temps in the stack
-    + Pop out
-    + Append the index diff as result
-  + Push temp to stack
-+ Return results
-
-Time: O(N), Space: O(N)
 
 #### [907. Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
 
@@ -3459,30 +4012,6 @@ private:
 
 Time: O(nlogk + mlogm), Space: O(n+k)
 
-#### [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DFS on Tree, Backtrack
-
-**Intuition**
-+ From node to leave, so we need to go to the end, think of DFS
-+ Use DFS to traverse the tree and carrying the current path, current sum, and result
-
-**Steps**
-+ Define `dfs` function
-  + Input: node, target
-  + Carrying: current path, current sum, result
-  + Output: none
-  + nullptr return
-  + Push the node, add up current value to current sum
-    + If current is leaf, and meet target, append current path to result
-    + Find left/right
-  + Pop back (end backtrack)
-+ Start with given root, target, and empty path, 0 sum, result
-
-Time: O(N), Space: O(H)
-
 #### [1730. Shortest Path to Get Food](https://leetcode.com/problems/shortest-path-to-get-food/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -3562,138 +4091,7 @@ public:
 
 Time: O(mxn), Space: (mxn)
 
-#### [716. Max Stack](https://leetcode.com/problems/max-stack/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**PROBLEM STATEMENT**
-
-Design a max stack that supports push, pop, top, peekMax and popMax.
-+ push(x) -- Push element x onto stack.
-+ pop() -- Remove the element on top of the stack and return it.
-+ top() -- Get the element on the top.
-+ peekMax() -- Retrieve the maximum element in the stack.
-+ popMax() -- Retrieve the maximum element in the stack, and remove it. If you find more than one maximum elements, only remove the top-most one.
-
-**Keyword**: Stack
-
-**Solution**
-```cpp
-class MaxStack {
-public:
-    void push(int x) {
-        _data.push_back(x);
-        _valToIt[x].push_back(_data.rbegin());
-    }
-
-    int pop() {
-        auto val = _data.back();
-        _data.pop_back();
-
-        _valToIt[val].pop_back();
-        if (_valToIt[val].empty()) {
-            _valToIt.erase(val);
-        }
-
-        return val;
-    }
-
-    int top() const {
-        return _data.back();
-    }
-
-    int peekMax() const {
-        return _valToIt.rbegin()->first;
-    }
-
-    int popMax() {
-        auto it = _valToIt.rbegin();
-        int max = it->first;
-
-        auto lastIt = it->second.back();
-        _data.erase(lastIt);
-        it->second.pop_back();
-        if (it->second.empty()) {
-            _valToIt.erase(max);
-        }
-
-        return max;
-    }
-
-private:
-    using _Container = std::vector<int>;
-    _Container _data;
-    std::map<int, std::vector<_Container::iterator>> _valToIt;
-};
-```
-
-**Variant**
-+ What if we don't need `popMax()`, how can we improve the algorithm?
-
-```cpp
-namespace {
-
-class MaxStack {
-public:
-    void push(int x) {
-        if (_data.empty()) {
-            _max = x;
-            _data.push(x);
-        } else if (x > _max) {
-            _data.push(encode(x));
-            _max = x
-        } else {
-            _data.push(x);
-        }
-    }
-
-    void pop() {
-        if (_data.empty()) {
-            return; 
-        }
-
-        auto top = _data.top();
-        _data.pop();
-
-        if (top > _max) {
-            _max = decode(top);
-        }
-    }
-
-    int top() const {
-        if (_data.empty()) {
-            // ... throw Exception();
-        }
-
-        auto top = _data.top();
-
-        return top > _max ? _max : top;
-    }
-
-    int peekMax() const {
-        if (_data.empty()) {
-            // ... throw Exception();
-        }
-
-        return _max;
-    }
-  
-private:
-    int encode(int x) const {
-        return 2 * x - _max;
-    }
-
-    int decode(int top) const {
-        return 2 * _max - top;
-    }
-private:
-    using _Container = std::stack<int>;
-    _Container _data;
-    int _max = -1;
-};
-```
-
-#### [2502. Design Memory Allocator]()
+#### [2502. Design Memory Allocator](https://leetcode.com/problems/design-memory-allocator/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
