@@ -104,30 +104,35 @@
  &lt;/tbody>
 &lt;/table>
 &lt;p>Answer:&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</guid><description>&lt;h1 id="leetcode-top-interview-questions">LeetCode Top Interview Questions&lt;/h1>
-&lt;p>&lt;img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&amp;amp;logo=Meta&amp;amp;logoColor=white" alt="Meta">&lt;br>
+&lt;p>&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode">&lt;br>
+&lt;img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&amp;amp;logo=Meta&amp;amp;logoColor=white" alt="Meta">&lt;br>
 &lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS">&lt;br>
 &lt;img src="https://img.shields.io/badge/google-4285F4?style=for-the-badge&amp;amp;logo=google&amp;amp;logoColor=white" alt="Google">&lt;br>
-&lt;img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&amp;amp;logo=apple&amp;amp;logoColor=white" alt="Apple">&lt;/p>
+&lt;img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&amp;amp;logo=apple&amp;amp;logoColor=white" alt="Apple">&lt;br>
+&lt;img src="https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&amp;amp;logo=roku&amp;amp;logoColor=white" alt="Roku">&lt;/p>
 &lt;h2 id="array--hashing">Array &amp;amp; Hashing&lt;/h2>
-&lt;h4 id="88-merge-sorted-array">&lt;a href="https://leetcode.com/problems/merge-sorted-array/">88. Merge Sorted Array&lt;/a>&lt;/h4>
-&lt;p>&lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS">&lt;/p>
-&lt;p>&lt;strong>Keyword&lt;/strong>: Two-Pointer&lt;/p>
+&lt;h4 id="217-contains-duplicate">&lt;a href="https://leetcode.com/problems/contains-duplicate/">217. Contains Duplicate&lt;/a>&lt;/h4>
+&lt;p>&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode">&lt;/p>
+&lt;p>&lt;strong>Keyword&lt;/strong>: Hashing&lt;/p>
 &lt;p>&lt;strong>Steps&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>Two pointers, all start from two end (&lt;code>m-1&lt;/code> and &lt;code>n-1&lt;/code>)&lt;/li>
-&lt;li>Iteration pointer starts from the very (&lt;code>m+n-1&lt;/code>) end
+&lt;li>Keep pushing element into &lt;code>std::unordered_set&lt;/code> until we find duplicated one&lt;/li>
+&lt;/ul>
+&lt;h4 id="383-ransom-note">&lt;a href="https://leetcode.com/problems/ransom-note/">383. Ransom Note&lt;/a>&lt;/h4>
+&lt;p>&lt;strong>Keyword&lt;/strong>: Hashing&lt;/p>
+&lt;p>&lt;strong>Steps&lt;/strong>&lt;/p>
 &lt;ul>
-&lt;li>If &lt;code>nums[i1] &amp;gt; nums[i2]&lt;/code>, use &lt;code>nums[i1]&lt;/code>, move i1&lt;/li>
-&lt;li>Else, use &lt;code>nums[i2]&lt;/code>, move i2&lt;/li>
-&lt;li>Move i&lt;/li>
+&lt;li>Use hash table to count occurrence of each letter&lt;/li>
+&lt;li>Knowing all the characters are letter, we can use array instead of hash table&lt;/li>
 &lt;/ul>
-&lt;/li>
-&lt;li>Copy the rest from &lt;code>nums&lt;/code>&lt;/li>
+&lt;h4 id="242-valid-anagram">&lt;a href="https://leetcode.com/problems/valid-anagram/">242. Valid Anagram&lt;/a>&lt;/h4>
+&lt;p>&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode">&lt;/p>
+&lt;p>&lt;strong>Keyword&lt;/strong>: Hashing&lt;/p>
+&lt;p>&lt;strong>Intuition&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Use &lt;code>std::array&lt;/code> to calculate the frequency of characters&lt;/li>
 &lt;/ul>
-&lt;p>Time: O(m+n), Space: O(1)&lt;/p>
-&lt;h4 id="27-remove-item">&lt;a href="https://leetcode.com/problems/remove-element/">27. Remove Item&lt;/a>&lt;/h4>
-&lt;p>&lt;strong>Keyword&lt;/strong>: Two-Pointer&lt;/p>
-&lt;p>two pointers, one tracks valid number, one iterates.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1>
+&lt;p>&lt;strong>Steps&lt;/strong>&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1>
 &lt;ol>
 &lt;li>&lt;strong>What is stratified cross-validation and when should we use it?&lt;/strong>&lt;/li>
 &lt;li>&lt;strong>Why do ensembles typically have higher scores than individual models?&lt;/strong>&lt;/li>
