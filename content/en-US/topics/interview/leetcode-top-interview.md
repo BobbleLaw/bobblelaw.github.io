@@ -734,6 +734,7 @@ Time: O(N), Space: O(1)
 #### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
 **Keyword**: Sliding Window
@@ -851,6 +852,499 @@ Time: O(len(string), len(template)), Space: O(len(template))
   + Remove the outside indices from the front
   + Remove small indices from the back
   + If i in range, append deque front (indices with larger value)
+
+## Linked List
+
+#### [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List
+
+**Steps**
++ Declare a `prev` points to `nullptr`
++ Declare a `current` points to the head
++ while current valid
+  + Cache `next`
+  + `current`'s next points to `prev`
+  + `prev` move to `current`
+  + `current` move to next
+
+#### [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Difference between [206. Reverse Linked List](#206-reverse-linked-list) is reverse list in a range
+
+#### [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD!!**
+
+**Keyword**: Linked-List
+
+#### [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Slow and fast pointer. When fast meets the end, return the slow
+
+#### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Slow and fast pointer. When fast meets slow, then there's a cycle
+
+#### [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Difference with [141. Linked List Cycle](#141-linked-list-cycle) is the problem requires return the entry of the loop
++ Detect loop part is the same. After we find a loop, place a node in the beginning, and move together with slow
+
+#### [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Linked-List
+
+**Intuition**:
++ Can't access head, and we don't know prev, so we can't simply unlink this node
++ We can **copy the next node** into current node, and delete next node
+
+#### [143. Reorder List](https://leetcode.com/problems/reorder-list/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Split the Linked List into two parts, be careful
+  + Remember to break the Linked List, meaning make last node of first part point to `nullptr`
+  + Two way to break a Linked List, one is len(first) >= len(second), the other one is len(first) <= len(second)
++ Reverse the second part
++ Merge two parts together
+
+**Steps**
++ ...
+
+#### [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Since both lists are sorted, we can iterate through both and merge them in order.
+
+**Steps**
++ Create `dummy` node
++ Declare `current` node starts at dummy
++ While both list not to the end
+  + Link the smaller node, and move forward
++ Link the rest list
+
+Time: O(n+m), Space: O(1)
+
+#### [148. Sort List](https://leetcode.com/problems/sort-list/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Naturally think of merge sort
++ Split the linked-list with fast-slow pointer
++ Merge two part, check [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
+
+**Steps**
++ If `head` is `nullptr` or one head, return `head`
++ Use fast-slow pointer to split the list
++ Recursively call `sortList` on `head` and `slow`
++ Merge the result
+
+Time: O(nlogn), Space: O(logn) of stack
+
+#### [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ For singly linked link, we can't access element by index, instead we have to count the move.
++ The distance between the earlier pointer and the later pointer keeps constant
+
+**Steps**
++ `first` and `second` pointer start from `dummy` node
++ Move `first` for `n+1` steps forward
++ Then move both together until `first` hits the end
++ `second->next` is the one to remove
+
+**Note**
++ Why `dummy` node?
++ Why move `n+1` steps?
+  + To remove the nth from the end, we need to arrive at the one before last nth node
+  + The `first` pointer stops at pos n
+
+#### [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**MEDIUM BUT HARD**
+
+**Keyword**: Linked-List
+
+**Intuition**
++ The easiest way is to use an extra hash map to store {Old Node -> New Node}
++ The optimal solution is not easy to come up
+
+**Approach: Hash map**
++ Declare hash map {Old Node -> New Node}
++ 1st pass: Copy node one by one, and update hash map
++ 2nd pass: Iterate the hash map, link next and random node of new node
+
+**Approach: Interleaving**
++ 1st pass: Copy each node right after the original node (don't care random pointer)
++ 2nd pass: Link random pointer in the copied nodes
++ 3rd pass: Separate the copied nodes and original nodes, and recover the original nodes links.
+  + Use dummy header
+
+Time: O(N), Space: O(1)
+
+#### [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List
+
+**Intuition**
++ Since numbers are stored in reverse order, adding them from head to tail is same as adding numbers
+
+**Steps**
++ Declare a dummy pointer
++ Declare `curr` and `carrier`
++ Loop while `l1` and `l2` both valid
++ Loop either `l1` or `l2` valid
++ Append carrier node if it exists
+
+#### [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Linked-List, Two-Pointer
+
+**Intuition**
++ Notice some keyword "numbers from [1, n] in n+1 size array", "constant space complexity"
++ Treat the value of nums as pointer to next node
++ We try to find the circle, then find the entrance
+
+**Steps**
++ ...
+
+#### [146. LRU Cache](https://leetcode.com/problems/lru-cache)
+
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Doubly Linked-List
+
+**Observations**
++ Both `get()` and `put()` are considered "used", So we use doubly linked list for efficient ordering
++ We can't use index to manipulate value in linked list, so we create a hash map {key, iterator}
+
+**Steps**
++ Declare a doubly linked list (of {key, value} pairs) for the underlying container, front is the most used, end is the least used
++ Declare a hash map {key, iterator} to fast access data
++ `get()`
+  + If not exist in map, return -1
+  + If exist
+    + Use the iterator to get value
+    + Move this {key, value} to the front
+      + Remove the iterator
+      + Push new node to the front
+      + Update map
++ `put()`
+  + If exist in map
+    + Use iterator to remove the existed one
+  + If not exist in map
+    + If exceed capacity
+      + Get the last key
+      + Pop last element
+      + Remove from map
+  + Push new node to the front
+  + Update map
+
+Time: O(1), Space: O(N)
+
+#### [460. LFU Cache](https://leetcode.com/problems/lfu-cache/)
+
+**HARD**
+
+*TODO*
+
+**Keyword**:
+
+**Intuition**
+
+**Steps**
+
+## Binary Tree
+
+#### [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Steps**
++ If nullptr, return nullptr
++ Swap `left` and `right`
++ `invertTree` on `left` and `right`
++ Return `root`
+
+#### [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Steps**
++ Small tree use DFS, deep trees use **BFS**.
+
+#### [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Intuition**
++ Diameter of a node is the longest path goes through the node
+  + In other words, **the largest sum of left and right subtree height**
++ Because we need to calculate the height from bottom up, so use DFS
+
+**Steps**
++ DFS recursion
+  + Calculate the sum of left and right subtring height
+  + Update the max diameter
+  + Return height
++ Start recursion with root
+
+Time: O(N), Space: O(H)
+
+#### [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Intuition**
+
+**Steps**
++ ...
+
+#### [100. Same Tree](https://leetcode.com/problems/same-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Intuition**
+
+**Steps**
++ ...
+
+#### [572. Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Intuition**
+
+**Steps**
++ ...
+
+#### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree
+
+**Intuition**
++ Use DFS to traverse the tree and locate LCA
++ Try [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii), and you would find that if the node can access its parent, everything is better.
++ So the other option is to build a hash map of nodes and their parent first, and the problem is the same as [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii)
+
+**Steps**
++ DFS function
+  + Return: the LCA
+  + Inputs: node, taget1, target2
+  + If `node` is null, return null
+  + If any of `p` and `q` is `node`, return `node`
+  + Recursively get left LCA and right LCA from left and right branch
+  + If LCA exists on both sides, return `node`
+  + Either `p` or `q` on one side of the `node`, LCA should be in that side of the `node`
++ Use DFS on left and right
+
+**Notes**
++ Even we can reuse the `lowestCommonAncestor()` function, its intention is confusing(we can't always find LCA in the subtree!), we better use a new `dfs()` function to define what to do in DFS recursion
+
+#### [1644. Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)
+
+**PROBLEM STATEMENT**
+
+Given a binary tree, find the lowest common ancestor (LCA) of two given nodes `p` and `q`. However, this version of the problem has a special requirement:
++ If either `p` or `q` is missing from the tree, return `nullptr` instead of the LCA.
+
+**Keyword**: DFS on Tree
+
+**Intuition**
++ Similar to [236. Lowest Common Ancestor of a Binary Tree](#236-lowest-common-ancestor-of-a-binary-tree)
++ The `dfs` function carries more infos
+
+**Solution**
+```cpp
+// Reuse the structure of basic LCA, but in dfs(), we carry the result if q and p exist in the tree, 
+class Solution {
+public:
+    Node* lowestCommonAncestor(Node* root, Node* p, Node* q) {
+        bool findP{false}, findQ{false};
+        const auto lca = dfs(root, p, q, findP, findQ);
+        return (findP && findQ) ? lca : nullptr;
+    }
+
+private:
+    Node* dfs(Node* node, Node* p, Node* q, bool& findP, bool& findQ) {
+        if (!node) {
+            return nullptr;
+        }
+        
+        bool leftFindP{false}, leftFindQ{false};
+        const auto left = dfs(node->left, p, q, leftFindP, leftFindQ);
+        bool rightFindP{false}, rightFindQ{false};
+        const auto right = dfs(node->right, p, q, rightFindP, rightFindQ);
+
+        findP = leftFindP || rightFindP || node == p;
+        findQ = leftFindQ || rightFindQ || node == q;
+
+        if (node == p || node == q) {
+            return node;
+        }
+        if (left && right) {
+            return node;
+        }
+        
+        return left ? left : right;
+    }
+}
+```
+
+#### [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
+
+**PROBLEM STATEMENT**
+
+Given two nodes in a binary tree where each node contains a parent pointer, find their lowest common ancestor (LCA).
+
+**Keyword**: Two-Pointer
+
+**Steps**
++ Use two pointers, start at `p` and `q`
++ Move each pointer upward to its parent until they meet
++ If a pointer reaches the root (`parent = nullptr`), restart at the other node
+  + Both pointers would traverse the same height in the end
++ The first common node encountered is the LCA
+
+**Solution**
+```cpp
+// Node definition
+// class Node {
+//     int val;
+//     Node* left;
+//     Node* right;
+//     Node* parent;
+// };
+
+class Solution {
+public:
+    Node* lowestCommonAncestor(Node* p, Node* q) {
+        // Two pointers
+        auto p1{p};
+        auto p2{q};
+        while (p1 != p2) {
+            // 1. Move pointer upward to parent
+            // 2. If pointer reaches nullptr, restart at the other's position
+            p1 = p1 ? p1->parent : q;
+            p2 = p2 ? p2->parent : p;
+        }
+
+        return p1;
+    }
+}
+```
+
+Time: O(H), Space: O(1)
+
+#### [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Tree
+
+**Intuition**
++ Classic BFS
+
+**Steps**
++ ...
+
+#### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Tree
+
+**Intuition**
++ Because we need to iterate the tree by layer, so BFS
++ The last node is the right most node in current layer
++ Optional: DFS. Add the right node first, so when list size is same as the depth, that's the right most node
+
+**Steps**
++ Prepare BFS
+  + Declare queue of Node
+  + Push root
++ BFS loop
+  + Iterate elements in layer
+    + Update the last element
+    + Insert left and right (if neccessary)
+  + Append last number of this layer
++ Return result
+
+Time: O(N), Space: O(N)
+
+**Variants**
++ Left Side View: Same structure, but save the first node of the layer
+
+#### [1448. Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree, BFS on Tree
+
+
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -974,20 +1468,6 @@ Time: O(m+n), Space: O(1)
 + one point to the range start, one is iterating
 + **Be creaful of the condition**
 
-## Binary Tree General
-
-#### [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
-
-**Keyword**: DFS/BFS on Tree
-
-+ Small tree use DFS, deep trees use **BFS**.
-
-#### [100. Same Tree](https://leetcode.com/problems/same-tree/)
-
-+ Try **BFS**
-
-### Graph General
-
 #### [733. Flood Fill](https://leetcode.com/problems/flood-fill/)
 
 **Keyword**: BFS on Grid
@@ -1008,21 +1488,10 @@ Time: O(m+n), Space: O(1)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-**Keyword**: BFS/DFS on Grid
+**Keyword**: BFS on Grid, DFS
 
 **Intuition**
 + When we meet a land, try to sink its adjacent lands until we can't
-
-**Steps: DFS**
-+ Define DFS
-  + Input: grid, and coordinate (row, col), Output: void
-  + If coordinate in range, and current cell is a land
-    + Sink it
-    + Explore adjcent cells
-+ Iterate the grid
-  + If current cell is land
-    + Count up
-    + Use DFS to sink its adjacent cells
 
 **Steps: BFS (Recommend)**
 + Return if `grid` is empty
@@ -1040,6 +1509,19 @@ Time: O(m+n), Space: O(1)
 + Return count
 
 Time: O(m x n), Space: O(m x n)
+
+#### [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: BFS on Grid
+
+**Intuition**
++ An island problem, use flood fill
++ When flood fill, calculate the current area, then update the max area
+
+**Steps**
++ ...
 
 #### [934. Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
 
@@ -1071,6 +1553,36 @@ Time: O(m x n), Space: O(m x n)
 
 Time: O(n^2), Space: O(n^2)
 
+#### [827. Making A Large Island](https://leetcode.com/problems/making-a-large-island/)
+
+**HARD**
+
+**Keywords**: DFS
+
+**Intuition**
++ When we change a cell from sea into land, it also connect the neighbor lands together
++ Label all islands with unique ids, and save their size
+  + ID should starts from 2, because 0 is for water, 1 is for OG land(a.k.a. unvisited land)
++ Try to turn each water into land, and calculate the new island size, update max island size
+  + Use `set` to avoid duplicated
+
+**Steps**
++ Declare hash map, {Island Id -> Island Size}
+  + Id starts from 2
++ 1st pass: Iterate cells, use DFS calculate size. 
++ DFS function: return size, log visited (with Id), carry the Island size map
+  + If not in bound, or not unvisited land, return 0
+  + If in bound
+    + Update Id
+    + Explore 4 directions, (size from 1)
++ 2nd pass: Find current max island size
++ 3rd pass: Iterate cells, locate water and try to fill
+  + Explore 4 directions, and add neighbor
+  + Sum up to calculate new size
+  + Update new max size
+
+Time: O($N^2$), Space: O($N^2$)
+
 #### [542. 01 Matrix](https://leetcode.com/problems/01-matrix/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
@@ -1084,6 +1596,7 @@ Time: O(n^2), Space: O(n^2)
 
 #### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
 **Keyword**: BFS on Grid, Flood-Fill
@@ -1105,6 +1618,47 @@ Time: O(n^2), Space: O(n^2)
       + Else rotten, push back to queue, decrease fresh count
   + Minute add up
 + Return if no fresh left or not
+
+#### [864. Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: BFS on Grid
+
+**Intuition**
++ First thought BFS with visited
++ For the `visited`, we have more than one state. e.g. visit without any key, and visit with 1 key are different
++ So we use some kinda of flag to represent state
++ State: `std::bit_set` vs `std::array<bool, Size>`
+  + We need to distinguish "not visit", "visited without key", "visited with ** key"
+  + `std::bit_set` can't represent "visited without key" state
+  + Prefer `int`, more compact
+
+**Steps**
++ Define `struct State { int r, c; int key_state; };`
++ Declare state queue: `std::queue<State>`
++ Declare `visited` as `std::vector<std::vector<std::array<bool, TotalState>>>`
++ Declare `total_keys`
++ Iterate `grid` to find starting point and `total_keys`
+  + If we meet starting point
+    + Enqueue
+    + Update `visited` with true at 0, meaning "visited without key"
+  + If we meet key, set flag
++ Declare steps
++ `bfs` loop starts
+  + Layer by layer, for each element in this layer
+    + If already have all the keys, return steps
+    + Try to expand 4 directions, for each directions
+      + If out bound, skip
+      + If meet wall, skip
+      + If meet lock, but don't have this key, skip
+      + Declare new_key_state
+      + If meet key, update new_key_state
+      + If visit current pos with new_key_state, skip
+      + Update visited at current pos with new_key_state to true
+      + Enqueue
+  + Steps count up
++ Default return -1
 
 #### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
 
@@ -1167,18 +1721,6 @@ Time: O(N + E), Space: O(N + E)
 #### [67. Add Binary](https://leetcode.com/problems/add-binary/)
 
 + Simulate binary addition (with two pointers)
-
-## Binary Tree
-
-#### [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
-
-**Keyword**: DFS/BFS
-
-**Steps**
-+ If nullptr, return nullptr
-+ Swap `left` and `right`
-+ `invertTree` on `left` and `right`
-+ Return `root`
 
 #### [638. Shopping Offers](https://leetcode.com/problems/shopping-offers/)
 
@@ -1303,171 +1845,6 @@ Time: O($Nlog(N)$), Space: O(N)
 + Build the result
 
 Time: O($Nlog(N)$), Space: O(N)
-
-#### [236. Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DFS
-
-**Intuition**
-+ Use DFS to traverse the tree and locate LCA
-+ Try [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii), and you would find that if the node can access its parent, everything is better.
-+ So the other option is to build a hash map of nodes and their parent first, and the problem is the same as [1650. Lowest Common Ancestor of a Binary Tree III](#1650-lowest-common-ancestor-of-a-binary-tree-iii)
-
-**Steps**
-+ DFS function
-  + Return: the LCA
-  + Inputs: node, taget1, target2
-  + If `node` is null, return null
-  + If any of `p` and `q` is `node`, return `node`
-  + Recursively get left LCA and right LCA from left and right branch
-  + If LCA exists on both sides, return `node`
-  + Either `p` or `q` on one side of the `node`, LCA should be in that side of the `node`
-+ Use DFS on left and right
-
-**Notes**
-+ Even we can reuse the `lowestCommonAncestor()` function, its intention is confusing(we can't always find LCA in the subtree!), we better use a new `dfs()` function to define what to do in DFS recursion
-
-#### [1644. Lowest Common Ancestor of a Binary Tree II](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/)
-
-**PROBLEM STATEMENT**
-
-Given a binary tree, find the lowest common ancestor (LCA) of two given nodes `p` and `q`. However, this version of the problem has a special requirement:
-+ If either `p` or `q` is missing from the tree, return `nullptr` instead of the LCA.
-
-**Keyword**: DFS
-
-**Intuition**
-+ Similar to [236. Lowest Common Ancestor of a Binary Tree](#236-lowest-common-ancestor-of-a-binary-tree)
-+ The `dfs` function carries more infos
-
-**Solution**
-```cpp
-// Reuse the structure of basic LCA, but in dfs(), we carry the result if q and p exist in the tree, 
-class Solution {
-public:
-    Node* lowestCommonAncestor(Node* root, Node* p, Node* q) {
-        bool findP{false}, findQ{false};
-        const auto lca = dfs(root, p, q, findP, findQ);
-        return (findP && findQ) ? lca : nullptr;
-    }
-
-private:
-    Node* dfs(Node* node, Node* p, Node* q, bool& findP, bool& findQ) {
-        if (!node) {
-            return nullptr;
-        }
-        
-        bool leftFindP{false}, leftFindQ{false};
-        const auto left = dfs(node->left, p, q, leftFindP, leftFindQ);
-        bool rightFindP{false}, rightFindQ{false};
-        const auto right = dfs(node->right, p, q, rightFindP, rightFindQ);
-
-        findP = leftFindP || rightFindP || node == p;
-        findQ = leftFindQ || rightFindQ || node == q;
-
-        if (node == p || node == q) {
-            return node;
-        }
-        if (left && right) {
-            return node;
-        }
-        
-        return left ? left : right;
-    }
-}
-```
-
-#### [1650. Lowest Common Ancestor of a Binary Tree III](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
-
-**PROBLEM STATEMENT**
-
-Given two nodes in a binary tree where each node contains a parent pointer, find their lowest common ancestor (LCA).
-
-**Keyword**: Two-Pointer
-
-**Steps**
-+ Use two pointers, start at `p` and `q`
-+ Move each pointer upward to its parent until they meet
-+ If a pointer reaches the root (`parent = nullptr`), restart at the other node
-  + Both pointers would traverse the same height in the end
-+ The first common node encountered is the LCA
-
-**Solution**
-```cpp
-// Node definition
-// class Node {
-//     int val;
-//     Node* left;
-//     Node* right;
-//     Node* parent;
-// };
-
-class Solution {
-public:
-    Node* lowestCommonAncestor(Node* p, Node* q) {
-        // Two pointers
-        auto p1{p};
-        auto p2{q};
-        while (p1 != p2) {
-            // 1. Move pointer upward to parent
-            // 2. If pointer reaches nullptr, restart at the other's position
-            p1 = p1 ? p1->parent : q;
-            p2 = p2 ? p2->parent : p;
-        }
-
-        return p1;
-    }
-}
-```
-
-Time: O(H), Space: O(1)
-
-#### [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: BFS
-
-**Intuition**
-+ Because we need to iterate the tree by layer, so BFS
-+ The last node is the right most node in current layer
-+ Optional: DFS. Add the right node first, so when list size is same as the depth, that's the right most node
-
-**Steps**
-+ Prepare BFS
-  + Declare queue of Node
-  + Push root
-+ BFS loop
-  + Iterate elements in layer
-    + Update the last element
-    + Insert left and right (if neccessary)
-  + Append last number of this layer
-+ Return result
-
-Time: O(N), Space: O(N)
-
-**Variants**
-+ Left Side View: Same structure, but save the first node of the layer
-
-#### [543. Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
-
-**Keyword**: DFS
-
-**Intuition**
-+ Diameter of a node is the longest path goes through the node
-  + In other words, **the largest sum of left and right subtree height**
-+ Because we need to calculate the height from bottom up, so use DFS
-
-**Steps**
-+ DFS recursion
-  + Calculate the sum of left and right subtring height
-  + Update the max diameter
-  + Return height
-+ Start recursion with root
-
-Time: O(N), Space: O(H)
 
 #### [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 
@@ -2127,6 +2504,8 @@ Time: O(log(N))
 
 #### [647. Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/)
 
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
 **Keyword**: Two-Pointer
 
 **Steps**
@@ -2234,51 +2613,6 @@ Time: O(N), Space: O(K)
 + Use BFS, traverse from top to bottom, left to right, ignore the right most node in each layer
 + Make use of `next` pointer. Two while loop, outer use leftMost, inner use head
 
-#### [146. LRU Cache](https://leetcode.com/problems/lru-cache)
-
-![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Doubly Linked-List
-
-**Observations**
-+ Both `get()` and `put()` are considered "used", So we use doubly linked list for efficient ordering
-+ We can't use index to manipulate value in linked list, so we create a hash map {key, iterator}
-
-**Steps**
-+ Declare a doubly linked list (of {key, value} pairs) for the underlying container, front is the most used, end is the least used
-+ Declare a hash map {key, iterator} to fast access data
-+ `get()`
-  + If not exist in map, return -1
-  + If exist
-    + Use the iterator to get value
-    + Move this {key, value} to the front
-      + Remove the iterator
-      + Push new node to the front
-      + Update map
-+ `put()`
-  + If exist in map
-    + Use iterator to remove the existed one
-  + If not exist in map
-    + If exceed capacity
-      + Get the last key
-      + Pop last element
-      + Remove from map
-  + Push new node to the front
-  + Update map
-
-Time: O(1), Space: O(N)
-
-#### [460. LFU Cache](https://leetcode.com/problems/lfu-cache/)
-
-**HARD**
-
-**Keyword**:
-
-**Intuition**
-
-**Steps**
-
 #### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 
 **Keyword**: Max-Heap
@@ -2338,31 +2672,6 @@ public:
     }
 }
 ```
-
-Time: O(N), Space: O(1)
-
-#### [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**MEDIUM BUT HARD**
-
-**Keyword**: Linked-List
-
-**Intuition**
-+ The easiest way is to use an extra hash map to store {Old Node -> New Node}
-+ The optimal solution is not easy to come up
-
-**Approach: Hash map**
-+ Declare hash map {Old Node -> New Node}
-+ 1st pass: Copy node one by one, and update hash map
-+ 2nd pass: Iterate the hash map, link next and random node of new node
-
-**Approach: Interleaving**
-+ 1st pass: Copy each node right after the original node (don't care random pointer)
-+ 2nd pass: Link random pointer in the copied nodes
-+ 3rd pass: Separate the copied nodes and original nodes, and recover the original nodes links.
-  + Use dummy header
 
 Time: O(N), Space: O(1)
 
@@ -2748,36 +3057,6 @@ Time: O(nlogn) + O(nlogn)
 + `fast` find the non-zero elements
 + If found, swap
 
-#### [827. Making A Large Island](https://leetcode.com/problems/making-a-large-island/)
-
-**HARD**
-
-**Keywords**: DFS
-
-**Intuition**
-+ When we change a cell from sea into land, it also connect the neighbor lands together
-+ Label all islands with unique ids, and save their size
-  + ID should starts from 2, because 0 is for water, 1 is for OG land(a.k.a. unvisited land)
-+ Try to turn each water into land, and calculate the new island size, update max island size
-  + Use `set` to avoid duplicated
-
-**Steps**
-+ Declare hash map, {Island Id -> Island Size}
-  + Id starts from 2
-+ 1st pass: Iterate cells, use DFS calculate size. 
-+ DFS function: return size, log visited (with Id), carry the Island size map
-  + If not in bound, or not unvisited land, return 0
-  + If in bound
-    + Update Id
-    + Explore 4 directions, (size from 1)
-+ 2nd pass: Find current max island size
-+ 3rd pass: Iterate cells, locate water and try to fill
-  + Explore 4 directions, and add neighbor
-  + Sum up to calculate new size
-  + Update new max size
-
-Time: O($N^2$), Space: O($N^2$)
-
 #### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
 
 **Keywords**: Sliding Windows
@@ -2868,42 +3147,6 @@ private:
 
 }
 ```
-
-#### [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Linked-List
-
-**Intuition**
-+ Since numbers are stored in reverse order, adding them from head to tail is same as adding numbers
-
-**Steps**
-+ Declare a dummy pointer
-+ Declare `curr` and `carrier`
-+ Loop while `l1` and `l2` both valid
-+ Loop either `l1` or `l2` valid
-+ Append carrier node if it exists
-
-#### [19. Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
-
-**Keyword**: Two-Pointer
-
-**Intuition**
-+ For singly linked link, we can't access element by index, instead we have to count the move.
-+ The distance between the earlier pointer and the later pointer keeps constant
-
-**Steps**
-+ `first` and `second` pointer start from `dummy` node
-+ Move `first` for `n+1` steps forward
-+ Then move both together until `first` hits the end
-+ `second->next` is the one to remove
-
-**Note**
-+ Why `dummy` node?
-+ Why move `n+1` steps?
-  + To remove the nth from the end, we need to arrive at the one before last nth node
-  + The `first` pointer stops at pos n
 
 #### [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 
@@ -3019,6 +3262,8 @@ Time: O(N), Space: O(N)
 
 #### [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
 
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
 **Keyword**: DFS on Graph
 
 **Intuition**
@@ -3037,13 +3282,20 @@ Time: O(N), Space: O(N)
 
 Time: O(N + E), Space: O(N)
 
+**Variant**
++ What if there are billions of connect nodes?
+
 #### [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 
 **Keyword**: BFS
 
 #### [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/)
 
+*TODO*
+
 #### [398. Random Pick Index](https://leetcode.com/problems/random-pick-index/)
+
+*TODO*
 
 #### [415. Add Strings](https://leetcode.com/problems/add-strings/)
 
@@ -3083,6 +3335,8 @@ Time: O(N + E), Space: O(N)
 + Use a hash map to track **the latest index where each number appeared**
 
 #### [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
+
+*TODO*
 
 #### [1152. Analyze User Website Visit Pattern](https://leetcode.com/problems/analyze-user-website-visit-pattern/)
 
@@ -3212,7 +3466,7 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
     + If outlier is not the same as special sum or outlier value appears multiple times, update max outlier
 + Return max outlier
 
-### Dynamic Programming
+## Dynamic Programming
 
 #### [322. Coin Change](https://leetcode.com/problems/coin-change/)
 
@@ -3297,6 +3551,14 @@ Time: O(N*L^2), Space: O(N*L)
 + Start from the second last row and go upward.
 + For each element, update it with the sum of itself and the min of its two children (below it).
 + The top element becomes the answer.
+
+#### [983. Minimum Cost For Tickets](https://leetcode.com/problems/minimum-cost-for-tickets/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: DP
+
+*TODO*
 
 #### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
 
@@ -3662,15 +3924,6 @@ public:
   + If left > right, return left top
   + return half of left top and right top
 
-#### [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: BFS on Tree
-
-**Intuition**
-+ Classic BFS
-
 #### [2551. Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -3764,44 +4017,6 @@ Time: 3 * O(n), Space: 2 * O(n)
   + If `counter == 0`, reutrn `i`
 + Return invalid
 
-#### [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Linked-List
-
-**Intuition**
-+ Since both lists are sorted, we can iterate through both and merge them in order.
-
-**Steps**
-+ Create `dummy` node
-+ Declare `current` node starts at dummy
-+ While both list not to the end
-  + Link the smaller node, and move forward
-+ Link the rest list
-
-Time: O(n+m), Space: O(1)
-
-#### [148. Sort List](https://leetcode.com/problems/sort-list/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Linked-List
-
-**Intuition**
-+ Naturally think of merge sort
-+ Split the linked-list with fast-slow pointer
-+ Merge two part, check [21. Merge Two Sorted Lists](#21-merge-two-sorted-lists)
-
-**Steps**
-+ If `head` is `nullptr` or one head, return `head`
-+ Use fast-slow pointer to split the list
-+ Recursively call `sortList` on `head` and `slow`
-+ Merge the result
-
-Time: O(nlogn), Space: O(logn) of stack
-
-
 #### [62. Unique Paths](https://leetcode.com/problems/unique-paths/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -3834,50 +4049,9 @@ This is a **combinatorics** problem. The robot has to make exactly `m-1` down mo
 
 Time: O(n + q), Space: O(n)
 
-#### [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
-
-**Keyword**: Linked-List
-
-#### [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
-
-**Keyword**: Linked-List
-
-**Intuition**
-+ Difference with [206. Reverse Linked List](#206-reverse-linked-list) is reverse list in a range
-
-#### [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
-
-**Keyword**: Linked-List, Two-Pointer
-
-**Intuition**
-+ Slow and fast pointer. When fast meets the end, return the slow
-
-#### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
-
-**Keyword**: Linked-List, Two-Pointer
-
-**Intuition**
-+ Slow and fast pointer. When fast meets slow, then there's a cycle
-
-#### [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
-
-**Keyword**: Linked-List, Two-Pointer
-
-**Intuition**
-+ Difference with [141. Linked List Cycle](#141-linked-list-cycle) is the problem requires return the entry of the loop
-+ Detect loop part is the same. After we find a loop, place a node in the beginning, and move together with slow
-
-#### [237. Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Linked-List
-
-**Intuition**:
-+ Can't access head, and we don't know prev, so we can't simply unlink this node
-+ We can **copy the next node** into current node, and delete next node
-
 #### [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+
+*TODO*
 
 #### [2221. Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)
 
