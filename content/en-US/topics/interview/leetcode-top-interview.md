@@ -1344,7 +1344,289 @@ Time: O(N), Space: O(N)
 
 **Keyword**: DFS on Tree, BFS on Tree
 
+**Intuition**
++ Cache the max so far while traversing the tree
 
+**Steps**
++ ...
+
+#### [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Tree, BST
+
+**Intuition**
++ Properties of BST is all the elements on the left are smaller than root, while all the elements on the right are larger than root
+
+**Steps**
++ `dfs`
+  + Input: Node, min, max
+  + Output: Valid or not?
+  + If node is null, return true (think of why)
+  + If node val is not in bound, return false
+  + Check if left and right branches are valid
+
+#### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Inorder Traversal on BST
+
+**Intuition**
++ In order traversal on BST, and carrying the counter, stop when `counter == k`
+
+**Steps**
++ Declare `traverse()` function
+  + Input: node, k
+  + Carry: count, result
+  + Output: void
+  + If `node` is null or count meet/exceed k, return
+  + Traverse left node
+  + `count` add up
+  + If `counter == k`, save current val to result, and return
+  + Traverse left node
++ Start from root, k, count = 0, res = -1
+
+Time: O(H + N), Space: O(H)
+
+#### [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Inorder Traversal on Tree, Preorder Traversal on Tree
+
+**Intuition**
++
+
+**Steps**
++
+
+#### [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+**Keyword**: DFS on Tree
+
+**Intuition**
++ We want to know the **max** sum, so think of DFS
++ DFS function track the max sum and the max gain (from single side)
+
+**Steps**
++ DFS function
+  + Return: Max Gain.
+  + Inputs: Node, max sum
+  + If node is null, return 0
+  + Calculate sum of left and right node
+  + Calculate current sum
+  + Update max sum
+  + Return max gain
++ Traverse the tree with DFS, start with root, and max sum is 0
+
+Time: O(N), Space: O(H)
+
+#### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+**Keyword**: BFS on Tree, 
+
+**Intuition**
++ We can use BFS to solver handle serialization and deserialization
++ Serialization
+  + Check `node` is `nullptr` instead of `node->left` and `node->right`
++ Deserialization
+  + Get familiar with `int std::getline(std::stringstream, std::string, char)`
+
+**Steps**
++ ...
+
+## Backtracking
+
+#### [78. Subsets](https://leetcode.com/problems/subsets/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Classic backtrack problem
+
+**Steps**
++ Declare `dfs` function
+  + Input: nums (optional), current index, current sequence, current results
+  + Output: void
+  + Base condition: append current sequence
+  + Backtrack condition:
+    + Iterate `[current index, nums' size)`
+      + Append num to current sequence
+      + backtrack
+      + Remove the last from current sequence
++ Start backtrack with
+  + numbers
+  + index 0
+  + sequence
+  + results
+
+#### [90. Subsets II](https://leetcode.com/problems/subsets-ii/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Classic backtrack problem
++ Be careful all the numbers can be **reused**
+
+**Steps**
++ Define `dfs`
+  + Input: candidates, target
+  + Carry: start index, combination, combinations
+  + Output: void
+  + If target is 0, end tracking, push combination to combinations
+  + Loop in range [start, size]
+    + If current number larger than target, skip (pruning)
+    + Push current number
+    + Recursively call dfs with `(..., target - current number, combination, combinations)`
+    + Pop last
++ Start with initial values
++ Return result
+
+#### [40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [46. Permutations](https://leetcode.com/problems/permutations/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Classics backtrack problem, permutations type
++ Use a container to avoid duplicated numbers (std::set or std::vector<bool>)
+
+**Steps**
++ Define `dfs`
+  + Input: numbers
+  + Carry: used, combination, result
+  + Output: void
+  + Base condition: combination size equal to numbers size, push combination to result, and return
+  + Loop all the numbers
+    + If used contains number, skip
+    + Append number to combination, insert number to used
+    + Recursively call `dfs`
+    + Remove last number, erase number
++ Start void initial values, and empty used, combination, result
++ Return result
+
+#### [79. Word Search](https://leetcode.com/problems/word-search/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Matrix, Backtracking
+
+**Intuition**
++ Because we need to search to the end of the word to find a word, so use DFS
+
+**Steps**
++ Define DFS
+  + Carriers: `board`, current row&col, `word`, current index
+  + Return: Find word or not
+  + Terminate Condition: 
+    + Current index equal to 'word` size, return true
+    + Not in range, and character of current coord is not the same as word current index, return false
+  + Backtrack
+    + Mark current character visited
+    + Explore 4 adjacent directions, and next index
+    + Recover current character
+  + Return found
++ Iterate through `board`, search from the first letter
+
+#### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+**Intuition**
++ A very classic combinatorics problem involving backtracking
+
+**Steps**
++ The `dfs` function
+  + Return: void
+  + Carry: (optional)digits, current index in digits, current word, current results
+  + Declare a static hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
+  + Base case: If current index is equal to digits size (iteration finishes), append current word, return
+  + Recursive case: 
+    + Get possible letters for current digit
+    + Append each letter to current word
++ Start backtrack with
+  + Input `digits`
+  + Empty word
+  + Index 0
+  + Output `res`
+
+Time: 
+
+#### [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Backtrack
+
+*TODO*
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [51. N-Queens](https://leetcode.com/problems/n-queens/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+**Keyword**: Backtrack
+
+*TODO*
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -1875,41 +2157,6 @@ Time: O($Nlog(N)$), Space: O(N)
 
 Time: O(N) + O(N), Space: O(N)
 
-#### [124. Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**HARD**
-
-**Keyword**: DFS on Tree
-
-**Intuition**
-+ We want to know the **max** sum, so think of DFS
-+ DFS function track the max sum and the max gain (from single side)
-
-**Steps**
-+ DFS function
-  + Return: Max Gain.
-  + Inputs: Node, max sum
-  + If node is null, return 0
-  + Calculate sum of left and right node
-  + Calculate current sum
-  + Update max sum
-  + Return max gain
-+ Traverse the tree with DFS, start with root, and max sum is 0
-
-Time: O(N), Space: O(H)
-
-#### [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
-
-**HARD**
-
-+ We can use BFS to solver handle serialization and deserialization
-+ Serialization
-  + Check `node` is `nullptr` instead of `node->left` and `node->right`
-+ Deserialization
-  + Get familiar with `int std::getline(std::stringstream, std::string, char)`
-
 #### [129. Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 
 **Keyword**: DFS
@@ -1933,23 +2180,6 @@ Time: O(N), Space: O(H)
 + **Each node represents a character**.
 + Each node keeps track of **whether it ends a valid word**.
 + Search word (or prefix) is traveral on tree
-
-### Binary Search Tree (BST)
-
-#### [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
-
-**Keyword**: DFS on BST
-
-**Intuition**
-+ Properties of BST is all the elements on the left are smaller than root, while all the elements on the right are larger than root
-
-**Steps**
-+ `dfs`
-  + Input: Node, min, max
-  + Output: Valid or not?
-  + If node is null, return true (think of why)
-  + If node val is not in bound, return false
-  + Check if left and right branches are valid
 
 #### [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
@@ -1977,34 +2207,14 @@ Time: O(N), Space: O(H)
 
 Time: O(N), Space: O(H)
 
-#### [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: In-order Traversal on BST
-
-**Intuition**
-+ In order traversal on BST, and carrying the counter, stop when `counter == k`
-
-**Steps**
-+ Declare `traverse()` function
-  + Input: node, k
-  + Carry: count, result
-  + Output: void
-  + If `node` is null or count meet/exceed k, return
-  + Traverse left node
-  + `count` add up
-  + If `counter == k`, save current val to result, and return
-  + Traverse left node
-+ Start from root, k, count = 0, res = -1
-
-Time: O(H + N), Space: O(H)
-
 #### [173. Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+
+*TODO*
 
 **Keyword**: BST Inorder Traverse
 
 **Steps**
++ ...
 
 #### [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)
 
@@ -3023,33 +3233,6 @@ Time: O(nlogn) + O(nlogn)
 + For each age, we need to find the people count in valid range
 + Use count and prefix sum on ages
 
-#### [51. N-Queens](https://leetcode.com/problems/n-queens/)
-
-**HARD**
-
-#### [79. Word Search](https://leetcode.com/problems/word-search/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DFS on Matrix, Backtracking
-
-**Intuition**
-+ Because we need to search to the end of the word to find a word, so use DFS
-
-**Steps**
-+ Define DFS
-  + Carriers: `board`, current row&col, `word`, current index
-  + Return: Find word or not
-  + Terminate Condition: 
-    + Current index equal to 'word` size, return true
-    + Not in range, and character of current coord is not the same as word current index, return false
-  + Backtrack
-    + Mark current character visited
-    + Explore 4 adjacent directions, and next index
-    + Recover current character
-  + Return found
-+ Iterate through `board`, search from the first letter
-
 #### [283. Move Zeroes](https://leetcode.com/problems/move-zeroes/)
 
 + Move in place, so we need to use two pointers, and swap
@@ -3560,81 +3743,6 @@ Time: O(N*L^2), Space: O(N*L)
 
 *TODO*
 
-#### [39. Combination Sum](https://leetcode.com/problems/combination-sum/)
-
-![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ Classic backtrack problem
-+ Be careful all the numbers can be **reused**
-
-**Steps**
-+ Define `dfs`
-  + Input: candidates, target
-  + Carry: start index, combination, combinations
-  + Output: void
-  + If target is 0, end tracking, push combination to combinations
-  + Loop in range [start, size]
-    + If current number larger than target, skip (pruning)
-    + Push current number
-    + Recursively call dfs with `(..., target - current number, combination, combinations)`
-    + Pop last
-+ Start with initial values
-+ Return result
-
-#### [78. Subsets](https://leetcode.com/problems/subsets/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ Classic backtrack problem
-
-**Steps**
-+ Declare `dfs` function
-  + Input: nums (optional), current index, current sequence, current results
-  + Output: void
-  + Base condition: append current sequence
-  + Backtrack condition:
-    + Iterate `[current index, nums' size)`
-      + Append num to current sequence
-      + backtrack
-      + Remove the last from current sequence
-+ Start backtrack with
-  + numbers
-  + index 0
-  + sequence
-  + results
-
-#### [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ A very classic combinatorics problem involving backtracking
-
-**Steps**
-+ The `dfs` function
-  + Return: void
-  + Carry: (optional)digits, current index in digits, current word, current results
-  + Declare a static hash map, an even better option is `char[8][4]`, for digits represent 3 letters, use '\0' as 4th letter
-  + Base case: If current index is equal to digits size (iteration finishes), append current word, return
-  + Recursive case: 
-    + Get possible letters for current digit
-    + Append each letter to current word
-+ Start backtrack with
-  + Input `digits`
-  + Empty word
-  + Index 0
-  + Output `res`
-
-Time: 
-
 #### [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -3686,28 +3794,6 @@ Time: O(N), Space: O(H)
     + Backtrack new numbers
     + Pop last new numbers
 + Start with input numbers (convert to floating number because of '/')
-
-#### [46. Permutations](https://leetcode.com/problems/permutations/)
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ Classics backtrack problem, permutations type
-+ Use a container to avoid duplicated numbers (std::set or std::vector<bool>)
-
-**Steps**
-+ Define `dfs`
-  + Input: numbers
-  + Carry: used, combination, result
-  + Output: void
-  + Base condition: combination size equal to numbers size, push combination to result, and return
-  + Loop all the numbers
-    + If used contains number, skip
-    + Append number to combination, insert number to used
-    + Recursively call `dfs`
-    + Remove last number, erase number
-+ Start void initial values, and empty used, combination, result
-+ Return result
 
 #### [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
