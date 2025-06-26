@@ -1628,6 +1628,112 @@ Time:
 **Steps**
 + ...
 
+## Graph
+
+#### [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid, DFS
+
+**Intuition**
++ When we meet a land, try to sink its adjacent lands until we can't
+
+**Steps: BFS (Recommend)**
++ Return if `grid` is empty
++ Declare queue to keep pending **lands**
++ Iterate the grid
+  + If current cell is land
+    + Sink
+    + Count up
+    + Add to queue
+    + Iterate pending lands (if appplicable)
+      + For each land, try 4 directions
+        + If cell is in range and is a land
+          + Sink
+          + Add to queue
++ Return count
+
+Time: O(m x n), Space: O(m x n)
+
+#### [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid
+
+**Intuition**
++ An island problem, use flood fill
++ When flood fill, calculate the current area, then update the max area
+
+**Steps**
++ ...
+
+#### [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DFS on Graph
+
+**Intuition**
++ Use DFS to traverse the graph
++ Use one hash table to store cloned nodes {Old -> New} to avoid cycles
++ Cycles for graph is like leaf of tree but connected
+
+**Steps**
++ The DFS function: Return cloned node, carrying (or cache) hash map
+  + If `nullptr` return `nullptr`
+  + If node is cloned, return the cloned node
+  + Otherwise
+    + Clone new node
+    + Recursively clone its neigbor
++ Start DFS from `root`
+
+Time: O(N + E), Space: O(N)
+
+**Variant**
++ What if there are billions of connect nodes?
+
+#### [286. Walls and Gates](https://leetcode.com/problems/walls-and-gates/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid, Flood-Fill
+
+**Intuition**
++ Classic BFS flood-fill problem
+  + Multi sources, starts from rotten oranges
+  + Process layer by layer (min by min)
+  + Count min as BFS depth
+
+**Steps**
++ Traverse grid to prepare BFS
+  + Push rotten pos into queue
+  + Count fresh count
++ BFS loop
+  + Iterate all the rotten oranges in this layer
+    + Try 4 directions
+      + If out of range or not fresh, skip
+      + Else rotten, push back to queue, decrease fresh count
+  + Minute add up
++ Return if no fresh left or not
+
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -1766,45 +1872,6 @@ Time: O(m+n), Space: O(1)
     + Append position
 + Return results
 
-#### [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: BFS on Grid, DFS
-
-**Intuition**
-+ When we meet a land, try to sink its adjacent lands until we can't
-
-**Steps: BFS (Recommend)**
-+ Return if `grid` is empty
-+ Declare queue to keep pending **lands**
-+ Iterate the grid
-  + If current cell is land
-    + Sink
-    + Count up
-    + Add to queue
-    + Iterate pending lands (if appplicable)
-      + For each land, try 4 directions
-        + If cell is in range and is a land
-          + Sink
-          + Add to queue
-+ Return count
-
-Time: O(m x n), Space: O(m x n)
-
-#### [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
-
-![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
-
-**Keyword**: BFS on Grid
-
-**Intuition**
-+ An island problem, use flood fill
-+ When flood fill, calculate the current area, then update the max area
-
-**Steps**
-+ ...
-
 #### [934. Shortest Bridge](https://leetcode.com/problems/shortest-bridge/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -1875,31 +1942,6 @@ Time: O($N^2$), Space: O($N^2$)
 + Multicore BFS
 + Start BFS from 0s (instead of 1s), which is faster
 + Initialize all the 1s to INT_MAX to indicate "no visited"
-
-#### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
-
-![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
-![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
-
-**Keyword**: BFS on Grid, Flood-Fill
-
-**Intuition**
-+ Classic BFS flood-fill problem
-  + Multi sources, starts from rotten oranges
-  + Process layer by layer (min by min)
-  + Count min as BFS depth
-
-**Steps**
-+ Traverse grid to prepare BFS
-  + Push rotten pos into queue
-  + Count fresh count
-+ BFS loop
-  + Iterate all the rotten oranges in this layer
-    + Try 4 directions
-      + If out of range or not fresh, skip
-      + Else rotten, push back to queue, decrease fresh count
-  + Minute add up
-+ Return if no fresh left or not
 
 #### [864. Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
 
@@ -3440,33 +3482,6 @@ Time: O(N), Space: O(N)
   + Compare to all other strings
     + If not the same character at same index or new string is too small, return current substring
 + Return first string
-
-### Graph 
-
-#### [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
-
-![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
-
-**Keyword**: DFS on Graph
-
-**Intuition**
-+ Use DFS to traverse the graph
-+ Use one hash table to store cloned nodes {Old -> New} to avoid cycles
-+ Cycles for graph is like leaf of tree but connected
-
-**Steps**
-+ The DFS function: Return cloned node, carrying (or cache) hash map
-  + If `nullptr` return `nullptr`
-  + If node is cloned, return the cloned node
-  + Otherwise
-    + Clone new node
-    + Recursively clone its neigbor
-+ Start DFS from `root`
-
-Time: O(N + E), Space: O(N)
-
-**Variant**
-+ What if there are billions of connect nodes?
 
 #### [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 
