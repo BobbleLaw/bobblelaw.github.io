@@ -1701,6 +1701,16 @@ Time: O(N + E), Space: O(N)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
+**PROBLEM STATEMENT**
+
+You are given a 2D grid `rooms` where:
++ `-1` represents a wall or obstacle,
++ `0` represents a gate,
++ `INF` (2³¹ - 1) represents an empty room.
+
+Fill each empty room with the number of steps to its nearest gate.
+If it is impossible to reach a gate, leave it as `INF`.
+
 **Keyword**:
 
 **Intuition**
@@ -1708,6 +1718,10 @@ Time: O(N + E), Space: O(N)
 
 **Steps**
 + ...
+
+**Solution**
+```cpp
+```
 
 #### [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 
@@ -1733,6 +1747,94 @@ Time: O(N + E), Space: O(N)
       + Else rotten, push back to queue, decrease fresh count
   + Minute add up
 + Return if no fresh left or not
+
+#### [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid, DFS on Grid, Flood-Fill
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Grid
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [207. Course Schedule](https://leetcode.com/problems/course-schedule/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Graph
+
+**Key Idea**
++ "In Degree"
+  + Definition: In a directed graph, the in-degree of a node is the number of edges pointing into it. The out-degree is the number of edges leaving it.
+  + In topological sort, we
+    + Start with the node that have 0 in-degree
+    + Then process and reduce the in-degree of the neighbor nodes
+
+**Intuition**
++ All the prerequisities form a **directed graph**
++ Start from the courses with no prerequisities (0 degree)
++ Return true if we can iterate all the nodes
+
+**Steps**
++ Iterate the prerequisites, to
+  + Build a graph, from pre course point to course
+  + Track in-degree of the course
++ Start with the course having 0 in-degree
++ BFS
+  + Process: Count up the taken course
+  + Reduce the in-degree of the next courses (neighbors)
++ The taken courses count should be equal to number of courses
+
+Time: O(N + E), Space: O(N + E)
+
+#### [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ Same as [207. Course Schedule](#207-course-schedule)
++ Change BFS Process: append current course
+
+Time: O(N + E), Space: O(N + E)
+
+#### [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**PROBLEM STATEMENT**
+
+You are given `n` nodes labeled from `0` to `n - 1` and a list of edges where `edges[i] = [a, b]` indicates there is an undirected edge between `a` and `b`.
+
+Return `true` if these edges form a valid tree, otherwise return `false`.
+
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+**Solution**
+```cpp
+```
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -1999,46 +2101,6 @@ Time: O($N^2$), Space: O($N^2$)
   + For each word, try to replace each character from 'a' to 'z' (two loops)
   + If new word is end word, return `depth + 1`
   + If new word is inside the set, and never visited, append to queue
-
-#### [207. Course Schedule](https://leetcode.com/problems/course-schedule/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: BFS on Graph
-
-**Key Idea**
-+ "In Degree"
-  + Definition: In a directed graph, the in-degree of a node is the number of edges pointing into it. The out-degree is the number of edges leaving it.
-  + In topological sort, we
-    + Start with the node that have 0 in-degree
-    + Then process and reduce the in-degree of the neighbor nodes
-
-**Intuition**
-+ All the prerequisities form a **directed graph**
-+ Start from the courses with no prerequisities (0 degree)
-+ Return true if we can iterate all the nodes
-
-**Steps**
-+ Iterate the prerequisites, to
-  + Build a graph, from pre course point to course
-  + Track in-degree of the course
-+ Start with the course having 0 in-degree
-+ BFS
-  + Process: Count up the taken course
-  + Reduce the in-degree of the next courses (neighbors)
-+ The taken courses count should be equal to number of courses
-
-Time: O(N + E), Space: O(N + E)
-
-#### [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Intuition**
-+ Same as [207. Course Schedule](#207-course-schedule)
-+ Change BFS Process: append current course
-
-Time: O(N + E), Space: O(N + E)
 
 ## Binary Operation
 
@@ -3482,10 +3544,6 @@ Time: O(N), Space: O(N)
   + Compare to all other strings
     + If not the same character at same index or new string is too small, return current substring
 + Return first string
-
-#### [130. Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
-
-**Keyword**: BFS
 
 #### [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/)
 
