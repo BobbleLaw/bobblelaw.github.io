@@ -1814,7 +1814,7 @@ Time: O(N + E), Space: O(N + E)
 
 Time: O(N + E), Space: O(N + E)
 
-#### [Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
+#### [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
@@ -1835,6 +1835,392 @@ Return `true` if these edges form a valid tree, otherwise return `false`.
 **Solution**
 ```cpp
 ```
+
+#### [323. Number of Connected Components In An Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**PROBLEM STATEMENT**
+
+You are given an integer `n` representing the number of nodes (labeled from `0` to `n - 1`) and a list of edges where `edges[i] = [a, b]` indicates an undirected edge between a and b.
+
+Return the number of connected components in the undirected graph.
+
+**Keyword**: Union-Find
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+**Solution: Union-Find**
+```cpp
+class Solution {
+public:
+    int countComponents(int n, const std::vector<std::vector<int>>& edges) {
+        std::vector<int> parent(n);
+        std::iota(parent.begin(), parent.end());
+
+        std::function<int(int)> find = [&](int x) {
+            if (x != parent[x]) {
+                parent[x] = find(parent[x]);
+            }
+            return parent[x];
+        };
+
+        int count = n;
+        for (const auto& edge: edges) {
+            int root1 = find(edge[0]);
+            int root2 = find(edge[1]);
+            if (root1 != root2) {
+                parent[root1] = root2;
+                --count;
+            }
+        }
+        return count;
+    }
+}
+```
+
+#### [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Union-Find
+
+**Intuition**
++ A tree with `n` nodes has `n - 1` edges
++ Since this graph has n edges, it must have one cycle.
++ Our goal is to detect the cycle and return the edge that closes the loop.
++ Use Union-Find, if two nodes of an edge are already in the same set, adding this edge creates a cycle — it's the redundant one.
+
+
+**Steps**
++ ...
+
+#### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: BFS on Graph
+
+**Intuition**
++ ...
+
+**Steps**
++ Put words into hash set
++ Return if `endWord` is not in the set
++ Declare queue of {string, depth} pair for later BFS
++ Declare hash set of visited strings
++ BFS loop
+  + For each word, try to replace each character from 'a' to 'z' (two loops)
+  + If new word is end word, return `depth + 1`
+  + If new word is inside the set, and never visited, append to queue
+
+## Heap/Priority Queue
+
+#### [703. Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Min-Heap
+
+**Intuition**
++ Classic min heap use case
+
+**Steps**
++ Define min heap for internal data
++ `ctor`
+  + Cache `k`
+  + Push every elements into min heap while keep only `k` elements
++ `int add(int x)`
+  + Push new element into min heap while keep only `k` elements
+  + Return top
+
+#### [1046. Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Max-Heap
+
+**Intuition**
++ Classic max heap use case
+
+**Steps**
++ Declare `maxHeap`
++ Push all the values into `maxHeap`
++ `while (maxHeap.size() >= 2)`
+  + Pop `x` and `y`
+  + Push `y - x` if `x != y`
++ Return `0` if max heap is empty, or last element
+
+#### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Max-Heap
+
+**Intuition**
++ "K Closest Points to Origin", meaning the smallest K distances, use max heap
+
+**Steps: Max-Heap**
++ Declare max heap: Element is [distance -> point]
++ Iterate points
+  + Push new distance
+  + If exceed k, pop heap
+
+Time: O(NLog(K)), Space: O(K)
+
+**Steps: Quick-Select**
++ Use std::nth_element
+
+Time: O(N) for average, O($N^2$), Space: O(1)
+
+#### [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Min-Heap
+
+**Intuition**
++ Classic min heap use case
+
+**Steps: Sort**
++ Sort the array in descending order
++ Return kth element
+
+Time: O($Nlog(N)$), Space: O(1). Good for small N
+
+**Steps: Min Heap**
++ Define min heap to maintain the k largest elements
++ Iterate array
+  + Pop (the smallest) when the heap size exceeds k
++ Return the top element
+
+Time: O($Nlog(K)$), Space: O(K). Good for big K, or streaming data
+
+**Steps: Quickselect**
+
+*TODO*
+
+Time: O(N) average, O($N^2$) worst, Space: O(1)
+
+#### [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Medium but tricky**
+
+**Keyword**: 
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+#### [355. Design Twitter](https://leetcode.com/problems/design-twitter/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Max-Heap, System Design
+
+**Intuition**
++ We need to track timestamp
++ We need to store following relationship
++ Efficiently return 10 (if exists) most recent tweets from multiple users
+
+**Steps**
++ Class member
+  + {userId: \[followerId\]}
+  + {userId: \[(timestamp, tweet)\]}
+  + timestamp
++ `postTweet`
+  + Push back, and timestamp increase
++ `getNewsFeed()`
+  + Declare max heap
+  + Push at most last 10 tweets from each of the followers to max heap
+  + Get the top 10 tweets
++ `follow()` and `unfollow()`
+  + `insert` and `erase`
+
+
+#### [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Min-Heap/Max-Heap
+
+**Intuition**
++ We don't want to sort the the entire list every time
++ Instead, we use two heaps to store two halves:
+  + A max heap for the smaller half
+  + A min heap for the larger half
++ We also need to keep two heaps balanced so
+  + left == right
+  + left == right + 1
+
+**Steps**
++ `add()`
+  + Add to left first
+  + Move the largest from left to right to maintain order (???)
+  + Rebalance: if right more than left, move smallest back to left
++ `findMedian()`
+  + If left > right, return left top
+  + return half of left top and right top
+
+## Intervals
+
+#### [57. Insert Interval](https://leetcode.com/problems/insert-interval/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Intervals
+
+**Intuition**
++ 3 steps
+  1. interval end < newInterval start, directly push back
+  2. interval start <= newInterval end, merge into one
+  3. interval start > newInterval end (else condition), directly push back
+
+**Steps**
++ Use while loop to implement the idea 
+
+#### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Intervals
+
+**Steps**
++ Sort the input intervals **by the mins**
++ Iterate the sorted intervals
+  + If result is empty, append current interval
+  + If the end of last interval in results is less than beginning of current interval, append current interval
+  + Else, update the end of last interval in results
+
+Time: O(NLog(N)), Space: O(N)
+
+#### [435. Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Intervals, Greedy
+
+**Intuition**
++ To minimize removals, we want to maximize the number of non-overlapping intervals we can keep.
++ The goal is: Keep as many non-overlapping intervals as possible → remove the rest
+
+**Steps**
++ sort intervals by **end time**
++ Declare keep count, and current end time
++ Iterate the intervals
+  + If current start time >= end
+    + Keep count up
+    + Update end with current end
++ Return total size - keep size
+
+#### [252. Meeting Rooms I](https://leetcode.com/problems/meeting-rooms/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**PROBLEM STATEMENT**
+
+Given an array of meeting time intervals `intervals` where `intervals[i] = [start_i, end_i]`, determine if a person can attend all meetings (i.e., no overlapping meetings).
+
+**Keyword**: Intervals
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+**Solution**
+```cpp
+class Solution {
+public:
+    bool canAttendMeetings(const std::vector<std::vector<int>>& intervals) {
+        // Sort based on the starting time
+        std::sort(intervals.begin(), intervals.end());
+
+        // Iterate if any start smaller than previous end
+        for (size_t i{1}};i < intervals.size(); ++i) {
+            if (intervals[i][0] < intervals[i - 1][1]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+```
+
+#### [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**PROBLEM STATEMENT**
+
+Given an array of meeting time intervals `intervals` where `intervals[i] = [start_i, end_i]`, return the minimum number of conference rooms required.
+
+**Keyword**: Intervals
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
+**Solution**
+```cpp
+class Solution {
+public:
+    int minMeetingRooms(const std::vector<std::vector<int>>& intervals) {
+        if (intervals.empty()) {
+            return 0;
+        }
+
+        // Sort based on starting point
+        std::sort(intervals.begin(), intervals.end());
+
+        // Use min heap to track the ending, as well as the ongoing meetings
+        std::priority_queue<int, std::vector<int>, std::greater> minHeap;
+        minHeap.push(intervals[0][1]);
+
+        for (size_t i{1}; i < intervals.size(); ++i) {
+            // If current meeting starts after (larger than) the earliest ending time, reuse room
+            if (intervals[i][0] >= minHeap.top()) {
+                minHeap.pop();
+            }
+            minHeap.push(intervals[i][1]);
+        }
+
+        return minHeap.size();
+    }
+}
+```
+
+Time: O(nlogn) + O(nlogn)
+
+#### [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
+
+**HARD**
+
+#### [1851. Minimum Interval to Include Each Query](https://leetcode.com/problems/minimum-interval-to-include-each-query/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -2008,7 +2394,7 @@ Time: O(n^2), Space: O(n^2)
 
 **HARD**
 
-**Keywords**: DFS
+**keyword**: DFS
 
 **Intuition**
 + When we change a cell from sea into land, it also connect the neighbor lands together
@@ -2085,22 +2471,6 @@ Time: O($N^2$), Space: O($N^2$)
       + Enqueue
   + Steps count up
 + Default return -1
-
-#### [127. Word Ladder](https://leetcode.com/problems/word-ladder/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: BFS on Graph
-
-**Steps**
-+ Put words into hash set
-+ Return if `endWord` is not in the set
-+ Declare queue of {string, depth} pair for later BFS
-+ Declare hash set of visited strings
-+ BFS loop
-  + For each word, try to replace each character from 'a' to 'z' (two loops)
-  + If new word is end word, return `depth + 1`
-  + If new word is inside the set, and never visited, append to queue
 
 ## Binary Operation
 
@@ -2543,30 +2913,6 @@ Time: O(len(word) + len(abbr)), Space: O(1)
 
 Time: O(N), Space: O(N)
 
-#### [215. Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Approach I: Sort**
-+ Sort the array in descending order
-+ Return kth element
-
-Time: O($Nlog(N)$), Space: O(1). Good for small N
-
-**Approach II: Min Heap**
-+ Define min heap to maintain the k largest elements
-+ Iterate array
-  + Pop (the smallest) when the heap size exceeds k
-+ Return the top element
-
-Time: O($Nlog(K)$), Space: O(K). Good for big K, or streaming data
-
-**Approach III: Quickselect**
-
-TODO
-
-Time: O(N) average, O($N^2$) worst, Space: O(1)
-
 #### [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
@@ -2927,26 +3273,6 @@ Time: O(N), Space: O(K)
 + Use BFS, traverse from top to bottom, left to right, ignore the right most node in each layer
 + Make use of `next` pointer. Two while loop, outer use leftMost, inner use head
 
-#### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
-
-**Keyword**: Max-Heap
-
-**Intuition**
-+ "K Closest Points to Origin", meaning the smallest K distances, use max heap
-
-**Steps: Max-Heap**
-+ Declare max heap: Element is [distance -> point]
-+ Iterate points
-  + Push new distance
-  + If exceed k, pop heap
-
-Time: O(NLog(K)), Space: O(K)
-
-**Steps: Quick-Select**
-+ Use std::nth_element
-
-Time: O(N) for average, O($N^2$), Space: O(1)
-
 #### [1762. Buildings With an Ocean View](https://leetcode.com/problems/buildings-with-an-ocean-view/)
 
 **PROBLEM STATEMENT**
@@ -3206,35 +3532,6 @@ std::string shortestUniqueSubstring(const std::string& input) {
 }
 ```
 
-#### [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-
-![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Intervals
-
-**Steps**
-+ Sort the input intervals **by the mins**
-+ Iterate the sorted intervals
-  + If result is empty, append current interval
-  + If the end of last interval in results is less than beginning of current interval, append current interval
-  + Else, update the end of last interval in results
-
-Time: O(NLog(N)), Space: O(N)
-
-#### [57. Insert Interval](https://leetcode.com/problems/insert-interval/)
-
-![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
-
-**Intuition**
-+ 3 steps
-  1. interval end < newInterval start, directly push back
-  2. interval start <= newInterval end, merge into one
-  3. interval start > newInterval end (else condition), directly push back
-
-**Steps**
-+ Use while loop to implement the idea 
-
 #### [986. Interval List Intersections](https://leetcode.com/problems/interval-list-intersections/)
 
 **Keyword**: Two-Pointer
@@ -3246,73 +3543,6 @@ Time: O(NLog(N)), Space: O(N)
   + Move the pointer from the list where the interval ends first (smaller ending).
 
 Time: O(N+M), Space: O(1)
-
-#### [252. Meeting Rooms I](https://leetcode.com/problems/meeting-rooms/)
-
-**PROBLEM STATEMENT**
-
-Given an array of meeting time intervals `intervals` where `intervals[i] = [start_i, end_i]`, determine if a person can attend all meetings (i.e., no overlapping meetings).
-
-```cpp
-class Solution {
-public:
-    bool canAttendMeetings(const std::vector<std::vector<int>>& intervals) {
-        // Sort based on the starting time
-        std::sort(intervals.begin(), intervals.end());
-
-        // Iterate if any start smaller than previous end
-        for (size_t i{1}};i < intervals.size(); ++i) {
-            if (intervals[i][0] < intervals[i - 1][1]) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-}
-```
-
-#### [253. Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**PROBLEM STATEMENT**
-
-Given an array of meeting time intervals `intervals` where `intervals[i] = [start_i, end_i]`, return the minimum number of conference rooms required.
-
-```cpp
-class Solution {
-public:
-    int minMeetingRooms(const std::vector<std::vector<int>>& intervals) {
-        if (intervals.empty()) {
-            return 0;
-        }
-
-        // Sort based on starting point
-        std::sort(intervals.begin(), intervals.end());
-
-        // Use min heap to track the ending, as well as the ongoing meetings
-        std::priority_queue<int, std::vector<int>, std::greater> minHeap;
-        minHeap.push(intervals[0][1]);
-
-        for (size_t i{1}; i < intervals.size(); ++i) {
-            // If current meeting starts after (larger than) the earliest ending time, reuse room
-            if (intervals[i][0] >= minHeap.top()) {
-                minHeap.pop();
-            }
-            minHeap.push(intervals[i][1]);
-        }
-
-        return minHeap.size();
-    }
-}
-```
-
-Time: O(nlogn) + O(nlogn)
-
-#### [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
-
-**HARD**
 
 #### [75. Sort Colors](https://leetcode.com/problems/sort-colors/)
 
@@ -3346,7 +3576,7 @@ Time: O(nlogn) + O(nlogn)
 
 #### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
 
-**Keywords**: Sliding Windows
+**keyword**: Sliding Windows
 
 **Intuition**
 + The problem is equivalent to **find the widest window with at most `k` zeros**
@@ -4058,30 +4288,6 @@ public:
     }
 };
 ```
-
-#### [295. Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Min/Max Heap
-
-**Intuition**
-+ We don't want to sort the the entire list every time
-+ Instead, we use two heaps to store two halves:
-  + A max heap for the smaller half
-  + A min heap for the larger half
-+ We also need to keep two heaps balanced so
-  + left == right
-  + left == right + 1
-
-**Steps**
-+ `add()`
-  + Add to left first
-  + Move the largest from left to right to maintain order (???)
-  + Rebalance: if right more than left, move smallest back to left
-+ `findMedian()`
-  + If left > right, return left top
-  + return half of left top and right top
 
 #### [2551. Put Marbles in Bags](https://leetcode.com/problems/put-marbles-in-bags/)
 
