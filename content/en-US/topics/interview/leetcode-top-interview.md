@@ -2220,7 +2220,164 @@ Time: O(nlogn) + O(nlogn)
 
 **HARD**
 
+## Advanced Graphs
 
+#### [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Dijkstra’s, Min-Heap
+
+**Intuition**
++ Shortest path problem on a weighted directed graph
++ We want the **longest shortest path** from node `k`, classic Dijkstra’s problem
+
+**Steps**
++ Build the graph with type {node: [(node, distance)]}
++ Declare a `n + 1` size array to keep track of the shortest time to reach node `i`, initialize with `INT_MAX`
++ Declare a min heap of type [(distance, node)], prepare Dijkstra’s
++ while heap not empty
+  + Pop the top node
+  + If the distance is larger than tracked shortest distance, skip (because we want to get shorter path)
+  + Iterate its neighbors
+    + If the new distance is shorter
+      + Update new distance
+      + Push to the heap
++ Find the max from shortest distances
+  + return invalid if we find INT_MAX
+
+Time: O((N + E)logN), Space: O(N + E)
+
+#### [332. Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+**Keyword**: Hierholzer's, Min-Heap
+
+**Intuition**
++ **Eulerian path** problem:
+  + Use each ticket exact once
+  + Lexi smallest path
++ Use Hierholzer's algorithm
+  + 
+
+**Steps**
++ Build a graph of type {name: min heap\[name\]}
++ Define `dfs`
+  + Input: start airport name
+  + Carrying: graph, results
+  + Output: void
+  + while there are destinations to go from current start
+    + Visit them in lexi order
+  + Append current node to the result
++ Perform DFS from "JKF"
++ Reverse the result
+
+Time: O(ElogD), Space: O(E + V)
+
+#### [1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Minimum Spanning Tree
+
+**Intuition**
++ Connect all nodes with the minimum total cost
++ Use Prim's
+
+**Steps**
++ ...
+
+#### [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+#### [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+#### [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+## 1-D DP
+
+## 2-D DP
+
+## Bit Manipulation
+
+#### [136. Single Number](https://leetcode.com/problems/single-number/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Key Idea**
++ Use **XOR** cancels out the pairs
++ XOR of a number with itself is 0
++ XOR with 0 leaves the number unchanged
+
+#### [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
+
+**Key Idea**
++ `ones = (ones ^ num) & ~twos`, meaning appear once, and not twice
++ `twos = (twos ^ num) & ~ones`, meaning appear twice, and not once
++ The numbers appear three times will cancel out, left the one appears once
++ Return `ones`
+
+#### [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
+
+**Key Idea**
++ Same as [136. Single Number](#136-single-number), XOR will cancel out all the duplicated numbers
++ But the final result is `a^b`, the XOR of two unique numbers
++ Use `diff = a_b & (-a_b);` to extract the **lowest diff bits** of `a_b`
++ Use this diff to separate the numbers into two group, and xor will cancel out the numbers appear twice
++ Return a and b
+
+#### [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Approach I: Iterate through**
++ Iterate the input bits
++ Count the LSB of the input, `count += (n & 1)`
++ Shift input right
+
+**Approach II: Brian Kernighan's Algorithm**
++ While input still exists
+  + Remove the lowest set bit
+
+```cpp
+int hammingWeight(uint32_t n) {
+  int count = 0;
+  while (n) {
+    n &= (n - 1);
+    ++count;
+  }
+  return count;
+}
+```
+
+#### [338. Counting Bits](https://leetcode.com/problems/counting-bits/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Bit Manipulation, DP
+
+
+#### [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Steps**
++ Declare the result value
++ Shift result left
++ Add the LSB of the input, `res |= (n & 1)`
++ Shift input right
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -2333,8 +2490,6 @@ Time: O(m+n), Space: O(1)
   + If we reach `currentRange`, we must jump
     + Increase the `jump` counter
     + Update `currentRange`
-
-## Intervals
 
 #### [228. Summary Ranges](https://leetcode.com/problems/summary-ranges/)
 
@@ -4166,60 +4321,6 @@ Time: O(9x9), Space: O(9x9x3)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 ### Bit Manipulation
-
-#### [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
-
-**Steps**
-+ Declare the result value
-+ Shift result left
-+ Add the LSB of the input, `res |= (n & 1)`
-+ Shift input right
-
-#### [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)
-
-**Approach I: Iterate through**
-+ Iterate the input bits
-+ Count the LSB of the input, `count += (n & 1)`
-+ Shift input right
-
-**Approach II: Brian Kernighan's Algorithm**
-+ While input still exists
-  + Remove the lowest set bit
-
-```cpp
-int hammingWeight(uint32_t n) {
-  int count = 0;
-  while (n) {
-    n &= (n - 1);
-    ++count;
-  }
-  return count;
-}
-```
-
-#### [136. Single Number](https://leetcode.com/problems/single-number/)
-
-**Key Idea**
-+ Use **XOR** cancels out the pairs
-+ XOR of a number with itself is 0
-+ XOR with 0 leaves the number unchanged
-
-#### [137. Single Number II](https://leetcode.com/problems/single-number-ii/)
-
-**Key Idea**
-+ `ones = (ones ^ num) & ~twos`, meaning appear once, and not twice
-+ `twos = (twos ^ num) & ~ones`, meaning appear twice, and not once
-+ The numbers appear three times will cancel out, left the one appears once
-+ Return `ones`
-
-#### [260. Single Number III](https://leetcode.com/problems/single-number-iii/)
-
-**Key Idea**
-+ Same as [136. Single Number](#136-single-number), XOR will cancel out all the duplicated numbers
-+ But the final result is `a^b`, the XOR of two unique numbers
-+ Use `diff = a_b & (-a_b);` to extract the **lowest diff bits** of `a_b`
-+ Use this diff to separate the numbers into two group, and xor will cancel out the numbers appear twice
-+ Return a and b
 
 #### [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
