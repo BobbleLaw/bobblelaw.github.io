@@ -192,6 +192,12 @@ public:
     + If stack empty, or stack top (last) not equal to corresponding open, return false
     + Else pop
 
+#### [678. Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
 #### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -212,6 +218,25 @@ public:
   + If open count is less than total need, append open
   + If close count is less than open count, append close
 + Start with `"", 0, 0, n, res`
+
+#### [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
+
+**Approach I: Two-Pass with Stack**
+1. Use stack to store '(', and unordered_set for invalid indices for quick access
+2. 1st pass: locate the unpaired ')' indices
+3. 2nd pass: Add the left '(' (unpaired) indices into invalid indices
+4. Build new string by removing invalid indices
+
+Time: O(N), Space: O(N)
+
+#### [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)
+
+**Approach: Simulate Stack**
++ Traverse from left to right
++ When encountering '(', increase left counter
++ When encountering ')'
+  + There's '(' left, decrease counter
+  + Otherwise, increase right counter 
 
 #### [155. Min Stack](https://leetcode.com/problems/min-stack/)
 
@@ -712,7 +737,7 @@ Time: O(n^3)
 
 Time: O(N), Space: O(1)
 
-#### [122: Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
+#### [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/)
 
 **Observations**
 + Buy and sell can happen in the same day
@@ -730,6 +755,14 @@ Time: O(N), Space: O(1)
   + Sum up all the increase
 
 Time: O(N), Space: O(1)
+
+#### [309. Best Time to Buy and Sell Stock with Cooldown](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keywords**: DP
+
+*TODO*
 
 #### [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
@@ -877,13 +910,15 @@ Time: O(len(string), len(template)), Space: O(len(template))
 **Intuition**
 + Difference between [206. Reverse Linked List](#206-reverse-linked-list) is reverse list in a range
 
-#### [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/description/)
+#### [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
 **HARD!!**
 
 **Keyword**: Linked-List
+
+*TODO*
 
 #### [876. Middle of the Linked List](https://leetcode.com/problems/middle-of-the-linked-list/)
 
@@ -2220,6 +2255,8 @@ Time: O(nlogn) + O(nlogn)
 
 **HARD**
 
+*TODO*
+
 ## Advanced Graphs
 
 #### [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)
@@ -2296,19 +2333,312 @@ Time: O(ElogD), Space: O(E + V)
 
 **HARD**
 
+*TODO*
+
 #### [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
 **HARD**
 
+*TODO*
+
 #### [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
+*TODO*
+
 ## 1-D DP
 
+#### [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DP
+
+**Steps**
++ Define DP
+  + `dp[i]`: Distinct ways to climb to the top
+  + Transition:
+    + `dp[i] = dp[i - 1] + dp[i - 2]`
+  + Base cases:
+    + `dp[0] = 1`
+    + `dp[1] = 2`
+
+#### [746. Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [198. House Robber](https://leetcode.com/problems/house-robber/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DP
+
+**Steps**
++ Define DP
+  + `dp[i]`: max amount of money to get on day i
+  + Transition:
+    + `dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])`
+  + Base cases:
+    + `dp[0] = nums[0]`
+    + `dp[1] = max(nums[0], nums[1])`
+
+#### [213. House Robber II](https://leetcode.com/problems/house-robber-ii/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [91. Decode Ways](https://leetcode.com/problems/decode-ways/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [322. Coin Change](https://leetcode.com/problems/coin-change/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DP
+
+*TODO*
+
+**Steps**
++ ...
+
+#### [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [139. Word Break](https://leetcode.com/problems/word-break/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DP
+
+**Steps**
++ Define DP
+  + Given word `s` of length `n`
+  + `dp[i] == 1` means the substring `s[0...i-1]` can be broken into words
++ Loop `[1...n]`
+  + Loop `[0...n)`
+    + Try to split the word at `j`, and check if `dp[j]` is valid and the suffix `s[j, i - j]` is in the dictionary
++ Return `dp[n]`
+
+Time: O(n^2), Space: O(n + d)
+
+#### [472. Concatenated Words](https://leetcode.com/problems/concatenated-words/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: DP
+
+**Intuition**
++ Similar to [Word Break](#139-word-break), except we need to iterate all the words
+
+**Steps**
++ Write a helper function to check if a word can be formed by a dictionary, exactly the same as [Word Break](#139-word-break)
++ Sort the words based on length
++ Iterate words
+  + If current word can be formed with dictionary, append word to result
+  + Update dictionary
+
+Time: O(N*L^2), Space: O(N*L)
+
+#### [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
 ## 2-D DP
+
+#### [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [518. Coin Change II](https://leetcode.com/problems/coin-change-ii/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [494. Target Sum](https://leetcode.com/problems/target-sum/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [97. Interleaving String](https://leetcode.com/problems/interleaving-string/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [329. Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+*TODO*
+
+#### [115. Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+*TODO*
+
+#### [72. Edit Distance](https://leetcode.com/problems/edit-distance/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+*TODO*
+
+#### [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+*TODO*
+
+## Tries
+
+#### [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Traversal on Tree
+
+**Intuition**
++ **Each node represents a character**.
++ Each node keeps track of **whether it ends a valid word**.
++ Search word (or prefix) is traveral on tree
+
+#### [211. Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [212. Word Search II](https://leetcode.com/problems/word-search-ii/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**HARD**
+
+*TODO*
+
+## Greedy
+
+#### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ Similar to [121. Best Time to Buy and Sell Stock](#121-best-time-to-buy-and-sell-stock)
++ Append vs. Start new
+
+**Steps**
++ Declare `curSum` as the first element, and `maxSum` as `curSum`
++ Loop from the second element
+  + Update `curSum` based on **append element** or **start new subarray**
+  + Update `maxSum`
+
+#### [55. Jump Game](https://leetcode.com/problems/jump-game/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Greedy
+
+**Intuition**
++ Always try to find out the max jump position from current position
+
+**Steps**
++ Track the max reachable index
++ Iterate the jumps
+  + If current index > max reachable index, return false
+  + Update max reachable index from current index
+  + If new max reachable index is over the total, return true
++ Default return true
+
+#### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Greedy
+
+**Intuition**
++ The difference between this question and [55. Jump Game](#55-jump-game) is
+  + **Return the minimum jump**
+  + Destination is `nums[n - 1]`
++ **Greedy**: At each level, try to extend the jump range as far as possible
+
+**Steps**
++ Declare the farthest index we can reach by `farthest`
++ Declare the current range of jump by `currentRange`
++ Declare jump count
++ Iterate `[0... n-1)`
+  + Update `farthest`
+  + If we reach `currentRange`, we must jump
+    + Increase the `jump` counter
+    + Update `currentRange`
+
+#### [134. Gas Station](https://leetcode.com/problems/gas-station/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [846. Hand of Straights](https://leetcode.com/problems/hand-of-straights/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [1899. Merge Triplets to Form Target Triplet](https://leetcode.com/problems/merge-triplets-to-form-target-triplet/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [763. Partition Labels](https://leetcode.com/problems/partition-labels/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
 
 ## Bit Manipulation
 
@@ -2368,6 +2698,21 @@ int hammingWeight(uint32_t n) {
 
 **Keyword**: Bit Manipulation, DP
 
+**Intuition**
++ Use brutal-force idea first
+```cpp
+int count = 0;
+while (n) {
+  count += (x & 1);
+  x >>= 1;
+}
+```
++ We realize we can reuse the previous computations
+
+**Steps**
++ Declare vector of `n + 1` size, and initialize with all 0
++ Fill the vector from pos 1 with relationship
+  + `dp[i] = dp[i >> 1] + (i & 1)`
 
 #### [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 
@@ -2378,6 +2723,117 @@ int hammingWeight(uint32_t n) {
 + Shift result left
 + Add the LSB of the input, `res |= (n & 1)`
 + Shift input right
+
+#### [268. Missing Number](https://leetcode.com/problems/missing-number/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Steps: Sum**
++ Use $sum = (a_0 + b_n) \times n \div 2$ to calculate the expected sum
++ Calculate the actual sum
++ The diff is result
+
+#### [371. Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ The structure is very easy, keep extract the last digit by mod, and append to the new number
++ Be carefult about the **overflow problem**
+  + INT_MAX: 2^31 - 1, ***7
+  + INT_MIN: -2^31, -***8
+
+**Steps**
++ While x is not zero
+  + d = x % 10, x /= 10
+  + To prevent overflow, pre-check if multiplying by 10 and adding a digit would exceed limits.
+  + res = res * 10 + d
+
+Time: O(logn), Space: O(1)
+
+## Math & Geometry
+
+#### [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Intuition**
++ Simulate the process
+
+**Steps**
++ Declare top, bottom, left, right
++ Loop while left and right, top and bottom don't cross
+  + Loop from left to right, top add up
+  + Loop from top to bottom, right count down
+  + If top and bottom not cross
+    + Loop from right to left, bottom count down
+  + If left and right not cross
+    + Loop from bottom to top, left add up
+
+#### [73. Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [202. Happy Number](https://leetcode.com/problems/happy-number/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [66. Plus One](https://leetcode.com/problems/plus-one/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [50. Pow(x, n)](https://leetcode.com/problems/powx-n/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+**Keyword**: Divide and Conquer
+
+**Observations**
++ If n is even, $x^n = (x^2)^{n/2}$
++ If n is odd, $x^n = x \times x^{n-1}$
+
+**Steps**
++ Corner case n == 0, return 1
++ Inverse `x` and `n`, if the exponent is negative
+  + Be careful, range of `int` is $[-2^{31} - 1, 2^{31}]$, so $[2^{31} + 1]$ would overflow, either use `long long`, or calculate $x * myPow(x, -(n + 1))$
++ Use recursive/iteration. 
+  + If `n` is even, $x^n = (x^2)^{n / 2}$
+  + If `n` is odd, $x^n = x * x^{n-1}$
+
+Time: O($Log(N)$), Space: recursive O($Log(N)$); Iteration: O(1)
+
+#### [43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
+
+#### [2013. Detect Squares](https://leetcode.com/problems/detect-squares/)
+
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+
+*TODO*
 
 #### [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 
@@ -2451,45 +2907,6 @@ Time: O(m+n), Space: O(1)
 + Rotate all
 + Rotate first k
 + Rotate remaining
-
-#### [55. Jump Game](https://leetcode.com/problems/jump-game/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Greedy
-
-**Intuition**
-+ Always try to find out the max jump position from current position
-
-**Steps**
-+ Track the max reachable index
-+ Iterate the jumps
-  + If current index > max reachable index, return false
-  + Update max reachable index from current index
-  + If new max reachable index is over the total, return true
-+ Default return true
-
-#### [45. Jump Game II](https://leetcode.com/problems/jump-game-ii/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Greedy
-
-**Intuition**
-+ The difference between this question and [Jump Game](#55-jump-game) is
-  + **Return the minimum jump**
-  + Destination is `nums[n - 1]`
-+ **Greedy**: At each level, try to extend the jump range as far as possible
-
-**Steps**
-+ Declare the farthest index we can reach by `farthest`
-+ Declare the current range of jump by `currentRange`
-+ Declare jump count
-+ Iterate `[0... n-1)`
-  + Update `farthest`
-  + If we reach `currentRange`, we must jump
-    + Increase the `jump` counter
-    + Update `currentRange`
 
 #### [228. Summary Ranges](https://leetcode.com/problems/summary-ranges/)
 
@@ -2801,15 +3218,6 @@ Time: O(N) + O(N), Space: O(N)
 
 Time: O(N), Space: O(H)
 
-#### [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-
-**Keyword**: Traversal on Tree
-
-**Intuition**
-+ **Each node represents a character**.
-+ Each node keeps track of **whether it ends a valid word**.
-+ Search word (or prefix) is traveral on tree
-
 #### [235. Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 
 **Keyword**: BST
@@ -2961,25 +3369,6 @@ return {findBound<kLow>(...), findBound<kHigh>(...)};
 + Return true by default
 
 Time: O(m + n), Space: O(1)
-
-#### [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
-
-**Approach I: Two-Pass with Stack**
-1. Use stack to store '(', and unordered_set for invalid indices for quick access
-2. 1st pass: locate the unpaired ')' indices
-3. 2nd pass: Add the left '(' (unpaired) indices into invalid indices
-4. Build new string by removing invalid indices
-
-Time: O(N), Space: O(N)
-
-#### [921. Minimum Add to Make Parentheses Valid](https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/)
-
-**Approach: Simulate Stack**
-+ Traverse from left to right
-+ When encountering '(', increase left counter
-+ When encountering ')'
-  + There's '(' left, decrease counter
-  + Otherwise, increase right counter 
 
 #### [408. Valid Word Abbreviation](https://leetcode.com/problems/valid-word-abbreviation/)
 
@@ -3140,26 +3529,6 @@ auto num = dist(rd);a
 + Return left (because `left == right` in the end)
 
 Time: O($log(N)$), Space: O(1)
-
-#### [50. Pow(x, n)](https://leetcode.com/problems/powx-n/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Divide and Conquer
-
-**Observations**
-+ If n is even, $x^n = (x^2)^{n/2}$
-+ If n is odd, $x^n = x \times x^{n-1}$
-
-**Steps**
-+ Corner case n == 0, return 1
-+ Inverse `x` and `n`, if the exponent is negative
-  + Be careful, range of `int` is $[-2^{31} - 1, 2^{31}]$, so $[2^{31} + 1]$ would overflow, either use `long long`, or calculate $x * myPow(x, -(n + 1))$
-+ Use recursive/iteration. 
-  + If `n` is even, $x^n = (x^2)^{n / 2}$
-  + If `n` is odd, $x^n = x * x^{n-1}$
-
-Time: O($Log(N)$), Space: recursive O($Log(N)$); Iteration: O(1)
 
 #### [71. Simplify Path](https://leetcode.com/problems/simplify-path/)
 
@@ -4107,81 +4476,6 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
     + If outlier is not the same as special sum or outlier value appears multiple times, update max outlier
 + Return max outlier
 
-## Dynamic Programming
-
-#### [322. Coin Change](https://leetcode.com/problems/coin-change/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DP
-
-**Steps**
-+ Define the DP
-  + 
-
-#### [139. Word Break](https://leetcode.com/problems/word-break/)
-
-**Keyword**: DP
-
-**Steps**
-+ Define DP
-  + Given word `s` of length `n`
-  + `dp[i] == 1` means the substring `s[0...i-1]` can be broken into words
-+ Loop `[1...n]`
-  + Loop `[0...n)`
-    + Try to split the word at `j`, and check if `dp[j]` is valid and the suffix `s[j, i - j]` is in the dictionary
-+ Return `dp[n]`
-
-Time: O(n^2), Space: O(n + d)
-
-#### [472. Concatenated Words](https://leetcode.com/problems/concatenated-words/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DP
-
-**Intuition**
-+ Similar to [Word Break](#139-word-break), except we need to iterate all the words
-
-**Steps**
-+ Write a helper function to check if a word can be formed by a dictionary, exactly the same as [Word Break](#139-word-break)
-+ Sort the words based on length
-+ Iterate words
-  + If current word can be formed with dictionary, append word to result
-  + Update dictionary
-
-Time: O(N*L^2), Space: O(N*L)
-
-#### [198. House Robber](https://leetcode.com/problems/house-robber/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DP
-
-**Steps**
-+ Define DP
-  + `dp[i]`: max amount of money to get on day i
-  + Transition:
-    + `dp[i] = max(dp[i - 1], dp[i - 2] + nums[i])`
-  + Base cases:
-    + `dp[0] = nums[0]`
-    + `dp[1] = max(nums[0], nums[1])`
-
-#### [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: DP
-
-**Steps**
-+ Define DP
-  + `dp[i]`: Distinct ways to climb to the top
-  + Transition:
-    + `dp[i] = dp[i - 1] + dp[i - 2]`
-  + Base cases:
-    + `dp[0] = 1`
-    + `dp[1] = 2`
-
 #### [120. Triangle](https://leetcode.com/problems/triangle/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -4253,23 +4547,6 @@ Time: O(N), Space: O(H)
     + Pop last new numbers
 + Start with input numbers (convert to floating number because of '/')
 
-#### [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Intuition**
-+ Simulate the process
-
-**Steps**
-+ Declare top, bottom, left, right
-+ Loop while left and right, top and bottom don't cross
-  + Loop from left to right, top add up
-  + Loop from top to bottom, right count down
-  + If top and bottom not cross
-    + Loop from right to left, bottom count down
-  + If left and right not cross
-    + Loop from bottom to top, left add up
-
 #### [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -4320,8 +4597,6 @@ Time: O(9x9), Space: O(9x9x3)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
-### Bit Manipulation
-
 #### [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -4333,20 +4608,6 @@ Time: O(9x9), Space: O(9x9x3)
 **Steps**
 + Declare a set to track unique numbers
 + Return size
-
-#### [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Intuition**
-+ Similar to [Best Time to Buy and Sell Stock](#121-best-time-to-buy-and-sell-stock)
-+ Append vs. Start new
-
-**Steps**
-+ Declare `curSum` as the first element, and `maxSum` as `curSum`
-+ Loop from the second element
-  + Update `curSum` based on **append element** or **start new subarray**
-  + Update `maxSum`
 
 #### [2790. Maximum Number of Groups With Increasing Length](https://leetcode.com/problems/maximum-number-of-groups-with-increasing-length/)
 
@@ -4428,24 +4689,6 @@ Time: O(N) * 2 + O(NlogN), Space: O(N)
 + Sum up the elements in min heap
 
 Time: O(m*nlogn), Space: O(k)
-
-#### [7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Intuition**
-+ The structure is very easy, keep extract the last digit by mod, and append to the new number
-+ Be carefult about the **overflow problem**
-  + INT_MAX: 2^31 - 1, ***7
-  + INT_MIN: -2^31, -***8
-
-**Steps**
-+ While x is not zero
-  + d = x % 10, x /= 10
-  + To prevent overflow, pre-check if multiplying by 10 and adding a digit would exceed limits.
-  + res = res * 10 + d
-
-Time: O(logn), Space: O(1)
 
 #### [907. Sum of Subarray Minimums](https://leetcode.com/problems/sum-of-subarray-minimums/)
 
