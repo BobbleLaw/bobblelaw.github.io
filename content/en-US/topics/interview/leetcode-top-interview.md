@@ -71,25 +71,6 @@ Time: O(N * K), Space: O(N * K), K is string length
   + If `target - nums[i]` exists in hashtable, append to result
   + Else insert new pair
 
-#### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
-
-**Keyword**: Min-Heap
-
-**Intuition**
-+ Use min heap to track the k largest number by contraint the size to k
-
-**Steps**
-+ Declare hash map to store the number frequency
-+ Iterate the hash map
-  + Push current {count, number} pair to min heap
-  + If min heap size is more than k, pop the top (smallest one)
-+ Build results
-
-Time: O(NLog(K)), Space: O(N)
-
 #### [271. Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
@@ -174,6 +155,30 @@ public:
     + Count the length of the sequence starts with this number
     + Update longest length
 
+#### [628. Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: Array
+
+**Intuition**
++ Two condition
+  + Max 3, all of them positive
+  + Min 2 + Max 1, min negative, max positive
+
+**Steps**
++ Declare 3 max for top max 3
++ Declare 2 min for top min 2
++ Iterate numbers
+  + If larger than largest, shift 2
+  + If larger than 2nd largest, shift 1
+  + If larger than 3rd largest, update
+  + If smaller than smallest, shift 1
+  + If smaller than 2nd smallest, update
++ Return the max of top 3 max, or top max and top min 2
+
+Time: O(n), Space: O(1)
+
 ## Stack
 
 #### [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
@@ -195,8 +200,24 @@ public:
 #### [678. Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
-*TODO*
+**Keyword**: Array
+
+**Intuition**
++ Because '*' can represent '(', ')', or nothing, so we need to **track a range** of the open parenthesis
+
+**Steps**
++ Declare `low` and `high`
++ Iterate the string
+  + If c == '(', low++, high++
+  + If c == ')', low--, high--
+  + If c == '*', low--, high++ (could be both, so range increase)
+  + If high < 0, return false
+  + If low < 0, low = 0
++ Return low == 0 (no more bracket left)
+
+Time: O(n), Space: O(2)
 
 #### [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 
@@ -456,6 +477,92 @@ Time: O(N), Space: O(N)
       + Update max area
   + Push current index (default)
 + Return max area
+
+#### [71. Simplify Path](https://leetcode.com/problems/simplify-path/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: Stack
+
+**Intuition**
++ Similar to [227. Basic Calculator II](#227-basic-calculator-ii)
++ Problem is to find all the valid parts from `s`, and make them into a path
++ `..` will pop the last element 
++ Make use of `std::getline(ss, part, sep)`
+
+**Steps**
++ Delcare `parts` of type [string]
++ Split the input path with '/' using `std::getline()`, for each part
+  + "." and ""(empty mean continuous '/', like "//", "///") -> skip
+  + ".." -> move up one by pop stack
+  + Other are valid name, push stack
++ Build output string. 
+  + Always startsWith '/', try not to use condition in the loop
+
+Time: O(N), Space: O(N)
+
+#### [394. Decode String](https://leetcode.com/problems/decode-string/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: Stack
+
+**Intuition**
++ The bracket can be nested, so this is a stack problem
++ Use the stack to track
+  + Repeat times
+  + Previous words
++ 4 conditions
+  + Number 
+  + Letter
+  + Bracket open '['
+  + Bracket close ']'
+
+**Steps**
++ Declare tracking stacks
+  + Repeat time of type [int]
+  + Previous words of type [string]
++ Declare current
+  + Word
+  + repeat time
++ Iterate the `s`
+  + If number
+    + Update repeat time
+  + If '['
+    + Push current repeat time, and clear
+    + Push current word, and clear
+  + If ']'
+    + Retrieve repeat time
+    + Retrieve previous word
+    + Append current word for "repeat time" to previous word
+    + Update current word
+  + Else (letters)
+    + Append to current word
+
+Time: O(n), Space: O(n)
+
+#### [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: Stack
+
+**Intuition**
++ Collisions **only occur** when a positive asteroid (moving right) is followed by a negative asteroid (moving left).
++ Use a stack to simulate the process, handling collisions in a Last-In-First-Out (LIFO) manner.
+
+**Steps**
++ Declare moving asteroids of type [int]
++ Iterate through each asteroid
+  + Check if current asteroid possible to collide with other moving asteroids (not empty, curernt moving left, top moving right)
+    + If the top asteroid is smaller, it is destroyed (pop from stack), try to keep colliding
+    + If they are equal, both are destroyed (pop from stack and mark current asteroid as destroyed), stop colliding
+    + If the top asteroid is larger, the current asteroid is destroyed, stop colliding
+  + If not possible to colide, then push back current asteroid to moving asteroids
++ Return moving asteroids
+
+Time: O(n), Space: O(n)
 
 ## Two-Pointer
 
@@ -870,8 +977,11 @@ Time: O(len(string), len(template)), Space: O(len(template))
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
 **HARD**
+
+*Question?*
 
 **Keyword**: Sliding Window
 
@@ -885,6 +995,60 @@ Time: O(len(string), len(template)), Space: O(len(template))
   + Remove the outside indices from the front
   + Remove small indices from the back
   + If i in range, append deque front (indices with larger value)
+
+#### [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**HARD**
+
+**Keyword**: Sliding Window
+
+**Intuition**
++ A sliding window problem. The window is valid when
+  + Word frequency inside the window is same as the word frequency in `words`
+  + Word count inside the window is same as the word count in `words`
+
+**Steps**
++ Declare word frequency of type {string: int}
++ Calculate the word frequency in `words`
++ Starting iteration `i` in \[0...word_len\) (bcs all the words have same len, so iteration from 0 is same as iteration from word_len)
+  + Init tracking variables: `left` from `i`, `count` of `0`, `seen` of empty {string: int}
+  + Expand right `j` in [i, `n - word_len`]
+    + If current word is in `word_freq`
+      + `count` add up
+      + `seen` add up
+      + while current word in seen is more than in `word_freq`
+        + Shrink left
+        + `seen` count down
+        + `count` count down
+      + If count is same as `word_count`
+        + Append `left` (to result)
+    + Else clear tracking variables
++ Return result
+
+Time: O(n * word_len), Space: O(W)
+
+#### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**keyword**: Sliding Windows
+
+**Intuition**
++ The problem is equivalent to **find the widest window with at most `k` zeros**
+
+**Steps**
++ Declare `left` at 0
++ Declare `zeroCount` to count zeros
++ Declare `maxLen` to track current max length
++ Iterate numbers with `right`
+  + If zero, `zeroCount` count up
+  + If more than `k` zeros in the window, move `left`
+  + Update window length
++ Return `maxLen`
+
+Time: O(N), Space: O(1)
 
 ## Linked List
 
@@ -1092,23 +1256,25 @@ Time: O(N), Space: O(1)
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
 **Keyword**: Doubly Linked-List
 
 **Observations**
-+ Both `get()` and `put()` are considered "used", So we use doubly linked list for efficient ordering
-+ We can't use index to manipulate value in linked list, so we create a hash map {key, iterator}
++ Both `get()` and `put()` are considered "used"
++ We use doubly linked list for efficient ordering, front (left) is the most recent element, and back (right) is the least recent element
++ We can't use index to manipulate value in linked list, so we create a hash map {key: iterator}
 
 **Steps**
-+ Declare a doubly linked list (of {key, value} pairs) for the underlying container, front is the most used, end is the least used
-+ Declare a hash map {key, iterator} to fast access data
++ Declare underlying container of type doubly linked list of (key, value) pairs, front is the most used, back is the least used
++ Declare a hash map of type {key: iterator} to fast access data
 + `get()`
   + If not exist in map, return -1
   + If exist
     + Use the iterator to get value
-    + Move this {key, value} to the front
+    + Update this (key, value)
       + Remove the iterator
-      + Push new node to the front
+      + Push new pair to the front
       + Update map
 + `put()`
   + If exist in map
@@ -1118,7 +1284,7 @@ Time: O(N), Space: O(1)
       + Get the last key
       + Pop last element
       + Remove from map
-  + Push new node to the front
+  + Push new pair to the front
   + Update map
 
 Time: O(1), Space: O(N)
@@ -1663,6 +1829,34 @@ Time:
 **Steps**
 + ...
 
+#### [679. 24 Game](https://leetcode.com/problems/24-game/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**HARD!!!**
+
+**Keyword**: Backtrack
+
+**Intuition**
++ Combination problem
++ No duplicated elements, no duplicated selection
++ Because support bracket, don't need to consider operation order
+
+**Steps**
++ Define `dfs`
+  + Input: numbers
+  + Output: can make or not (bool)
+  + Base condition: only one number
+    + Return true when this number is the same as 24
+  + Loop the two combinations of numbers: for example, [1, 2, 3] -> [1, 2], [1, 3], [2, 3]
+    + Declare new numbers
+    + The two combination is num1 and num2
+    + Append the rest numbers to new numbers
+    + Append the result of num1 and num2 to new numbers
+    + Backtrack new numbers
+    + Pop last new numbers
++ Start with input numbers (convert to floating number because of '/')
+
 ## Graph
 
 #### [200. Number of Islands](https://leetcode.com/problems/number-of-islands/)
@@ -1789,6 +1983,8 @@ If it is impossible to reach a gate, leave it as `INF`.
 
 **Keyword**: BFS on Grid, DFS on Grid, Flood-Fill
 
+*TODO*
+
 **Intuition**
 + ...
 
@@ -1800,6 +1996,8 @@ If it is impossible to reach a gate, leave it as `INF`.
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 
 **Keyword**: BFS on Grid
+
+*TODO*
 
 **Intuition**
 + ...
@@ -1861,6 +2059,8 @@ Return `true` if these edges form a valid tree, otherwise return `false`.
 
 **Keyword**:
 
+*TODO*
+
 **Intuition**
 + ...
 
@@ -1882,6 +2082,8 @@ You are given an integer `n` representing the number of nodes (labeled from `0` 
 Return the number of connected components in the undirected graph.
 
 **Keyword**: Union-Find
+
+*TODO*
 
 **Intuition**
 + ...
@@ -1953,6 +2155,49 @@ public:
   + For each word, try to replace each character from 'a' to 'z' (two loops)
   + If new word is end word, return `depth + 1`
   + If new word is inside the set, and never visited, append to queue
+
+#### [864. Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**HARD**
+
+**Keyword**: BFS on Grid
+
+**Intuition**
++ First thought BFS with visited
++ For the `visited`, we have more than one state. e.g. visit without any key, and visit with 1 key are different
++ So we use some kinda of flag to represent state
++ State: `std::bit_set` vs `std::array<bool, Size>`
+  + We need to distinguish "not visit", "visited without key", "visited with ** key"
+  + `std::bit_set` can't represent "visited without key" state
+  + Prefer `int`, more compact
+
+**Steps**
++ Define `struct State { int r, c; int key_state; };`
++ Declare state queue: `std::queue<State>`
++ Declare `visited` as `std::vector<std::vector<std::array<bool, TotalState>>>`
++ Declare `total_keys`
++ Iterate `grid` to find starting point and `total_keys`
+  + If we meet starting point
+    + Enqueue
+    + Update `visited` with true at 0, meaning "visited without key"
+  + If we meet key, set flag
++ Declare steps
++ `bfs` loop starts
+  + Layer by layer, for each element in this layer
+    + If already have all the keys, return steps
+    + Try to expand 4 directions, for each directions
+      + If out bound, skip
+      + If meet wall, skip
+      + If meet lock, but don't have this key, skip
+      + Declare new_key_state
+      + If meet key, update new_key_state
+      + If visit current pos with new_key_state, skip
+      + Update visited at current pos with new_key_state to true
+      + Enqueue
+  + Steps count up
++ Default return -1
 
 ## Heap/Priority Queue
 
@@ -2051,6 +2296,8 @@ Time: O(N) average, O($N^2$) worst, Space: O(1)
 
 **Keyword**: 
 
+*TODO*
+
 **Intuition**
 + ...
 
@@ -2107,6 +2354,26 @@ Time: O(N) average, O($N^2$) worst, Space: O(1)
 + `findMedian()`
   + If left > right, return left top
   + return half of left top and right top
+
+#### [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements)
+
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: Min-Heap
+
+**Intuition**
++ Use min heap to track the k largest number by contraint the size to k
+
+**Steps**
++ Declare hash map to store the number frequency
++ Iterate the hash map
+  + Push current (count, number) pair to min heap
+  + If min heap size is more than k, pop the top (smallest one)
++ Build results
+
+Time: O(NLog(K)), Space: O(N)
 
 ## Intervals
 
@@ -2826,8 +3093,23 @@ Time: O($Log(N)$), Space: recursive O($Log(N)$); Iteration: O(1)
 #### [43. Multiply Strings](https://leetcode.com/problems/multiply-strings/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
-*TODO*
+**Intuition**
++ Simulate how we do multiplication
++ Maximum length of result is `m + n`
+
+**Steps**
++ Declare result (of digit form) of type [int] of size m + n
++ First loop from the end
+  + Second loop from the end
+    + Calculate multiplication
+    + Calculate the sum, multiplication + current value, `sum = mul + res[i + j + 1]`
+    + Update current digit to `sum % 10`
+    + Update prev digit to `+= sum / 10`
++ Assemble into string
+  + Skip the leading zero
++ Return string
 
 #### [2013. Detect Squares](https://leetcode.com/problems/detect-squares/)
 
@@ -3002,47 +3284,6 @@ Time: O($N^2$), Space: O($N^2$)
 + Multicore BFS
 + Start BFS from 0s (instead of 1s), which is faster
 + Initialize all the 1s to INT_MAX to indicate "no visited"
-
-#### [864. Shortest Path to Get All Keys](https://leetcode.com/problems/shortest-path-to-get-all-keys/)
-
-![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
-
-**Keyword**: BFS on Grid
-
-**Intuition**
-+ First thought BFS with visited
-+ For the `visited`, we have more than one state. e.g. visit without any key, and visit with 1 key are different
-+ So we use some kinda of flag to represent state
-+ State: `std::bit_set` vs `std::array<bool, Size>`
-  + We need to distinguish "not visit", "visited without key", "visited with ** key"
-  + `std::bit_set` can't represent "visited without key" state
-  + Prefer `int`, more compact
-
-**Steps**
-+ Define `struct State { int r, c; int key_state; };`
-+ Declare state queue: `std::queue<State>`
-+ Declare `visited` as `std::vector<std::vector<std::array<bool, TotalState>>>`
-+ Declare `total_keys`
-+ Iterate `grid` to find starting point and `total_keys`
-  + If we meet starting point
-    + Enqueue
-    + Update `visited` with true at 0, meaning "visited without key"
-  + If we meet key, set flag
-+ Declare steps
-+ `bfs` loop starts
-  + Layer by layer, for each element in this layer
-    + If already have all the keys, return steps
-    + Try to expand 4 directions, for each directions
-      + If out bound, skip
-      + If meet wall, skip
-      + If meet lock, but don't have this key, skip
-      + Declare new_key_state
-      + If meet key, update new_key_state
-      + If visit current pos with new_key_state, skip
-      + Update visited at current pos with new_key_state to true
-      + Enqueue
-  + Steps count up
-+ Default return -1
 
 ## Binary Operation
 
@@ -3348,6 +3589,9 @@ return {findBound<kLow>(...), findBound<kHigh>(...)};
 #### [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+
+**Keyword**: Stack, Two-Pointer
 
 **Intuition**
 + Option 1: Use two stack (vector) to hold the new string, then compare. Both time and space complexity is O(m + n)
@@ -3355,10 +3599,11 @@ return {findBound<kLow>(...), findBound<kHigh>(...)};
 
 **Steps: Two Pointer**
 + Define `nextValidIndex()`
-  + Check if current char is '#', backspace count up
-  + Else check if there's backspace left, backspace count down
-  + Or break the loop, this is the index
-  + `index` count down (move left)
+  + while `index >= 0`
+    + If current char is '#', backspace count up, `index` count down
+    + Else check if there are backspaces left, use this backspace, backspace count down, `index` count down
+    + Else break the loop, this is the valid index
+  + Return `index`
 + Two pointers start at the end of both string
 + while loop with any one of the index is valid
   + Calculate the next valid index
@@ -3530,25 +3775,6 @@ auto num = dist(rd);a
 
 Time: O($log(N)$), Space: O(1)
 
-#### [71. Simplify Path](https://leetcode.com/problems/simplify-path/)
-
-**Keyword**: Stack
-
-**Observations**
-+ Similar to [227. Basic Calculator II](#227-basic-calculator-ii)
-
-**Steps**
-+ Split the input path with '/'
-  + Use `std::getline()`
-+ Process each part
-  + "." and "" -> ignore
-  + ".." -> move up one by pop stack
-  + Other are valid name, push stack
-+ Build output string. 
-  + Always startsWith '/', try not to use condition in the loop
-
-Time: O(N), Space: O(N)
-
 #### [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
 
 **Keyword**: BFS
@@ -3654,6 +3880,8 @@ Time: O(N), Space: O(K), where K is non zero element count.
 Time: O(N), Space: O(1)
 
 #### [680. Valid Palindrome II](https://leetcode.com/problems/valid-palindrome-ii/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
 **Keyword**: Two-Pointer
 
@@ -4098,23 +4326,6 @@ Time: O(N+M), Space: O(1)
 + `fast` find the non-zero elements
 + If found, swap
 
-#### [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
-
-**keyword**: Sliding Windows
-
-**Intuition**
-+ The problem is equivalent to **find the widest window with at most `k` zeros**
-
-**Steps**
-+ Two pointers, iterate `right`, slide control with `left`
-+ `zeroCount` to count zeros, `maxLen` to track current max length
-+ Iterate numbers
-  + If zero, count up
-  + If more than `k` zeros in the window, move `left`
-  + Update window length
-
-Time: O(N), Space: O(1)
-
 #### [65. Valid Number](https://leetcode.com/problems/valid-number/)
 
 **HARD**
@@ -4417,23 +4628,6 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
 }
 ```
 
-#### [735. Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
-
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-**Keyword**: Stack
-
-**Intuition**
-+ Collisions only occur when a positive asteroid (moving right) is followed by a negative asteroid (moving left).
-+ Use a stack to simulate the process, handling collisions in a Last-In-First-Out (LIFO) manner.
-
-**Steps**
-+ Iterate through each asteroid
-  + For each asteroid, check if it collides with the top of the stack (i.e., current asteroid is negative and top of stack is positive).
-  + If the top asteroid is smaller, it is destroyed (pop from stack).
-  + If they are equal, both are destroyed (pop from stack and mark current asteroid as destroyed).
-  + If the top asteroid is larger, the current asteroid is destroyed.
-
 #### [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
@@ -4518,34 +4712,6 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
 + Start with given root, target, and empty path, 0 sum, result
 
 Time: O(N), Space: O(H)
-
-#### [679. 24 Game](https://leetcode.com/problems/24-game/)
-
-![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
-
-**HARD!!!**
-
-**Keyword**: Backtrack
-
-**Intuition**
-+ Combination problem
-+ No duplicated elements, no duplicated selection
-+ Because support bracket, don't need to consider operation order
-
-**Steps**
-+ Define `dfs`
-  + Input: numbers
-  + Output: can make or not (bool)
-  + Base condition: only one number
-    + Return true when this number is the same as 24
-  + Loop the two combinations of numbers: for example, [1, 2, 3] -> [1, 2], [1, 3], [2, 3]
-    + Declare new numbers
-    + The two combination is num1 and num2
-    + Append the rest numbers to new numbers
-    + Append the result of num1 and num2 to new numbers
-    + Backtrack new numbers
-    + Pop last new numbers
-+ Start with input numbers (convert to floating number because of '/')
 
 #### [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
 
