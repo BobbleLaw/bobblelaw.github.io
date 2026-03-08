@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Qt on Bobble Law</title><link>https://bobblelaw.github.io/tags/qt/</link><description>Recent content in Qt on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Wed, 18 Oct 2017 17:26:42 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/qt/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
-&lt;p>Here is a hello world code for Qt&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QDebug&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> argc, &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">**&lt;/span> argv){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> QCoreApplication app(argc, argv);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> qDebug() &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello, Qt!&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> app.exec()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
-&lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>g++ main.cpp -I&lt;span style="color:#ae81ff">\\&lt;/span>path&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\i&lt;/span>nclude -o main -L&lt;span style="color:#ae81ff">\p&lt;/span>ath&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\l&lt;/span>ib -lQtCore4
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>If we have qmake, all we need is&lt;/li>
-&lt;/ol>
-&lt;pre tabindex="0">&lt;code class="language-qmake" data-lang="qmake">CONFIG +=qt
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Qt on Bobble Law</title><link>https://bobblelaw.github.io/tags/qt/</link><description>Recent content in Qt on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Wed, 18 Oct 2017 17:26:42 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/qt/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code"&gt;A Simple Qt code&lt;/h3&gt;
+&lt;p&gt;Here is a hello world code for Qt&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;QtCore/QDebug&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; argc, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;&lt;span style="color:#f92672"&gt;**&lt;/span&gt; argv){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; QCoreApplication app(argc, argv);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; qDebug() &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Hello, Qt!&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; app.exec()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g++ main.cpp -I&lt;span style="color:#ae81ff"&gt;\\&lt;/span&gt;path&lt;span style="color:#ae81ff"&gt;\t&lt;/span&gt;o&lt;span style="color:#ae81ff"&gt;\Q&lt;/span&gt;t&lt;span style="color:#ae81ff"&gt;\5&lt;/span&gt;.13.0&lt;span style="color:#ae81ff"&gt;\i&lt;/span&gt;nclude -o main -L&lt;span style="color:#ae81ff"&gt;\p&lt;/span&gt;ath&lt;span style="color:#ae81ff"&gt;\t&lt;/span&gt;o&lt;span style="color:#ae81ff"&gt;\Q&lt;/span&gt;t&lt;span style="color:#ae81ff"&gt;\5&lt;/span&gt;.13.0&lt;span style="color:#ae81ff"&gt;\l&lt;/span&gt;ib -lQtCore4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;If we have qmake, all we need is&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-qmake" data-lang="qmake"&gt;CONFIG +=qt
 QT -= gui
 SOURCE += main.cpp
-&lt;/code>&lt;/pre>&lt;ol start="3">
-&lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cmake" data-lang="cmake">&lt;span style="display:flex;">&lt;span>PROJECT(&lt;span style="color:#e6db74">example&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>FIND_PACKAGE(&lt;span style="color:#e6db74">Qt4&lt;/span> &lt;span style="color:#e6db74">COMPONENTS&lt;/span> &lt;span style="color:#e6db74">QtCore&lt;/span> &lt;span style="color:#e6db74">REQUIRED&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>INCLUDE(&lt;span style="color:#f92672">${&lt;/span>QT_USE_FILE&lt;span style="color:#f92672">}&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>ADD_EXECUTABLE(&lt;span style="color:#e6db74">example&lt;/span> &lt;span style="color:#e6db74">main.cpp&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
-&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start="3"&gt;
+&lt;li&gt;If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;PROJECT(&lt;span style="color:#e6db74"&gt;example&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;FIND_PACKAGE(&lt;span style="color:#e6db74"&gt;Qt4&lt;/span&gt; &lt;span style="color:#e6db74"&gt;COMPONENTS&lt;/span&gt; &lt;span style="color:#e6db74"&gt;QtCore&lt;/span&gt; &lt;span style="color:#e6db74"&gt;REQUIRED&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;INCLUDE(&lt;span style="color:#f92672"&gt;${&lt;/span&gt;QT_USE_FILE&lt;span style="color:#f92672"&gt;}&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ADD_EXECUTABLE(&lt;span style="color:#e6db74"&gt;example&lt;/span&gt; &lt;span style="color:#e6db74"&gt;main.cpp&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="a-complete-qt-project"&gt;A Complete Qt Project&lt;/h3&gt;
+&lt;p&gt;Ususally a complete qt project would consist of the following files&lt;/p&gt;</description></item></channel></rss>

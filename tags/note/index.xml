@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Note on Bobble Law</title><link>https://bobblelaw.github.io/tags/note/</link><description>Recent content in Note on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Fri, 17 Aug 2018 17:41:48 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/note/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on Linux Development</title><link>https://bobblelaw.github.io/posts/notes-on-linux-dev/</link><pubDate>Fri, 17 Aug 2018 17:41:48 +0800</pubDate><guid>https://bobblelaw.github.io/posts/notes-on-linux-dev/</guid><description>&lt;h3 id="how-to-use-previous-version-of-gcc">How to use previous version of gcc&lt;/h3>
-&lt;p>This problem arises when we try to compile mex file in Matlab. It shows a &lt;strong>warning&lt;/strong> as&lt;/p>
-&lt;pre>&lt;code>Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Note on Bobble Law</title><link>https://bobblelaw.github.io/tags/note/</link><description>Recent content in Note on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Fri, 17 Aug 2018 17:41:48 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/tags/note/index.xml" rel="self" type="application/rss+xml"/><item><title>Notes on Linux Development</title><link>https://bobblelaw.github.io/posts/notes-on-linux-dev/</link><pubDate>Fri, 17 Aug 2018 17:41:48 +0800</pubDate><guid>https://bobblelaw.github.io/posts/notes-on-linux-dev/</guid><description>&lt;h3 id="how-to-use-previous-version-of-gcc"&gt;How to use previous version of gcc&lt;/h3&gt;
+&lt;p&gt;This problem arises when we try to compile mex file in Matlab. It shows a &lt;strong&gt;warning&lt;/strong&gt; as&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. 
 The version currently supported with MEX is '6.4.x'. For a list of currently 
 supported compilers see
-&lt;/code>&lt;/pre>
-&lt;p>An easy solution is to do as followed (simply install the target version),&lt;/p>
-&lt;pre>&lt;code>sudo apt-get update &amp;amp;&amp;amp; \
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An easy solution is to do as followed (simply install the target version),&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update &amp;amp;&amp;amp; \
 sudo apt-get install build-essential software-properties-common -y &amp;amp;&amp;amp; \
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y &amp;amp;&amp;amp; \
 sudo apt-get update &amp;amp;&amp;amp; \
 sudo apt-get install gcc-6 g++-6 -y &amp;amp;&amp;amp; \
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 &amp;amp;&amp;amp; \
 gcc -v
-&lt;/code>&lt;/pre>
-&lt;p>But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p&gt;</description></item></channel></rss>

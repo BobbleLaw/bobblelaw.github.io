@@ -1,162 +1,167 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bobble Law</title><link>https://bobblelaw.github.io/topics/interview/</link><description>Recent content on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/topics/interview/index.xml" rel="self" type="application/rss+xml"/><item><title>SLAM Interview Questions</title><link>https://bobblelaw.github.io/topics/interview/slam-interview/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/slam-interview/</guid><description>&lt;h2 id="linear-algebra">Linear Algebra&lt;/h2>
-&lt;ul>
-&lt;li>如何求解 $Ax=b$？SVD和QR分解哪个更快？&lt;/li>
-&lt;/ul>
-&lt;p>Depend on the rank of $[A | b]$.&lt;/p>
-&lt;p>Solution include QR decomposition, LTLD decomposition, Cholesky decomposition and SVD decomposition.&lt;/p>
-&lt;h2 id="optimization-basics">Optimization Basics&lt;/h2>
-&lt;ul>
-&lt;li>Explain Gradient descent, Gaussian-Newton, LM, Dogleg&lt;/li>
-&lt;/ul>
-&lt;h2 id="computer-vision-basics">Computer Vision Basics&lt;/h2>
-&lt;ul>
-&lt;li>
-&lt;p>SIFT vs. SURF&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>Parallax and depth&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;p>$ \frac{parallax}{baseline} = \frac{focal~ length}{depth} $&lt;/p>
-&lt;ul>
-&lt;li>Edge detection algorithms&lt;/li>
-&lt;/ul>
-&lt;p>Filtering, augmentation, and detection. Gaussian filter and some handcrafted kernel to locate pixel gradient.&lt;/p>
-&lt;ol>
-&lt;li>Canny&lt;/li>
-&lt;li>Sobel&lt;/li>
-&lt;li>Laplacian&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>Hoffman transform&lt;/li>
-&lt;/ul>
-&lt;h2 id="3d-basics">3D Basics&lt;/h2>
-&lt;ul>
-&lt;li>如何对匹配好的点做进一步的处理，已到达更好的效果？&lt;/li>
-&lt;/ul>
-&lt;ol>
-&lt;li>Compare the distance with experienced threshold&lt;/li>
-&lt;li>RANSAC&lt;/li>
-&lt;li>KNN&lt;/li>
-&lt;/ol>
-&lt;ul>
-&lt;li>
-&lt;p>Explain RANSAC&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/behavioral-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/behavioral-interview/</guid><description>&lt;h1 id="behavioral-interviews">Behavioral Interviews&lt;/h1>
-&lt;h2 id="amazon-leadership-principles">Amazon Leadership Principles&lt;/h2>
-&lt;h3 id="customer-obsession">Customer Obsession&lt;/h3>
-&lt;blockquote>
-&lt;p>Amazonians are encouraged to find ways to delight the customer before they know they’d like to be delighted.&lt;/p>&lt;/blockquote>
-&lt;ul>
-&lt;li>
-&lt;p>Tell me about a time when you strongly &lt;strong>disagreed&lt;/strong> with your manager or peer on something you considered very important to the business.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>S&lt;/strong>: During development of our factory calibration pipeline for robotic mowers, I strongly disagreed with my manager&amp;rsquo;s proposal to skip the camera reprojection validation step to save time in production.&lt;/li>
-&lt;li>&lt;strong>T&lt;/strong>: The manager argued that since the calibration passed initial optimization with low residuals, we didn’t need a final projection check. But I believed that skipping this step could let silent failures (e.g. bad feature matches or incorrect chessboard detection) leak into production, which would degrade localization and ultimately hurt customer trust.&lt;/li>
-&lt;li>&lt;strong>A&lt;/strong>: I respectfully raised my concern in our calibration review, backed by data from a recent batch where two units had excellent residuals but failed real-world testing due to wrong board detections. I showed how reprojection visualization would’ve caught those immediately. I also proposed a fast implementation of this check that added just 2 seconds per unit. I emphasized that catching bad units early avoids costly field returns and rework.&lt;/li>
-&lt;li>&lt;strong>R&lt;/strong>: My manager agreed to test my proposal on the next 100 units. The check caught 3 failures that would’ve passed otherwise. It became a required step in our calibration line. This reinforced the value of speaking up with data—and balancing efficiency with long-term quality.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>Tell me about a time when you overcommitted yourself or your company.&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h1 id="cpp-interview-questions">Cpp Interview Questions&lt;/h1>
-&lt;h2 id="embedded-software-development-engineer">Embedded Software Development Engineer&lt;/h2>
-&lt;h3 id="difference-between-serial-communication-protocols-like-i2c-spi-and-uart">Difference between Serial Communication protocols like I2C, SPI and UART&lt;/h3>
-&lt;p>&lt;img src="https://media.licdn.com/dms/image/v2/D5612AQHZQKpJFd0INA/article-inline_image-shrink_1000_1488/B56ZU2XcHoHQAQ-/0/1740373869897?e=1752105600&amp;amp;v=beta&amp;amp;t=_1Jye7I5u_mmeYXEgkDqoFNYldSpvhXkZJmtMEVu3hY" alt="I2C, SPI and UART">&lt;/p>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>Feature&lt;/th>
- &lt;th>UART&lt;br>(Universal Asynchronous Receiver Transmitter)&lt;/th>
- &lt;th>I2C&lt;br>(Inter-Integrated Circuit)&lt;/th>
- &lt;th>SPI&lt;br>(Serial Peripheral Interface)&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>Wire&lt;/td>
- &lt;td>2 - TX(transmit), RX(receive)&lt;/td>
- &lt;td>2 - SDA(data), SCL(clock)&lt;/td>
- &lt;td>4+ - MOSI, MOSO, SCLK, SS (chip select), one CS per slave&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Speed&lt;/td>
- &lt;td>Low&lt;/td>
- &lt;td>Medium&lt;/td>
- &lt;td>High&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Communication&lt;/td>
- &lt;td>Asynchronous (no shared clock); devices must agree on baud rate&lt;/td>
- &lt;td>Synchronous, multi-master/multi-slave&lt;/td>
- &lt;td>Synchronous, full-duplex&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Topology&lt;/td>
- &lt;td>Point-to-Point&lt;/td>
- &lt;td>Multi-Slave&lt;/td>
- &lt;td>Multi-Slave with Chip Select(CS)&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>Use Case&lt;/td>
- &lt;td>Simple point-to-point communication (e.g. debug console, GPS modules)&lt;/td>
- &lt;td>Connecting multiple low-speed peripherals (e.g. sensors, EEPROM)&lt;/td>
- &lt;td>High-speed communication with sensors, flash, displays&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;p>Answer:&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</guid><description>&lt;h1 id="leetcode-top-interview-questions">LeetCode Top Interview Questions&lt;/h1>
-&lt;p>&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode">&lt;br>
-&lt;img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&amp;amp;logo=Meta&amp;amp;logoColor=white" alt="Meta">&lt;br>
-&lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS">&lt;br>
-&lt;img src="https://img.shields.io/badge/google-4285F4?style=for-the-badge&amp;amp;logo=google&amp;amp;logoColor=white" alt="Google">&lt;br>
-&lt;img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&amp;amp;logo=apple&amp;amp;logoColor=white" alt="Apple">&lt;br>
-&lt;img src="https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&amp;amp;logo=roku&amp;amp;logoColor=white" alt="Roku">&lt;/p>
-&lt;h2 id="array--hashing">Array &amp;amp; Hashing&lt;/h2>
-&lt;h4 id="217-contains-duplicate">&lt;a href="https://leetcode.com/problems/contains-duplicate/">217. Contains Duplicate&lt;/a>&lt;/h4>
-&lt;p>&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode">&lt;/p>
-&lt;p>&lt;strong>Keyword&lt;/strong>: Hashing&lt;/p>
-&lt;p>&lt;strong>Steps&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Keep pushing element into &lt;code>std::unordered_set&lt;/code> until we find duplicated one&lt;/li>
-&lt;/ul>
-&lt;h4 id="383-ransom-note">&lt;a href="https://leetcode.com/problems/ransom-note/">383. Ransom Note&lt;/a>&lt;/h4>
-&lt;p>&lt;strong>Keyword&lt;/strong>: Hashing&lt;/p>
-&lt;p>&lt;strong>Steps&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Use hash table to count occurrence of each letter&lt;/li>
-&lt;li>Knowing all the characters are letter, we can use array instead of hash table&lt;/li>
-&lt;/ul>
-&lt;h4 id="242-valid-anagram">&lt;a href="https://leetcode.com/problems/valid-anagram/">242. Valid Anagram&lt;/a>&lt;/h4>
-&lt;p>&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode">&lt;/p>
-&lt;p>&lt;strong>Keyword&lt;/strong>: Hashing&lt;/p>
-&lt;p>&lt;strong>Intuition&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Use &lt;code>std::array&lt;/code> to calculate the frequency of characters&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Steps&lt;/strong>&lt;/p></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;h1 id="machine-learning-interview">Machine Learning Interview&lt;/h1>
-&lt;ol>
-&lt;li>&lt;strong>What is stratified cross-validation and when should we use it?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Why do ensembles typically have higher scores than individual models?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>What is regularization? Can you give some examples of regularization techniques?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>What is an imbalanced dataset? Can you list some ways to deal with it?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Why do we need a validation set and test set? What is the difference between them?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>Can you explain the differences between supervised, unsupervised, and reinforcement learning?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>What are some factors that explain the success and recent rise of deep learning?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>What is data augmentation? Can you give some examples?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>What are convolutional networks? Where can we use them?&lt;/strong>&lt;/li>
-&lt;li>&lt;strong>What is the curse of dimensionality? Can you list some ways to deal with it?&lt;/strong>&lt;/li>
-&lt;/ol></description></item><item><title/><link>https://bobblelaw.github.io/topics/interview/system-design-interview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://bobblelaw.github.io/topics/interview/system-design-interview/</guid><description>&lt;h1 id="system-design-interview">System Design Interview&lt;/h1>
-&lt;h2 id="embedded">Embedded&lt;/h2>
-&lt;ul>
-&lt;li>Design a state machine for a traffic light controller(Amazon)&lt;/li>
-&lt;li>Design the LED behaviour of Apple Airpods(Apple)&lt;/li>
-&lt;li>Design alexa for weather information(Amazon)&lt;/li>
-&lt;li>Design VR glass(Meta)&lt;/li>
-&lt;li>Design oculus game controller(Meta)&lt;/li>
-&lt;li>Design apple pencil(Apple)&lt;/li>
-&lt;li>Design an audio mixer (Asked at Meta Reality Lab)&lt;/li>
-&lt;li>Design a microkernel-based system which can load a file and start execution. (Asked at Meta Reality Labs)&lt;/li>
-&lt;li>Design a state machine for a vending machine at your office(Google)&lt;/li>
-&lt;li>Design a telemetry service (Asked at Meta for Embedded Software Engineering role)&lt;/li>
-&lt;li>Design a protocol to send data from the host to the device x bytes at a time. (Asked at Meta)&lt;/li>
-&lt;li>Design a throwable Panoramic Ball Camera that Shoots 360-Degree Photos.&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bobble Law</title><link>https://bobblelaw.github.io/topics/interview/</link><description>Recent content on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/topics/interview/index.xml" rel="self" type="application/rss+xml"/><item><title>Behavioral Interviews</title><link>https://bobblelaw.github.io/topics/interview/behavioral-interview/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/behavioral-interview/</guid><description>&lt;h2 id="amazon-leadership-principles"&gt;Amazon Leadership Principles&lt;/h2&gt;
+&lt;h3 id="customer-obsession"&gt;Customer Obsession&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Amazonians are encouraged to find ways to delight the customer before they know they’d like to be delighted.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about a time when you strongly &lt;strong&gt;disagreed&lt;/strong&gt; with your manager or peer on something you considered very important to the business.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;S&lt;/strong&gt;: During development of our factory calibration pipeline for robotic mowers, I strongly disagreed with my manager&amp;rsquo;s proposal to skip the camera reprojection validation step to save time in production.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;: The manager argued that since the calibration passed initial optimization with low residuals, we didn’t need a final projection check. But I believed that skipping this step could let silent failures (e.g. bad feature matches or incorrect chessboard detection) leak into production, which would degrade localization and ultimately hurt customer trust.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;: I respectfully raised my concern in our calibration review, backed by data from a recent batch where two units had excellent residuals but failed real-world testing due to wrong board detections. I showed how reprojection visualization would’ve caught those immediately. I also proposed a fast implementation of this check that added just 2 seconds per unit. I emphasized that catching bad units early avoids costly field returns and rework.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;: My manager agreed to test my proposal on the next 100 units. The check caught 3 failures that would’ve passed otherwise. It became a required step in our calibration line. This reinforced the value of speaking up with data—and balancing efficiency with long-term quality.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tell me about a time when you overcommitted yourself or your company.&lt;/p&gt;</description></item><item><title>Cpp Interview Questions</title><link>https://bobblelaw.github.io/topics/interview/cpp-interview/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/cpp-interview/</guid><description>&lt;h2 id="embedded-software-development-engineer"&gt;Embedded Software Development Engineer&lt;/h2&gt;
+&lt;h3 id="difference-between-serial-communication-protocols-like-i2c-spi-and-uart"&gt;Difference between Serial Communication protocols like I2C, SPI and UART&lt;/h3&gt;
+&lt;p&gt;&lt;img src="https://media.licdn.com/dms/image/v2/D5612AQHZQKpJFd0INA/article-inline_image-shrink_1000_1488/B56ZU2XcHoHQAQ-/0/1740373869897?e=1752105600&amp;amp;v=beta&amp;amp;t=_1Jye7I5u_mmeYXEgkDqoFNYldSpvhXkZJmtMEVu3hY" alt="I2C, SPI and UART"&gt;&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Feature&lt;/th&gt;
+ &lt;th&gt;UART&lt;br&gt;(Universal Asynchronous Receiver Transmitter)&lt;/th&gt;
+ &lt;th&gt;I2C&lt;br&gt;(Inter-Integrated Circuit)&lt;/th&gt;
+ &lt;th&gt;SPI&lt;br&gt;(Serial Peripheral Interface)&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Wire&lt;/td&gt;
+ &lt;td&gt;2 - TX(transmit), RX(receive)&lt;/td&gt;
+ &lt;td&gt;2 - SDA(data), SCL(clock)&lt;/td&gt;
+ &lt;td&gt;4+ - MOSI, MOSO, SCLK, SS (chip select), one CS per slave&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Speed&lt;/td&gt;
+ &lt;td&gt;Low&lt;/td&gt;
+ &lt;td&gt;Medium&lt;/td&gt;
+ &lt;td&gt;High&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Communication&lt;/td&gt;
+ &lt;td&gt;Asynchronous (no shared clock); devices must agree on baud rate&lt;/td&gt;
+ &lt;td&gt;Synchronous, multi-master/multi-slave&lt;/td&gt;
+ &lt;td&gt;Synchronous, full-duplex&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Topology&lt;/td&gt;
+ &lt;td&gt;Point-to-Point&lt;/td&gt;
+ &lt;td&gt;Multi-Slave&lt;/td&gt;
+ &lt;td&gt;Multi-Slave with Chip Select(CS)&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Use Case&lt;/td&gt;
+ &lt;td&gt;Simple point-to-point communication (e.g. debug console, GPS modules)&lt;/td&gt;
+ &lt;td&gt;Connecting multiple low-speed peripherals (e.g. sensors, EEPROM)&lt;/td&gt;
+ &lt;td&gt;High-speed communication with sensors, flash, displays&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Answer:&lt;/p&gt;</description></item><item><title>LeetCode Top Interview Questions</title><link>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/leetcode-top-interview/</guid><description>&lt;p&gt;&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode"&gt;&lt;br&gt;
+&lt;img src="https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&amp;amp;logo=Meta&amp;amp;logoColor=white" alt="Meta"&gt;&lt;br&gt;
+&lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS"&gt;&lt;br&gt;
+&lt;img src="https://img.shields.io/badge/google-4285F4?style=for-the-badge&amp;amp;logo=google&amp;amp;logoColor=white" alt="Google"&gt;&lt;br&gt;
+&lt;img src="https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&amp;amp;logo=apple&amp;amp;logoColor=white" alt="Apple"&gt;&lt;br&gt;
+&lt;img src="https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&amp;amp;logo=roku&amp;amp;logoColor=white" alt="Roku"&gt;&lt;/p&gt;
+&lt;h2 id="array--hashing"&gt;Array &amp;amp; Hashing&lt;/h2&gt;
+&lt;h4 id="217-contains-duplicate"&gt;&lt;a href="https://leetcode.com/problems/contains-duplicate/"&gt;217. Contains Duplicate&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keyword&lt;/strong&gt;: Hashing&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Steps&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Keep pushing element into &lt;code&gt;std::unordered_set&lt;/code&gt; until we find duplicated one&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="383-ransom-note"&gt;&lt;a href="https://leetcode.com/problems/ransom-note/"&gt;383. Ransom Note&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;Keyword&lt;/strong&gt;: Hashing&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Steps&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use hash table to count occurrence of each letter&lt;/li&gt;
+&lt;li&gt;Knowing all the characters are letter, we can use array instead of hash table&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="242-valid-anagram"&gt;&lt;a href="https://leetcode.com/problems/valid-anagram/"&gt;242. Valid Anagram&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&amp;amp;logo=LeetCode&amp;amp;logoColor=#d16c06" alt="LeetCode"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Keyword&lt;/strong&gt;: Hashing&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Intuition&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use &lt;code&gt;std::array&lt;/code&gt; to calculate the frequency of characters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Steps&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If not same size, return false&lt;/li&gt;
+&lt;li&gt;Declare array of &lt;code&gt;freqs&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;For the first string, add up&lt;/li&gt;
+&lt;li&gt;For the second string, count down&lt;/li&gt;
+&lt;li&gt;Check if all the elements in &lt;code&gt;freqs&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id="49-group-anagrams"&gt;&lt;a href="https://leetcode.com/problems/group-anagrams/"&gt;49. Group Anagrams&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&amp;amp;logo=amazon-aws&amp;amp;logoColor=white" alt="AWS"&gt;&lt;/p&gt;</description></item><item><title>Machine Learning Interview</title><link>https://bobblelaw.github.io/topics/interview/ml-interview/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/ml-interview/</guid><description>&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;What is stratified cross-validation and when should we use it?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why do ensembles typically have higher scores than individual models?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What is regularization? Can you give some examples of regularization techniques?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What is an imbalanced dataset? Can you list some ways to deal with it?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Why do we need a validation set and test set? What is the difference between them?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Can you explain the differences between supervised, unsupervised, and reinforcement learning?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What are some factors that explain the success and recent rise of deep learning?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What is data augmentation? Can you give some examples?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What are convolutional networks? Where can we use them?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What is the curse of dimensionality? Can you list some ways to deal with it?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;</description></item><item><title>System Design Interview</title><link>https://bobblelaw.github.io/topics/interview/system-design-interview/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/system-design-interview/</guid><description>&lt;h2 id="embedded"&gt;Embedded&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Design a state machine for a traffic light controller(Amazon)&lt;/li&gt;
+&lt;li&gt;Design the LED behaviour of Apple Airpods(Apple)&lt;/li&gt;
+&lt;li&gt;Design alexa for weather information(Amazon)&lt;/li&gt;
+&lt;li&gt;Design VR glass(Meta)&lt;/li&gt;
+&lt;li&gt;Design oculus game controller(Meta)&lt;/li&gt;
+&lt;li&gt;Design apple pencil(Apple)&lt;/li&gt;
+&lt;li&gt;Design an audio mixer (Asked at Meta Reality Lab)&lt;/li&gt;
+&lt;li&gt;Design a microkernel-based system which can load a file and start execution. (Asked at Meta Reality Labs)&lt;/li&gt;
+&lt;li&gt;Design a state machine for a vending machine at your office(Google)&lt;/li&gt;
+&lt;li&gt;Design a telemetry service (Asked at Meta for Embedded Software Engineering role)&lt;/li&gt;
+&lt;li&gt;Design a protocol to send data from the host to the device x bytes at a time. (Asked at Meta)&lt;/li&gt;
+&lt;li&gt;Design a throwable Panoramic Ball Camera that Shoots 360-Degree Photos.&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>SLAM Interview Questions</title><link>https://bobblelaw.github.io/topics/interview/slam-interview/</link><pubDate>Thu, 27 Oct 2022 16:37:56 +0800</pubDate><guid>https://bobblelaw.github.io/topics/interview/slam-interview/</guid><description>&lt;h2 id="linear-algebra"&gt;Linear Algebra&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如何求解 $Ax=b$？SVD和QR分解哪个更快？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Depend on the rank of $[A | b]$.&lt;/p&gt;
+&lt;p&gt;Solution include QR decomposition, LTLD decomposition, Cholesky decomposition and SVD decomposition.&lt;/p&gt;
+&lt;h2 id="optimization-basics"&gt;Optimization Basics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Explain Gradient descent, Gaussian-Newton, LM, Dogleg&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="computer-vision-basics"&gt;Computer Vision Basics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;SIFT vs. SURF&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Parallax and depth&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$ \frac{parallax}{baseline} = \frac{focal~ length}{depth} $&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Edge detection algorithms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Filtering, augmentation, and detection. Gaussian filter and some handcrafted kernel to locate pixel gradient.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Canny&lt;/li&gt;
+&lt;li&gt;Sobel&lt;/li&gt;
+&lt;li&gt;Laplacian&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Hoffman transform&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="3d-basics"&gt;3D Basics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;如何对匹配好的点做进一步的处理，已到达更好的效果？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Compare the distance with experienced threshold&lt;/li&gt;
+&lt;li&gt;RANSAC&lt;/li&gt;
+&lt;li&gt;KNN&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Explain RANSAC&lt;/p&gt;</description></item></channel></rss>

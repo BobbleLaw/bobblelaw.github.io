@@ -1,1614 +1,1614 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Bobble Law</title><link>https://bobblelaw.github.io/posts/</link><description>Recent content in Posts on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Tue, 03 Jun 2025 22:38:00 +0100</lastBuildDate><atom:link href="https://bobblelaw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Emojis in Markdown</title><link>https://bobblelaw.github.io/posts/emojis-in-markdown/</link><pubDate>Tue, 03 Jun 2025 22:38:00 +0100</pubDate><guid>https://bobblelaw.github.io/posts/emojis-in-markdown/</guid><description>&lt;p>Reference: &lt;a href="https://gist.github.com/rxaviers/7360908">Complete list of github markdown emoji markup&lt;/a>&lt;/p>
-&lt;h2 id="people">People&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>:bowtie: &lt;code>:bowtie:&lt;/code>&lt;/th>
- &lt;th>:smile: &lt;code>:smile:&lt;/code>&lt;/th>
- &lt;th>:laughing: &lt;code>:laughing:&lt;/code>&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>:blush: &lt;code>:blush:&lt;/code>&lt;/td>
- &lt;td>:smiley: &lt;code>:smiley:&lt;/code>&lt;/td>
- &lt;td>:relaxed: &lt;code>:relaxed:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:smirk: &lt;code>:smirk:&lt;/code>&lt;/td>
- &lt;td>:heart_eyes: &lt;code>:heart_eyes:&lt;/code>&lt;/td>
- &lt;td>:kissing_heart: &lt;code>:kissing_heart:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:kissing_closed_eyes: &lt;code>:kissing_closed_eyes:&lt;/code>&lt;/td>
- &lt;td>:flushed: &lt;code>:flushed:&lt;/code>&lt;/td>
- &lt;td>:relieved: &lt;code>:relieved:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:satisfied: &lt;code>:satisfied:&lt;/code>&lt;/td>
- &lt;td>:grin: &lt;code>:grin:&lt;/code>&lt;/td>
- &lt;td>:wink: &lt;code>:wink:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:stuck_out_tongue_winking_eye: &lt;code>:stuck_out_tongue_winking_eye:&lt;/code>&lt;/td>
- &lt;td>:stuck_out_tongue_closed_eyes: &lt;code>:stuck_out_tongue_closed_eyes:&lt;/code>&lt;/td>
- &lt;td>:grinning: &lt;code>:grinning:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:kissing: &lt;code>:kissing:&lt;/code>&lt;/td>
- &lt;td>:kissing_smiling_eyes: &lt;code>:kissing_smiling_eyes:&lt;/code>&lt;/td>
- &lt;td>:stuck_out_tongue: &lt;code>:stuck_out_tongue:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sleeping: &lt;code>:sleeping:&lt;/code>&lt;/td>
- &lt;td>:worried: &lt;code>:worried:&lt;/code>&lt;/td>
- &lt;td>:frowning: &lt;code>:frowning:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:anguished: &lt;code>:anguished:&lt;/code>&lt;/td>
- &lt;td>:open_mouth: &lt;code>:open_mouth:&lt;/code>&lt;/td>
- &lt;td>:grimacing: &lt;code>:grimacing:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:confused: &lt;code>:confused:&lt;/code>&lt;/td>
- &lt;td>:hushed: &lt;code>:hushed:&lt;/code>&lt;/td>
- &lt;td>:expressionless: &lt;code>:expressionless:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:unamused: &lt;code>:unamused:&lt;/code>&lt;/td>
- &lt;td>:sweat_smile: &lt;code>:sweat_smile:&lt;/code>&lt;/td>
- &lt;td>:sweat: &lt;code>:sweat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:disappointed_relieved: &lt;code>:disappointed_relieved:&lt;/code>&lt;/td>
- &lt;td>:weary: &lt;code>:weary:&lt;/code>&lt;/td>
- &lt;td>:pensive: &lt;code>:pensive:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:disappointed: &lt;code>:disappointed:&lt;/code>&lt;/td>
- &lt;td>:confounded: &lt;code>:confounded:&lt;/code>&lt;/td>
- &lt;td>:fearful: &lt;code>:fearful:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cold_sweat: &lt;code>:cold_sweat:&lt;/code>&lt;/td>
- &lt;td>:persevere: &lt;code>:persevere:&lt;/code>&lt;/td>
- &lt;td>:cry: &lt;code>:cry:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sob: &lt;code>:sob:&lt;/code>&lt;/td>
- &lt;td>:joy: &lt;code>:joy:&lt;/code>&lt;/td>
- &lt;td>:astonished: &lt;code>:astonished:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:scream: &lt;code>:scream:&lt;/code>&lt;/td>
- &lt;td>:neckbeard: &lt;code>:neckbeard:&lt;/code>&lt;/td>
- &lt;td>:tired_face: &lt;code>:tired_face:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:angry: &lt;code>:angry:&lt;/code>&lt;/td>
- &lt;td>:rage: &lt;code>:rage:&lt;/code>&lt;/td>
- &lt;td>:triumph: &lt;code>:triumph:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sleepy: &lt;code>:sleepy:&lt;/code>&lt;/td>
- &lt;td>:yum: &lt;code>:yum:&lt;/code>&lt;/td>
- &lt;td>:mask: &lt;code>:mask:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sunglasses: &lt;code>:sunglasses:&lt;/code>&lt;/td>
- &lt;td>:dizzy_face: &lt;code>:dizzy_face:&lt;/code>&lt;/td>
- &lt;td>:imp: &lt;code>:imp:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:smiling_imp: &lt;code>:smiling_imp:&lt;/code>&lt;/td>
- &lt;td>:neutral_face: &lt;code>:neutral_face:&lt;/code>&lt;/td>
- &lt;td>:no_mouth: &lt;code>:no_mouth:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:innocent: &lt;code>:innocent:&lt;/code>&lt;/td>
- &lt;td>:alien: &lt;code>:alien:&lt;/code>&lt;/td>
- &lt;td>:yellow_heart: &lt;code>:yellow_heart:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:blue_heart: &lt;code>:blue_heart:&lt;/code>&lt;/td>
- &lt;td>:purple_heart: &lt;code>:purple_heart:&lt;/code>&lt;/td>
- &lt;td>:heart: &lt;code>:heart:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:green_heart: &lt;code>:green_heart:&lt;/code>&lt;/td>
- &lt;td>:broken_heart: &lt;code>:broken_heart:&lt;/code>&lt;/td>
- &lt;td>:heartbeat: &lt;code>:heartbeat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:heartpulse: &lt;code>:heartpulse:&lt;/code>&lt;/td>
- &lt;td>:two_hearts: &lt;code>:two_hearts:&lt;/code>&lt;/td>
- &lt;td>:revolving_hearts: &lt;code>:revolving_hearts:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cupid: &lt;code>:cupid:&lt;/code>&lt;/td>
- &lt;td>:sparkling_heart: &lt;code>:sparkling_heart:&lt;/code>&lt;/td>
- &lt;td>:sparkles: &lt;code>:sparkles:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:star: &lt;code>:star:&lt;/code>&lt;/td>
- &lt;td>:star2: &lt;code>:star2:&lt;/code>&lt;/td>
- &lt;td>:dizzy: &lt;code>:dizzy:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:boom: &lt;code>:boom:&lt;/code>&lt;/td>
- &lt;td>:collision: &lt;code>:collision:&lt;/code>&lt;/td>
- &lt;td>:anger: &lt;code>:anger:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:exclamation: &lt;code>:exclamation:&lt;/code>&lt;/td>
- &lt;td>:question: &lt;code>:question:&lt;/code>&lt;/td>
- &lt;td>:grey_exclamation: &lt;code>:grey_exclamation:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:grey_question: &lt;code>:grey_question:&lt;/code>&lt;/td>
- &lt;td>:zzz: &lt;code>:zzz:&lt;/code>&lt;/td>
- &lt;td>:dash: &lt;code>:dash:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sweat_drops: &lt;code>:sweat_drops:&lt;/code>&lt;/td>
- &lt;td>:notes: &lt;code>:notes:&lt;/code>&lt;/td>
- &lt;td>:musical_note: &lt;code>:musical_note:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:fire: &lt;code>:fire:&lt;/code>&lt;/td>
- &lt;td>:hankey: &lt;code>:hankey:&lt;/code>&lt;/td>
- &lt;td>:poop: &lt;code>:poop:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:shit: &lt;code>:shit:&lt;/code>&lt;/td>
- &lt;td>:+1: &lt;code>:+1:&lt;/code>&lt;/td>
- &lt;td>:thumbsup: &lt;code>:thumbsup:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:-1: &lt;code>:-1:&lt;/code>&lt;/td>
- &lt;td>:thumbsdown: &lt;code>:thumbsdown:&lt;/code>&lt;/td>
- &lt;td>:ok_hand: &lt;code>:ok_hand:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:punch: &lt;code>:punch:&lt;/code>&lt;/td>
- &lt;td>:facepunch: &lt;code>:facepunch:&lt;/code>&lt;/td>
- &lt;td>:fist: &lt;code>:fist:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:v: &lt;code>:v:&lt;/code>&lt;/td>
- &lt;td>:wave: &lt;code>:wave:&lt;/code>&lt;/td>
- &lt;td>:hand: &lt;code>:hand:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:raised_hand: &lt;code>:raised_hand:&lt;/code>&lt;/td>
- &lt;td>:open_hands: &lt;code>:open_hands:&lt;/code>&lt;/td>
- &lt;td>:point_up: &lt;code>:point_up:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:point_down: &lt;code>:point_down:&lt;/code>&lt;/td>
- &lt;td>:point_left: &lt;code>:point_left:&lt;/code>&lt;/td>
- &lt;td>:point_right: &lt;code>:point_right:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:raised_hands: &lt;code>:raised_hands:&lt;/code>&lt;/td>
- &lt;td>:pray: &lt;code>:pray:&lt;/code>&lt;/td>
- &lt;td>:point_up_2: &lt;code>:point_up_2:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clap: &lt;code>:clap:&lt;/code>&lt;/td>
- &lt;td>:muscle: &lt;code>:muscle:&lt;/code>&lt;/td>
- &lt;td>:metal: &lt;code>:metal:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:fu: &lt;code>:fu:&lt;/code>&lt;/td>
- &lt;td>:walking: &lt;code>:walking:&lt;/code>&lt;/td>
- &lt;td>:runner: &lt;code>:runner:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:running: &lt;code>:running:&lt;/code>&lt;/td>
- &lt;td>:couple: &lt;code>:couple:&lt;/code>&lt;/td>
- &lt;td>:family: &lt;code>:family:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:two_men_holding_hands: &lt;code>:two_men_holding_hands:&lt;/code>&lt;/td>
- &lt;td>:two_women_holding_hands: &lt;code>:two_women_holding_hands:&lt;/code>&lt;/td>
- &lt;td>:dancer: &lt;code>:dancer:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:dancers: &lt;code>:dancers:&lt;/code>&lt;/td>
- &lt;td>:ok_woman: &lt;code>:ok_woman:&lt;/code>&lt;/td>
- &lt;td>:no_good: &lt;code>:no_good:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:information_desk_person: &lt;code>:information_desk_person:&lt;/code>&lt;/td>
- &lt;td>:raising_hand: &lt;code>:raising_hand:&lt;/code>&lt;/td>
- &lt;td>:bride_with_veil: &lt;code>:bride_with_veil:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:person_with_pouting_face: &lt;code>:person_with_pouting_face:&lt;/code>&lt;/td>
- &lt;td>:person_frowning: &lt;code>:person_frowning:&lt;/code>&lt;/td>
- &lt;td>:bow: &lt;code>:bow:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:couplekiss: &lt;code>:couplekiss:&lt;/code>&lt;/td>
- &lt;td>:couple_with_heart: &lt;code>:couple_with_heart:&lt;/code>&lt;/td>
- &lt;td>:massage: &lt;code>:massage:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:haircut: &lt;code>:haircut:&lt;/code>&lt;/td>
- &lt;td>:nail_care: &lt;code>:nail_care:&lt;/code>&lt;/td>
- &lt;td>:boy: &lt;code>:boy:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:girl: &lt;code>:girl:&lt;/code>&lt;/td>
- &lt;td>:woman: &lt;code>:woman:&lt;/code>&lt;/td>
- &lt;td>:man: &lt;code>:man:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:baby: &lt;code>:baby:&lt;/code>&lt;/td>
- &lt;td>:older_woman: &lt;code>:older_woman:&lt;/code>&lt;/td>
- &lt;td>:older_man: &lt;code>:older_man:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:person_with_blond_hair: &lt;code>:person_with_blond_hair:&lt;/code>&lt;/td>
- &lt;td>:man_with_gua_pi_mao: &lt;code>:man_with_gua_pi_mao:&lt;/code>&lt;/td>
- &lt;td>:man_with_turban: &lt;code>:man_with_turban:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:construction_worker: &lt;code>:construction_worker:&lt;/code>&lt;/td>
- &lt;td>:cop: &lt;code>:cop:&lt;/code>&lt;/td>
- &lt;td>:angel: &lt;code>:angel:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:princess: &lt;code>:princess:&lt;/code>&lt;/td>
- &lt;td>:smiley_cat: &lt;code>:smiley_cat:&lt;/code>&lt;/td>
- &lt;td>:smile_cat: &lt;code>:smile_cat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:heart_eyes_cat: &lt;code>:heart_eyes_cat:&lt;/code>&lt;/td>
- &lt;td>:kissing_cat: &lt;code>:kissing_cat:&lt;/code>&lt;/td>
- &lt;td>:smirk_cat: &lt;code>:smirk_cat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:scream_cat: &lt;code>:scream_cat:&lt;/code>&lt;/td>
- &lt;td>:crying_cat_face: &lt;code>:crying_cat_face:&lt;/code>&lt;/td>
- &lt;td>:joy_cat: &lt;code>:joy_cat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:pouting_cat: &lt;code>:pouting_cat:&lt;/code>&lt;/td>
- &lt;td>:japanese_ogre: &lt;code>:japanese_ogre:&lt;/code>&lt;/td>
- &lt;td>:japanese_goblin: &lt;code>:japanese_goblin:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:see_no_evil: &lt;code>:see_no_evil:&lt;/code>&lt;/td>
- &lt;td>:hear_no_evil: &lt;code>:hear_no_evil:&lt;/code>&lt;/td>
- &lt;td>:speak_no_evil: &lt;code>:speak_no_evil:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:guardsman: &lt;code>:guardsman:&lt;/code>&lt;/td>
- &lt;td>:skull: &lt;code>:skull:&lt;/code>&lt;/td>
- &lt;td>:feet: &lt;code>:feet:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:lips: &lt;code>:lips:&lt;/code>&lt;/td>
- &lt;td>:kiss: &lt;code>:kiss:&lt;/code>&lt;/td>
- &lt;td>:droplet: &lt;code>:droplet:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ear: &lt;code>:ear:&lt;/code>&lt;/td>
- &lt;td>:eyes: &lt;code>:eyes:&lt;/code>&lt;/td>
- &lt;td>:nose: &lt;code>:nose:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tongue: &lt;code>:tongue:&lt;/code>&lt;/td>
- &lt;td>:love_letter: &lt;code>:love_letter:&lt;/code>&lt;/td>
- &lt;td>:bust_in_silhouette: &lt;code>:bust_in_silhouette:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:busts_in_silhouette: &lt;code>:busts_in_silhouette:&lt;/code>&lt;/td>
- &lt;td>:speech_balloon: &lt;code>:speech_balloon:&lt;/code>&lt;/td>
- &lt;td>:thought_balloon: &lt;code>:thought_balloon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:feelsgood: &lt;code>:feelsgood:&lt;/code>&lt;/td>
- &lt;td>:finnadie: &lt;code>:finnadie:&lt;/code>&lt;/td>
- &lt;td>:goberserk: &lt;code>:goberserk:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:godmode: &lt;code>:godmode:&lt;/code>&lt;/td>
- &lt;td>:hurtrealbad: &lt;code>:hurtrealbad:&lt;/code>&lt;/td>
- &lt;td>:rage1: &lt;code>:rage1:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:rage2: &lt;code>:rage2:&lt;/code>&lt;/td>
- &lt;td>:rage3: &lt;code>:rage3:&lt;/code>&lt;/td>
- &lt;td>:rage4: &lt;code>:rage4:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:suspect: &lt;code>:suspect:&lt;/code>&lt;/td>
- &lt;td>:trollface: &lt;code>:trollface:&lt;/code>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="nature">Nature&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>:sunny: &lt;code>:sunny:&lt;/code>&lt;/th>
- &lt;th>:umbrella: &lt;code>:umbrella:&lt;/code>&lt;/th>
- &lt;th>:cloud: &lt;code>:cloud:&lt;/code>&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>:snowflake: &lt;code>:snowflake:&lt;/code>&lt;/td>
- &lt;td>:snowman: &lt;code>:snowman:&lt;/code>&lt;/td>
- &lt;td>:zap: &lt;code>:zap:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cyclone: &lt;code>:cyclone:&lt;/code>&lt;/td>
- &lt;td>:foggy: &lt;code>:foggy:&lt;/code>&lt;/td>
- &lt;td>:ocean: &lt;code>:ocean:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cat: &lt;code>:cat:&lt;/code>&lt;/td>
- &lt;td>:dog: &lt;code>:dog:&lt;/code>&lt;/td>
- &lt;td>:mouse: &lt;code>:mouse:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:hamster: &lt;code>:hamster:&lt;/code>&lt;/td>
- &lt;td>:rabbit: &lt;code>:rabbit:&lt;/code>&lt;/td>
- &lt;td>:wolf: &lt;code>:wolf:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:frog: &lt;code>:frog:&lt;/code>&lt;/td>
- &lt;td>:tiger: &lt;code>:tiger:&lt;/code>&lt;/td>
- &lt;td>:koala: &lt;code>:koala:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bear: &lt;code>:bear:&lt;/code>&lt;/td>
- &lt;td>:pig: &lt;code>:pig:&lt;/code>&lt;/td>
- &lt;td>:pig_nose: &lt;code>:pig_nose:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cow: &lt;code>:cow:&lt;/code>&lt;/td>
- &lt;td>:boar: &lt;code>:boar:&lt;/code>&lt;/td>
- &lt;td>:monkey_face: &lt;code>:monkey_face:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:monkey: &lt;code>:monkey:&lt;/code>&lt;/td>
- &lt;td>:horse: &lt;code>:horse:&lt;/code>&lt;/td>
- &lt;td>:racehorse: &lt;code>:racehorse:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:camel: &lt;code>:camel:&lt;/code>&lt;/td>
- &lt;td>:sheep: &lt;code>:sheep:&lt;/code>&lt;/td>
- &lt;td>:elephant: &lt;code>:elephant:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:panda_face: &lt;code>:panda_face:&lt;/code>&lt;/td>
- &lt;td>:snake: &lt;code>:snake:&lt;/code>&lt;/td>
- &lt;td>:bird: &lt;code>:bird:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:baby_chick: &lt;code>:baby_chick:&lt;/code>&lt;/td>
- &lt;td>:hatched_chick: &lt;code>:hatched_chick:&lt;/code>&lt;/td>
- &lt;td>:hatching_chick: &lt;code>:hatching_chick:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:chicken: &lt;code>:chicken:&lt;/code>&lt;/td>
- &lt;td>:penguin: &lt;code>:penguin:&lt;/code>&lt;/td>
- &lt;td>:turtle: &lt;code>:turtle:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bug: &lt;code>:bug:&lt;/code>&lt;/td>
- &lt;td>:honeybee: &lt;code>:honeybee:&lt;/code>&lt;/td>
- &lt;td>:ant: &lt;code>:ant:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:beetle: &lt;code>:beetle:&lt;/code>&lt;/td>
- &lt;td>:snail: &lt;code>:snail:&lt;/code>&lt;/td>
- &lt;td>:octopus: &lt;code>:octopus:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tropical_fish: &lt;code>:tropical_fish:&lt;/code>&lt;/td>
- &lt;td>:fish: &lt;code>:fish:&lt;/code>&lt;/td>
- &lt;td>:whale: &lt;code>:whale:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:whale2: &lt;code>:whale2:&lt;/code>&lt;/td>
- &lt;td>:dolphin: &lt;code>:dolphin:&lt;/code>&lt;/td>
- &lt;td>:cow2: &lt;code>:cow2:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ram: &lt;code>:ram:&lt;/code>&lt;/td>
- &lt;td>:rat: &lt;code>:rat:&lt;/code>&lt;/td>
- &lt;td>:water_buffalo: &lt;code>:water_buffalo:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tiger2: &lt;code>:tiger2:&lt;/code>&lt;/td>
- &lt;td>:rabbit2: &lt;code>:rabbit2:&lt;/code>&lt;/td>
- &lt;td>:dragon: &lt;code>:dragon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:goat: &lt;code>:goat:&lt;/code>&lt;/td>
- &lt;td>:rooster: &lt;code>:rooster:&lt;/code>&lt;/td>
- &lt;td>:dog2: &lt;code>:dog2:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:pig2: &lt;code>:pig2:&lt;/code>&lt;/td>
- &lt;td>:mouse2: &lt;code>:mouse2:&lt;/code>&lt;/td>
- &lt;td>:ox: &lt;code>:ox:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:dragon_face: &lt;code>:dragon_face:&lt;/code>&lt;/td>
- &lt;td>:blowfish: &lt;code>:blowfish:&lt;/code>&lt;/td>
- &lt;td>:crocodile: &lt;code>:crocodile:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:dromedary_camel: &lt;code>:dromedary_camel:&lt;/code>&lt;/td>
- &lt;td>:leopard: &lt;code>:leopard:&lt;/code>&lt;/td>
- &lt;td>:cat2: &lt;code>:cat2:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:poodle: &lt;code>:poodle:&lt;/code>&lt;/td>
- &lt;td>:paw_prints: &lt;code>:paw_prints:&lt;/code>&lt;/td>
- &lt;td>:bouquet: &lt;code>:bouquet:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cherry_blossom: &lt;code>:cherry_blossom:&lt;/code>&lt;/td>
- &lt;td>:tulip: &lt;code>:tulip:&lt;/code>&lt;/td>
- &lt;td>:four_leaf_clover: &lt;code>:four_leaf_clover:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:rose: &lt;code>:rose:&lt;/code>&lt;/td>
- &lt;td>:sunflower: &lt;code>:sunflower:&lt;/code>&lt;/td>
- &lt;td>:hibiscus: &lt;code>:hibiscus:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:maple_leaf: &lt;code>:maple_leaf:&lt;/code>&lt;/td>
- &lt;td>:leaves: &lt;code>:leaves:&lt;/code>&lt;/td>
- &lt;td>:fallen_leaf: &lt;code>:fallen_leaf:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:herb: &lt;code>:herb:&lt;/code>&lt;/td>
- &lt;td>:mushroom: &lt;code>:mushroom:&lt;/code>&lt;/td>
- &lt;td>:cactus: &lt;code>:cactus:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:palm_tree: &lt;code>:palm_tree:&lt;/code>&lt;/td>
- &lt;td>:evergreen_tree: &lt;code>:evergreen_tree:&lt;/code>&lt;/td>
- &lt;td>:deciduous_tree: &lt;code>:deciduous_tree:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:chestnut: &lt;code>:chestnut:&lt;/code>&lt;/td>
- &lt;td>:seedling: &lt;code>:seedling:&lt;/code>&lt;/td>
- &lt;td>:blossom: &lt;code>:blossom:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ear_of_rice: &lt;code>:ear_of_rice:&lt;/code>&lt;/td>
- &lt;td>:shell: &lt;code>:shell:&lt;/code>&lt;/td>
- &lt;td>:globe_with_meridians: &lt;code>:globe_with_meridians:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sun_with_face: &lt;code>:sun_with_face:&lt;/code>&lt;/td>
- &lt;td>:full_moon_with_face: &lt;code>:full_moon_with_face:&lt;/code>&lt;/td>
- &lt;td>:new_moon_with_face: &lt;code>:new_moon_with_face:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:new_moon: &lt;code>:new_moon:&lt;/code>&lt;/td>
- &lt;td>:waxing_crescent_moon: &lt;code>:waxing_crescent_moon:&lt;/code>&lt;/td>
- &lt;td>:first_quarter_moon: &lt;code>:first_quarter_moon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:waxing_gibbous_moon: &lt;code>:waxing_gibbous_moon:&lt;/code>&lt;/td>
- &lt;td>:full_moon: &lt;code>:full_moon:&lt;/code>&lt;/td>
- &lt;td>:waning_gibbous_moon: &lt;code>:waning_gibbous_moon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:last_quarter_moon: &lt;code>:last_quarter_moon:&lt;/code>&lt;/td>
- &lt;td>:waning_crescent_moon: &lt;code>:waning_crescent_moon:&lt;/code>&lt;/td>
- &lt;td>:last_quarter_moon_with_face: &lt;code>:last_quarter_moon_with_face:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:first_quarter_moon_with_face: &lt;code>:first_quarter_moon_with_face:&lt;/code>&lt;/td>
- &lt;td>:moon: &lt;code>:moon:&lt;/code>&lt;/td>
- &lt;td>:earth_africa: &lt;code>:earth_africa:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:earth_americas: &lt;code>:earth_americas:&lt;/code>&lt;/td>
- &lt;td>:earth_asia: &lt;code>:earth_asia:&lt;/code>&lt;/td>
- &lt;td>:volcano: &lt;code>:volcano:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:milky_way: &lt;code>:milky_way:&lt;/code>&lt;/td>
- &lt;td>:partly_sunny: &lt;code>:partly_sunny:&lt;/code>&lt;/td>
- &lt;td>:octocat: &lt;code>:octocat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:squirrel: &lt;code>:squirrel:&lt;/code>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="objects">Objects&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>:bamboo: &lt;code>:bamboo:&lt;/code>&lt;/th>
- &lt;th>:gift_heart: &lt;code>:gift_heart:&lt;/code>&lt;/th>
- &lt;th>:dolls: &lt;code>:dolls:&lt;/code>&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>:school_satchel: &lt;code>:school_satchel:&lt;/code>&lt;/td>
- &lt;td>:mortar_board: &lt;code>:mortar_board:&lt;/code>&lt;/td>
- &lt;td>:flags: &lt;code>:flags:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:fireworks: &lt;code>:fireworks:&lt;/code>&lt;/td>
- &lt;td>:sparkler: &lt;code>:sparkler:&lt;/code>&lt;/td>
- &lt;td>:wind_chime: &lt;code>:wind_chime:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:rice_scene: &lt;code>:rice_scene:&lt;/code>&lt;/td>
- &lt;td>:jack_o_lantern: &lt;code>:jack_o_lantern:&lt;/code>&lt;/td>
- &lt;td>:ghost: &lt;code>:ghost:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:santa: &lt;code>:santa:&lt;/code>&lt;/td>
- &lt;td>:christmas_tree: &lt;code>:christmas_tree:&lt;/code>&lt;/td>
- &lt;td>:gift: &lt;code>:gift:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bell: &lt;code>:bell:&lt;/code>&lt;/td>
- &lt;td>:no_bell: &lt;code>:no_bell:&lt;/code>&lt;/td>
- &lt;td>:tanabata_tree: &lt;code>:tanabata_tree:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tada: &lt;code>:tada:&lt;/code>&lt;/td>
- &lt;td>:confetti_ball: &lt;code>:confetti_ball:&lt;/code>&lt;/td>
- &lt;td>:balloon: &lt;code>:balloon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:crystal_ball: &lt;code>:crystal_ball:&lt;/code>&lt;/td>
- &lt;td>:cd: &lt;code>:cd:&lt;/code>&lt;/td>
- &lt;td>:dvd: &lt;code>:dvd:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:floppy_disk: &lt;code>:floppy_disk:&lt;/code>&lt;/td>
- &lt;td>:camera: &lt;code>:camera:&lt;/code>&lt;/td>
- &lt;td>:video_camera: &lt;code>:video_camera:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:movie_camera: &lt;code>:movie_camera:&lt;/code>&lt;/td>
- &lt;td>:computer: &lt;code>:computer:&lt;/code>&lt;/td>
- &lt;td>:tv: &lt;code>:tv:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:iphone: &lt;code>:iphone:&lt;/code>&lt;/td>
- &lt;td>:phone: &lt;code>:phone:&lt;/code>&lt;/td>
- &lt;td>:telephone: &lt;code>:telephone:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:telephone_receiver: &lt;code>:telephone_receiver:&lt;/code>&lt;/td>
- &lt;td>:pager: &lt;code>:pager:&lt;/code>&lt;/td>
- &lt;td>:fax: &lt;code>:fax:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:minidisc: &lt;code>:minidisc:&lt;/code>&lt;/td>
- &lt;td>:vhs: &lt;code>:vhs:&lt;/code>&lt;/td>
- &lt;td>:sound: &lt;code>:sound:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:speaker: &lt;code>:speaker:&lt;/code>&lt;/td>
- &lt;td>:mute: &lt;code>:mute:&lt;/code>&lt;/td>
- &lt;td>:loudspeaker: &lt;code>:loudspeaker:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:mega: &lt;code>:mega:&lt;/code>&lt;/td>
- &lt;td>:hourglass: &lt;code>:hourglass:&lt;/code>&lt;/td>
- &lt;td>:hourglass_flowing_sand: &lt;code>:hourglass_flowing_sand:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:alarm_clock: &lt;code>:alarm_clock:&lt;/code>&lt;/td>
- &lt;td>:watch: &lt;code>:watch:&lt;/code>&lt;/td>
- &lt;td>:radio: &lt;code>:radio:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:satellite: &lt;code>:satellite:&lt;/code>&lt;/td>
- &lt;td>:loop: &lt;code>:loop:&lt;/code>&lt;/td>
- &lt;td>:mag: &lt;code>:mag:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:mag_right: &lt;code>:mag_right:&lt;/code>&lt;/td>
- &lt;td>:unlock: &lt;code>:unlock:&lt;/code>&lt;/td>
- &lt;td>:lock: &lt;code>:lock:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:lock_with_ink_pen: &lt;code>:lock_with_ink_pen:&lt;/code>&lt;/td>
- &lt;td>:closed_lock_with_key: &lt;code>:closed_lock_with_key:&lt;/code>&lt;/td>
- &lt;td>:key: &lt;code>:key:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bulb: &lt;code>:bulb:&lt;/code>&lt;/td>
- &lt;td>:flashlight: &lt;code>:flashlight:&lt;/code>&lt;/td>
- &lt;td>:high_brightness: &lt;code>:high_brightness:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:low_brightness: &lt;code>:low_brightness:&lt;/code>&lt;/td>
- &lt;td>:electric_plug: &lt;code>:electric_plug:&lt;/code>&lt;/td>
- &lt;td>:battery: &lt;code>:battery:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:calling: &lt;code>:calling:&lt;/code>&lt;/td>
- &lt;td>:email: &lt;code>:email:&lt;/code>&lt;/td>
- &lt;td>:mailbox: &lt;code>:mailbox:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:postbox: &lt;code>:postbox:&lt;/code>&lt;/td>
- &lt;td>:bath: &lt;code>:bath:&lt;/code>&lt;/td>
- &lt;td>:bathtub: &lt;code>:bathtub:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:shower: &lt;code>:shower:&lt;/code>&lt;/td>
- &lt;td>:toilet: &lt;code>:toilet:&lt;/code>&lt;/td>
- &lt;td>:wrench: &lt;code>:wrench:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:nut_and_bolt: &lt;code>:nut_and_bolt:&lt;/code>&lt;/td>
- &lt;td>:hammer: &lt;code>:hammer:&lt;/code>&lt;/td>
- &lt;td>:seat: &lt;code>:seat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:moneybag: &lt;code>:moneybag:&lt;/code>&lt;/td>
- &lt;td>:yen: &lt;code>:yen:&lt;/code>&lt;/td>
- &lt;td>:dollar: &lt;code>:dollar:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:pound: &lt;code>:pound:&lt;/code>&lt;/td>
- &lt;td>:euro: &lt;code>:euro:&lt;/code>&lt;/td>
- &lt;td>:credit_card: &lt;code>:credit_card:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:money_with_wings: &lt;code>:money_with_wings:&lt;/code>&lt;/td>
- &lt;td>:e-mail: &lt;code>:e-mail:&lt;/code>&lt;/td>
- &lt;td>:inbox_tray: &lt;code>:inbox_tray:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:outbox_tray: &lt;code>:outbox_tray:&lt;/code>&lt;/td>
- &lt;td>:envelope: &lt;code>:envelope:&lt;/code>&lt;/td>
- &lt;td>:incoming_envelope: &lt;code>:incoming_envelope:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:postal_horn: &lt;code>:postal_horn:&lt;/code>&lt;/td>
- &lt;td>:mailbox_closed: &lt;code>:mailbox_closed:&lt;/code>&lt;/td>
- &lt;td>:mailbox_with_mail: &lt;code>:mailbox_with_mail:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:mailbox_with_no_mail: &lt;code>:mailbox_with_no_mail:&lt;/code>&lt;/td>
- &lt;td>:door: &lt;code>:door:&lt;/code>&lt;/td>
- &lt;td>:smoking: &lt;code>:smoking:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bomb: &lt;code>:bomb:&lt;/code>&lt;/td>
- &lt;td>:gun: &lt;code>:gun:&lt;/code>&lt;/td>
- &lt;td>:hocho: &lt;code>:hocho:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:pill: &lt;code>:pill:&lt;/code>&lt;/td>
- &lt;td>:syringe: &lt;code>:syringe:&lt;/code>&lt;/td>
- &lt;td>:page_facing_up: &lt;code>:page_facing_up:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:page_with_curl: &lt;code>:page_with_curl:&lt;/code>&lt;/td>
- &lt;td>:bookmark_tabs: &lt;code>:bookmark_tabs:&lt;/code>&lt;/td>
- &lt;td>:bar_chart: &lt;code>:bar_chart:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:chart_with_upwards_trend: &lt;code>:chart_with_upwards_trend:&lt;/code>&lt;/td>
- &lt;td>:chart_with_downwards_trend: &lt;code>:chart_with_downwards_trend:&lt;/code>&lt;/td>
- &lt;td>:scroll: &lt;code>:scroll:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clipboard: &lt;code>:clipboard:&lt;/code>&lt;/td>
- &lt;td>:calendar: &lt;code>:calendar:&lt;/code>&lt;/td>
- &lt;td>:date: &lt;code>:date:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:card_index: &lt;code>:card_index:&lt;/code>&lt;/td>
- &lt;td>:file_folder: &lt;code>:file_folder:&lt;/code>&lt;/td>
- &lt;td>:open_file_folder: &lt;code>:open_file_folder:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:scissors: &lt;code>:scissors:&lt;/code>&lt;/td>
- &lt;td>:pushpin: &lt;code>:pushpin:&lt;/code>&lt;/td>
- &lt;td>:paperclip: &lt;code>:paperclip:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:black_nib: &lt;code>:black_nib:&lt;/code>&lt;/td>
- &lt;td>:pencil2: &lt;code>:pencil2:&lt;/code>&lt;/td>
- &lt;td>:straight_ruler: &lt;code>:straight_ruler:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:triangular_ruler: &lt;code>:triangular_ruler:&lt;/code>&lt;/td>
- &lt;td>:closed_book: &lt;code>:closed_book:&lt;/code>&lt;/td>
- &lt;td>:green_book: &lt;code>:green_book:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:blue_book: &lt;code>:blue_book:&lt;/code>&lt;/td>
- &lt;td>:orange_book: &lt;code>:orange_book:&lt;/code>&lt;/td>
- &lt;td>:notebook: &lt;code>:notebook:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:notebook_with_decorative_cover: &lt;code>:notebook_with_decorative_cover:&lt;/code>&lt;/td>
- &lt;td>:ledger: &lt;code>:ledger:&lt;/code>&lt;/td>
- &lt;td>:books: &lt;code>:books:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bookmark: &lt;code>:bookmark:&lt;/code>&lt;/td>
- &lt;td>:name_badge: &lt;code>:name_badge:&lt;/code>&lt;/td>
- &lt;td>:microscope: &lt;code>:microscope:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:telescope: &lt;code>:telescope:&lt;/code>&lt;/td>
- &lt;td>:newspaper: &lt;code>:newspaper:&lt;/code>&lt;/td>
- &lt;td>:football: &lt;code>:football:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:basketball: &lt;code>:basketball:&lt;/code>&lt;/td>
- &lt;td>:soccer: &lt;code>:soccer:&lt;/code>&lt;/td>
- &lt;td>:baseball: &lt;code>:baseball:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tennis: &lt;code>:tennis:&lt;/code>&lt;/td>
- &lt;td>:8ball: &lt;code>:8ball:&lt;/code>&lt;/td>
- &lt;td>:rugby_football: &lt;code>:rugby_football:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bowling: &lt;code>:bowling:&lt;/code>&lt;/td>
- &lt;td>:golf: &lt;code>:golf:&lt;/code>&lt;/td>
- &lt;td>:mountain_bicyclist: &lt;code>:mountain_bicyclist:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bicyclist: &lt;code>:bicyclist:&lt;/code>&lt;/td>
- &lt;td>:horse_racing: &lt;code>:horse_racing:&lt;/code>&lt;/td>
- &lt;td>:snowboarder: &lt;code>:snowboarder:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:swimmer: &lt;code>:swimmer:&lt;/code>&lt;/td>
- &lt;td>:surfer: &lt;code>:surfer:&lt;/code>&lt;/td>
- &lt;td>:ski: &lt;code>:ski:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:spades: &lt;code>:spades:&lt;/code>&lt;/td>
- &lt;td>:hearts: &lt;code>:hearts:&lt;/code>&lt;/td>
- &lt;td>:clubs: &lt;code>:clubs:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:diamonds: &lt;code>:diamonds:&lt;/code>&lt;/td>
- &lt;td>:gem: &lt;code>:gem:&lt;/code>&lt;/td>
- &lt;td>:ring: &lt;code>:ring:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:trophy: &lt;code>:trophy:&lt;/code>&lt;/td>
- &lt;td>:musical_score: &lt;code>:musical_score:&lt;/code>&lt;/td>
- &lt;td>:musical_keyboard: &lt;code>:musical_keyboard:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:violin: &lt;code>:violin:&lt;/code>&lt;/td>
- &lt;td>:space_invader: &lt;code>:space_invader:&lt;/code>&lt;/td>
- &lt;td>:video_game: &lt;code>:video_game:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:black_joker: &lt;code>:black_joker:&lt;/code>&lt;/td>
- &lt;td>:flower_playing_cards: &lt;code>:flower_playing_cards:&lt;/code>&lt;/td>
- &lt;td>:game_die: &lt;code>:game_die:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:dart: &lt;code>:dart:&lt;/code>&lt;/td>
- &lt;td>:mahjong: &lt;code>:mahjong:&lt;/code>&lt;/td>
- &lt;td>:clapper: &lt;code>:clapper:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:memo: &lt;code>:memo:&lt;/code>&lt;/td>
- &lt;td>:pencil: &lt;code>:pencil:&lt;/code>&lt;/td>
- &lt;td>:book: &lt;code>:book:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:art: &lt;code>:art:&lt;/code>&lt;/td>
- &lt;td>:microphone: &lt;code>:microphone:&lt;/code>&lt;/td>
- &lt;td>:headphones: &lt;code>:headphones:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:trumpet: &lt;code>:trumpet:&lt;/code>&lt;/td>
- &lt;td>:saxophone: &lt;code>:saxophone:&lt;/code>&lt;/td>
- &lt;td>:guitar: &lt;code>:guitar:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:shoe: &lt;code>:shoe:&lt;/code>&lt;/td>
- &lt;td>:sandal: &lt;code>:sandal:&lt;/code>&lt;/td>
- &lt;td>:high_heel: &lt;code>:high_heel:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:lipstick: &lt;code>:lipstick:&lt;/code>&lt;/td>
- &lt;td>:boot: &lt;code>:boot:&lt;/code>&lt;/td>
- &lt;td>:shirt: &lt;code>:shirt:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tshirt: &lt;code>:tshirt:&lt;/code>&lt;/td>
- &lt;td>:necktie: &lt;code>:necktie:&lt;/code>&lt;/td>
- &lt;td>:womans_clothes: &lt;code>:womans_clothes:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:dress: &lt;code>:dress:&lt;/code>&lt;/td>
- &lt;td>:running_shirt_with_sash: &lt;code>:running_shirt_with_sash:&lt;/code>&lt;/td>
- &lt;td>:jeans: &lt;code>:jeans:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:kimono: &lt;code>:kimono:&lt;/code>&lt;/td>
- &lt;td>:bikini: &lt;code>:bikini:&lt;/code>&lt;/td>
- &lt;td>:ribbon: &lt;code>:ribbon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tophat: &lt;code>:tophat:&lt;/code>&lt;/td>
- &lt;td>:crown: &lt;code>:crown:&lt;/code>&lt;/td>
- &lt;td>:womans_hat: &lt;code>:womans_hat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:mans_shoe: &lt;code>:mans_shoe:&lt;/code>&lt;/td>
- &lt;td>:closed_umbrella: &lt;code>:closed_umbrella:&lt;/code>&lt;/td>
- &lt;td>:briefcase: &lt;code>:briefcase:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:handbag: &lt;code>:handbag:&lt;/code>&lt;/td>
- &lt;td>:pouch: &lt;code>:pouch:&lt;/code>&lt;/td>
- &lt;td>:purse: &lt;code>:purse:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:eyeglasses: &lt;code>:eyeglasses:&lt;/code>&lt;/td>
- &lt;td>:fishing_pole_and_fish: &lt;code>:fishing_pole_and_fish:&lt;/code>&lt;/td>
- &lt;td>:coffee: &lt;code>:coffee:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tea: &lt;code>:tea:&lt;/code>&lt;/td>
- &lt;td>:sake: &lt;code>:sake:&lt;/code>&lt;/td>
- &lt;td>:baby_bottle: &lt;code>:baby_bottle:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:beer: &lt;code>:beer:&lt;/code>&lt;/td>
- &lt;td>:beers: &lt;code>:beers:&lt;/code>&lt;/td>
- &lt;td>:cocktail: &lt;code>:cocktail:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tropical_drink: &lt;code>:tropical_drink:&lt;/code>&lt;/td>
- &lt;td>:wine_glass: &lt;code>:wine_glass:&lt;/code>&lt;/td>
- &lt;td>:fork_and_knife: &lt;code>:fork_and_knife:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:pizza: &lt;code>:pizza:&lt;/code>&lt;/td>
- &lt;td>:hamburger: &lt;code>:hamburger:&lt;/code>&lt;/td>
- &lt;td>:fries: &lt;code>:fries:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:poultry_leg: &lt;code>:poultry_leg:&lt;/code>&lt;/td>
- &lt;td>:meat_on_bone: &lt;code>:meat_on_bone:&lt;/code>&lt;/td>
- &lt;td>:spaghetti: &lt;code>:spaghetti:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:curry: &lt;code>:curry:&lt;/code>&lt;/td>
- &lt;td>:fried_shrimp: &lt;code>:fried_shrimp:&lt;/code>&lt;/td>
- &lt;td>:bento: &lt;code>:bento:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sushi: &lt;code>:sushi:&lt;/code>&lt;/td>
- &lt;td>:fish_cake: &lt;code>:fish_cake:&lt;/code>&lt;/td>
- &lt;td>:rice_ball: &lt;code>:rice_ball:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:rice_cracker: &lt;code>:rice_cracker:&lt;/code>&lt;/td>
- &lt;td>:rice: &lt;code>:rice:&lt;/code>&lt;/td>
- &lt;td>:ramen: &lt;code>:ramen:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:stew: &lt;code>:stew:&lt;/code>&lt;/td>
- &lt;td>:oden: &lt;code>:oden:&lt;/code>&lt;/td>
- &lt;td>:dango: &lt;code>:dango:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:egg: &lt;code>:egg:&lt;/code>&lt;/td>
- &lt;td>:bread: &lt;code>:bread:&lt;/code>&lt;/td>
- &lt;td>:doughnut: &lt;code>:doughnut:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:custard: &lt;code>:custard:&lt;/code>&lt;/td>
- &lt;td>:icecream: &lt;code>:icecream:&lt;/code>&lt;/td>
- &lt;td>:ice_cream: &lt;code>:ice_cream:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:shaved_ice: &lt;code>:shaved_ice:&lt;/code>&lt;/td>
- &lt;td>:birthday: &lt;code>:birthday:&lt;/code>&lt;/td>
- &lt;td>:cake: &lt;code>:cake:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cookie: &lt;code>:cookie:&lt;/code>&lt;/td>
- &lt;td>:chocolate_bar: &lt;code>:chocolate_bar:&lt;/code>&lt;/td>
- &lt;td>:candy: &lt;code>:candy:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:lollipop: &lt;code>:lollipop:&lt;/code>&lt;/td>
- &lt;td>:honey_pot: &lt;code>:honey_pot:&lt;/code>&lt;/td>
- &lt;td>:apple: &lt;code>:apple:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:green_apple: &lt;code>:green_apple:&lt;/code>&lt;/td>
- &lt;td>:tangerine: &lt;code>:tangerine:&lt;/code>&lt;/td>
- &lt;td>:lemon: &lt;code>:lemon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cherries: &lt;code>:cherries:&lt;/code>&lt;/td>
- &lt;td>:grapes: &lt;code>:grapes:&lt;/code>&lt;/td>
- &lt;td>:watermelon: &lt;code>:watermelon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:strawberry: &lt;code>:strawberry:&lt;/code>&lt;/td>
- &lt;td>:peach: &lt;code>:peach:&lt;/code>&lt;/td>
- &lt;td>:melon: &lt;code>:melon:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:banana: &lt;code>:banana:&lt;/code>&lt;/td>
- &lt;td>:pear: &lt;code>:pear:&lt;/code>&lt;/td>
- &lt;td>:pineapple: &lt;code>:pineapple:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sweet_potato: &lt;code>:sweet_potato:&lt;/code>&lt;/td>
- &lt;td>:eggplant: &lt;code>:eggplant:&lt;/code>&lt;/td>
- &lt;td>:tomato: &lt;code>:tomato:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:corn: &lt;code>:corn:&lt;/code>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="places">Places&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>:house: &lt;code>:house:&lt;/code>&lt;/th>
- &lt;th>:house_with_garden: &lt;code>:house_with_garden:&lt;/code>&lt;/th>
- &lt;th>:school: &lt;code>:school:&lt;/code>&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>:office: &lt;code>:office:&lt;/code>&lt;/td>
- &lt;td>:post_office: &lt;code>:post_office:&lt;/code>&lt;/td>
- &lt;td>:hospital: &lt;code>:hospital:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bank: &lt;code>:bank:&lt;/code>&lt;/td>
- &lt;td>:convenience_store: &lt;code>:convenience_store:&lt;/code>&lt;/td>
- &lt;td>:love_hotel: &lt;code>:love_hotel:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:hotel: &lt;code>:hotel:&lt;/code>&lt;/td>
- &lt;td>:wedding: &lt;code>:wedding:&lt;/code>&lt;/td>
- &lt;td>:church: &lt;code>:church:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:department_store: &lt;code>:department_store:&lt;/code>&lt;/td>
- &lt;td>:european_post_office: &lt;code>:european_post_office:&lt;/code>&lt;/td>
- &lt;td>:city_sunrise: &lt;code>:city_sunrise:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:city_sunset: &lt;code>:city_sunset:&lt;/code>&lt;/td>
- &lt;td>:japanese_castle: &lt;code>:japanese_castle:&lt;/code>&lt;/td>
- &lt;td>:european_castle: &lt;code>:european_castle:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:tent: &lt;code>:tent:&lt;/code>&lt;/td>
- &lt;td>:factory: &lt;code>:factory:&lt;/code>&lt;/td>
- &lt;td>:tokyo_tower: &lt;code>:tokyo_tower:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:japan: &lt;code>:japan:&lt;/code>&lt;/td>
- &lt;td>:mount_fuji: &lt;code>:mount_fuji:&lt;/code>&lt;/td>
- &lt;td>:sunrise_over_mountains: &lt;code>:sunrise_over_mountains:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sunrise: &lt;code>:sunrise:&lt;/code>&lt;/td>
- &lt;td>:stars: &lt;code>:stars:&lt;/code>&lt;/td>
- &lt;td>:statue_of_liberty: &lt;code>:statue_of_liberty:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bridge_at_night: &lt;code>:bridge_at_night:&lt;/code>&lt;/td>
- &lt;td>:carousel_horse: &lt;code>:carousel_horse:&lt;/code>&lt;/td>
- &lt;td>:rainbow: &lt;code>:rainbow:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ferris_wheel: &lt;code>:ferris_wheel:&lt;/code>&lt;/td>
- &lt;td>:fountain: &lt;code>:fountain:&lt;/code>&lt;/td>
- &lt;td>:roller_coaster: &lt;code>:roller_coaster:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ship: &lt;code>:ship:&lt;/code>&lt;/td>
- &lt;td>:speedboat: &lt;code>:speedboat:&lt;/code>&lt;/td>
- &lt;td>:boat: &lt;code>:boat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sailboat: &lt;code>:sailboat:&lt;/code>&lt;/td>
- &lt;td>:rowboat: &lt;code>:rowboat:&lt;/code>&lt;/td>
- &lt;td>:anchor: &lt;code>:anchor:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:rocket: &lt;code>:rocket:&lt;/code>&lt;/td>
- &lt;td>:airplane: &lt;code>:airplane:&lt;/code>&lt;/td>
- &lt;td>:helicopter: &lt;code>:helicopter:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:steam_locomotive: &lt;code>:steam_locomotive:&lt;/code>&lt;/td>
- &lt;td>:tram: &lt;code>:tram:&lt;/code>&lt;/td>
- &lt;td>:mountain_railway: &lt;code>:mountain_railway:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bike: &lt;code>:bike:&lt;/code>&lt;/td>
- &lt;td>:aerial_tramway: &lt;code>:aerial_tramway:&lt;/code>&lt;/td>
- &lt;td>:suspension_railway: &lt;code>:suspension_railway:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:mountain_cableway: &lt;code>:mountain_cableway:&lt;/code>&lt;/td>
- &lt;td>:tractor: &lt;code>:tractor:&lt;/code>&lt;/td>
- &lt;td>:blue_car: &lt;code>:blue_car:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:oncoming_automobile: &lt;code>:oncoming_automobile:&lt;/code>&lt;/td>
- &lt;td>:car: &lt;code>:car:&lt;/code>&lt;/td>
- &lt;td>:red_car: &lt;code>:red_car:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:taxi: &lt;code>:taxi:&lt;/code>&lt;/td>
- &lt;td>:oncoming_taxi: &lt;code>:oncoming_taxi:&lt;/code>&lt;/td>
- &lt;td>:articulated_lorry: &lt;code>:articulated_lorry:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bus: &lt;code>:bus:&lt;/code>&lt;/td>
- &lt;td>:oncoming_bus: &lt;code>:oncoming_bus:&lt;/code>&lt;/td>
- &lt;td>:rotating_light: &lt;code>:rotating_light:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:police_car: &lt;code>:police_car:&lt;/code>&lt;/td>
- &lt;td>:oncoming_police_car: &lt;code>:oncoming_police_car:&lt;/code>&lt;/td>
- &lt;td>:fire_engine: &lt;code>:fire_engine:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ambulance: &lt;code>:ambulance:&lt;/code>&lt;/td>
- &lt;td>:minibus: &lt;code>:minibus:&lt;/code>&lt;/td>
- &lt;td>:truck: &lt;code>:truck:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:train: &lt;code>:train:&lt;/code>&lt;/td>
- &lt;td>:station: &lt;code>:station:&lt;/code>&lt;/td>
- &lt;td>:train2: &lt;code>:train2:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:bullettrain_front: &lt;code>:bullettrain_front:&lt;/code>&lt;/td>
- &lt;td>:bullettrain_side: &lt;code>:bullettrain_side:&lt;/code>&lt;/td>
- &lt;td>:light_rail: &lt;code>:light_rail:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:monorail: &lt;code>:monorail:&lt;/code>&lt;/td>
- &lt;td>:railway_car: &lt;code>:railway_car:&lt;/code>&lt;/td>
- &lt;td>:trolleybus: &lt;code>:trolleybus:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ticket: &lt;code>:ticket:&lt;/code>&lt;/td>
- &lt;td>:fuelpump: &lt;code>:fuelpump:&lt;/code>&lt;/td>
- &lt;td>:vertical_traffic_light: &lt;code>:vertical_traffic_light:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:traffic_light: &lt;code>:traffic_light:&lt;/code>&lt;/td>
- &lt;td>:warning: &lt;code>:warning:&lt;/code>&lt;/td>
- &lt;td>:construction: &lt;code>:construction:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:beginner: &lt;code>:beginner:&lt;/code>&lt;/td>
- &lt;td>:atm: &lt;code>:atm:&lt;/code>&lt;/td>
- &lt;td>:slot_machine: &lt;code>:slot_machine:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:busstop: &lt;code>:busstop:&lt;/code>&lt;/td>
- &lt;td>:barber: &lt;code>:barber:&lt;/code>&lt;/td>
- &lt;td>:hotsprings: &lt;code>:hotsprings:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:checkered_flag: &lt;code>:checkered_flag:&lt;/code>&lt;/td>
- &lt;td>:crossed_flags: &lt;code>:crossed_flags:&lt;/code>&lt;/td>
- &lt;td>:izakaya_lantern: &lt;code>:izakaya_lantern:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:moyai: &lt;code>:moyai:&lt;/code>&lt;/td>
- &lt;td>:circus_tent: &lt;code>:circus_tent:&lt;/code>&lt;/td>
- &lt;td>:performing_arts: &lt;code>:performing_arts:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:round_pushpin: &lt;code>:round_pushpin:&lt;/code>&lt;/td>
- &lt;td>:triangular_flag_on_post: &lt;code>:triangular_flag_on_post:&lt;/code>&lt;/td>
- &lt;td>:jp: &lt;code>:jp:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:kr: &lt;code>:kr:&lt;/code>&lt;/td>
- &lt;td>:cn: &lt;code>:cn:&lt;/code>&lt;/td>
- &lt;td>:us: &lt;code>:us:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:fr: &lt;code>:fr:&lt;/code>&lt;/td>
- &lt;td>:es: &lt;code>:es:&lt;/code>&lt;/td>
- &lt;td>:it: &lt;code>:it:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ru: &lt;code>:ru:&lt;/code>&lt;/td>
- &lt;td>:gb: &lt;code>:gb:&lt;/code>&lt;/td>
- &lt;td>:uk: &lt;code>:uk:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:de: &lt;code>:de:&lt;/code>&lt;/td>
- &lt;td>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table>
-&lt;h2 id="symbols">Symbols&lt;/h2>
-&lt;table>
- &lt;thead>
- &lt;tr>
- &lt;th>:one: &lt;code>:one:&lt;/code>&lt;/th>
- &lt;th>:two: &lt;code>:two:&lt;/code>&lt;/th>
- &lt;th>:three: &lt;code>:three:&lt;/code>&lt;/th>
- &lt;/tr>
- &lt;/thead>
- &lt;tbody>
- &lt;tr>
- &lt;td>:four: &lt;code>:four:&lt;/code>&lt;/td>
- &lt;td>:five: &lt;code>:five:&lt;/code>&lt;/td>
- &lt;td>:six: &lt;code>:six:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:seven: &lt;code>:seven:&lt;/code>&lt;/td>
- &lt;td>:eight: &lt;code>:eight:&lt;/code>&lt;/td>
- &lt;td>:nine: &lt;code>:nine:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:keycap_ten: &lt;code>:keycap_ten:&lt;/code>&lt;/td>
- &lt;td>:1234: &lt;code>:1234:&lt;/code>&lt;/td>
- &lt;td>:zero: &lt;code>:zero:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:hash: &lt;code>:hash:&lt;/code>&lt;/td>
- &lt;td>:symbols: &lt;code>:symbols:&lt;/code>&lt;/td>
- &lt;td>:arrow_backward: &lt;code>:arrow_backward:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_down: &lt;code>:arrow_down:&lt;/code>&lt;/td>
- &lt;td>:arrow_forward: &lt;code>:arrow_forward:&lt;/code>&lt;/td>
- &lt;td>:arrow_left: &lt;code>:arrow_left:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:capital_abcd: &lt;code>:capital_abcd:&lt;/code>&lt;/td>
- &lt;td>:abcd: &lt;code>:abcd:&lt;/code>&lt;/td>
- &lt;td>:abc: &lt;code>:abc:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_lower_left: &lt;code>:arrow_lower_left:&lt;/code>&lt;/td>
- &lt;td>:arrow_lower_right: &lt;code>:arrow_lower_right:&lt;/code>&lt;/td>
- &lt;td>:arrow_right: &lt;code>:arrow_right:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_up: &lt;code>:arrow_up:&lt;/code>&lt;/td>
- &lt;td>:arrow_upper_left: &lt;code>:arrow_upper_left:&lt;/code>&lt;/td>
- &lt;td>:arrow_upper_right: &lt;code>:arrow_upper_right:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_double_down: &lt;code>:arrow_double_down:&lt;/code>&lt;/td>
- &lt;td>:arrow_double_up: &lt;code>:arrow_double_up:&lt;/code>&lt;/td>
- &lt;td>:arrow_down_small: &lt;code>:arrow_down_small:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_heading_down: &lt;code>:arrow_heading_down:&lt;/code>&lt;/td>
- &lt;td>:arrow_heading_up: &lt;code>:arrow_heading_up:&lt;/code>&lt;/td>
- &lt;td>:leftwards_arrow_with_hook: &lt;code>:leftwards_arrow_with_hook:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_right_hook: &lt;code>:arrow_right_hook:&lt;/code>&lt;/td>
- &lt;td>:left_right_arrow: &lt;code>:left_right_arrow:&lt;/code>&lt;/td>
- &lt;td>:arrow_up_down: &lt;code>:arrow_up_down:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:arrow_up_small: &lt;code>:arrow_up_small:&lt;/code>&lt;/td>
- &lt;td>:arrows_clockwise: &lt;code>:arrows_clockwise:&lt;/code>&lt;/td>
- &lt;td>:arrows_counterclockwise: &lt;code>:arrows_counterclockwise:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:rewind: &lt;code>:rewind:&lt;/code>&lt;/td>
- &lt;td>:fast_forward: &lt;code>:fast_forward:&lt;/code>&lt;/td>
- &lt;td>:information_source: &lt;code>:information_source:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ok: &lt;code>:ok:&lt;/code>&lt;/td>
- &lt;td>:twisted_rightwards_arrows: &lt;code>:twisted_rightwards_arrows:&lt;/code>&lt;/td>
- &lt;td>:repeat: &lt;code>:repeat:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:repeat_one: &lt;code>:repeat_one:&lt;/code>&lt;/td>
- &lt;td>:new: &lt;code>:new:&lt;/code>&lt;/td>
- &lt;td>:top: &lt;code>:top:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:up: &lt;code>:up:&lt;/code>&lt;/td>
- &lt;td>:cool: &lt;code>:cool:&lt;/code>&lt;/td>
- &lt;td>:free: &lt;code>:free:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ng: &lt;code>:ng:&lt;/code>&lt;/td>
- &lt;td>:cinema: &lt;code>:cinema:&lt;/code>&lt;/td>
- &lt;td>:koko: &lt;code>:koko:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:signal_strength: &lt;code>:signal_strength:&lt;/code>&lt;/td>
- &lt;td>:u5272: &lt;code>:u5272:&lt;/code>&lt;/td>
- &lt;td>:u5408: &lt;code>:u5408:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:u55b6: &lt;code>:u55b6:&lt;/code>&lt;/td>
- &lt;td>:u6307: &lt;code>:u6307:&lt;/code>&lt;/td>
- &lt;td>:u6708: &lt;code>:u6708:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:u6709: &lt;code>:u6709:&lt;/code>&lt;/td>
- &lt;td>:u6e80: &lt;code>:u6e80:&lt;/code>&lt;/td>
- &lt;td>:u7121: &lt;code>:u7121:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:u7533: &lt;code>:u7533:&lt;/code>&lt;/td>
- &lt;td>:u7a7a: &lt;code>:u7a7a:&lt;/code>&lt;/td>
- &lt;td>:u7981: &lt;code>:u7981:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:sa: &lt;code>:sa:&lt;/code>&lt;/td>
- &lt;td>:restroom: &lt;code>:restroom:&lt;/code>&lt;/td>
- &lt;td>:mens: &lt;code>:mens:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:womens: &lt;code>:womens:&lt;/code>&lt;/td>
- &lt;td>:baby_symbol: &lt;code>:baby_symbol:&lt;/code>&lt;/td>
- &lt;td>:no_smoking: &lt;code>:no_smoking:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:parking: &lt;code>:parking:&lt;/code>&lt;/td>
- &lt;td>:wheelchair: &lt;code>:wheelchair:&lt;/code>&lt;/td>
- &lt;td>:metro: &lt;code>:metro:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:baggage_claim: &lt;code>:baggage_claim:&lt;/code>&lt;/td>
- &lt;td>:accept: &lt;code>:accept:&lt;/code>&lt;/td>
- &lt;td>:wc: &lt;code>:wc:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:potable_water: &lt;code>:potable_water:&lt;/code>&lt;/td>
- &lt;td>:put_litter_in_its_place: &lt;code>:put_litter_in_its_place:&lt;/code>&lt;/td>
- &lt;td>:secret: &lt;code>:secret:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:congratulations: &lt;code>:congratulations:&lt;/code>&lt;/td>
- &lt;td>:m: &lt;code>:m:&lt;/code>&lt;/td>
- &lt;td>:passport_control: &lt;code>:passport_control:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:left_luggage: &lt;code>:left_luggage:&lt;/code>&lt;/td>
- &lt;td>:customs: &lt;code>:customs:&lt;/code>&lt;/td>
- &lt;td>:ideograph_advantage: &lt;code>:ideograph_advantage:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:cl: &lt;code>:cl:&lt;/code>&lt;/td>
- &lt;td>:sos: &lt;code>:sos:&lt;/code>&lt;/td>
- &lt;td>:id: &lt;code>:id:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:no_entry_sign: &lt;code>:no_entry_sign:&lt;/code>&lt;/td>
- &lt;td>:underage: &lt;code>:underage:&lt;/code>&lt;/td>
- &lt;td>:no_mobile_phones: &lt;code>:no_mobile_phones:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:do_not_litter: &lt;code>:do_not_litter:&lt;/code>&lt;/td>
- &lt;td>:non-potable_water: &lt;code>:non-potable_water:&lt;/code>&lt;/td>
- &lt;td>:no_bicycles: &lt;code>:no_bicycles:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:no_pedestrians: &lt;code>:no_pedestrians:&lt;/code>&lt;/td>
- &lt;td>:children_crossing: &lt;code>:children_crossing:&lt;/code>&lt;/td>
- &lt;td>:no_entry: &lt;code>:no_entry:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:eight_spoked_asterisk: &lt;code>:eight_spoked_asterisk:&lt;/code>&lt;/td>
- &lt;td>:eight_pointed_black_star: &lt;code>:eight_pointed_black_star:&lt;/code>&lt;/td>
- &lt;td>:heart_decoration: &lt;code>:heart_decoration:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:vs: &lt;code>:vs:&lt;/code>&lt;/td>
- &lt;td>:vibration_mode: &lt;code>:vibration_mode:&lt;/code>&lt;/td>
- &lt;td>:mobile_phone_off: &lt;code>:mobile_phone_off:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:chart: &lt;code>:chart:&lt;/code>&lt;/td>
- &lt;td>:currency_exchange: &lt;code>:currency_exchange:&lt;/code>&lt;/td>
- &lt;td>:aries: &lt;code>:aries:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:taurus: &lt;code>:taurus:&lt;/code>&lt;/td>
- &lt;td>:gemini: &lt;code>:gemini:&lt;/code>&lt;/td>
- &lt;td>:cancer: &lt;code>:cancer:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:leo: &lt;code>:leo:&lt;/code>&lt;/td>
- &lt;td>:virgo: &lt;code>:virgo:&lt;/code>&lt;/td>
- &lt;td>:libra: &lt;code>:libra:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:scorpius: &lt;code>:scorpius:&lt;/code>&lt;/td>
- &lt;td>:sagittarius: &lt;code>:sagittarius:&lt;/code>&lt;/td>
- &lt;td>:capricorn: &lt;code>:capricorn:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:aquarius: &lt;code>:aquarius:&lt;/code>&lt;/td>
- &lt;td>:pisces: &lt;code>:pisces:&lt;/code>&lt;/td>
- &lt;td>:ophiuchus: &lt;code>:ophiuchus:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:six_pointed_star: &lt;code>:six_pointed_star:&lt;/code>&lt;/td>
- &lt;td>:negative_squared_cross_mark: &lt;code>:negative_squared_cross_mark:&lt;/code>&lt;/td>
- &lt;td>:a: &lt;code>:a:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:b: &lt;code>:b:&lt;/code>&lt;/td>
- &lt;td>:ab: &lt;code>:ab:&lt;/code>&lt;/td>
- &lt;td>:o2: &lt;code>:o2:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:diamond_shape_with_a_dot_inside: &lt;code>:diamond_shape_with_a_dot_inside:&lt;/code>&lt;/td>
- &lt;td>:recycle: &lt;code>:recycle:&lt;/code>&lt;/td>
- &lt;td>:end: &lt;code>:end:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:on: &lt;code>:on:&lt;/code>&lt;/td>
- &lt;td>:soon: &lt;code>:soon:&lt;/code>&lt;/td>
- &lt;td>:clock1: &lt;code>:clock1:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock130: &lt;code>:clock130:&lt;/code>&lt;/td>
- &lt;td>:clock10: &lt;code>:clock10:&lt;/code>&lt;/td>
- &lt;td>:clock1030: &lt;code>:clock1030:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock11: &lt;code>:clock11:&lt;/code>&lt;/td>
- &lt;td>:clock1130: &lt;code>:clock1130:&lt;/code>&lt;/td>
- &lt;td>:clock12: &lt;code>:clock12:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock1230: &lt;code>:clock1230:&lt;/code>&lt;/td>
- &lt;td>:clock2: &lt;code>:clock2:&lt;/code>&lt;/td>
- &lt;td>:clock230: &lt;code>:clock230:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock3: &lt;code>:clock3:&lt;/code>&lt;/td>
- &lt;td>:clock330: &lt;code>:clock330:&lt;/code>&lt;/td>
- &lt;td>:clock4: &lt;code>:clock4:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock430: &lt;code>:clock430:&lt;/code>&lt;/td>
- &lt;td>:clock5: &lt;code>:clock5:&lt;/code>&lt;/td>
- &lt;td>:clock530: &lt;code>:clock530:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock6: &lt;code>:clock6:&lt;/code>&lt;/td>
- &lt;td>:clock630: &lt;code>:clock630:&lt;/code>&lt;/td>
- &lt;td>:clock7: &lt;code>:clock7:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock730: &lt;code>:clock730:&lt;/code>&lt;/td>
- &lt;td>:clock8: &lt;code>:clock8:&lt;/code>&lt;/td>
- &lt;td>:clock830: &lt;code>:clock830:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:clock9: &lt;code>:clock9:&lt;/code>&lt;/td>
- &lt;td>:clock930: &lt;code>:clock930:&lt;/code>&lt;/td>
- &lt;td>:heavy_dollar_sign: &lt;code>:heavy_dollar_sign:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:copyright: &lt;code>:copyright:&lt;/code>&lt;/td>
- &lt;td>:registered: &lt;code>:registered:&lt;/code>&lt;/td>
- &lt;td>:tm: &lt;code>:tm:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:x: &lt;code>:x:&lt;/code>&lt;/td>
- &lt;td>:heavy_exclamation_mark: &lt;code>:heavy_exclamation_mark:&lt;/code>&lt;/td>
- &lt;td>:bangbang: &lt;code>:bangbang:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:interrobang: &lt;code>:interrobang:&lt;/code>&lt;/td>
- &lt;td>:o: &lt;code>:o:&lt;/code>&lt;/td>
- &lt;td>:heavy_multiplication_x: &lt;code>:heavy_multiplication_x:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:heavy_plus_sign: &lt;code>:heavy_plus_sign:&lt;/code>&lt;/td>
- &lt;td>:heavy_minus_sign: &lt;code>:heavy_minus_sign:&lt;/code>&lt;/td>
- &lt;td>:heavy_division_sign: &lt;code>:heavy_division_sign:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:white_flower: &lt;code>:white_flower:&lt;/code>&lt;/td>
- &lt;td>:100: &lt;code>:100:&lt;/code>&lt;/td>
- &lt;td>:heavy_check_mark: &lt;code>:heavy_check_mark:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:ballot_box_with_check: &lt;code>:ballot_box_with_check:&lt;/code>&lt;/td>
- &lt;td>:radio_button: &lt;code>:radio_button:&lt;/code>&lt;/td>
- &lt;td>:link: &lt;code>:link:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:curly_loop: &lt;code>:curly_loop:&lt;/code>&lt;/td>
- &lt;td>:wavy_dash: &lt;code>:wavy_dash:&lt;/code>&lt;/td>
- &lt;td>:part_alternation_mark: &lt;code>:part_alternation_mark:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:trident: &lt;code>:trident:&lt;/code>&lt;/td>
- &lt;td>:black_square: &lt;code>:black_square:&lt;/code>&lt;/td>
- &lt;td>:white_square: &lt;code>:white_square:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:white_check_mark: &lt;code>:white_check_mark:&lt;/code>&lt;/td>
- &lt;td>:black_square_button: &lt;code>:black_square_button:&lt;/code>&lt;/td>
- &lt;td>:white_square_button: &lt;code>:white_square_button:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:black_circle: &lt;code>:black_circle:&lt;/code>&lt;/td>
- &lt;td>:white_circle: &lt;code>:white_circle:&lt;/code>&lt;/td>
- &lt;td>:red_circle: &lt;code>:red_circle:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:large_blue_circle: &lt;code>:large_blue_circle:&lt;/code>&lt;/td>
- &lt;td>:large_blue_diamond: &lt;code>:large_blue_diamond:&lt;/code>&lt;/td>
- &lt;td>:large_orange_diamond: &lt;code>:large_orange_diamond:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:small_blue_diamond: &lt;code>:small_blue_diamond:&lt;/code>&lt;/td>
- &lt;td>:small_orange_diamond: &lt;code>:small_orange_diamond:&lt;/code>&lt;/td>
- &lt;td>:small_red_triangle: &lt;code>:small_red_triangle:&lt;/code>&lt;/td>
- &lt;/tr>
- &lt;tr>
- &lt;td>:small_red_triangle_down: &lt;code>:small_red_triangle_down:&lt;/code>&lt;/td>
- &lt;td>:shipit: &lt;code>:shipit:&lt;/code>&lt;/td>
- &lt;td>&lt;/td>
- &lt;/tr>
- &lt;/tbody>
-&lt;/table></description></item><item><title>rvalue ref-qualified assignment operators</title><link>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</link><pubDate>Sun, 22 Aug 2021 14:53:21 +0800</pubDate><guid>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</guid><description>&lt;p>The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">struct&lt;/span> &lt;span style="color:#a6e22e">foo&lt;/span> { ... };
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>foo &lt;span style="color:#a6e22e">get_my_foo&lt;/span>() { ... }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">// .. some code later:
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>foo f;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>get_my_foo() &lt;span style="color:#f92672">=&lt;/span> f;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This &lt;a href="https://godbolt.org/z/oh3vFA">compiles&lt;/a> &amp;hellip; and does nothing useful.&lt;/p>
-&lt;p>We&amp;rsquo;ve assigned &lt;code>f&lt;/code> to a temporary &lt;code>foo&lt;/code>.&lt;br>
-No error, no warning.&lt;/p>
-&lt;h2 id="a-real-life-example">A Real-Life Example&lt;/h2>
-&lt;p>In the math library I&amp;rsquo;m writing we have a &lt;code>mat&lt;/code> struct for matrices and &lt;code>vec&lt;/code> for vectors.&lt;br>
-Matrices are stored column-major, i.e. as an array of column vectors.&lt;br>
-Now, sometimes you want to get the row of such matrix and thus &lt;code>mat&lt;/code> has a function &lt;code>vec mat::row(int)&lt;/code> that returns the specified row.&lt;br>
-It has to return the &lt;code>vec&lt;/code> per value because only columns are stored contiguously in &lt;code>mat&lt;/code>:&lt;/p></description></item><item><title>Inlining Optimization</title><link>https://bobblelaw.github.io/posts/inline-optimization/</link><pubDate>Wed, 19 May 2021 17:29:41 +0800</pubDate><guid>https://bobblelaw.github.io/posts/inline-optimization/</guid><description>&lt;p>&lt;a href="https://en.wikipedia.org/wiki/Inline_expansion">Inlining&lt;/a> is one of the most important compiler optimizations.&lt;br>
-We can often write abstractions and thin wrapper functions without incurring any performance penalty, because the compiler will expand the method for us at call site.&lt;/p>
-&lt;p>If a function is not inlined, conventional wisdom says that the compiler has to assume that the method can modify any global state and change the memory behind any pointer or reference that might have &amp;ldquo;escaped&amp;rdquo;.&lt;/p></description></item><item><title>Multi-Level Loop Break</title><link>https://bobblelaw.github.io/posts/multi-level-break/</link><pubDate>Wed, 12 May 2021 09:57:09 +0800</pubDate><guid>https://bobblelaw.github.io/posts/multi-level-break/</guid><description>&lt;p>I guess we all have been at this point.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> (&lt;span style="color:#66d9ef">auto&lt;/span> i : ...)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">for&lt;/span> (&lt;span style="color:#66d9ef">auto&lt;/span> j : ...)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (condition(i, j))
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">break&lt;/span> outer&lt;span style="color:#f92672">???&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>You want to search something, and for one reason or another you end up with a nested loop.&lt;br>
-You find what you searched for and now want to &lt;code>break&lt;/code> all the way to the outer loop.&lt;/p>
-&lt;p>If only we had multi-level &lt;code>breaks&lt;/code>.&lt;/p></description></item><item><title>Understanding Perspective-N-Points</title><link>https://bobblelaw.github.io/posts/understanding-pnp/</link><pubDate>Sun, 18 Apr 2021 15:17:26 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-pnp/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>The Perspective-n-Point (PnP) problem is the problem of estimating the relative pose between an object and the camera, given a set of correspondences between 3D points and their projections on the image plane.&lt;br>
-It is a fundamental problem that was first studied in the photogrammetry literature, and later on studied in the context of computer vision.&lt;/p>
-&lt;p>In this post, I will present a few solvers (among many), discuss their proofs and also show some concise implementations. I will focus on the minimal solvers - solutions to the PnP problem that requires the minimal amount of information. In this case, we need at least three pairs of correspondences, and the minimal solvers that only require three pairs of correspondences are called P3P solvers.&lt;/p></description></item><item><title>Understanding Automatic Differentiation</title><link>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</link><pubDate>Wed, 17 Mar 2021 20:47:18 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</guid><description>&lt;p>Deriving derivatives is not fun. In this post, I will deep dive into the methods for automatic differentiation (AD). After reading this post, I hope you can feel confident with using the various AD techniques, and hopefully never manually calculate derivatives again. Note that this post is not a comparison between AD libraries. For that, a good starting point is &lt;a href="">here&lt;/a>.&lt;/p>
-&lt;h2 id="why-automatic-differentiation">Why Automatic Differentiation?&lt;/h2>
-&lt;p>Automatic differentiation is a natural continuation of scientists and engineers’ pursuit for mechanizing computation. After all, we learn how to take derivatives by memorizing a set of rules. Why can’t computers do the same thing?&lt;/p></description></item><item><title>Moves in Returns</title><link>https://bobblelaw.github.io/posts/moves-in-return/</link><pubDate>Sat, 19 Dec 2020 14:39:20 +0800</pubDate><guid>https://bobblelaw.github.io/posts/moves-in-return/</guid><description>&lt;p>Today we&amp;rsquo;ll discuss code of the form:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>T &lt;span style="color:#a6e22e">work&lt;/span>(&lt;span style="color:#75715e">/* ... */&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">/* ... */&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> x;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is a classical &amp;ldquo;return-by-value&amp;rdquo; and (wrongfully) associated with copies and overhead.&lt;/p>
-&lt;p>In many cases, this will actually &lt;code>move&lt;/code> the result instead of copying it.&lt;br>
-For modern C++, one could even argue that this will move in &lt;em>most&lt;/em> cases (or, as we will see, completely &lt;em>elide&lt;/em> the copy and directly construct in the result memory).&lt;/p></description></item><item><title>std::unordered_map Performance and Usage</title><link>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</link><pubDate>Fri, 11 Dec 2020 09:36:58 +0800</pubDate><guid>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</guid><description>&lt;h2 id="origin-story">Origin Story&lt;/h2>
-&lt;p>We have always been told that hashmap is the best associative container that offer O(1) insert, delete, and lookup. However, the customization space of it is quite large and depending on the use case, the trade-off space can change radically.&lt;br>
-&lt;code>std::unordered_map&lt;/code> is (in)famous for having an API that basically forces implementers to use &amp;ldquo;buckets with linked lists&amp;rdquo;, also known as &lt;em>separate chaining&lt;/em>.&lt;br>
-Many performance-critical applications swear on &lt;em>open addressing&lt;/em>, often storing keys and values directly in arrays (either together or separate).&lt;br>
-These are often called &lt;code>flat_&lt;/code>maps.&lt;br>
-Many requirements and quality attributes influence which particular type is &amp;ldquo;best&amp;rdquo;:&lt;/p></description></item><item><title>Sort Multiple Ranges</title><link>https://bobblelaw.github.io/posts/sort-multiple-range/</link><pubDate>Sat, 28 Nov 2020 09:45:32 +0800</pubDate><guid>https://bobblelaw.github.io/posts/sort-multiple-range/</guid><description>&lt;p>&lt;code>std::sort&lt;/code> is a great utility.&lt;br>
-You can easily sort subranges and provide custom comparison functions.&lt;br>
-However, it struggles with the following scenario:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>std&lt;span style="color:#f92672">::&lt;/span>vector&lt;span style="color:#f92672">&amp;lt;&lt;/span>&lt;span style="color:#66d9ef">int&lt;/span>&lt;span style="color:#f92672">&amp;gt;&lt;/span> keys &lt;span style="color:#f92672">=&lt;/span> ...;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>std&lt;span style="color:#f92672">::&lt;/span>vector&lt;span style="color:#f92672">&amp;lt;&lt;/span>std&lt;span style="color:#f92672">::&lt;/span>string&lt;span style="color:#f92672">&amp;gt;&lt;/span> values &lt;span style="color:#f92672">=&lt;/span> ...;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>std&lt;span style="color:#f92672">::&lt;/span>sort(...); &lt;span style="color:#75715e">// ???
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We want to sort by &lt;code>keys&lt;/code> but keep the 1-on-1 correspondence with &lt;code>values&lt;/code>, i.e. keep the ranges &amp;ldquo;in sync&amp;rdquo; during sorting.&lt;br>
-A common solution is to allocate a vector of indices, sort these indices, and then apply the resulting permutation.&lt;br>
-However, the need for an additional allocation and bad cache locality due to indirection make this a suboptimal solution.&lt;/p></description></item><item><title>range_ref&lt;T></title><link>https://bobblelaw.github.io/posts/range-ref/</link><pubDate>Thu, 12 Nov 2020 19:37:43 +0800</pubDate><guid>https://bobblelaw.github.io/posts/range-ref/</guid><description>&lt;p>Passing references to functions is great.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">struct&lt;/span> &lt;span style="color:#a6e22e">some_user_type&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">void&lt;/span> &lt;span style="color:#a6e22e">foo&lt;/span>(some_user_type &lt;span style="color:#66d9ef">const&lt;/span>&lt;span style="color:#f92672">&amp;amp;&lt;/span> v)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e">// freely read from v
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Memory management and lifetime handling is done by the caller.&lt;br>
-Users of your function / API have a liberating amount of freedom how they organize their data: on the stack, on the heap, in smart pointers, in vectors, it doesn&amp;rsquo;t matter.&lt;br>
-They can pass a reference to your function.&lt;br>
-No (potentially expensive) copy is performed.&lt;/p></description></item><item><title>Recursive Lambdas</title><link>https://bobblelaw.github.io/posts/recursive-lambda-function/</link><pubDate>Sun, 08 Nov 2020 13:41:36 +0800</pubDate><guid>https://bobblelaw.github.io/posts/recursive-lambda-function/</guid><description>&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">auto&lt;/span> fib &lt;span style="color:#f92672">=&lt;/span> [](&lt;span style="color:#66d9ef">int&lt;/span> n) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (n &lt;span style="color:#f92672">&amp;lt;=&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>) &lt;span style="color:#66d9ef">return&lt;/span> n;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> &lt;span style="color:#a6e22e">fib&lt;/span>(n &lt;span style="color:#f92672">-&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>) &lt;span style="color:#f92672">+&lt;/span> fib(n &lt;span style="color:#f92672">-&lt;/span> &lt;span style="color:#ae81ff">2&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>};
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">auto&lt;/span> i &lt;span style="color:#f92672">=&lt;/span> fib(&lt;span style="color:#ae81ff">7&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If only it were that simple.&lt;/p>
-&lt;p>Obviously, any performance-conscious programmer will compute Fibonacci numbers iteratively (or even &lt;a href="https://en.wikipedia.org/wiki/Fibonacci_number#Closed-form_expression">explicitly&lt;/a>), but this solution will serve as an example for an underappreciated tool: &lt;em>recursive lambdas&lt;/em>.&lt;/p>
-&lt;p>Lambdas are one of my favorite features in any programming language and while I long for a &lt;a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0573r1.html">shorter syntax in C++&lt;/a>, I still use them quite ubiquitously, especially for local functions.&lt;br>
-They allow us to abstract behavior into a function while still accessing local variables (through captures) and without leaking new names into the surrounding namespace.&lt;br>
-While already plenty powerful, sometimes we might want to call a lambda recursively.&lt;/p></description></item><item><title>Basic Floating Point Optimizations</title><link>https://bobblelaw.github.io/posts/floating-point-optimizations/</link><pubDate>Wed, 07 Aug 2019 09:08:11 +0800</pubDate><guid>https://bobblelaw.github.io/posts/floating-point-optimizations/</guid><description>&lt;p>Ever seen some people write &lt;code>f * 0.5&lt;/code> when they mean &lt;code>f / 2&lt;/code>?&lt;/p>
-&lt;p>Or if the compiler is able to optimize the &lt;code>f * 1.0&lt;/code> that you added for clarity?&lt;/p>
-&lt;p>Maybe you wrote &lt;code>f + f&lt;/code> instead of &lt;code>f * 2&lt;/code> as a clever optimization?&lt;/p>
-&lt;p>Modern compilers are basically magic, &lt;em>but do they actually perform these optimizations?&lt;/em>&lt;br>
-And, more importantly, &lt;em>why is &lt;code>f + 0.0&lt;/code> slower than &lt;code>f - 0.0&lt;/code>?&lt;/em>&lt;/p></description></item><item><title>Notes on Linux Development</title><link>https://bobblelaw.github.io/posts/notes-on-linux-dev/</link><pubDate>Fri, 17 Aug 2018 17:41:48 +0800</pubDate><guid>https://bobblelaw.github.io/posts/notes-on-linux-dev/</guid><description>&lt;h3 id="how-to-use-previous-version-of-gcc">How to use previous version of gcc&lt;/h3>
-&lt;p>This problem arises when we try to compile mex file in Matlab. It shows a &lt;strong>warning&lt;/strong> as&lt;/p>
-&lt;pre>&lt;code>Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. 
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Bobble Law</title><link>https://bobblelaw.github.io/posts/</link><description>Recent content in Posts on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Tue, 03 Jun 2025 22:38:00 +0100</lastBuildDate><atom:link href="https://bobblelaw.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Emojis in Markdown</title><link>https://bobblelaw.github.io/posts/emojis-in-markdown/</link><pubDate>Tue, 03 Jun 2025 22:38:00 +0100</pubDate><guid>https://bobblelaw.github.io/posts/emojis-in-markdown/</guid><description>&lt;p&gt;Reference: &lt;a href="https://gist.github.com/rxaviers/7360908"&gt;Complete list of github markdown emoji markup&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="people"&gt;People&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;:bowtie: &lt;code&gt;:bowtie:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:smile: &lt;code&gt;:smile:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:laughing: &lt;code&gt;:laughing:&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:blush: &lt;code&gt;:blush:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:smiley: &lt;code&gt;:smiley:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:relaxed: &lt;code&gt;:relaxed:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:smirk: &lt;code&gt;:smirk:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heart_eyes: &lt;code&gt;:heart_eyes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:kissing_heart: &lt;code&gt;:kissing_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:kissing_closed_eyes: &lt;code&gt;:kissing_closed_eyes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:flushed: &lt;code&gt;:flushed:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:relieved: &lt;code&gt;:relieved:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:satisfied: &lt;code&gt;:satisfied:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:grin: &lt;code&gt;:grin:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wink: &lt;code&gt;:wink:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:stuck_out_tongue_winking_eye: &lt;code&gt;:stuck_out_tongue_winking_eye:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:stuck_out_tongue_closed_eyes: &lt;code&gt;:stuck_out_tongue_closed_eyes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:grinning: &lt;code&gt;:grinning:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:kissing: &lt;code&gt;:kissing:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:kissing_smiling_eyes: &lt;code&gt;:kissing_smiling_eyes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:stuck_out_tongue: &lt;code&gt;:stuck_out_tongue:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sleeping: &lt;code&gt;:sleeping:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:worried: &lt;code&gt;:worried:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:frowning: &lt;code&gt;:frowning:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:anguished: &lt;code&gt;:anguished:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:open_mouth: &lt;code&gt;:open_mouth:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:grimacing: &lt;code&gt;:grimacing:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:confused: &lt;code&gt;:confused:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hushed: &lt;code&gt;:hushed:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:expressionless: &lt;code&gt;:expressionless:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:unamused: &lt;code&gt;:unamused:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sweat_smile: &lt;code&gt;:sweat_smile:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sweat: &lt;code&gt;:sweat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:disappointed_relieved: &lt;code&gt;:disappointed_relieved:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:weary: &lt;code&gt;:weary:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pensive: &lt;code&gt;:pensive:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:disappointed: &lt;code&gt;:disappointed:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:confounded: &lt;code&gt;:confounded:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fearful: &lt;code&gt;:fearful:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cold_sweat: &lt;code&gt;:cold_sweat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:persevere: &lt;code&gt;:persevere:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cry: &lt;code&gt;:cry:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sob: &lt;code&gt;:sob:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:joy: &lt;code&gt;:joy:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:astonished: &lt;code&gt;:astonished:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:scream: &lt;code&gt;:scream:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:neckbeard: &lt;code&gt;:neckbeard:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tired_face: &lt;code&gt;:tired_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:angry: &lt;code&gt;:angry:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rage: &lt;code&gt;:rage:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:triumph: &lt;code&gt;:triumph:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sleepy: &lt;code&gt;:sleepy:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:yum: &lt;code&gt;:yum:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mask: &lt;code&gt;:mask:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sunglasses: &lt;code&gt;:sunglasses:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dizzy_face: &lt;code&gt;:dizzy_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:imp: &lt;code&gt;:imp:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:smiling_imp: &lt;code&gt;:smiling_imp:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:neutral_face: &lt;code&gt;:neutral_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_mouth: &lt;code&gt;:no_mouth:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:innocent: &lt;code&gt;:innocent:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:alien: &lt;code&gt;:alien:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:yellow_heart: &lt;code&gt;:yellow_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:blue_heart: &lt;code&gt;:blue_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:purple_heart: &lt;code&gt;:purple_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heart: &lt;code&gt;:heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:green_heart: &lt;code&gt;:green_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:broken_heart: &lt;code&gt;:broken_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heartbeat: &lt;code&gt;:heartbeat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:heartpulse: &lt;code&gt;:heartpulse:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:two_hearts: &lt;code&gt;:two_hearts:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:revolving_hearts: &lt;code&gt;:revolving_hearts:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cupid: &lt;code&gt;:cupid:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sparkling_heart: &lt;code&gt;:sparkling_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sparkles: &lt;code&gt;:sparkles:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:star: &lt;code&gt;:star:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:star2: &lt;code&gt;:star2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dizzy: &lt;code&gt;:dizzy:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:boom: &lt;code&gt;:boom:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:collision: &lt;code&gt;:collision:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:anger: &lt;code&gt;:anger:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:exclamation: &lt;code&gt;:exclamation:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:question: &lt;code&gt;:question:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:grey_exclamation: &lt;code&gt;:grey_exclamation:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:grey_question: &lt;code&gt;:grey_question:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:zzz: &lt;code&gt;:zzz:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dash: &lt;code&gt;:dash:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sweat_drops: &lt;code&gt;:sweat_drops:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:notes: &lt;code&gt;:notes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:musical_note: &lt;code&gt;:musical_note:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:fire: &lt;code&gt;:fire:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hankey: &lt;code&gt;:hankey:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:poop: &lt;code&gt;:poop:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:shit: &lt;code&gt;:shit:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:+1: &lt;code&gt;:+1:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:thumbsup: &lt;code&gt;:thumbsup:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:-1: &lt;code&gt;:-1:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:thumbsdown: &lt;code&gt;:thumbsdown:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ok_hand: &lt;code&gt;:ok_hand:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:punch: &lt;code&gt;:punch:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:facepunch: &lt;code&gt;:facepunch:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fist: &lt;code&gt;:fist:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:v: &lt;code&gt;:v:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wave: &lt;code&gt;:wave:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hand: &lt;code&gt;:hand:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:raised_hand: &lt;code&gt;:raised_hand:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:open_hands: &lt;code&gt;:open_hands:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:point_up: &lt;code&gt;:point_up:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:point_down: &lt;code&gt;:point_down:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:point_left: &lt;code&gt;:point_left:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:point_right: &lt;code&gt;:point_right:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:raised_hands: &lt;code&gt;:raised_hands:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pray: &lt;code&gt;:pray:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:point_up_2: &lt;code&gt;:point_up_2:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clap: &lt;code&gt;:clap:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:muscle: &lt;code&gt;:muscle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:metal: &lt;code&gt;:metal:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:fu: &lt;code&gt;:fu:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:walking: &lt;code&gt;:walking:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:runner: &lt;code&gt;:runner:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:running: &lt;code&gt;:running:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:couple: &lt;code&gt;:couple:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:family: &lt;code&gt;:family:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:two_men_holding_hands: &lt;code&gt;:two_men_holding_hands:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:two_women_holding_hands: &lt;code&gt;:two_women_holding_hands:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dancer: &lt;code&gt;:dancer:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:dancers: &lt;code&gt;:dancers:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ok_woman: &lt;code&gt;:ok_woman:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_good: &lt;code&gt;:no_good:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:information_desk_person: &lt;code&gt;:information_desk_person:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:raising_hand: &lt;code&gt;:raising_hand:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bride_with_veil: &lt;code&gt;:bride_with_veil:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:person_with_pouting_face: &lt;code&gt;:person_with_pouting_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:person_frowning: &lt;code&gt;:person_frowning:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bow: &lt;code&gt;:bow:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:couplekiss: &lt;code&gt;:couplekiss:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:couple_with_heart: &lt;code&gt;:couple_with_heart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:massage: &lt;code&gt;:massage:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:haircut: &lt;code&gt;:haircut:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:nail_care: &lt;code&gt;:nail_care:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:boy: &lt;code&gt;:boy:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:girl: &lt;code&gt;:girl:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:woman: &lt;code&gt;:woman:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:man: &lt;code&gt;:man:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:baby: &lt;code&gt;:baby:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:older_woman: &lt;code&gt;:older_woman:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:older_man: &lt;code&gt;:older_man:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:person_with_blond_hair: &lt;code&gt;:person_with_blond_hair:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:man_with_gua_pi_mao: &lt;code&gt;:man_with_gua_pi_mao:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:man_with_turban: &lt;code&gt;:man_with_turban:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:construction_worker: &lt;code&gt;:construction_worker:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cop: &lt;code&gt;:cop:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:angel: &lt;code&gt;:angel:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:princess: &lt;code&gt;:princess:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:smiley_cat: &lt;code&gt;:smiley_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:smile_cat: &lt;code&gt;:smile_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:heart_eyes_cat: &lt;code&gt;:heart_eyes_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:kissing_cat: &lt;code&gt;:kissing_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:smirk_cat: &lt;code&gt;:smirk_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:scream_cat: &lt;code&gt;:scream_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:crying_cat_face: &lt;code&gt;:crying_cat_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:joy_cat: &lt;code&gt;:joy_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:pouting_cat: &lt;code&gt;:pouting_cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:japanese_ogre: &lt;code&gt;:japanese_ogre:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:japanese_goblin: &lt;code&gt;:japanese_goblin:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:see_no_evil: &lt;code&gt;:see_no_evil:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hear_no_evil: &lt;code&gt;:hear_no_evil:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:speak_no_evil: &lt;code&gt;:speak_no_evil:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:guardsman: &lt;code&gt;:guardsman:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:skull: &lt;code&gt;:skull:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:feet: &lt;code&gt;:feet:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:lips: &lt;code&gt;:lips:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:kiss: &lt;code&gt;:kiss:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:droplet: &lt;code&gt;:droplet:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ear: &lt;code&gt;:ear:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:eyes: &lt;code&gt;:eyes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:nose: &lt;code&gt;:nose:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tongue: &lt;code&gt;:tongue:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:love_letter: &lt;code&gt;:love_letter:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bust_in_silhouette: &lt;code&gt;:bust_in_silhouette:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:busts_in_silhouette: &lt;code&gt;:busts_in_silhouette:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:speech_balloon: &lt;code&gt;:speech_balloon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:thought_balloon: &lt;code&gt;:thought_balloon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:feelsgood: &lt;code&gt;:feelsgood:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:finnadie: &lt;code&gt;:finnadie:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:goberserk: &lt;code&gt;:goberserk:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:godmode: &lt;code&gt;:godmode:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hurtrealbad: &lt;code&gt;:hurtrealbad:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rage1: &lt;code&gt;:rage1:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:rage2: &lt;code&gt;:rage2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rage3: &lt;code&gt;:rage3:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rage4: &lt;code&gt;:rage4:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:suspect: &lt;code&gt;:suspect:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:trollface: &lt;code&gt;:trollface:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="nature"&gt;Nature&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;:sunny: &lt;code&gt;:sunny:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:umbrella: &lt;code&gt;:umbrella:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:cloud: &lt;code&gt;:cloud:&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:snowflake: &lt;code&gt;:snowflake:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:snowman: &lt;code&gt;:snowman:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:zap: &lt;code&gt;:zap:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cyclone: &lt;code&gt;:cyclone:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:foggy: &lt;code&gt;:foggy:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ocean: &lt;code&gt;:ocean:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cat: &lt;code&gt;:cat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dog: &lt;code&gt;:dog:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mouse: &lt;code&gt;:mouse:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:hamster: &lt;code&gt;:hamster:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rabbit: &lt;code&gt;:rabbit:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wolf: &lt;code&gt;:wolf:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:frog: &lt;code&gt;:frog:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tiger: &lt;code&gt;:tiger:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:koala: &lt;code&gt;:koala:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bear: &lt;code&gt;:bear:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pig: &lt;code&gt;:pig:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pig_nose: &lt;code&gt;:pig_nose:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cow: &lt;code&gt;:cow:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:boar: &lt;code&gt;:boar:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:monkey_face: &lt;code&gt;:monkey_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:monkey: &lt;code&gt;:monkey:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:horse: &lt;code&gt;:horse:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:racehorse: &lt;code&gt;:racehorse:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:camel: &lt;code&gt;:camel:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sheep: &lt;code&gt;:sheep:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:elephant: &lt;code&gt;:elephant:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:panda_face: &lt;code&gt;:panda_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:snake: &lt;code&gt;:snake:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bird: &lt;code&gt;:bird:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:baby_chick: &lt;code&gt;:baby_chick:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hatched_chick: &lt;code&gt;:hatched_chick:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hatching_chick: &lt;code&gt;:hatching_chick:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:chicken: &lt;code&gt;:chicken:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:penguin: &lt;code&gt;:penguin:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:turtle: &lt;code&gt;:turtle:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bug: &lt;code&gt;:bug:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:honeybee: &lt;code&gt;:honeybee:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ant: &lt;code&gt;:ant:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:beetle: &lt;code&gt;:beetle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:snail: &lt;code&gt;:snail:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:octopus: &lt;code&gt;:octopus:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tropical_fish: &lt;code&gt;:tropical_fish:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fish: &lt;code&gt;:fish:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:whale: &lt;code&gt;:whale:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:whale2: &lt;code&gt;:whale2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dolphin: &lt;code&gt;:dolphin:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cow2: &lt;code&gt;:cow2:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ram: &lt;code&gt;:ram:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rat: &lt;code&gt;:rat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:water_buffalo: &lt;code&gt;:water_buffalo:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tiger2: &lt;code&gt;:tiger2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rabbit2: &lt;code&gt;:rabbit2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dragon: &lt;code&gt;:dragon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:goat: &lt;code&gt;:goat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rooster: &lt;code&gt;:rooster:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dog2: &lt;code&gt;:dog2:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:pig2: &lt;code&gt;:pig2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mouse2: &lt;code&gt;:mouse2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ox: &lt;code&gt;:ox:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:dragon_face: &lt;code&gt;:dragon_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:blowfish: &lt;code&gt;:blowfish:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:crocodile: &lt;code&gt;:crocodile:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:dromedary_camel: &lt;code&gt;:dromedary_camel:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:leopard: &lt;code&gt;:leopard:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cat2: &lt;code&gt;:cat2:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:poodle: &lt;code&gt;:poodle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:paw_prints: &lt;code&gt;:paw_prints:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bouquet: &lt;code&gt;:bouquet:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cherry_blossom: &lt;code&gt;:cherry_blossom:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tulip: &lt;code&gt;:tulip:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:four_leaf_clover: &lt;code&gt;:four_leaf_clover:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:rose: &lt;code&gt;:rose:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sunflower: &lt;code&gt;:sunflower:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hibiscus: &lt;code&gt;:hibiscus:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:maple_leaf: &lt;code&gt;:maple_leaf:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:leaves: &lt;code&gt;:leaves:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fallen_leaf: &lt;code&gt;:fallen_leaf:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:herb: &lt;code&gt;:herb:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mushroom: &lt;code&gt;:mushroom:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cactus: &lt;code&gt;:cactus:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:palm_tree: &lt;code&gt;:palm_tree:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:evergreen_tree: &lt;code&gt;:evergreen_tree:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:deciduous_tree: &lt;code&gt;:deciduous_tree:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:chestnut: &lt;code&gt;:chestnut:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:seedling: &lt;code&gt;:seedling:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:blossom: &lt;code&gt;:blossom:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ear_of_rice: &lt;code&gt;:ear_of_rice:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:shell: &lt;code&gt;:shell:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:globe_with_meridians: &lt;code&gt;:globe_with_meridians:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sun_with_face: &lt;code&gt;:sun_with_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:full_moon_with_face: &lt;code&gt;:full_moon_with_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:new_moon_with_face: &lt;code&gt;:new_moon_with_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:new_moon: &lt;code&gt;:new_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:waxing_crescent_moon: &lt;code&gt;:waxing_crescent_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:first_quarter_moon: &lt;code&gt;:first_quarter_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:waxing_gibbous_moon: &lt;code&gt;:waxing_gibbous_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:full_moon: &lt;code&gt;:full_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:waning_gibbous_moon: &lt;code&gt;:waning_gibbous_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:last_quarter_moon: &lt;code&gt;:last_quarter_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:waning_crescent_moon: &lt;code&gt;:waning_crescent_moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:last_quarter_moon_with_face: &lt;code&gt;:last_quarter_moon_with_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:first_quarter_moon_with_face: &lt;code&gt;:first_quarter_moon_with_face:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:moon: &lt;code&gt;:moon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:earth_africa: &lt;code&gt;:earth_africa:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:earth_americas: &lt;code&gt;:earth_americas:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:earth_asia: &lt;code&gt;:earth_asia:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:volcano: &lt;code&gt;:volcano:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:milky_way: &lt;code&gt;:milky_way:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:partly_sunny: &lt;code&gt;:partly_sunny:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:octocat: &lt;code&gt;:octocat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:squirrel: &lt;code&gt;:squirrel:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="objects"&gt;Objects&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;:bamboo: &lt;code&gt;:bamboo:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:gift_heart: &lt;code&gt;:gift_heart:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:dolls: &lt;code&gt;:dolls:&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:school_satchel: &lt;code&gt;:school_satchel:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mortar_board: &lt;code&gt;:mortar_board:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:flags: &lt;code&gt;:flags:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:fireworks: &lt;code&gt;:fireworks:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sparkler: &lt;code&gt;:sparkler:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wind_chime: &lt;code&gt;:wind_chime:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:rice_scene: &lt;code&gt;:rice_scene:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:jack_o_lantern: &lt;code&gt;:jack_o_lantern:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ghost: &lt;code&gt;:ghost:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:santa: &lt;code&gt;:santa:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:christmas_tree: &lt;code&gt;:christmas_tree:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:gift: &lt;code&gt;:gift:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bell: &lt;code&gt;:bell:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_bell: &lt;code&gt;:no_bell:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tanabata_tree: &lt;code&gt;:tanabata_tree:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tada: &lt;code&gt;:tada:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:confetti_ball: &lt;code&gt;:confetti_ball:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:balloon: &lt;code&gt;:balloon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:crystal_ball: &lt;code&gt;:crystal_ball:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cd: &lt;code&gt;:cd:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dvd: &lt;code&gt;:dvd:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:floppy_disk: &lt;code&gt;:floppy_disk:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:camera: &lt;code&gt;:camera:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:video_camera: &lt;code&gt;:video_camera:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:movie_camera: &lt;code&gt;:movie_camera:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:computer: &lt;code&gt;:computer:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tv: &lt;code&gt;:tv:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:iphone: &lt;code&gt;:iphone:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:phone: &lt;code&gt;:phone:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:telephone: &lt;code&gt;:telephone:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:telephone_receiver: &lt;code&gt;:telephone_receiver:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pager: &lt;code&gt;:pager:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fax: &lt;code&gt;:fax:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:minidisc: &lt;code&gt;:minidisc:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:vhs: &lt;code&gt;:vhs:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sound: &lt;code&gt;:sound:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:speaker: &lt;code&gt;:speaker:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mute: &lt;code&gt;:mute:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:loudspeaker: &lt;code&gt;:loudspeaker:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:mega: &lt;code&gt;:mega:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hourglass: &lt;code&gt;:hourglass:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hourglass_flowing_sand: &lt;code&gt;:hourglass_flowing_sand:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:alarm_clock: &lt;code&gt;:alarm_clock:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:watch: &lt;code&gt;:watch:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:radio: &lt;code&gt;:radio:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:satellite: &lt;code&gt;:satellite:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:loop: &lt;code&gt;:loop:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mag: &lt;code&gt;:mag:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:mag_right: &lt;code&gt;:mag_right:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:unlock: &lt;code&gt;:unlock:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:lock: &lt;code&gt;:lock:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:lock_with_ink_pen: &lt;code&gt;:lock_with_ink_pen:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:closed_lock_with_key: &lt;code&gt;:closed_lock_with_key:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:key: &lt;code&gt;:key:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bulb: &lt;code&gt;:bulb:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:flashlight: &lt;code&gt;:flashlight:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:high_brightness: &lt;code&gt;:high_brightness:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:low_brightness: &lt;code&gt;:low_brightness:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:electric_plug: &lt;code&gt;:electric_plug:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:battery: &lt;code&gt;:battery:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:calling: &lt;code&gt;:calling:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:email: &lt;code&gt;:email:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mailbox: &lt;code&gt;:mailbox:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:postbox: &lt;code&gt;:postbox:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bath: &lt;code&gt;:bath:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bathtub: &lt;code&gt;:bathtub:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:shower: &lt;code&gt;:shower:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:toilet: &lt;code&gt;:toilet:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wrench: &lt;code&gt;:wrench:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:nut_and_bolt: &lt;code&gt;:nut_and_bolt:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hammer: &lt;code&gt;:hammer:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:seat: &lt;code&gt;:seat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:moneybag: &lt;code&gt;:moneybag:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:yen: &lt;code&gt;:yen:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dollar: &lt;code&gt;:dollar:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:pound: &lt;code&gt;:pound:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:euro: &lt;code&gt;:euro:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:credit_card: &lt;code&gt;:credit_card:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:money_with_wings: &lt;code&gt;:money_with_wings:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:e-mail: &lt;code&gt;:e-mail:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:inbox_tray: &lt;code&gt;:inbox_tray:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:outbox_tray: &lt;code&gt;:outbox_tray:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:envelope: &lt;code&gt;:envelope:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:incoming_envelope: &lt;code&gt;:incoming_envelope:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:postal_horn: &lt;code&gt;:postal_horn:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mailbox_closed: &lt;code&gt;:mailbox_closed:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mailbox_with_mail: &lt;code&gt;:mailbox_with_mail:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:mailbox_with_no_mail: &lt;code&gt;:mailbox_with_no_mail:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:door: &lt;code&gt;:door:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:smoking: &lt;code&gt;:smoking:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bomb: &lt;code&gt;:bomb:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:gun: &lt;code&gt;:gun:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hocho: &lt;code&gt;:hocho:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:pill: &lt;code&gt;:pill:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:syringe: &lt;code&gt;:syringe:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:page_facing_up: &lt;code&gt;:page_facing_up:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:page_with_curl: &lt;code&gt;:page_with_curl:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bookmark_tabs: &lt;code&gt;:bookmark_tabs:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bar_chart: &lt;code&gt;:bar_chart:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:chart_with_upwards_trend: &lt;code&gt;:chart_with_upwards_trend:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:chart_with_downwards_trend: &lt;code&gt;:chart_with_downwards_trend:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:scroll: &lt;code&gt;:scroll:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clipboard: &lt;code&gt;:clipboard:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:calendar: &lt;code&gt;:calendar:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:date: &lt;code&gt;:date:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:card_index: &lt;code&gt;:card_index:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:file_folder: &lt;code&gt;:file_folder:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:open_file_folder: &lt;code&gt;:open_file_folder:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:scissors: &lt;code&gt;:scissors:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pushpin: &lt;code&gt;:pushpin:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:paperclip: &lt;code&gt;:paperclip:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:black_nib: &lt;code&gt;:black_nib:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pencil2: &lt;code&gt;:pencil2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:straight_ruler: &lt;code&gt;:straight_ruler:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:triangular_ruler: &lt;code&gt;:triangular_ruler:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:closed_book: &lt;code&gt;:closed_book:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:green_book: &lt;code&gt;:green_book:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:blue_book: &lt;code&gt;:blue_book:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:orange_book: &lt;code&gt;:orange_book:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:notebook: &lt;code&gt;:notebook:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:notebook_with_decorative_cover: &lt;code&gt;:notebook_with_decorative_cover:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ledger: &lt;code&gt;:ledger:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:books: &lt;code&gt;:books:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bookmark: &lt;code&gt;:bookmark:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:name_badge: &lt;code&gt;:name_badge:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:microscope: &lt;code&gt;:microscope:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:telescope: &lt;code&gt;:telescope:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:newspaper: &lt;code&gt;:newspaper:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:football: &lt;code&gt;:football:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:basketball: &lt;code&gt;:basketball:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:soccer: &lt;code&gt;:soccer:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:baseball: &lt;code&gt;:baseball:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tennis: &lt;code&gt;:tennis:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:8ball: &lt;code&gt;:8ball:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rugby_football: &lt;code&gt;:rugby_football:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bowling: &lt;code&gt;:bowling:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:golf: &lt;code&gt;:golf:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mountain_bicyclist: &lt;code&gt;:mountain_bicyclist:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bicyclist: &lt;code&gt;:bicyclist:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:horse_racing: &lt;code&gt;:horse_racing:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:snowboarder: &lt;code&gt;:snowboarder:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:swimmer: &lt;code&gt;:swimmer:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:surfer: &lt;code&gt;:surfer:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ski: &lt;code&gt;:ski:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:spades: &lt;code&gt;:spades:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hearts: &lt;code&gt;:hearts:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clubs: &lt;code&gt;:clubs:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:diamonds: &lt;code&gt;:diamonds:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:gem: &lt;code&gt;:gem:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ring: &lt;code&gt;:ring:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:trophy: &lt;code&gt;:trophy:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:musical_score: &lt;code&gt;:musical_score:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:musical_keyboard: &lt;code&gt;:musical_keyboard:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:violin: &lt;code&gt;:violin:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:space_invader: &lt;code&gt;:space_invader:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:video_game: &lt;code&gt;:video_game:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:black_joker: &lt;code&gt;:black_joker:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:flower_playing_cards: &lt;code&gt;:flower_playing_cards:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:game_die: &lt;code&gt;:game_die:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:dart: &lt;code&gt;:dart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mahjong: &lt;code&gt;:mahjong:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clapper: &lt;code&gt;:clapper:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:memo: &lt;code&gt;:memo:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pencil: &lt;code&gt;:pencil:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:book: &lt;code&gt;:book:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:art: &lt;code&gt;:art:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:microphone: &lt;code&gt;:microphone:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:headphones: &lt;code&gt;:headphones:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:trumpet: &lt;code&gt;:trumpet:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:saxophone: &lt;code&gt;:saxophone:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:guitar: &lt;code&gt;:guitar:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:shoe: &lt;code&gt;:shoe:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sandal: &lt;code&gt;:sandal:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:high_heel: &lt;code&gt;:high_heel:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:lipstick: &lt;code&gt;:lipstick:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:boot: &lt;code&gt;:boot:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:shirt: &lt;code&gt;:shirt:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tshirt: &lt;code&gt;:tshirt:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:necktie: &lt;code&gt;:necktie:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:womans_clothes: &lt;code&gt;:womans_clothes:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:dress: &lt;code&gt;:dress:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:running_shirt_with_sash: &lt;code&gt;:running_shirt_with_sash:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:jeans: &lt;code&gt;:jeans:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:kimono: &lt;code&gt;:kimono:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bikini: &lt;code&gt;:bikini:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ribbon: &lt;code&gt;:ribbon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tophat: &lt;code&gt;:tophat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:crown: &lt;code&gt;:crown:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:womans_hat: &lt;code&gt;:womans_hat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:mans_shoe: &lt;code&gt;:mans_shoe:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:closed_umbrella: &lt;code&gt;:closed_umbrella:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:briefcase: &lt;code&gt;:briefcase:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:handbag: &lt;code&gt;:handbag:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pouch: &lt;code&gt;:pouch:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:purse: &lt;code&gt;:purse:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:eyeglasses: &lt;code&gt;:eyeglasses:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fishing_pole_and_fish: &lt;code&gt;:fishing_pole_and_fish:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:coffee: &lt;code&gt;:coffee:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tea: &lt;code&gt;:tea:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sake: &lt;code&gt;:sake:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:baby_bottle: &lt;code&gt;:baby_bottle:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:beer: &lt;code&gt;:beer:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:beers: &lt;code&gt;:beers:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cocktail: &lt;code&gt;:cocktail:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tropical_drink: &lt;code&gt;:tropical_drink:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wine_glass: &lt;code&gt;:wine_glass:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fork_and_knife: &lt;code&gt;:fork_and_knife:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:pizza: &lt;code&gt;:pizza:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hamburger: &lt;code&gt;:hamburger:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fries: &lt;code&gt;:fries:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:poultry_leg: &lt;code&gt;:poultry_leg:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:meat_on_bone: &lt;code&gt;:meat_on_bone:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:spaghetti: &lt;code&gt;:spaghetti:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:curry: &lt;code&gt;:curry:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fried_shrimp: &lt;code&gt;:fried_shrimp:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bento: &lt;code&gt;:bento:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sushi: &lt;code&gt;:sushi:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fish_cake: &lt;code&gt;:fish_cake:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rice_ball: &lt;code&gt;:rice_ball:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:rice_cracker: &lt;code&gt;:rice_cracker:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rice: &lt;code&gt;:rice:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ramen: &lt;code&gt;:ramen:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:stew: &lt;code&gt;:stew:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:oden: &lt;code&gt;:oden:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:dango: &lt;code&gt;:dango:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:egg: &lt;code&gt;:egg:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bread: &lt;code&gt;:bread:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:doughnut: &lt;code&gt;:doughnut:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:custard: &lt;code&gt;:custard:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:icecream: &lt;code&gt;:icecream:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ice_cream: &lt;code&gt;:ice_cream:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:shaved_ice: &lt;code&gt;:shaved_ice:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:birthday: &lt;code&gt;:birthday:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cake: &lt;code&gt;:cake:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cookie: &lt;code&gt;:cookie:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:chocolate_bar: &lt;code&gt;:chocolate_bar:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:candy: &lt;code&gt;:candy:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:lollipop: &lt;code&gt;:lollipop:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:honey_pot: &lt;code&gt;:honey_pot:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:apple: &lt;code&gt;:apple:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:green_apple: &lt;code&gt;:green_apple:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tangerine: &lt;code&gt;:tangerine:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:lemon: &lt;code&gt;:lemon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cherries: &lt;code&gt;:cherries:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:grapes: &lt;code&gt;:grapes:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:watermelon: &lt;code&gt;:watermelon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:strawberry: &lt;code&gt;:strawberry:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:peach: &lt;code&gt;:peach:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:melon: &lt;code&gt;:melon:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:banana: &lt;code&gt;:banana:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pear: &lt;code&gt;:pear:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pineapple: &lt;code&gt;:pineapple:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sweet_potato: &lt;code&gt;:sweet_potato:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:eggplant: &lt;code&gt;:eggplant:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tomato: &lt;code&gt;:tomato:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:corn: &lt;code&gt;:corn:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="places"&gt;Places&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;:house: &lt;code&gt;:house:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:house_with_garden: &lt;code&gt;:house_with_garden:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:school: &lt;code&gt;:school:&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:office: &lt;code&gt;:office:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:post_office: &lt;code&gt;:post_office:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hospital: &lt;code&gt;:hospital:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bank: &lt;code&gt;:bank:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:convenience_store: &lt;code&gt;:convenience_store:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:love_hotel: &lt;code&gt;:love_hotel:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:hotel: &lt;code&gt;:hotel:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wedding: &lt;code&gt;:wedding:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:church: &lt;code&gt;:church:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:department_store: &lt;code&gt;:department_store:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:european_post_office: &lt;code&gt;:european_post_office:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:city_sunrise: &lt;code&gt;:city_sunrise:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:city_sunset: &lt;code&gt;:city_sunset:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:japanese_castle: &lt;code&gt;:japanese_castle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:european_castle: &lt;code&gt;:european_castle:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:tent: &lt;code&gt;:tent:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:factory: &lt;code&gt;:factory:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tokyo_tower: &lt;code&gt;:tokyo_tower:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:japan: &lt;code&gt;:japan:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mount_fuji: &lt;code&gt;:mount_fuji:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sunrise_over_mountains: &lt;code&gt;:sunrise_over_mountains:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sunrise: &lt;code&gt;:sunrise:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:stars: &lt;code&gt;:stars:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:statue_of_liberty: &lt;code&gt;:statue_of_liberty:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bridge_at_night: &lt;code&gt;:bridge_at_night:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:carousel_horse: &lt;code&gt;:carousel_horse:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rainbow: &lt;code&gt;:rainbow:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ferris_wheel: &lt;code&gt;:ferris_wheel:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fountain: &lt;code&gt;:fountain:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:roller_coaster: &lt;code&gt;:roller_coaster:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ship: &lt;code&gt;:ship:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:speedboat: &lt;code&gt;:speedboat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:boat: &lt;code&gt;:boat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sailboat: &lt;code&gt;:sailboat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rowboat: &lt;code&gt;:rowboat:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:anchor: &lt;code&gt;:anchor:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:rocket: &lt;code&gt;:rocket:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:airplane: &lt;code&gt;:airplane:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:helicopter: &lt;code&gt;:helicopter:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:steam_locomotive: &lt;code&gt;:steam_locomotive:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tram: &lt;code&gt;:tram:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mountain_railway: &lt;code&gt;:mountain_railway:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bike: &lt;code&gt;:bike:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:aerial_tramway: &lt;code&gt;:aerial_tramway:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:suspension_railway: &lt;code&gt;:suspension_railway:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:mountain_cableway: &lt;code&gt;:mountain_cableway:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tractor: &lt;code&gt;:tractor:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:blue_car: &lt;code&gt;:blue_car:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:oncoming_automobile: &lt;code&gt;:oncoming_automobile:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:car: &lt;code&gt;:car:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:red_car: &lt;code&gt;:red_car:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:taxi: &lt;code&gt;:taxi:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:oncoming_taxi: &lt;code&gt;:oncoming_taxi:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:articulated_lorry: &lt;code&gt;:articulated_lorry:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bus: &lt;code&gt;:bus:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:oncoming_bus: &lt;code&gt;:oncoming_bus:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:rotating_light: &lt;code&gt;:rotating_light:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:police_car: &lt;code&gt;:police_car:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:oncoming_police_car: &lt;code&gt;:oncoming_police_car:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fire_engine: &lt;code&gt;:fire_engine:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ambulance: &lt;code&gt;:ambulance:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:minibus: &lt;code&gt;:minibus:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:truck: &lt;code&gt;:truck:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:train: &lt;code&gt;:train:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:station: &lt;code&gt;:station:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:train2: &lt;code&gt;:train2:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:bullettrain_front: &lt;code&gt;:bullettrain_front:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bullettrain_side: &lt;code&gt;:bullettrain_side:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:light_rail: &lt;code&gt;:light_rail:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:monorail: &lt;code&gt;:monorail:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:railway_car: &lt;code&gt;:railway_car:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:trolleybus: &lt;code&gt;:trolleybus:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ticket: &lt;code&gt;:ticket:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fuelpump: &lt;code&gt;:fuelpump:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:vertical_traffic_light: &lt;code&gt;:vertical_traffic_light:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:traffic_light: &lt;code&gt;:traffic_light:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:warning: &lt;code&gt;:warning:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:construction: &lt;code&gt;:construction:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:beginner: &lt;code&gt;:beginner:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:atm: &lt;code&gt;:atm:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:slot_machine: &lt;code&gt;:slot_machine:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:busstop: &lt;code&gt;:busstop:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:barber: &lt;code&gt;:barber:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:hotsprings: &lt;code&gt;:hotsprings:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:checkered_flag: &lt;code&gt;:checkered_flag:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:crossed_flags: &lt;code&gt;:crossed_flags:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:izakaya_lantern: &lt;code&gt;:izakaya_lantern:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:moyai: &lt;code&gt;:moyai:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:circus_tent: &lt;code&gt;:circus_tent:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:performing_arts: &lt;code&gt;:performing_arts:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:round_pushpin: &lt;code&gt;:round_pushpin:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:triangular_flag_on_post: &lt;code&gt;:triangular_flag_on_post:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:jp: &lt;code&gt;:jp:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:kr: &lt;code&gt;:kr:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cn: &lt;code&gt;:cn:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:us: &lt;code&gt;:us:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:fr: &lt;code&gt;:fr:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:es: &lt;code&gt;:es:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:it: &lt;code&gt;:it:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ru: &lt;code&gt;:ru:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:gb: &lt;code&gt;:gb:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:uk: &lt;code&gt;:uk:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:de: &lt;code&gt;:de:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="symbols"&gt;Symbols&lt;/h2&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;:one: &lt;code&gt;:one:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:two: &lt;code&gt;:two:&lt;/code&gt;&lt;/th&gt;
+ &lt;th&gt;:three: &lt;code&gt;:three:&lt;/code&gt;&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:four: &lt;code&gt;:four:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:five: &lt;code&gt;:five:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:six: &lt;code&gt;:six:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:seven: &lt;code&gt;:seven:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:eight: &lt;code&gt;:eight:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:nine: &lt;code&gt;:nine:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:keycap_ten: &lt;code&gt;:keycap_ten:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:1234: &lt;code&gt;:1234:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:zero: &lt;code&gt;:zero:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:hash: &lt;code&gt;:hash:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:symbols: &lt;code&gt;:symbols:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_backward: &lt;code&gt;:arrow_backward:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_down: &lt;code&gt;:arrow_down:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_forward: &lt;code&gt;:arrow_forward:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_left: &lt;code&gt;:arrow_left:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:capital_abcd: &lt;code&gt;:capital_abcd:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:abcd: &lt;code&gt;:abcd:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:abc: &lt;code&gt;:abc:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_lower_left: &lt;code&gt;:arrow_lower_left:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_lower_right: &lt;code&gt;:arrow_lower_right:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_right: &lt;code&gt;:arrow_right:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_up: &lt;code&gt;:arrow_up:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_upper_left: &lt;code&gt;:arrow_upper_left:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_upper_right: &lt;code&gt;:arrow_upper_right:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_double_down: &lt;code&gt;:arrow_double_down:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_double_up: &lt;code&gt;:arrow_double_up:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_down_small: &lt;code&gt;:arrow_down_small:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_heading_down: &lt;code&gt;:arrow_heading_down:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_heading_up: &lt;code&gt;:arrow_heading_up:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:leftwards_arrow_with_hook: &lt;code&gt;:leftwards_arrow_with_hook:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_right_hook: &lt;code&gt;:arrow_right_hook:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:left_right_arrow: &lt;code&gt;:left_right_arrow:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrow_up_down: &lt;code&gt;:arrow_up_down:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:arrow_up_small: &lt;code&gt;:arrow_up_small:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrows_clockwise: &lt;code&gt;:arrows_clockwise:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:arrows_counterclockwise: &lt;code&gt;:arrows_counterclockwise:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:rewind: &lt;code&gt;:rewind:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:fast_forward: &lt;code&gt;:fast_forward:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:information_source: &lt;code&gt;:information_source:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ok: &lt;code&gt;:ok:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:twisted_rightwards_arrows: &lt;code&gt;:twisted_rightwards_arrows:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:repeat: &lt;code&gt;:repeat:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:repeat_one: &lt;code&gt;:repeat_one:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:new: &lt;code&gt;:new:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:top: &lt;code&gt;:top:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:up: &lt;code&gt;:up:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cool: &lt;code&gt;:cool:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:free: &lt;code&gt;:free:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ng: &lt;code&gt;:ng:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cinema: &lt;code&gt;:cinema:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:koko: &lt;code&gt;:koko:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:signal_strength: &lt;code&gt;:signal_strength:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u5272: &lt;code&gt;:u5272:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u5408: &lt;code&gt;:u5408:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:u55b6: &lt;code&gt;:u55b6:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u6307: &lt;code&gt;:u6307:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u6708: &lt;code&gt;:u6708:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:u6709: &lt;code&gt;:u6709:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u6e80: &lt;code&gt;:u6e80:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u7121: &lt;code&gt;:u7121:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:u7533: &lt;code&gt;:u7533:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u7a7a: &lt;code&gt;:u7a7a:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:u7981: &lt;code&gt;:u7981:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:sa: &lt;code&gt;:sa:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:restroom: &lt;code&gt;:restroom:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mens: &lt;code&gt;:mens:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:womens: &lt;code&gt;:womens:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:baby_symbol: &lt;code&gt;:baby_symbol:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_smoking: &lt;code&gt;:no_smoking:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:parking: &lt;code&gt;:parking:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wheelchair: &lt;code&gt;:wheelchair:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:metro: &lt;code&gt;:metro:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:baggage_claim: &lt;code&gt;:baggage_claim:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:accept: &lt;code&gt;:accept:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wc: &lt;code&gt;:wc:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:potable_water: &lt;code&gt;:potable_water:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:put_litter_in_its_place: &lt;code&gt;:put_litter_in_its_place:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:secret: &lt;code&gt;:secret:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:congratulations: &lt;code&gt;:congratulations:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:m: &lt;code&gt;:m:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:passport_control: &lt;code&gt;:passport_control:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:left_luggage: &lt;code&gt;:left_luggage:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:customs: &lt;code&gt;:customs:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ideograph_advantage: &lt;code&gt;:ideograph_advantage:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:cl: &lt;code&gt;:cl:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sos: &lt;code&gt;:sos:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:id: &lt;code&gt;:id:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:no_entry_sign: &lt;code&gt;:no_entry_sign:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:underage: &lt;code&gt;:underage:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_mobile_phones: &lt;code&gt;:no_mobile_phones:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:do_not_litter: &lt;code&gt;:do_not_litter:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:non-potable_water: &lt;code&gt;:non-potable_water:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_bicycles: &lt;code&gt;:no_bicycles:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:no_pedestrians: &lt;code&gt;:no_pedestrians:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:children_crossing: &lt;code&gt;:children_crossing:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:no_entry: &lt;code&gt;:no_entry:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:eight_spoked_asterisk: &lt;code&gt;:eight_spoked_asterisk:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:eight_pointed_black_star: &lt;code&gt;:eight_pointed_black_star:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heart_decoration: &lt;code&gt;:heart_decoration:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:vs: &lt;code&gt;:vs:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:vibration_mode: &lt;code&gt;:vibration_mode:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:mobile_phone_off: &lt;code&gt;:mobile_phone_off:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:chart: &lt;code&gt;:chart:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:currency_exchange: &lt;code&gt;:currency_exchange:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:aries: &lt;code&gt;:aries:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:taurus: &lt;code&gt;:taurus:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:gemini: &lt;code&gt;:gemini:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:cancer: &lt;code&gt;:cancer:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:leo: &lt;code&gt;:leo:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:virgo: &lt;code&gt;:virgo:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:libra: &lt;code&gt;:libra:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:scorpius: &lt;code&gt;:scorpius:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:sagittarius: &lt;code&gt;:sagittarius:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:capricorn: &lt;code&gt;:capricorn:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:aquarius: &lt;code&gt;:aquarius:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:pisces: &lt;code&gt;:pisces:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ophiuchus: &lt;code&gt;:ophiuchus:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:six_pointed_star: &lt;code&gt;:six_pointed_star:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:negative_squared_cross_mark: &lt;code&gt;:negative_squared_cross_mark:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:a: &lt;code&gt;:a:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:b: &lt;code&gt;:b:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:ab: &lt;code&gt;:ab:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:o2: &lt;code&gt;:o2:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:diamond_shape_with_a_dot_inside: &lt;code&gt;:diamond_shape_with_a_dot_inside:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:recycle: &lt;code&gt;:recycle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:end: &lt;code&gt;:end:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:on: &lt;code&gt;:on:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:soon: &lt;code&gt;:soon:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock1: &lt;code&gt;:clock1:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock130: &lt;code&gt;:clock130:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock10: &lt;code&gt;:clock10:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock1030: &lt;code&gt;:clock1030:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock11: &lt;code&gt;:clock11:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock1130: &lt;code&gt;:clock1130:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock12: &lt;code&gt;:clock12:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock1230: &lt;code&gt;:clock1230:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock2: &lt;code&gt;:clock2:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock230: &lt;code&gt;:clock230:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock3: &lt;code&gt;:clock3:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock330: &lt;code&gt;:clock330:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock4: &lt;code&gt;:clock4:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock430: &lt;code&gt;:clock430:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock5: &lt;code&gt;:clock5:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock530: &lt;code&gt;:clock530:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock6: &lt;code&gt;:clock6:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock630: &lt;code&gt;:clock630:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock7: &lt;code&gt;:clock7:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock730: &lt;code&gt;:clock730:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock8: &lt;code&gt;:clock8:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock830: &lt;code&gt;:clock830:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:clock9: &lt;code&gt;:clock9:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:clock930: &lt;code&gt;:clock930:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heavy_dollar_sign: &lt;code&gt;:heavy_dollar_sign:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:copyright: &lt;code&gt;:copyright:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:registered: &lt;code&gt;:registered:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:tm: &lt;code&gt;:tm:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:x: &lt;code&gt;:x:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heavy_exclamation_mark: &lt;code&gt;:heavy_exclamation_mark:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:bangbang: &lt;code&gt;:bangbang:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:interrobang: &lt;code&gt;:interrobang:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:o: &lt;code&gt;:o:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heavy_multiplication_x: &lt;code&gt;:heavy_multiplication_x:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:heavy_plus_sign: &lt;code&gt;:heavy_plus_sign:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heavy_minus_sign: &lt;code&gt;:heavy_minus_sign:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heavy_division_sign: &lt;code&gt;:heavy_division_sign:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:white_flower: &lt;code&gt;:white_flower:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:100: &lt;code&gt;:100:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:heavy_check_mark: &lt;code&gt;:heavy_check_mark:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:ballot_box_with_check: &lt;code&gt;:ballot_box_with_check:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:radio_button: &lt;code&gt;:radio_button:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:link: &lt;code&gt;:link:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:curly_loop: &lt;code&gt;:curly_loop:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:wavy_dash: &lt;code&gt;:wavy_dash:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:part_alternation_mark: &lt;code&gt;:part_alternation_mark:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:trident: &lt;code&gt;:trident:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:black_square: &lt;code&gt;:black_square:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:white_square: &lt;code&gt;:white_square:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:white_check_mark: &lt;code&gt;:white_check_mark:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:black_square_button: &lt;code&gt;:black_square_button:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:white_square_button: &lt;code&gt;:white_square_button:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:black_circle: &lt;code&gt;:black_circle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:white_circle: &lt;code&gt;:white_circle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:red_circle: &lt;code&gt;:red_circle:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:large_blue_circle: &lt;code&gt;:large_blue_circle:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:large_blue_diamond: &lt;code&gt;:large_blue_diamond:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:large_orange_diamond: &lt;code&gt;:large_orange_diamond:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:small_blue_diamond: &lt;code&gt;:small_blue_diamond:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:small_orange_diamond: &lt;code&gt;:small_orange_diamond:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:small_red_triangle: &lt;code&gt;:small_red_triangle:&lt;/code&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;:small_red_triangle_down: &lt;code&gt;:small_red_triangle_down:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;:shipit: &lt;code&gt;:shipit:&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;</description></item><item><title>rvalue ref-qualified assignment operators</title><link>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</link><pubDate>Sun, 22 Aug 2021 14:53:21 +0800</pubDate><guid>https://bobblelaw.github.io/posts/delete-rvalue-ref-assignment/</guid><description>&lt;p&gt;The title might sound like an incantation to summon some mid-tier C++ god but it addresses a very real everyday pitfall:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;struct&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;foo&lt;/span&gt; { ... };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo &lt;span style="color:#a6e22e"&gt;get_my_foo&lt;/span&gt;() { ... }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;// .. some code later:
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;foo f;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;get_my_foo() &lt;span style="color:#f92672"&gt;=&lt;/span&gt; f;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This &lt;a href="https://godbolt.org/z/oh3vFA"&gt;compiles&lt;/a&gt; &amp;hellip; and does nothing useful.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve assigned &lt;code&gt;f&lt;/code&gt; to a temporary &lt;code&gt;foo&lt;/code&gt;.&lt;br&gt;
+No error, no warning.&lt;/p&gt;
+&lt;h2 id="a-real-life-example"&gt;A Real-Life Example&lt;/h2&gt;
+&lt;p&gt;In the math library I&amp;rsquo;m writing we have a &lt;code&gt;mat&lt;/code&gt; struct for matrices and &lt;code&gt;vec&lt;/code&gt; for vectors.&lt;br&gt;
+Matrices are stored column-major, i.e. as an array of column vectors.&lt;br&gt;
+Now, sometimes you want to get the row of such matrix and thus &lt;code&gt;mat&lt;/code&gt; has a function &lt;code&gt;vec mat::row(int)&lt;/code&gt; that returns the specified row.&lt;br&gt;
+It has to return the &lt;code&gt;vec&lt;/code&gt; per value because only columns are stored contiguously in &lt;code&gt;mat&lt;/code&gt;:&lt;/p&gt;</description></item><item><title>Inlining Optimization</title><link>https://bobblelaw.github.io/posts/inline-optimization/</link><pubDate>Wed, 19 May 2021 17:29:41 +0800</pubDate><guid>https://bobblelaw.github.io/posts/inline-optimization/</guid><description>&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Inline_expansion"&gt;Inlining&lt;/a&gt; is one of the most important compiler optimizations.&lt;br&gt;
+We can often write abstractions and thin wrapper functions without incurring any performance penalty, because the compiler will expand the method for us at call site.&lt;/p&gt;
+&lt;p&gt;If a function is not inlined, conventional wisdom says that the compiler has to assume that the method can modify any global state and change the memory behind any pointer or reference that might have &amp;ldquo;escaped&amp;rdquo;.&lt;/p&gt;</description></item><item><title>Multi-Level Loop Break</title><link>https://bobblelaw.github.io/posts/multi-level-break/</link><pubDate>Wed, 12 May 2021 09:57:09 +0800</pubDate><guid>https://bobblelaw.github.io/posts/multi-level-break/</guid><description>&lt;p&gt;I guess we all have been at this point.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;auto&lt;/span&gt; i : ...)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (&lt;span style="color:#66d9ef"&gt;auto&lt;/span&gt; j : ...)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (condition(i, j))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;break&lt;/span&gt; outer&lt;span style="color:#f92672"&gt;???&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You want to search something, and for one reason or another you end up with a nested loop.&lt;br&gt;
+You find what you searched for and now want to &lt;code&gt;break&lt;/code&gt; all the way to the outer loop.&lt;/p&gt;
+&lt;p&gt;If only we had multi-level &lt;code&gt;breaks&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Understanding Perspective-N-Points</title><link>https://bobblelaw.github.io/posts/understanding-pnp/</link><pubDate>Sun, 18 Apr 2021 15:17:26 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-pnp/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;The Perspective-n-Point (PnP) problem is the problem of estimating the relative pose between an object and the camera, given a set of correspondences between 3D points and their projections on the image plane.&lt;br&gt;
+It is a fundamental problem that was first studied in the photogrammetry literature, and later on studied in the context of computer vision.&lt;/p&gt;
+&lt;p&gt;In this post, I will present a few solvers (among many), discuss their proofs and also show some concise implementations. I will focus on the minimal solvers - solutions to the PnP problem that requires the minimal amount of information. In this case, we need at least three pairs of correspondences, and the minimal solvers that only require three pairs of correspondences are called P3P solvers.&lt;/p&gt;</description></item><item><title>Understanding Automatic Differentiation</title><link>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</link><pubDate>Wed, 17 Mar 2021 20:47:18 +0800</pubDate><guid>https://bobblelaw.github.io/posts/understanding-automatic-differentiation/</guid><description>&lt;p&gt;Deriving derivatives is not fun. In this post, I will deep dive into the methods for automatic differentiation (AD). After reading this post, I hope you can feel confident with using the various AD techniques, and hopefully never manually calculate derivatives again. Note that this post is not a comparison between AD libraries. For that, a good starting point is &lt;a href=""&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="why-automatic-differentiation"&gt;Why Automatic Differentiation?&lt;/h2&gt;
+&lt;p&gt;Automatic differentiation is a natural continuation of scientists and engineers’ pursuit for mechanizing computation. After all, we learn how to take derivatives by memorizing a set of rules. Why can’t computers do the same thing?&lt;/p&gt;</description></item><item><title>Moves in Returns</title><link>https://bobblelaw.github.io/posts/moves-in-return/</link><pubDate>Sat, 19 Dec 2020 14:39:20 +0800</pubDate><guid>https://bobblelaw.github.io/posts/moves-in-return/</guid><description>&lt;p&gt;Today we&amp;rsquo;ll discuss code of the form:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;T &lt;span style="color:#a6e22e"&gt;work&lt;/span&gt;(&lt;span style="color:#75715e"&gt;/* ... */&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;/* ... */&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is a classical &amp;ldquo;return-by-value&amp;rdquo; and (wrongfully) associated with copies and overhead.&lt;/p&gt;
+&lt;p&gt;In many cases, this will actually &lt;code&gt;move&lt;/code&gt; the result instead of copying it.&lt;br&gt;
+For modern C++, one could even argue that this will move in &lt;em&gt;most&lt;/em&gt; cases (or, as we will see, completely &lt;em&gt;elide&lt;/em&gt; the copy and directly construct in the result memory).&lt;/p&gt;</description></item><item><title>std::unordered_map Performance and Usage</title><link>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</link><pubDate>Fri, 11 Dec 2020 09:36:58 +0800</pubDate><guid>https://bobblelaw.github.io/posts/unordered-map-usage-and-performance/</guid><description>&lt;h2 id="origin-story"&gt;Origin Story&lt;/h2&gt;
+&lt;p&gt;We have always been told that hashmap is the best associative container that offer O(1) insert, delete, and lookup. However, the customization space of it is quite large and depending on the use case, the trade-off space can change radically.&lt;br&gt;
+&lt;code&gt;std::unordered_map&lt;/code&gt; is (in)famous for having an API that basically forces implementers to use &amp;ldquo;buckets with linked lists&amp;rdquo;, also known as &lt;em&gt;separate chaining&lt;/em&gt;.&lt;br&gt;
+Many performance-critical applications swear on &lt;em&gt;open addressing&lt;/em&gt;, often storing keys and values directly in arrays (either together or separate).&lt;br&gt;
+These are often called &lt;code&gt;flat_&lt;/code&gt;maps.&lt;br&gt;
+Many requirements and quality attributes influence which particular type is &amp;ldquo;best&amp;rdquo;:&lt;/p&gt;</description></item><item><title>Sort Multiple Ranges</title><link>https://bobblelaw.github.io/posts/sort-multiple-range/</link><pubDate>Sat, 28 Nov 2020 09:45:32 +0800</pubDate><guid>https://bobblelaw.github.io/posts/sort-multiple-range/</guid><description>&lt;p&gt;&lt;code&gt;std::sort&lt;/code&gt; is a great utility.&lt;br&gt;
+You can easily sort subranges and provide custom comparison functions.&lt;br&gt;
+However, it struggles with the following scenario:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;std&lt;span style="color:#f92672"&gt;::&lt;/span&gt;vector&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; keys &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ...;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;std&lt;span style="color:#f92672"&gt;::&lt;/span&gt;vector&lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt;std&lt;span style="color:#f92672"&gt;::&lt;/span&gt;string&lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; values &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ...;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;std&lt;span style="color:#f92672"&gt;::&lt;/span&gt;sort(...); &lt;span style="color:#75715e"&gt;// ???
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We want to sort by &lt;code&gt;keys&lt;/code&gt; but keep the 1-on-1 correspondence with &lt;code&gt;values&lt;/code&gt;, i.e. keep the ranges &amp;ldquo;in sync&amp;rdquo; during sorting.&lt;br&gt;
+A common solution is to allocate a vector of indices, sort these indices, and then apply the resulting permutation.&lt;br&gt;
+However, the need for an additional allocation and bad cache locality due to indirection make this a suboptimal solution.&lt;/p&gt;</description></item><item><title>range_ref&lt;T&gt;</title><link>https://bobblelaw.github.io/posts/range-ref/</link><pubDate>Thu, 12 Nov 2020 19:37:43 +0800</pubDate><guid>https://bobblelaw.github.io/posts/range-ref/</guid><description>&lt;p&gt;Passing references to functions is great.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;struct&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;some_user_type&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;void&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;foo&lt;/span&gt;(some_user_type &lt;span style="color:#66d9ef"&gt;const&lt;/span&gt;&lt;span style="color:#f92672"&gt;&amp;amp;&lt;/span&gt; v)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;// freely read from v
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Memory management and lifetime handling is done by the caller.&lt;br&gt;
+Users of your function / API have a liberating amount of freedom how they organize their data: on the stack, on the heap, in smart pointers, in vectors, it doesn&amp;rsquo;t matter.&lt;br&gt;
+They can pass a reference to your function.&lt;br&gt;
+No (potentially expensive) copy is performed.&lt;/p&gt;</description></item><item><title>Recursive Lambdas</title><link>https://bobblelaw.github.io/posts/recursive-lambda-function/</link><pubDate>Sun, 08 Nov 2020 13:41:36 +0800</pubDate><guid>https://bobblelaw.github.io/posts/recursive-lambda-function/</guid><description>&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;auto&lt;/span&gt; fib &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [](&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; n) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; (n &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; n;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fib&lt;/span&gt;(n &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) &lt;span style="color:#f92672"&gt;+&lt;/span&gt; fib(n &lt;span style="color:#f92672"&gt;-&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;};
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;auto&lt;/span&gt; i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; fib(&lt;span style="color:#ae81ff"&gt;7&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If only it were that simple.&lt;/p&gt;
+&lt;p&gt;Obviously, any performance-conscious programmer will compute Fibonacci numbers iteratively (or even &lt;a href="https://en.wikipedia.org/wiki/Fibonacci_number#Closed-form_expression"&gt;explicitly&lt;/a&gt;), but this solution will serve as an example for an underappreciated tool: &lt;em&gt;recursive lambdas&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Lambdas are one of my favorite features in any programming language and while I long for a &lt;a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0573r1.html"&gt;shorter syntax in C++&lt;/a&gt;, I still use them quite ubiquitously, especially for local functions.&lt;br&gt;
+They allow us to abstract behavior into a function while still accessing local variables (through captures) and without leaking new names into the surrounding namespace.&lt;br&gt;
+While already plenty powerful, sometimes we might want to call a lambda recursively.&lt;/p&gt;</description></item><item><title>Basic Floating Point Optimizations</title><link>https://bobblelaw.github.io/posts/floating-point-optimizations/</link><pubDate>Wed, 07 Aug 2019 09:08:11 +0800</pubDate><guid>https://bobblelaw.github.io/posts/floating-point-optimizations/</guid><description>&lt;p&gt;Ever seen some people write &lt;code&gt;f * 0.5&lt;/code&gt; when they mean &lt;code&gt;f / 2&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;Or if the compiler is able to optimize the &lt;code&gt;f * 1.0&lt;/code&gt; that you added for clarity?&lt;/p&gt;
+&lt;p&gt;Maybe you wrote &lt;code&gt;f + f&lt;/code&gt; instead of &lt;code&gt;f * 2&lt;/code&gt; as a clever optimization?&lt;/p&gt;
+&lt;p&gt;Modern compilers are basically magic, &lt;em&gt;but do they actually perform these optimizations?&lt;/em&gt;&lt;br&gt;
+And, more importantly, &lt;em&gt;why is &lt;code&gt;f + 0.0&lt;/code&gt; slower than &lt;code&gt;f - 0.0&lt;/code&gt;?&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Notes on Linux Development</title><link>https://bobblelaw.github.io/posts/notes-on-linux-dev/</link><pubDate>Fri, 17 Aug 2018 17:41:48 +0800</pubDate><guid>https://bobblelaw.github.io/posts/notes-on-linux-dev/</guid><description>&lt;h3 id="how-to-use-previous-version-of-gcc"&gt;How to use previous version of gcc&lt;/h3&gt;
+&lt;p&gt;This problem arises when we try to compile mex file in Matlab. It shows a &lt;strong&gt;warning&lt;/strong&gt; as&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Warning: You are using gcc version '7.x.x'. The version of gcc is not supported. 
 The version currently supported with MEX is '6.4.x'. For a list of currently 
 supported compilers see
-&lt;/code>&lt;/pre>
-&lt;p>An easy solution is to do as followed (simply install the target version),&lt;/p>
-&lt;pre>&lt;code>sudo apt-get update &amp;amp;&amp;amp; \
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;An easy solution is to do as followed (simply install the target version),&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt-get update &amp;amp;&amp;amp; \
 sudo apt-get install build-essential software-properties-common -y &amp;amp;&amp;amp; \
 sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y &amp;amp;&amp;amp; \
 sudo apt-get update &amp;amp;&amp;amp; \
 sudo apt-get install gcc-6 g++-6 -y &amp;amp;&amp;amp; \
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 60 --slave /usr/bin/g++ g++ /usr/bin/g++-6 &amp;amp;&amp;amp; \
 gcc -v
-&lt;/code>&lt;/pre>
-&lt;p>But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p></description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code">A Simple Qt code&lt;/h3>
-&lt;p>Here is a hello world code for Qt&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cpp" data-lang="cpp">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;QtCore/QDebug&amp;gt;&lt;/span>&lt;span style="color:#75715e">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>(&lt;span style="color:#66d9ef">int&lt;/span> argc, &lt;span style="color:#66d9ef">char&lt;/span>&lt;span style="color:#f92672">**&lt;/span> argv){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> QCoreApplication app(argc, argv);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> qDebug() &lt;span style="color:#f92672">&amp;lt;&amp;lt;&lt;/span> &lt;span style="color:#e6db74">&amp;#34;Hello, Qt!&amp;#34;&lt;/span>;
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> app.exec()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
-&lt;li>If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>g++ main.cpp -I&lt;span style="color:#ae81ff">\\&lt;/span>path&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\i&lt;/span>nclude -o main -L&lt;span style="color:#ae81ff">\p&lt;/span>ath&lt;span style="color:#ae81ff">\t&lt;/span>o&lt;span style="color:#ae81ff">\Q&lt;/span>t&lt;span style="color:#ae81ff">\5&lt;/span>.13.0&lt;span style="color:#ae81ff">\l&lt;/span>ib -lQtCore4
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
-&lt;li>If we have qmake, all we need is&lt;/li>
-&lt;/ol>
-&lt;pre tabindex="0">&lt;code class="language-qmake" data-lang="qmake">CONFIG +=qt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But this will affect the global gcc/g++, so we change the configure file for mex only,&lt;/p&gt;</description></item><item><title>How to Use CMake to Configure a Qt Project?</title><link>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</link><pubDate>Wed, 18 Oct 2017 17:26:42 +0800</pubDate><guid>https://bobblelaw.github.io/posts/how-to-use-cmake-to-configure-a-qt-project/</guid><description>&lt;h3 id="a-simple-qt-code"&gt;A Simple Qt code&lt;/h3&gt;
+&lt;p&gt;Here is a hello world code for Qt&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;QtCore/QCoreApplication&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#include&lt;/span&gt; &lt;span style="color:#75715e"&gt;&amp;lt;QtCore/QDebug&amp;gt;&lt;/span&gt;&lt;span style="color:#75715e"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;(&lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; argc, &lt;span style="color:#66d9ef"&gt;char&lt;/span&gt;&lt;span style="color:#f92672"&gt;**&lt;/span&gt; argv){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; QCoreApplication app(argc, argv);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; qDebug() &lt;span style="color:#f92672"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Hello, Qt!&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; app.exec()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol&gt;
+&lt;li&gt;If we don&amp;rsquo;t use IDE or qmake, but compiler, this is the command&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;g++ main.cpp -I&lt;span style="color:#ae81ff"&gt;\\&lt;/span&gt;path&lt;span style="color:#ae81ff"&gt;\t&lt;/span&gt;o&lt;span style="color:#ae81ff"&gt;\Q&lt;/span&gt;t&lt;span style="color:#ae81ff"&gt;\5&lt;/span&gt;.13.0&lt;span style="color:#ae81ff"&gt;\i&lt;/span&gt;nclude -o main -L&lt;span style="color:#ae81ff"&gt;\p&lt;/span&gt;ath&lt;span style="color:#ae81ff"&gt;\t&lt;/span&gt;o&lt;span style="color:#ae81ff"&gt;\Q&lt;/span&gt;t&lt;span style="color:#ae81ff"&gt;\5&lt;/span&gt;.13.0&lt;span style="color:#ae81ff"&gt;\l&lt;/span&gt;ib -lQtCore4
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ol start="2"&gt;
+&lt;li&gt;If we have qmake, all we need is&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-qmake" data-lang="qmake"&gt;CONFIG +=qt
 QT -= gui
 SOURCE += main.cpp
-&lt;/code>&lt;/pre>&lt;ol start="3">
-&lt;li>If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li>
-&lt;/ol>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-cmake" data-lang="cmake">&lt;span style="display:flex;">&lt;span>PROJECT(&lt;span style="color:#e6db74">example&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>FIND_PACKAGE(&lt;span style="color:#e6db74">Qt4&lt;/span> &lt;span style="color:#e6db74">COMPONENTS&lt;/span> &lt;span style="color:#e6db74">QtCore&lt;/span> &lt;span style="color:#e6db74">REQUIRED&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>INCLUDE(&lt;span style="color:#f92672">${&lt;/span>QT_USE_FILE&lt;span style="color:#f92672">}&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#960050;background-color:#1e0010">&lt;/span>ADD_EXECUTABLE(&lt;span style="color:#e6db74">example&lt;/span> &lt;span style="color:#e6db74">main.cpp&lt;/span>)&lt;span style="color:#960050;background-color:#1e0010">
-&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="a-complete-qt-project">A Complete Qt Project&lt;/h3>
-&lt;p>Ususally a complete qt project would consist of the following files&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start="3"&gt;
+&lt;li&gt;If we use cmake, our old friend CMakeList.txt comes to stage&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-cmake" data-lang="cmake"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;PROJECT(&lt;span style="color:#e6db74"&gt;example&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;FIND_PACKAGE(&lt;span style="color:#e6db74"&gt;Qt4&lt;/span&gt; &lt;span style="color:#e6db74"&gt;COMPONENTS&lt;/span&gt; &lt;span style="color:#e6db74"&gt;QtCore&lt;/span&gt; &lt;span style="color:#e6db74"&gt;REQUIRED&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;INCLUDE(&lt;span style="color:#f92672"&gt;${&lt;/span&gt;QT_USE_FILE&lt;span style="color:#f92672"&gt;}&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;ADD_EXECUTABLE(&lt;span style="color:#e6db74"&gt;example&lt;/span&gt; &lt;span style="color:#e6db74"&gt;main.cpp&lt;/span&gt;)&lt;span style="color:#960050;background-color:#1e0010"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id="a-complete-qt-project"&gt;A Complete Qt Project&lt;/h3&gt;
+&lt;p&gt;Ususally a complete qt project would consist of the following files&lt;/p&gt;</description></item></channel></rss>
