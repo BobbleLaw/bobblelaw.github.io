@@ -1,4 +1,16 @@
-# Drawing in 2D
+---
+title: Drawing in 2D
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 Last time, we looked at how to create compute pipeline states from kernel functions so we can perform arbitrary computation on the GPU. This time, we’ll focus on a different kind of pipeline state: _render pipeline states_.
 

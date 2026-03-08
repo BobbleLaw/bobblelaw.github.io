@@ -1,4 +1,16 @@
-# Constants
+---
+title: Constants
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 Last time, we talked about how to add attributes to vertices so we could fill our triangle with smoothly shaded colors. In this article we will talk about how to pass constant data to shaders, which remains the same for all vertices in a draw call.
 

@@ -1,4 +1,16 @@
-# LeetCode Top Interview Questions
+---
+title: LeetCode Top Interview Questions
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
@@ -881,13 +893,15 @@ Time: O(N), Space: O(1)
 
 **Intuition**
 + Use the sliding window technique to maintain a substring without repeating characters while iterating through the string.
-If a character is repeated, move the left pointer of the window forward to exclude the previous occurrence.
++ If a character is repeated, move the left pointer of the window forward to exclude the previous occurrence.
 
 **Steps**
-+ Use two pointers, `left` and `right` start at `0`
-+ Declare hash map to record the last seen character index, {character, index}
++ Declare
+  + `left` at pos 0
+  + hash map to record the last seen character index of type {character: index}
+  + `maxLen` of so far the max length window, init with 0
 + Iterate the string (with `right`)
-  + If current character is seen and in range of the window
+  + If current character is seen and in range of the window (shrink)
     + Update `left` to next index of the seen character index
   + Update `lastSeen` of current position (`right`)
   + Update max length
@@ -981,20 +995,24 @@ Time: O(len(string), len(template)), Space: O(len(template))
 
 **HARD**
 
-*Question?*
-
 **Keyword**: Sliding Window
 
 **Intuition**
 + Brutal force: scan each window, cost O(nk)
-+ Use `deque` to store `indices` of useful elements in window
++ Try to track the max candiates inside the window
+  + Use deque to store the max candidates
+  + The deque is in decreasing order
 
 **Steps**
 + Declare a deque to keep indices of elements that are candidates for max
 + Iterate `nums`
-  + Remove the outside indices from the front
-  + Remove small indices from the back
-  + If i in range, append deque front (indices with larger value)
+  + while loop to keep the element at last index is greater equal than current number
+  + Push back current index
+  + Remove the indices outside the window from the front if there is
+  + If i in range, append the element at first index (deque front)
++ Return result
+
+Time: O(n), Space: O(k)
 
 #### [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 
@@ -1006,14 +1024,17 @@ Time: O(len(string), len(template)), Space: O(len(template))
 
 **Intuition**
 + A sliding window problem. The window is valid when
-  + Word frequency inside the window is same as the word frequency in `words`
-  + Word count inside the window is same as the word count in `words`
+  + **Word frequency** inside the window is same as the word frequency in `words`
+  + **Word count** inside the window is same as the word count in `words`
 
 **Steps**
 + Declare word frequency of type {string: int}
 + Calculate the word frequency in `words`
 + Starting iteration `i` in \[0...word_len\) (bcs all the words have same len, so iteration from 0 is same as iteration from word_len)
-  + Init tracking variables: `left` from `i`, `count` of `0`, `seen` of empty {string: int}
+  + Init tracking variables
+    + `left` from `i`
+    + `count` of `0`
+    + `seen` of empty {string: int}
   + Expand right `j` in [i, `n - word_len`]
     + If current word is in `word_freq`
       + `count` add up
@@ -1070,6 +1091,8 @@ Time: O(N), Space: O(1)
 #### [92. Reverse Linked List II](https://leetcode.com/problems/reverse-linked-list-ii/)
 
 **Keyword**: Linked-List
+
+*TODO*
 
 **Intuition**
 + Difference between [206. Reverse Linked List](#206-reverse-linked-list) is reverse list in a range
@@ -1260,7 +1283,7 @@ Time: O(N), Space: O(1)
 
 **Keyword**: Doubly Linked-List
 
-**Observations**
+**Intuition**
 + Both `get()` and `put()` are considered "used"
 + We use doubly linked list for efficient ordering, front (left) is the most recent element, and back (right) is the least recent element
 + We can't use index to manipulate value in linked list, so we create a hash map {key: iterator}
@@ -1290,6 +1313,8 @@ Time: O(N), Space: O(1)
 Time: O(1), Space: O(N)
 
 #### [460. LFU Cache](https://leetcode.com/problems/lfu-cache/)
+
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
 **HARD**
 
@@ -1844,18 +1869,20 @@ Time:
 
 **Steps**
 + Define `dfs`
-  + Input: numbers
+  + Input: numbers ([double])
   + Output: can make or not (bool)
   + Base condition: only one number
     + Return true when this number is the same as 24
   + Loop the two combinations of numbers: for example, [1, 2, 3] -> [1, 2], [1, 3], [2, 3]
-    + Declare new numbers
-    + The two combination is num1 and num2
-    + Append the rest numbers to new numbers
-    + Append the result of num1 and num2 to new numbers
+    + Declare next new numbers
+    + Append the not selected numbers (not include current two) to new numbers
+    + Push the result of current two number into new numbers
     + Backtrack new numbers
     + Pop last new numbers
 + Start with input numbers (convert to floating number because of '/')
+
+Time: O(4! * 4^3), permutation of numbers x all operator combinations
+Space: O(1), excluding stack size
 
 ## Graph
 
@@ -1913,12 +1940,14 @@ Time: O(m x n), Space: O(m x n)
 + Cycles for graph is like leaf of tree but connected
 
 **Steps**
-+ The DFS function: Return cloned node, carrying (or cache) hash map
++ Define `dfs()`
+  + Carrying (or cache): hash map from old node to new node of type {node: node}
+  + Return: cloned node
   + If `nullptr` return `nullptr`
   + If node is cloned, return the cloned node
   + Otherwise
     + Clone new node
-    + Recursively clone its neigbor
+    + Recursively clone its neigbors
 + Start DFS from `root`
 
 Time: O(N + E), Space: O(N)
@@ -1976,6 +2005,9 @@ If it is impossible to reach a gate, leave it as `INF`.
       + Else rotten, push back to queue, decrease fresh count
   + Minute add up
 + Return if no fresh left or not
+
+Time: O(m x n), need to visit all the cell
+Space: O(m x n), possible to store all the oranges
 
 #### [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 
@@ -2397,6 +2429,7 @@ Time: O(NLog(K)), Space: O(N)
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 
 **Keyword**: Intervals
 
@@ -4189,6 +4222,16 @@ Time: O(1), Space: O(capacity)
 
 **HARD!!!**
 
+*TODO*
+
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
 #### [670. Maximum Swap](https://leetcode.com/problems/maximum-swap/)
 
 **Keyword**: Greedy
@@ -4216,6 +4259,8 @@ Time: O(N), Capacity: O(1)
 #### [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
 
 **MEDIUM, BUT HARD**
+
+**Keyword**:
 
 **Intuition**
 + Convert the digits to number is better to understand
@@ -4416,10 +4461,19 @@ private:
   + If `pB` goes to the end, move to `headA`
 + Return `pA` (or `pB`)
 
-
 #### [282. Expression Add Operators](https://leetcode.com/problems/expression-add-operators/)
 
 **HARD**
+
+*TODO*
+
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
 
 #### [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 
@@ -4514,9 +4568,25 @@ Time: O(N), Space: O(N)
 
 *TODO*
 
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
+
 #### [398. Random Pick Index](https://leetcode.com/problems/random-pick-index/)
 
 *TODO*
+
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
 
 #### [415. Add Strings](https://leetcode.com/problems/add-strings/)
 
@@ -4558,6 +4628,14 @@ Time: O(N), Space: O(N)
 #### [1047. Remove All Adjacent Duplicates In String](https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/)
 
 *TODO*
+
+**Keyword**:
+
+**Intuition**
++ ...
+
+**Steps**
++ ...
 
 #### [1152. Analyze User Website Visit Pattern](https://leetcode.com/problems/analyze-user-website-visit-pattern/)
 
@@ -4687,7 +4765,25 @@ std::vector<std::string> mostVisitedPattern(const std::vector<std::string>& user
 
 **Keyword**: DP
 
-*TODO*
+**Intuition**
++ This is a dynamic programming problem.
++ At each travel day, decide which ticket (1, 7, or 30-day) gives the minimum total cost going forward.
+
+**Steps**
++ Define the dp
+  + dp[i] = min(dp[i + 1] + cost[0], dp[i + 7] + cost[1], dp[i + 30] + cost[2])
+  + Meaning: from day i to the end, how much to cost
+  + Start from the ending
++ Store the travel days into a hashset for faster access
++ Declare array of size 366, initialize with 0
++ Iterate from the end (365)
+  + If current day is travel day
+    + dp[i] = min(dp[i + 1] + cost[0], dp[i + 7] + cost[1], dp[i + 30] + cost[2])
+  + If current day is not travel day
+    + dp[i] = dp[i + 1]
++ Return dp[0]
+
+Time: O(365), Space: O(365) 
 
 #### [113. Path Sum II](https://leetcode.com/problems/path-sum-ii/)
 
@@ -4739,7 +4835,10 @@ Time: O(9x9), Space: O(9x9x3)
 
 **Keyword**: Simulation
 
+*TODO*
+
 **Steps**
++ ...
 
 #### [838. Push Dominoes](https://leetcode.com/problems/push-dominoes/)
 
@@ -4747,7 +4846,10 @@ Time: O(9x9), Space: O(9x9x3)
 
 **Keyword**: Simulation
 
+*TODO*
+
 **Steps**
++ ...
 
 #### [1429. First Unique Number](https://leetcode.com/problems/first-unique-number/)
 
@@ -4755,17 +4857,25 @@ Time: O(9x9), Space: O(9x9x3)
 
 **PROBLEM STATEMENT**
 
+*TODO*
+
 #### [795. Number of Subarrays with Bounded Maximum](https://leetcode.com/problems/number-of-subarrays-with-bounded-maximum/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+*TODO*
 
 #### [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
+*TODO*
+
 #### [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+
+**Keyword**:
 
 **Intuition**
 + Each operation removes **one unique non-zero number** from the set of values in the array.
@@ -4786,8 +4896,10 @@ Time: O(9x9), Space: O(9x9x3)
 **Keyword**: Greedy
 
 **Intuition**
++ ...
 
 **Steps**
++ ...
 
 #### [2214. Minimum Health to Beat Game](https://leetcode.com/problems/minimum-health-to-beat-game/)
 
@@ -4925,6 +5037,8 @@ This is a **combinatorics** problem. The robot has to make exactly `m-1` down mo
 Time: O(n + q), Space: O(n)
 
 #### [225. Implement Stack using Queues](https://leetcode.com/problems/implement-stack-using-queues/)
+
+**Keyword**:
 
 *TODO*
 
@@ -5082,6 +5196,7 @@ Return the length of the shortest path for you to reach any food cell. If there 
 **Keyword**: BFS on Grid
 
 **Intuition**
++ ...
 
 **Solution**
 ```cpp
@@ -5174,7 +5289,7 @@ Time: O(mxn), Space: (mxn)
     + Count up range element number
   + Return total element count
 
-#### Amazon Coding
+#### Amazon Coding \#001
 
 **PROBLEM STATEMENT**
 

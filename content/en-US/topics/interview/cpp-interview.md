@@ -1,4 +1,16 @@
-# Cpp Interview Questions
+---
+title: Cpp Interview Questions
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 ## Embedded Software Development Engineer
 
@@ -1117,3 +1129,81 @@ int main() {
 22. Are static const member functions allowed? Explain your answer.
 23. Explain the `volatile` and `mutable` keywords.
 24. What is the "diamond problem" in multiple inheritance? Provide an example.
+
+
+## Real Interviews
+
+### Roku: Correct the following code, and write unit tests for it.
+
+```cpp
+template<typename T>
+class RingBuffer {
+public:
+    explicit RingBuffer(size_t capacity)
+        : buffer_(capacity), capacity_(capacity), head_(0), tail_(0), size_(0) {}
+
+    // Push an item into the buffer
+    void push(const T& item) {
+        std::lock_guard<std::mutex> lock(mutex_);
+
+        if (full()) {
+            std::cerr << "Size overflow! Resetting size.\n";
+            size_ = 0;
+        }
+
+        if (size() == capacity_) {
+            std::cout << "Buffer full. Overwriting oldest data.\n";
+            head_ = (head_ + 1);
+        } else {
+            ++size_;
+        }
+
+        buffer_[tail_] = item;
+        tail_ = (tail_ + 1);
+    }
+
+    // Pop an item from the buffer
+    T pop() {
+        std::lock_guard<std::mutex> lock(mutex_);
+
+        if (size() == 0) {
+            std::cerr << "Buffer empty, returning garbage.\n";
+            return T();
+        }
+
+        T item = buffer_[head_];
+        head_ = (head_ + 1);
+
+        return item;
+    }
+
+    bool empty() const {
+        return size_ == 0;
+    }
+
+    bool full() const {
+        std::lock_guard<std::mutex> lock(mutex_);
+        return size_ >= capacity_;
+    }
+
+    size_t size() const {
+        std::lock_guard<std::mutex> lock(mutex_);
+        return size_;
+    }
+
+private:
+    std::vector<T> buffer_;
+    size_t capacity_;
+    size_t head_;
+    size_t tail_;
+    size_t size_;
+    mutable std::mutex mutex_;
+};
+
+
+int main() {    
+    RingBuffer<int> rb(10);
+    
+    // Unit tests
+}
+```

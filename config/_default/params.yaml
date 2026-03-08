@@ -157,73 +157,79 @@ about:
 # Experience
 experience:
   enable: true
-
   # default "Experience"
   # title: "Experience"
-
   items:
-    - job: "Visual SLAM Engineer"
-      company: "Mammotion Tech"
+    - company: "Roku UK"
+      companyUrl: "https://www.roku.com"
+      jobs:
+        - name: "Senior Software Engineer"
+          date: "Sep 2025 - Present"
+          content: >
+            TV OS, UI Framework
+    - company: "Mammotion Tech"
       companyUrl: "https://uk.mammotion.com"
-      date: "Feb 2023 - Feb 2025"
-      info:
-        enable: false
-        content: ""
-      featuredLink:
-        enable: false
-        name: "Example Project"
-        url: "https://example.com"
-      content: >
-        <ul>
-          <li>Scalable Calibration: Delivered end-to-end calibration systems 
-          deployed across 100,000+ robotic mowers, ensuring consistent accuracy 
-          in mass production.</li>
-          <li>Hardware-Software Synergy: Bridged algorithmic design (SLAM, 3D 
-          reconstruction) with practical implementation (Qt apps, sensor integration).</li>
-          <li>Full-Cycle Impact: Addressed challenges from factory calibration 
-          to post-deployment thermal effects, demonstrating versatility across 
-          the product lifecycle.</li>
-        </ul>
-
-    - job: "Computer Vision Engineer"
-      company: "Mech-Mind Robotics"
+      jobs: 
+        - name: "Visual SLAM Engineer"
+          date: "Feb 2023 - Feb 2025"
+          info:
+            enable: false
+            content: ""
+          featuredLink:
+            enable: false
+            name: "Example Project"
+            url: "https://example.com"
+          content: >
+            <ul>
+              <li>Scalable Calibration: Delivered end-to-end calibration systems 
+              deployed across 100,000+ robotic mowers, ensuring consistent accuracy 
+              in mass production.</li>
+              <li>Hardware-Software Synergy: Bridged algorithmic design (SLAM, 3D 
+              reconstruction) with practical implementation (Qt apps, sensor integration).</li>
+              <li>Full-Cycle Impact: Addressed challenges from factory calibration 
+              to post-deployment thermal effects, demonstrating versatility across 
+              the product lifecycle.</li>
+            </ul>
+    - company: "Mech-Mind Robotics"
       companyUrl: "https://www.mech-mind.com"
-      date: "Apr 2020 - Dec 2022"
-      info:
-        enable: false
-        content: ""
-      featuredLink:
-        enable: false
-        name: "Example Project"
-        url: "https://example.com"
-      content: >
-        <ul>
-          <li>Full-Stack Vision Expertise: Bridged algorithm design (GMM, point 
-          cloud registration) with industrial-grade software (C++, Qt, VTK) and 
-          sensor calibration.</li>
-          <li>Performance at Scale: Delivered solutions for processing 10M+ point 
-          clouds and calibrating mission-critical sensors in harsh environments.</li>
-          <li>Cross-Functional Impact: Transitioned seamlessly between algorithm 
-          R&D, software optimization, and robotics integration.</li>
-        </ul>
-
-    - job: "Research Intern"
-      company: "DJI Robotics"
+      jobs: 
+        - name: "Computer Vision Engineer"
+          date: "Apr 2020 - Dec 2022"
+          info:
+            enable: false
+            content: ""
+          featuredLink:
+            enable: false
+            name: "Example Project"
+            url: "https://example.com"
+          content: >
+            <ul>
+              <li>Full-Stack Vision Expertise: Bridged algorithm design (GMM, point 
+              cloud registration) with industrial-grade software (C++, Qt, VTK) and 
+              sensor calibration.</li>
+              <li>Performance at Scale: Delivered solutions for processing 10M+ point 
+              clouds and calibrating mission-critical sensors in harsh environments.</li>
+              <li>Cross-Functional Impact: Transitioned seamlessly between algorithm 
+              R&D, software optimization, and robotics integration.</li>
+            </ul>
+    - company: "DJI Robotics"
       companyUrl: "https://www.dji.com/uk"
-      date: "Jan 2020 - Aug 2020"
-      info:
-        enable: false
-        content: ""
-      featuredLink:
-        enable: false
-        name: "Example Project"
-        url: "https://example.com"
-      content: >
-        <ul>
-          <li>Bridging Research and Industry: Delivered PhD-level research into a functional prototype for real-world automation, demonstrating full-cycle R&D capability.</li>
-          <li>Multi-Modal Vision Systems: Combined structured light 3D sensing, point cloud processing, and monocular vision for adaptable pose estimation.</li>
-          <li>Hardware-Software Synergy: Designed sensor systems, algorithms, and user-facing tools to solve industrial automation challenges.</li>
-        </ul>
+      jobs:
+        - name: "Research Intern"
+          date: "Jan 2020 - Aug 2020"
+          info:
+            enable: false
+            content: ""
+          featuredLink:
+            enable: false
+            name: "Example Project"
+            url: "https://example.com"
+          content: >
+            <ul>
+              <li>Bridging Research and Industry: Delivered PhD-level research into a functional prototype for real-world automation, demonstrating full-cycle R&D capability.</li>
+              <li>Multi-Modal Vision Systems: Combined structured light 3D sensing, point cloud processing, and monocular vision for adaptable pose estimation.</li>
+              <li>Hardware-Software Synergy: Designed sensor systems, algorithms, and user-facing tools to solve industrial automation challenges.</li>
+            </ul>
 
 # Education
 education:

@@ -1,4 +1,16 @@
-# MTKView
+---
+title: MTKView
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 In the previous article, we got acquainted with Metal’s command submission model, including command queues, command buffers, and command encoders. In this article, we will meet the `MTKView` class, which allows us to display the pictures we draw with Metal on the screen.
 

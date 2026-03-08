@@ -1,3 +1,17 @@
+---
+title: VIO
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
+
 ## FEJ Explaination
 
 可观性问题会直接带来多传感器融合融态中的关键手段：FEJ First Estimated Jacobian.

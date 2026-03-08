@@ -1,4 +1,16 @@
-# Commands
+---
+title: Commands
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 So far in this series, we have talked about devices and buffers. Creating a device and asking it to allocate GPU memory are important tasks, but in order to put the GPU to work, we need to learn how to speak its language. We need to learn how to issue commands.
 

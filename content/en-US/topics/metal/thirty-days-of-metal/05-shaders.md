@@ -1,4 +1,16 @@
-# Shaders
+---
+title: Shaders
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 In the previous article, we looked at how to start and end render passes by creating a render command encoder from a view’s render pass descriptor. We also saw how the act of executing a render pass can clear the contents of a texture to a solid color. Finally, we discussed how to present the cleared texture in the view.
 

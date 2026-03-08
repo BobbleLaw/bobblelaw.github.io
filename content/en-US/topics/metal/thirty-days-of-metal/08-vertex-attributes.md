@@ -1,4 +1,16 @@
-# Vertex Attribute
+---
+title: Vertex Attribute
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 In the previous article, we crossed the threshold from learning foundational concepts of Metal into actually drawing shapes with the GPU. In this article, we will augment the previous example by adding a new _attribute_ to our vertices — color — and learn how to simplify our vertex function signatures by using _vertex descriptors_.
 

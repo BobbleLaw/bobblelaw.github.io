@@ -1,5 +1,16 @@
-# Machine Learning Interview
-
+---
+title: Machine Learning Interview
+description:
+toc: true
+authors:
+  - host
+tags: []
+categories:
+series:
+date: '2022-11-18T19:14:11+08:00'
+lastmod: '2022-11-20T22:52:56+08:00'
+draft: false
+---
 
 1. **What is stratified cross-validation and when should we use it?**
 2. **Why do ensembles typically have higher scores than individual models?**
