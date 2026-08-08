@@ -56,7 +56,7 @@ To decompose the functions into elementary steps, we need to construct their **e
 
 ### Accumulating the Tangent Trace
 
-Let’s say we want to calculate the partial derivative of $y$ with respect to $x_1$, with $x_1=1.5$ and $x_2=0.5$. As we mentioned above, we can try do it one intermediate variable at a time. Note that we are **only calculating the numerical value** of the derivative. For each $v_i$, we calculate $\.{v_i}=\frac{\partial{v_i}}{\partial{x_1}}$. Let’s try a few variables to see how it goes:
+Let’s say we want to calculate the partial derivative of $y$ with respect to $x_1$, with $x_1=1.5$ and $x_2=0.5$. As we mentioned above, we can try do it one intermediate variable at a time. Note that we are **only calculating the numerical value** of the derivative. For each $v_i$, we calculate $\dot{v}_i=\frac{\partial v_i}{\partial x_1}$. Let’s try a few variables to see how it goes:
 
 ```math
 \begin{align}
@@ -67,7 +67,7 @@ Let’s say we want to calculate the partial derivative of $y$ with respect to $
 \end{align}
 ```
 
-For these calculations, we are simply applying chain rules with basic derivatives. Note that how $\.{v_i}$ **only depends on the derivatives and values of the earlier variables**. We can now augment Table 2 to include the derivatives.
+For these calculations, we are simply applying chain rules with basic derivatives. Note that how $\dot{v}_i$ **only depends on the derivatives and values of the earlier variables**. We can now augment Table 2 to include the derivatives.
 
 
 The values of the intermediate variables are sometimes called the **primal trace**, and the derivative values the **tangent trace**.
@@ -92,7 +92,7 @@ and each column consists of
 \end{align}
 ```
 
-which are the partial derivatives of $y_i$ with respect to each $x_i$. So we can obtain the columns one by one by setting the corresponding $\.{x_i}$ and setting the other entries zero. This opens some interesting techniques. For example, if we want to compute the Jacobian-vector product with $\bold{r}$, we can simply set $\bold{\dot{x}}=\bold{r}$
+which are the partial derivatives of $y_i$ with respect to each $x_i$. So we can obtain the columns one by one by setting the corresponding $\dot{x}_i$ and setting the other entries zero. This opens some interesting techniques. For example, if we want to compute the Jacobian-vector product with $\bold{r}$, we can simply set $\bold{\dot{x}}=\bold{r}$
  instead of a unit vector:
 
 ```math
@@ -191,7 +191,7 @@ This essentially gives us the way to conduct forward mode AD by using dual numbe
 So, how do we take this to higher dimensions?
 We simply add an $\epsilon$ for each component.
 Assume a function $f: \reals^n \to \reals$.
-We define a vector $\boldsymbol{\epsilon} \in \reals^{n}$ where $\boldsymbol{\epsilon}_i^2 =  \boldsymbol{\epsilon}_i \ boldsymbol{\epsilon}_j = 0$. If you write out the component-wise computation following Eq.[1](), it follows that
+We define a vector $\boldsymbol{\epsilon} \in \reals^{n}$ where $\boldsymbol{\epsilon}_i^2 = \boldsymbol{\epsilon}_i \boldsymbol{\epsilon}_j = 0$. If you write out the component-wise computation following Eq.[1](), it follows that
 
 ```math
 \begin{align}
@@ -225,7 +225,7 @@ Reverse mode automatic differentiation, also known as adjoint mode, calculates t
 
 The two terms on the right-hand side can be seen as going backwards: $\frac{\partial y}{\partial x}$ can be determined once we calculate $y$ from $x$, and $\frac{\partial x}{\partial t}$ can be calculated once we calculate $x$ from $t$. Extending this to multivariate functions, we have the multivariate chain rule:
 
-Theorem [1](): Suppose \$g: \reals^n \to \reals^m$ is differentiable at $a \in \reals^n$ and $f: \reals^m \to \reals^{p}$ is differentiable at $g(a) \in \reals^m$. Then $f \circ g: \reals^n \to \reals^p$ is differentiable at $a$, and its derivative at this point is given by
+Theorem [1](): Suppose $g: \reals^n \to \reals^m$ is differentiable at $a \in \reals^n$ and $f: \reals^m \to \reals^{p}$ is differentiable at $g(a) \in \reals^m$. Then $f \circ g: \reals^n \to \reals^p$ is differentiable at $a$, and its derivative at this point is given by
 
 ```math
 D_{a}(f \circ g)=D_{g(a)}(f) D_{a}(g)

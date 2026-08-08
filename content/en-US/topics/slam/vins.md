@@ -14,15 +14,15 @@ _WIP_
 
 ```math
 \begin{align}
-_{G}^{B}\.{q}(t) &= \frac{1}{2} Ω(^{G}ω(t))_{G}^{B}q(t), ~ 
-with ~ Ω(ω)= \begin{bmatrix}
-            -[ω]_{×} & ω \\
-            -ω^{T}   & 0
+_{G}^{B}\dot{q}(t) &= \frac{1}{2} \Omega(^{G}\omega(t))_{G}^{B}q(t), ~
+\text{with} ~ \Omega(\omega)= \begin{bmatrix}
+            -[\omega]_{\times} & \omega \\
+            -\omega^{T}   & 0
            \end{bmatrix} \\
-^{G}\.{p}(t) &= ~ ^{G}v(t) \\
-^{G}\.{v}(t) &= ~ ^{G}a(t) \\
-\.{b}_{g}(t) &= n_{w_{g}}(t) \\
-\.{b}_{a}(t) &= n_{w_{a}}(t)
+^{G}\dot{p}(t) &= ~ ^{G}v(t) \\
+^{G}\dot{v}(t) &= ~ ^{G}a(t) \\
+\dot{b}_{g}(t) &= n_{w_{g}}(t) \\
+\dot{b}_{a}(t) &= n_{w_{a}}(t)
 \end{align}
 ```
 
@@ -42,8 +42,8 @@ For example,
 
 ```math
 \begin{align}
-  \~a_t &= a_t + ~ _w^T{R} ~ ^w{g} + b_{a_t} + n_a \\
-  \~\omega &= \omega_t + b_{\omega_t} + n_\omega
+  \widetilde{a}_t &= a_t + ~ _w^T{R} ~ ^w{g} + b_{a_t} + n_a \\
+  \widetilde{\omega}_t &= \omega_t + b_{\omega_t} + n_\omega
 \end{align}
 ```
 
@@ -75,21 +75,21 @@ n_{\omega} \sim N(0, \sigma_{\omega}^2)
 
 ```math
 \begin{align}
-  \alpha_{B_{k+1}}^{B_k} &= \iint_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\^a_t-b_{a_t}-n_a)} ~ dt^2  \\
-  \beta_{B_{k+1}}^{B_k} &= \int_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\^a_t-b_{a_t}-n_a)}  ~ dt \\
-  \gamma_{B_{k+1}}^{B_k} &= \int_{[t_k, t_{k+1}]} {\frac{1}{2}\Omega(\~\omega_t - b_{\omega_t} - n_\omega)\gamma_{B_t}^{B_{k+1}}} dt 
+  \alpha_{B_{k+1}}^{B_k} &= \iint_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\widehat{a}_t-b_{a_t}-n_a)} ~ dt^2  \\
+  \beta_{B_{k+1}}^{B_k} &= \int_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\widehat{a}_t-b_{a_t}-n_a)}  ~ dt \\
+  \gamma_{B_{k+1}}^{B_k} &= \int_{[t_k, t_{k+1}]} {\frac{1}{2}\Omega(\widetilde{\omega}_t - b_{\omega_t} - n_\omega)\gamma_{B_t}^{B_{k+1}}} dt
 \end{align}
 ```
 
 ```math
-\begin{align}
-  \alpha_{B_{k+1}}^{B_k} &\approx  \^\alpha_{B_{k+1}}^{B_k} + J_{b_a}^\alpha\delta{b_a} + J_{b_a}^\alpha\delta{b_\omega}\\
-  \beta_{B_{k+1}}^{B_k} &\approx \^\beta_{B_{k+1}}^{B_k} + J_{b_a}^\beta\delta{b_a} + J_{b_a}^\beta\delta{b_\omega}\\
-  \gamma_{B_{k+1}}^{B_k} &\approx \^\gamma_{B_{k+1}}^{B_k} \otimes \begin{bmatrix}
+\begin{aligned}
+  \alpha_{B_{k+1}}^{B_k} &\approx \widehat{\alpha}_{B_{k+1}}^{B_k} + J_{b_a}^\alpha\delta{b_a} + J_{b_a}^\alpha\delta{b_\omega}\\
+  \beta_{B_{k+1}}^{B_k} &\approx \widehat{\beta}_{B_{k+1}}^{B_k} + J_{b_a}^\beta\delta{b_a} + J_{b_a}^\beta\delta{b_\omega}\\
+  \gamma_{B_{k+1}}^{B_k} &\approx \widehat{\gamma}_{B_{k+1}}^{B_k} \otimes \begin{bmatrix}
                   1 \\
                   \frac{1}{2}J_{b_\omega}^\gamma\delta{b_\omega}
-                \end{bmatrix} 
-\end{align}
+                \end{bmatrix}
+\end{aligned}
 ```
 
 ### Question: Purpose of pre-integration?

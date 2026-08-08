@@ -17,7 +17,8 @@ useBootstrapCDN: false
 # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
 # cloudinaryCloudName: "YOUR_CLOUD_NAME"
 
-# Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+# MathJax is loaded by the site-level head extension. Keep the theme's legacy
+# MathJax 2 integration disabled.
 mathjax: false
 
 # Whether the fade animations on the home page will be enabled

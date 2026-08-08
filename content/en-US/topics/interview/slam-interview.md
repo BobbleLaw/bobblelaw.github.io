@@ -165,7 +165,7 @@ A simplified SfM
 #### SO3
 
 ```math
-R{R}^{T} = I, det(R) = I
+RR^{T} = I, \qquad \det(R) = 1
 ```
 
 ##### Lie Group
@@ -297,7 +297,7 @@ In Visual SLAM:
 + Bundle Adjustment
 
 ```math
-\sum_{i, j} || z_{ij} - \pi(T_i, Pj)||^2
+\sum_{i,j} \left\lVert z_{ij} - \pi(T_i, P_j) \right\rVert^2
 ```
 + Pose Graph Optimization
 
@@ -414,7 +414,7 @@ Given a dataset D with both inliers and outliers
 The number of iteration k depends on
 
 ```math
-k = \frac{log(1-p)}{log(1-w^n)}
+k = \frac{\log(1-p)}{\log(1-w^n)}
 ```
 
 where p is desired probability of finding a good model, w is estimated inlier ratio, N is number of points in the sample.

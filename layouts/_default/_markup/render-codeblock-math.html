@@ -1,0 +1,9 @@
+<div class="math-display">
+{{- if strings.Contains .Inner "\\begin{align}" }}
+{{ .Inner | safeHTML }}
+{{- else }}
+\[
+{{- .Inner | safeHTML -}}
+\]
+{{- end }}
+</div>
