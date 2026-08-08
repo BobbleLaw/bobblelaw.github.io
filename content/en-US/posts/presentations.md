@@ -6,7 +6,7 @@ tags:
   - presentations
   - computer vision
 image:
-toc: false
+toc: true
 draft: false
 ---
 

@@ -5,7 +5,7 @@ date: '2021-05-19T17:29:41+08:00'
 tags: 
   - C++
 image:
-toc:
+toc: true
 draft: false
 ---
 

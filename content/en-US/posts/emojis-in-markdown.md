@@ -5,7 +5,7 @@ date: 2025-06-03T22:38:00+01:00
 tags:
   - Sample
 image:
-toc: false
+toc: true
 draft: false
 ---
 
