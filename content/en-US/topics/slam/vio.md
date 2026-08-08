@@ -2,8 +2,6 @@
 title: VIO
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

@@ -2,8 +2,6 @@
 title: MSCKF Series
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

@@ -2,8 +2,6 @@
 title: Intrinsic Calibration
 description:
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

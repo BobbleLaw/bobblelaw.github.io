@@ -2,8 +2,6 @@
 title: Recursive Lambdas
 description: Ever wondered how to make our beloved [](){}s call themselves?
 date: '2020-11-08T13:41:36+08:00'
-authors:
-  - Bob Law
 tags: 
   - C++
 image:

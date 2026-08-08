@@ -2,7 +2,6 @@
 title: Basic Floating Point Optimizations
 description: Why is "f + 0.0" slower than "f - 0.0"?
 date: 2019-08-07T09:08:11+08:00
-author: "Bob Law"
 tags: 
   - C++
 image:

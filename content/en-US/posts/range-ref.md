@@ -2,8 +2,6 @@
 title: range_ref<T>
 description: A fast, lightweight, non-owning view of a range.
 date: '2020-11-12T19:37:43+08:00'
-authors:
-  - Bob Law
 tags: 
   - C++
 image:

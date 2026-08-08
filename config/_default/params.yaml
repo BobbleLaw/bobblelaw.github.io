@@ -1,5 +1,5 @@
-title: "Bob Law"
-description: Bob Law's personal website
+title: "Ziyun Luo"
+description: Ziyun Luo's personal website
 
 # The path to serve the static files from, default is "static"
 # staticPath: "static"
@@ -82,9 +82,11 @@ navbar:
 
   menus:
     disableAbout: false
-    disableExperience: false
-    disableEducation: false
-    disableProjects: false
+    # These sections remain on the homepage; keep the top navigation focused
+    # on destinations that lead to separate pages.
+    disableExperience: true
+    disableEducation: true
+    disableProjects: true
     disableAchievements: false
     disableContact: false
 
@@ -95,7 +97,7 @@ hero:
   enable: true
 
   intro: "Hi, my name is Lo TszWan (try to read it in Cantonese), call me"
-  title: "Bob,"
+  title: "Ziyun,"
   subtitle: "a 3D Computer Vision Engineer. 🪩"
   content: >
     Passionate about algorithms that make machines understand space. 

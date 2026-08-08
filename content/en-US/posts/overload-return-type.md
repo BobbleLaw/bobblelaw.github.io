@@ -2,8 +2,6 @@
 title: Overload Return Type
 description: Everyone overloads by argument types. But can you do return type?
 date: '2021-02-11T10:43:29+08:00'
-authors:
-  - Bob Law
 tags: 
   - C++
 image:

@@ -2,8 +2,6 @@
 title: Inlining Optimization 
 description: Even without inlining, the compiler does not always has to assume the worst case.
 date: '2021-05-19T17:29:41+08:00'
-authors:
-  - Bob Law
 tags: 
   - C++
 image:

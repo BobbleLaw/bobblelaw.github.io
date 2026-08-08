@@ -2,8 +2,6 @@
 title: Cpp Interview Questions
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

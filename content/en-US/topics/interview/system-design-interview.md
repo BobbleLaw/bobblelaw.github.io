@@ -2,8 +2,6 @@
 title: System Design Interview
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

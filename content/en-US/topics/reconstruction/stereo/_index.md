@@ -2,8 +2,6 @@
 title: Stereo Vision
 description: Introduction
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

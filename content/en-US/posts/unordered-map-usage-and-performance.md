@@ -2,8 +2,6 @@
 title: std::unordered_map Performance and Usage
 description: How well is your hashmap?
 date: '2020-12-11T09:36:58+08:00'
-authors:
-  - Bob Law
 tags:
   - C++
 image:

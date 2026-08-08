@@ -2,7 +2,6 @@
 title: "Emojis in Markdown"
 description: ""
 date: 2025-06-03T22:38:00+01:00
-author: "Bob Law"
 tags:
   - Sample
 image:

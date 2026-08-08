@@ -2,8 +2,6 @@
 title: Understanding Automatic Differentiation
 description: My humble understand towards AD.
 date: '2021-03-17T20:47:18+08:00'
-authors:
-  - Bob Law
 tags: 
   - Optimization
 image:

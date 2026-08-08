@@ -2,8 +2,6 @@
 title: Presentations
 description: Interactive technical presentations about computer vision and production engineering.
 date: '2026-08-08T12:00:00+01:00'
-authors:
-  - Bob Law
 tags:
   - presentations
   - computer vision

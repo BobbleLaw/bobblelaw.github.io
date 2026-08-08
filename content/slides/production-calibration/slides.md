@@ -1,7 +1,6 @@
 ---
 theme: default
 title: Building a Production Calibration System
-author: Bob Law
 info: |
   Factory calibration, online compensation, validation, and production deployment
 aspectRatio: 16/9
@@ -17,7 +16,7 @@ mdc: true
   <div class="eyebrow">Production Computer Vision</div>
   <h1 class="deck-title">Building a Production<br><span class="accent">Calibration System</span></h1>
   <div class="deck-subtitle">Factory Calibration · Online Compensation · Validation at Scale</div>
-  <div class="presenter-name">Bob Law</div>
+  <div class="presenter-name">Ziyun Luo</div>
 </div>
 
 <!--

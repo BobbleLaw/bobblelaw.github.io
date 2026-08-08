@@ -2,8 +2,6 @@
 title: 3D Modeling
 description: Techniques related to 3D reconstruction
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

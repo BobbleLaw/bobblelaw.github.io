@@ -2,8 +2,6 @@
 title: 6 DoF Pose Estimation
 description:
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

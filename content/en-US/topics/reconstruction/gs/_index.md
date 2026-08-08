@@ -2,8 +2,6 @@
 title: Neural Network based 3D Modeling
 description: Introduction
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

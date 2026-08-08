@@ -2,8 +2,6 @@
 title: SLAM Interview Questions
 description: Questions are collected from Chinese internet.
 toc: false
-authors:
-  - host
 tags: 
   - SLAM
 categories:

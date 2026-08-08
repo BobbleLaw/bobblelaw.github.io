@@ -2,8 +2,6 @@
 title: VINS Series
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

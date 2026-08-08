@@ -2,8 +2,6 @@
 title: Machine Learning Interview
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

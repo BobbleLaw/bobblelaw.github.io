@@ -2,8 +2,6 @@
 title: Detection
 description: Object detection, pose estimation, and registration techniques.
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

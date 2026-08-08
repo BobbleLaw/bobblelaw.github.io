@@ -2,8 +2,6 @@
 title: Computer Vision and Image Processing
 description: Techniques related to 3D reconstruction
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

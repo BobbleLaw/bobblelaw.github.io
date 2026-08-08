@@ -2,8 +2,6 @@
 title: Images-based Modeling
 description: Introduction
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

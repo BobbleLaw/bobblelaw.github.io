@@ -2,8 +2,6 @@
 title: Calibration
 description: Techniques related to camera calibration
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:

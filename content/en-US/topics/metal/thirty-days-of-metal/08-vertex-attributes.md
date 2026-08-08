@@ -2,8 +2,6 @@
 title: Vertex Attribute
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

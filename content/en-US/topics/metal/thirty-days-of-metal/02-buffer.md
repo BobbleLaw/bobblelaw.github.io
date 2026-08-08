@@ -2,8 +2,6 @@
 title: Buffer
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

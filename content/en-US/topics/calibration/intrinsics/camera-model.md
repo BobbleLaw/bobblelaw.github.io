@@ -2,7 +2,6 @@
 title: Camera Models
 description:
 toc: true
-authors:
 tags: []
 categories:
 series:

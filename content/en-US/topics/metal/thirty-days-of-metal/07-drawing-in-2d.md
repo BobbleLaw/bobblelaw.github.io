@@ -2,8 +2,6 @@
 title: Drawing in 2D
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

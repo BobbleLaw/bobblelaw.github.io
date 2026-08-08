@@ -2,8 +2,6 @@
 title: Point Pair Features
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

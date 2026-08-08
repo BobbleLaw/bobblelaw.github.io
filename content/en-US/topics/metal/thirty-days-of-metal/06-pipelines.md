@@ -2,8 +2,6 @@
 title: Pipelines
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

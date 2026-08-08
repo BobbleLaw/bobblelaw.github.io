@@ -2,8 +2,6 @@
 title: Notes on Linux Development
 description: A place for problems and solutions encountered in Linux development
 date: '2018-08-17T17:41:48+08:00'
-authors:
-  - Bob Law
 tags: 
   - Note
 image:

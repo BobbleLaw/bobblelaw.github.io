@@ -2,8 +2,6 @@
 title: Behavioral Interviews
 description:
 toc: true
-authors:
-  - host
 tags: []
 categories:
 series:

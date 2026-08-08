@@ -2,8 +2,6 @@
 title: Geometry Analysis
 description: Geometry processing and analysis notes.
 toc: true
-authors:
-  - host
 tags:
 categories:
 series:
