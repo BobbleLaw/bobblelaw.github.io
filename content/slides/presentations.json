@@ -1,0 +1,11 @@
+{
+  "presentations": [
+    {
+      "name": "Building a Production Calibration System",
+      "directory": "content/slides/production-calibration",
+      "route": "production-calibration",
+      "enabled": true,
+      "includeNotes": false
+    }
+  ]
+}
