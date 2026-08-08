@@ -18,6 +18,7 @@ draft: false
 ![Google](https://img.shields.io/badge/google-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![Apple](https://img.shields.io/badge/Apple-%23000000.svg?style=for-the-badge&logo=apple&logoColor=white)
 ![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 ## Array & Hashing
 
@@ -57,6 +58,8 @@ draft: false
 #### [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
+
 
 **Keyword**: Hashing
 
@@ -134,6 +137,7 @@ public:
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Array
 
@@ -253,6 +257,8 @@ Time: O(n), Space: O(2)
 + Start with `"", 0, 0, n, res`
 
 #### [1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses)
+
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Approach I: Two-Pass with Stack**
 1. Use stack to store '(', and unordered_set for invalid indices for quick access
@@ -659,6 +665,7 @@ Time: O(N), Space: O(1)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Binary Search
 
@@ -698,6 +705,7 @@ Time: O(nLog(max)), each check takes O(n), binary search take O(log(max)), Space
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Binary Search
 
@@ -888,6 +896,7 @@ Time: O(N), Space: O(1)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Sliding Window
 
@@ -955,6 +964,7 @@ Time: O(N), Space: O(A), where A is the size of the character size
 #### [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **HARD**
 
@@ -1076,6 +1086,7 @@ Time: O(N), Space: O(1)
 #### [206. Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Linked-List
 
@@ -1144,6 +1155,7 @@ Time: O(N), Space: O(1)
 #### [143. Reorder List](https://leetcode.com/problems/reorder-list/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Linked-List
 
@@ -1280,6 +1292,7 @@ Time: O(N), Space: O(1)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 ![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Doubly Linked-List
 
@@ -1315,16 +1328,119 @@ Time: O(1), Space: O(N)
 #### [460. LFU Cache](https://leetcode.com/problems/lfu-cache/)
 
 ![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **HARD**
 
-*TODO*
-
 **Keyword**:
 
-**Intuition**
+**Key Insight**
 
-**Steps**
+**Thought Process**
+
+Maintain:
+
+```
+keyToNode:
+key -> (value, freq, iterator)
+
+freqToList:
+freq -> LRU list of keys
+
+minFreq:
+current minimum frequency
+```
+
+Operations:
+- get
+  - Remove from old frequency list.
+  - Increase frequency.
+  - Insert into new frequency list.
+- put
+  - Existing key → update value + increase frequency.
+  - New key:
+    - If full, remove tail of minFreq list.
+    - Insert into frequency 1.
+    - minFreq = 1.
+
+**Solution**
+
+```cpp
+class LFUCache {
+  public:
+    explicit LFUCache(int capacity) : _capacity(capacity) {}
+
+    int Get(int key) {
+      if (!_keyMap.contains(key)) {
+        return -1;
+      }
+
+      touch(key);
+      return _keyMap[key].value;
+    }
+
+    int Put(int key, int value) {
+      if (_capacity == 0) {
+        return;
+      }
+      
+      if (_keyMap.contains(key)) {
+        keyMap[key].value = value;
+        touch(key);
+        return;
+      } else {
+        if (keyMap.size() == _capacity) {
+          auto oldKey = _freqMap[_minFreq].back();
+          _freqMap[_minFreq].pop_back();
+          _keyMap.erase(oldKey);
+        }
+
+        _freqMap[1].push_front(key);
+        _keyMap[key] = {
+          .value = value,
+          .freq = 1,
+          .it = _freqMap[1].begin()
+        };
+        _minFreq = 1;
+      }
+    }
+
+  private:
+    int touch(int key) {
+      // assume the user is responsible for checking existence
+      auto& entry = _keyMap[key];
+
+      auto f = entry.freq;
+      // not in current freq anymore
+      _freqMap[f].erase(entry.it);
+      // erase current freq if there's no current freq anymore
+      if (_freqMap[f].empty()) {
+        _freqMap.erase(f);
+        if (_minFreq == f) {
+          _minFreq++;
+        }
+      }
+
+      // update entry
+      entry.freq++;
+      freqMap[entry.freq].push_front(key);
+      entry.it = freqMap[entry.freq].begin();
+    }
+
+  private:
+    struct Entry {
+      int value;
+      int freq;
+      std::list<int>::iterator it;
+    };
+    
+    std::unordered_map<int, Entry> _keyMap;
+    // double-linked list: most recent -> least recent
+    std::unordered_map<int, std::list<int>> _freqMap;
+    const int _capacity;
+    int _minFreq = 0;
+}
+```
 
 ## Binary Tree
 
@@ -1633,6 +1749,7 @@ Time: O(H + N), Space: O(H)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **HARD**
 
@@ -1777,6 +1894,7 @@ Time: O(N), Space: O(H)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: DFS on Matrix, Backtracking
 
@@ -1801,6 +1919,7 @@ Time: O(N), Space: O(H)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Backtrack
 
@@ -1890,6 +2009,7 @@ Space: O(1), excluding stack size
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: BFS on Grid, DFS
 
@@ -2041,6 +2161,7 @@ Space: O(m x n), possible to store all the oranges
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: BFS on Graph
 
@@ -2072,6 +2193,7 @@ Time: O(N + E), Space: O(N + E)
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Intuition**
 + Same as [207. Course Schedule](#207-course-schedule)
@@ -2172,6 +2294,7 @@ public:
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: BFS on Graph
 
@@ -2271,6 +2394,7 @@ public:
 #### [973. K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Max-Heap
 
@@ -2392,6 +2516,7 @@ Time: O(N) average, O($N^2$) worst, Space: O(1)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 ![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Min-Heap
 
@@ -2430,6 +2555,7 @@ Time: O(NLog(K)), Space: O(N)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
 ![Roku](https://img.shields.io/badge/roku-6f1ab1?style=for-the-badge&logo=roku&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Intervals
 
@@ -2501,6 +2627,7 @@ public:
 
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **PROBLEM STATEMENT**
 
@@ -2638,6 +2765,7 @@ Time: O(ElogD), Space: O(E + V)
 #### [269. Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **HARD**
 
@@ -2646,6 +2774,7 @@ Time: O(ElogD), Space: O(E + V)
 #### [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 *TODO*
 
@@ -2698,8 +2827,9 @@ Time: O(ElogD), Space: O(E + V)
 #### [91. Decode Ways](https://leetcode.com/problems/decode-ways/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
-*TODO*
+**Keyword**: DP
 
 #### [322. Coin Change](https://leetcode.com/problems/coin-change/)
 
@@ -2818,10 +2948,11 @@ Time: O(N*L^2), Space: O(N*L)
 #### [312. Burst Balloons](https://leetcode.com/problems/burst-balloons/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **HARD**
 
-*TODO*
+**Keyword**: DP
 
 #### [10. Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/)
 
@@ -2847,12 +2978,14 @@ Time: O(N*L^2), Space: O(N*L)
 #### [211. Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 *TODO*
 
 #### [212. Word Search II](https://leetcode.com/problems/word-search-ii/)
 
 ![LeetCode](https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **HARD**
 
@@ -3322,6 +3455,8 @@ Time: O($N^2$), Space: O($N^2$)
 
 #### [67. Add Binary](https://leetcode.com/problems/add-binary/)
 
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
+
 + Simulate binary addition (with two pointers)
 
 #### [638. Shopping Offers](https://leetcode.com/problems/shopping-offers/)
@@ -3359,6 +3494,8 @@ Time: O($N^2$), Space: O($N^2$)
 + Except we need one more boolean to indicate the direction, reverse the values in level based on the direction
 
 #### [314. Binary Tree Vertical Order Traversal](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **PROBLEM STATEMENT**
 
@@ -3528,6 +3665,8 @@ Time: O(N), Space: O(H)
 + ...
 
 #### [270. Closest Binary Search Tree Value](https://leetcode.com/problems/closest-binary-search-tree-value/)
+
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **PROBLEM STATEMENT**
 
@@ -3738,6 +3877,7 @@ Time: O(N), Space: O(N)
 #### [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/)
 
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 #### [227. Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
 
@@ -3766,6 +3906,8 @@ Time: O(N), Space: O(N)
 Time: O(N), Space: O(N)
 
 #### [528. Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)
+
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Prefix Sum
 
@@ -3809,6 +3951,8 @@ auto num = dist(rd);a
 Time: O($log(N)$), Space: O(1)
 
 #### [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
+
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: BFS
 
@@ -4104,6 +4248,7 @@ Time: O(N), Space: O(1)
 
 ![Meta](https://img.shields.io/badge/Meta-%230467DF.svg?style=for-the-badge&logo=Meta&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Snapchat](https://img.shields.io/badge/Snapchat-%23FFFC00.svg?style=for-the-badge&logo=Snapchat&logoColor=white)
 
 **Keyword**: Min-Heap
 
