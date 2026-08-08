@@ -1,0 +1,36 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default .Title }}">
+<link rel="stylesheet" href="{{ "css/topics.css" | relURL }}" media="all">
+<link rel="stylesheet" href="{{ "css/single.css" | relURL }}" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="container-fluid topics-shell">
+  <div class="row g-0">
+    <aside class="col-lg-3 col-xl-2 topics-sidebar">
+      <div class="topics-sidebar-inner">
+        <a class="topics-sidebar-title" href="{{ "/topics/" | relLangURL }}">Topics</a>
+        <nav aria-label="Topic chapters">
+          <ul class="topics-tree">
+            {{ range (.Site.GetPage "/topics").Sections.ByTitle }}
+              {{ partial "topics-nav.html" (dict "page" . "current" $) }}
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <main class="col-lg-9 col-xl-10 topics-content">
+      <article class="topics-article">
+        <header class="topics-heading">
+          <p class="topics-eyebrow">Topic article</p>
+          <h1>{{ .Title }}</h1>
+          {{ with .Description }}<p class="topics-lead">{{ . }}</p>{{ end }}
+        </header>
+        <div class="topics-body">{{ .Content }}</div>
+      </article>
+    </main>
+  </div>
+</div>
+{{ end }}

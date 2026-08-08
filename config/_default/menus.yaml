@@ -4,10 +4,11 @@ main:
     name: Posts
     url: /posts
     weight: 1
+  - identifier: topics
+    name: Topics
+    url: /topics
+    weight: 2
   - identifier: tags
     name: Tags
     url: /tags
-    weight: 2
-  - name: Topics
-    url: /topics
     weight: 3

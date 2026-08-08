@@ -1,0 +1,16 @@
+{{ $page := .page }}
+{{ $current := .current }}
+{{ $isActive := or (eq $current.RelPermalink $page.RelPermalink) (hasPrefix $current.RelPermalink $page.RelPermalink) }}
+<li class="topics-tree-item{{ if $isActive }} is-active{{ end }}">
+  <a href="{{ $page.RelPermalink }}"{{ if eq $current.RelPermalink $page.RelPermalink }} aria-current="page"{{ end }}>{{ $page.Title }}</a>
+  {{ if $page.Pages }}
+  <ul>
+    {{ range $page.Sections.ByTitle }}
+      {{ partial "topics-nav.html" (dict "page" . "current" $current) }}
+    {{ end }}
+    {{ range $page.RegularPages.ByTitle }}
+    <li><a href="{{ .RelPermalink }}"{{ if eq $current.RelPermalink .RelPermalink }} aria-current="page"{{ end }}>{{ .Title }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</li>

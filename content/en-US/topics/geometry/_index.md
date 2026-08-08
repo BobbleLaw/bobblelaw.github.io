@@ -1,6 +1,6 @@
 ---
 title: Geometry Analysis
-description:
+description: Geometry processing and analysis notes.
 toc: true
 authors:
   - host

@@ -1,0 +1,69 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Description | default (printf "%s of %s" .Title .Site.Title) }}">
+<link rel="stylesheet" href="{{ "css/topics.css" | relURL }}" media="all">
+{{ end }}
+
+{{ define "title" }}{{ .Title }} | {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+<div class="container-fluid topics-shell">
+  <div class="row g-0">
+    <aside class="col-lg-3 col-xl-2 topics-sidebar">
+      <div class="topics-sidebar-inner">
+        <a class="topics-sidebar-title" href="{{ "/topics/" | relLangURL }}">Topics</a>
+        <nav aria-label="Topic chapters">
+          <ul class="topics-tree">
+            {{ range (.Site.GetPage "/topics").Sections.ByTitle }}
+              {{ partial "topics-nav.html" (dict "page" . "current" $) }}
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="col-lg-9 col-xl-10 topics-content">
+      <article class="topics-article">
+        <header class="topics-heading">
+          <p class="topics-eyebrow">{{ if eq .RelPermalink ("/topics/" | relLangURL) }}Documentation{{ else }}Chapter{{ end }}</p>
+          <h1>{{ .Title }}</h1>
+          {{ with .Description }}<p class="topics-lead">{{ . }}</p>{{ end }}
+        </header>
+
+        {{ with .Content }}<div class="topics-body">{{ . }}</div>{{ end }}
+
+        {{ if eq .RelPermalink ("/topics/" | relLangURL) }}
+          <div class="chapter-list">
+            {{ range .Sections.ByTitle }}
+            <a class="chapter-row" href="{{ .RelPermalink }}">
+              <span>
+                <strong>{{ .Title }}</strong>
+                <small>{{ .Description | default "Notes and reference material for this chapter are being prepared." }}</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+            {{ end }}
+          </div>
+        {{ else }}
+          {{ $entries := .Pages }}
+          {{ if $entries }}
+          <section class="topics-section-list">
+            <h2>In this chapter</h2>
+            {{ range $entries.ByTitle }}
+            <a class="chapter-row" href="{{ .RelPermalink }}">
+              <span>
+                <strong>{{ .Title }}</strong>
+                <small>{{ .Description | default (.Summary | plainify) | default "Content for this entry is being prepared." | truncate 150 }}</small>
+              </span>
+              <span aria-hidden="true">→</span>
+            </a>
+            {{ end }}
+          </section>
+          {{ else }}
+          <p class="topics-placeholder">Content for this chapter is being prepared. Check back soon.</p>
+          {{ end }}
+        {{ end }}
+      </article>
+    </main>
+  </div>
+</div>
+{{ end }}

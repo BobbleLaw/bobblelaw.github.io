@@ -1,4 +1,4 @@
 ---
 title: Topics
-layout: doc-list
+description: Browse articles, notes, and reference material by subject.
 ---
