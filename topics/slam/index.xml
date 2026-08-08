@@ -1,93 +1,126 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SLAM on Bobble Law</title><link>https://bobblelaw.github.io/topics/slam/</link><description>Recent content in SLAM on Bobble Law</description><generator>Hugo</generator><language>en-US</language><lastBuildDate>Sun, 20 Nov 2022 22:52:56 +0800</lastBuildDate><atom:link href="https://bobblelaw.github.io/topics/slam/index.xml" rel="self" type="application/rss+xml"/><item><title>MSCKF Series</title><link>https://bobblelaw.github.io/topics/slam/msckf/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/slam/msckf/</guid><description>&lt;h2 id="notations"&gt;Notations&lt;/h2&gt;
 &lt;h2 id="review-of-extended-kalman-filter"&gt;Review of Extended Kalman Filter&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
-x_{k} &amp;amp;= f(x_{k-1}, u_{k-1}) + w_{k-1} \\
-z_{k} &amp;amp;= h(x_{k}) + v_{k-1}
+&lt;div class="math-display"&gt;
+\begin{align}
+x_{k} &amp;= f(x_{k-1}, u_{k-1}) + w_{k-1} \\
+z_{k} &amp;= h(x_{k}) + v_{k-1}
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;where $w_{k} ∼ N(0, Q_{k})$, $v_{k} ∼ N(0, R_{k})$.&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
-_{G}^{B}\.{q}(t) &amp;amp;= \frac{1}{2} Ω(^{G}ω(t))_{G}^{B}q(t), ~ 
-with ~ Ω(ω)= \begin{bmatrix}
- -[ω]_{×} &amp;amp; ω \\
- -ω^{T} &amp;amp; 0
+&lt;/div&gt;
+&lt;p&gt;where $w_{k} ∼ N(0, Q_{k})$, $v_{k} ∼ N(0, R_{k})$.&lt;/p&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+_{G}^{B}\dot{q}(t) &amp;= \frac{1}{2} \Omega(^{G}\omega(t))_{G}^{B}q(t), ~
+\text{with} ~ \Omega(\omega)= \begin{bmatrix}
+ -[\omega]_{\times} &amp; \omega \\
+ -\omega^{T} &amp; 0
  \end{bmatrix} \\
-^{G}\.{p}(t) &amp;amp;= ~ ^{G}v(t) \\
-^{G}\.{v}(t) &amp;amp;= ~ ^{G}a(t) \\
-\.{b}_{g}(t) &amp;amp;= n_{w_{g}}(t) \\
-\.{b}_{a}(t) &amp;amp;= n_{w_{a}}(t)
+^{G}\dot{p}(t) &amp;= ~ ^{G}v(t) \\
+^{G}\dot{v}(t) &amp;= ~ ^{G}a(t) \\
+\dot{b}_{g}(t) &amp;= n_{w_{g}}(t) \\
+\dot{b}_{a}(t) &amp;= n_{w_{a}}(t)
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
-_{G}^{B}\.{q}(t) &amp;amp;= \frac{1}{2} Ω(^{G}ω(t))_{G}^{B}q(t), ~ 
-with ~ Ω(ω)= \begin{bmatrix}
- -[ω]_{×} &amp;amp; ω \\
- -ω^{T} &amp;amp; 0
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+_{G}^{B}\dot{q}(t) &amp;= \frac{1}{2} \Omega(^{G}\omega(t))_{G}^{B}q(t), ~
+\text{with} ~ \Omega(\omega)= \begin{bmatrix}
+ -[\omega]_{\times} &amp; \omega \\
+ -\omega^{T} &amp; 0
  \end{bmatrix} \\
-^{G}\.{p}(t) &amp;amp;= ~ ^{G}v(t) \\
-^{G}\.{v}(t) &amp;amp;= ~ ^{G}a(t) \\
-\.{b}_{g}(t) &amp;amp;= n_{w_{g}}(t) \\
-\.{b}_{a}(t) &amp;amp;= n_{w_{a}}(t)
+^{G}\dot{p}(t) &amp;= ~ ^{G}v(t) \\
+^{G}\dot{v}(t) &amp;= ~ ^{G}a(t) \\
+\dot{b}_{g}(t) &amp;= n_{w_{g}}(t) \\
+\dot{b}_{a}(t) &amp;= n_{w_{a}}(t)
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\bold{x}_{B} = [^{G}q_{B}^{T},~ ^{G}p_{B}^{T},~ ^{G}v_{B}^{T},~ b_{g}^{T},~ b_{a}^{T}]^{T}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\~{\bold{x}}_{B} = [^{G}\delta\theta_{B}^{T},~ ^{G}\~p_{B}^{T},~ ^{G}\~v_{B}^{T},~ \~b_{g}^{T},~ \~b_{a}^{T}]^{T}
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="complete-state-vector"&gt;Complete state vector&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{pmatrix} a&amp;amp;b\\c&amp;amp;d \end{pmatrix} \quad
-\begin{bmatrix} a&amp;amp;b\\c&amp;amp;d \end{bmatrix} \quad
-\begin{Bmatrix} a&amp;amp;b\\c&amp;amp;d \end{Bmatrix} \quad
-\begin{vmatrix} a&amp;amp;b\\c&amp;amp;d \end{vmatrix} 
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{aligned}
-x ={}&amp;amp; a+b+c+{} \\
-&amp;amp;d+e+f+g
-\end{aligned}
-&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>VINS Series</title><link>https://bobblelaw.github.io/topics/slam/vins/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/slam/vins/</guid><description>&lt;p&gt;&lt;em&gt;WIP&lt;/em&gt;&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
-_{G}^{B}\.{q}(t) &amp;amp;= \frac{1}{2} Ω(^{G}ω(t))_{G}^{B}q(t), ~ 
-with ~ Ω(ω)= \begin{bmatrix}
- -[ω]_{×} &amp;amp; ω \\
- -ω^{T} &amp;amp; 0
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[\bold{x}_{B} = [^{G}q_{B}^{T},~ ^{G}p_{B}^{T},~ ^{G}v_{B}^{T},~ b_{g}^{T},~ b_{a}^{T}]^{T}\]
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[\widetilde{\bold{x}}_{B} = [^{G}\delta\theta_{B}^{T},~ ^{G}\widetilde{p}_{B}^{T},~ ^{G}\widetilde{v}_{B}^{T},~ \widetilde{b}_{g}^{T},~ \widetilde{b}_{a}^{T}]^{T}\]
+&lt;/div&gt;
+&lt;h2 id="complete-state-vector"&gt;Complete state vector&lt;/h2&gt;
+&lt;div class="math-display"&gt;
+\[\begin{pmatrix} a&amp;b\\c&amp;d \end{pmatrix} \quad
+\begin{bmatrix} a&amp;b\\c&amp;d \end{bmatrix} \quad
+\begin{Bmatrix} a&amp;b\\c&amp;d \end{Bmatrix} \quad
+\begin{vmatrix} a&amp;b\\c&amp;d \end{vmatrix} \]
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[\begin{aligned}
+x ={}&amp; a+b+c+{} \\
+&amp;d+e+f+g
+\end{aligned}\]
+&lt;/div&gt;</description></item><item><title>VINS Series</title><link>https://bobblelaw.github.io/topics/slam/vins/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/slam/vins/</guid><description>&lt;p&gt;&lt;em&gt;WIP&lt;/em&gt;&lt;/p&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+_{G}^{B}\dot{q}(t) &amp;= \frac{1}{2} \Omega(^{G}\omega(t))_{G}^{B}q(t), ~
+\text{with} ~ \Omega(\omega)= \begin{bmatrix}
+ -[\omega]_{\times} &amp; \omega \\
+ -\omega^{T} &amp; 0
  \end{bmatrix} \\
-^{G}\.{p}(t) &amp;amp;= ~ ^{G}v(t) \\
-^{G}\.{v}(t) &amp;amp;= ~ ^{G}a(t) \\
-\.{b}_{g}(t) &amp;amp;= n_{w_{g}}(t) \\
-\.{b}_{a}(t) &amp;amp;= n_{w_{a}}(t)
+^{G}\dot{p}(t) &amp;= ~ ^{G}v(t) \\
+^{G}\dot{v}(t) &amp;= ~ ^{G}a(t) \\
+\dot{b}_{g}(t) &amp;= n_{w_{g}}(t) \\
+\dot{b}_{a}(t) &amp;= n_{w_{a}}(t)
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\int u \frac{dv}{dx}\, dx=uv-\int \frac{du}{dx}v\,dx
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;p(\boldsymbol{x} | \boldsymbol{z}) = p(\boldsymbol{z} | \boldsymbol{x})p(\boldsymbol{x})
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;p(\boldsymbol{z} | \boldsymbol{x}) = \prod_{i} p(\boldsymbol{z_i} | \boldsymbol{x_i})
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;For example,&lt;/p&gt;
-&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
- \~a_t &amp;amp;= a_t + ~ _w^T{R} ~ ^w{g} + b_{a_t} + n_a \\
- \~\omega &amp;amp;= \omega_t + b_{\omega_t} + n_\omega
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[\int u \frac{dv}{dx}\, dx=uv-\int \frac{du}{dx}v\,dx\]
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[p(\boldsymbol{x} | \boldsymbol{z}) = p(\boldsymbol{z} | \boldsymbol{x})p(\boldsymbol{x})\]
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[p(\boldsymbol{z} | \boldsymbol{x}) = \prod_{i} p(\boldsymbol{z_i} | \boldsymbol{x_i})\]
+&lt;/div&gt;
+&lt;p&gt;For example,&lt;/p&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+ \widetilde{a}_t &amp;= a_t + ~ _w^T{R} ~ ^w{g} + b_{a_t} + n_a \\
+ \widetilde{\omega}_t &amp;= \omega_t + b_{\omega_t} + n_\omega
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;n_a \sim N(0, \sigma_a^2) \\
-n_{\omega} \sim N(0, \sigma_{\omega}^2)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
- _{B_{k+1}}^G{p} &amp;amp;=~ _{B_{k}}^G{p} +~ _{B_{k}}^G{v}\varDelta{t} + \iint_{[t_k, t_{k+1}]} a_t ~ dt^2 \\
- _{B_{k+1}}^G{v} &amp;amp;=~ _{B_{k}}^G{v} + \int_{[t_k, t_{k+1}]} a_t ~ dt \\
- _{B_{k+1}}^G{q} &amp;amp;=~ _{B_{k}}^G{q} \otimes \int_{[t_k, t_{k+1}]} \frac{1}{2} ~ ^{B_{k}}{q} \otimes 
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[n_a \sim N(0, \sigma_a^2) \\
+n_{\omega} \sim N(0, \sigma_{\omega}^2)\]
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+ _{B_{k+1}}^G{p} &amp;=~ _{B_{k}}^G{p} +~ _{B_{k}}^G{v}\varDelta{t} + \iint_{[t_k, t_{k+1}]} a_t ~ dt^2 \\
+ _{B_{k+1}}^G{v} &amp;=~ _{B_{k}}^G{v} + \int_{[t_k, t_{k+1}]} a_t ~ dt \\
+ _{B_{k+1}}^G{q} &amp;=~ _{B_{k}}^G{q} \otimes \int_{[t_k, t_{k+1}]} \frac{1}{2} ~ ^{B_{k}}{q} \otimes 
  \begin{bmatrix}
  \omega_t \\
  0
  \end{bmatrix} dt 
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
- _G^{B_k}{R} ~ _{B_{k+1}}^G{p} &amp;amp;=~ _{B_{k}}^G{p} +~ _{B_{k}}^G{v}\varDelta{t} + \iint_{[t_k, t_{k+1}]} a_t ~ dt^2 \\
- _G^{B_k}{R} ~ _{B_{k+1}}^G{v} &amp;amp;=~ _{B_{k}}^G{v} + \int_{[t_k, t_{k+1}]} a_t ~ dt \\
- _G^{B_k}{q} \otimes _{B_{k+1}}^G{q} &amp;amp;=~ \gamma_{B_{k+1}}^{B_k}
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+ _G^{B_k}{R} ~ _{B_{k+1}}^G{p} &amp;=~ _{B_{k}}^G{p} +~ _{B_{k}}^G{v}\varDelta{t} + \iint_{[t_k, t_{k+1}]} a_t ~ dt^2 \\
+ _G^{B_k}{R} ~ _{B_{k+1}}^G{v} &amp;=~ _{B_{k}}^G{v} + \int_{[t_k, t_{k+1}]} a_t ~ dt \\
+ _G^{B_k}{q} \otimes _{B_{k+1}}^G{q} &amp;=~ \gamma_{B_{k+1}}^{B_k}
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
- \alpha_{B_{k+1}}^{B_k} &amp;amp;= \iint_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\^a_t-b_{a_t}-n_a)} ~ dt^2 \\
- \beta_{B_{k+1}}^{B_k} &amp;amp;= \int_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\^a_t-b_{a_t}-n_a)} ~ dt \\
- \gamma_{B_{k+1}}^{B_k} &amp;amp;= \int_{[t_k, t_{k+1}]} {\frac{1}{2}\Omega(\~\omega_t - b_{\omega_t} - n_\omega)\gamma_{B_t}^{B_{k+1}}} dt 
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\begin{align}
+ \alpha_{B_{k+1}}^{B_k} &amp;= \iint_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\widehat{a}_t-b_{a_t}-n_a)} ~ dt^2 \\
+ \beta_{B_{k+1}}^{B_k} &amp;= \int_{[t_k, t_{k+1}]} {_{B_t}^{B_k}{R}(\widehat{a}_t-b_{a_t}-n_a)} ~ dt \\
+ \gamma_{B_{k+1}}^{B_k} &amp;= \int_{[t_k, t_{k+1}]} {\frac{1}{2}\Omega(\widetilde{\omega}_t - b_{\omega_t} - n_\omega)\gamma_{B_t}^{B_{k+1}}} dt
 \end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex="0"&gt;&lt;code class="language-math" data-lang="math"&gt;\begin{align}
- \alpha_{B_{k+1}}^{B_k} &amp;amp;\approx \^\alpha_{B_{k+1}}^{B_k} + J_{b_a}^\alpha\delta{b_a} + J_{b_a}^\alpha\delta{b_\omega}\\
- \beta_{B_{k+1}}^{B_k} &amp;amp;\approx \^\beta_{B_{k+1}}^{B_k} + J_{b_a}^\beta\delta{b_a} + J_{b_a}^\beta\delta{b_\omega}\\
- \gamma_{B_{k+1}}^{B_k} &amp;amp;\approx \^\gamma_{B_{k+1}}^{B_k} \otimes \begin{bmatrix}
+&lt;/div&gt;
+&lt;div class="math-display"&gt;
+\[\begin{aligned}
+ \alpha_{B_{k+1}}^{B_k} &amp;\approx \widehat{\alpha}_{B_{k+1}}^{B_k} + J_{b_a}^\alpha\delta{b_a} + J_{b_a}^\alpha\delta{b_\omega}\\
+ \beta_{B_{k+1}}^{B_k} &amp;\approx \widehat{\beta}_{B_{k+1}}^{B_k} + J_{b_a}^\beta\delta{b_a} + J_{b_a}^\beta\delta{b_\omega}\\
+ \gamma_{B_{k+1}}^{B_k} &amp;\approx \widehat{\gamma}_{B_{k+1}}^{B_k} \otimes \begin{bmatrix}
  1 \\
  \frac{1}{2}J_{b_\omega}^\gamma\delta{b_\omega}
- \end{bmatrix} 
-\end{align}
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="question-purpose-of-pre-integration"&gt;Question: Purpose of pre-integration?&lt;/h3&gt;</description></item><item><title>VIO</title><link>https://bobblelaw.github.io/topics/slam/vio/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/slam/vio/</guid><description>&lt;h2 id="fej-explaination"&gt;FEJ Explaination&lt;/h2&gt;
+ \end{bmatrix}
+\end{aligned}\]
+&lt;/div&gt;
+&lt;h3 id="question-purpose-of-pre-integration"&gt;Question: Purpose of pre-integration?&lt;/h3&gt;</description></item><item><title>VIO</title><link>https://bobblelaw.github.io/topics/slam/vio/</link><pubDate>Fri, 18 Nov 2022 19:14:11 +0800</pubDate><guid>https://bobblelaw.github.io/topics/slam/vio/</guid><description>&lt;h2 id="fej-explaination"&gt;FEJ Explaination&lt;/h2&gt;
 &lt;p&gt;可观性问题会直接带来多传感器融合融态中的关键手段：FEJ First Estimated Jacobian.&lt;/p&gt;
 &lt;p&gt;即不同残差对同一状态求Jacobian时，线性化点必须一致，以避免零空间null space退化而使不可观变量变可观。&lt;/p&gt;
 &lt;p&gt;因此对其的理解是一件非常重要的事情。初学者在没有足够资料与文档解释的情况下，对其的理解是比较困难的。&lt;/p&gt;
