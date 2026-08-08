@@ -2,6 +2,11 @@ baseURL: https://bobblelaw.github.io
 title: Bobble Law
 theme: hugo-profile
 
+module:
+  hugoVersion:
+    extended: true
+    min: 0.164.0
+
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: false
 
