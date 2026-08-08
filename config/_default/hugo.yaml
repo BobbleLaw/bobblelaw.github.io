@@ -21,6 +21,12 @@ markup:
 pagination:
   pageSize: 3
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 services:
   googleAnalytics:
     id: G-7GMTK23CS7
