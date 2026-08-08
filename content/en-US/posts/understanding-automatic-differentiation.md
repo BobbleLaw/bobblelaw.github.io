@@ -2,7 +2,8 @@
 title: Understanding Automatic Differentiation
 description: My humble understand towards AD.
 date: '2021-03-17T20:47:18+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags: 
   - Optimization
 image:
@@ -309,4 +310,3 @@ This post covers basic automatic differentiation techniques for forward and reve
 + Articles:
   + Reverse-mode automatic differentiation: a tutorial([link](https://rufflewind.com/2016-12-30/reverse-mode-automatic-differentiation))
   + Engineering Trade-Offs in Automatic Differentiation: from TensorFlow and PyTorch to Jax and Julia([link](http://www.stochasticlifestyle.com/engineering-trade-offs-in-automatic-differentiation-from-tensorflow-and-pytorch-to-jax-and-julia/))
-

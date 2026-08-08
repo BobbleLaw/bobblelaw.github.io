@@ -190,6 +190,6 @@ fragment float4 fragment_main(VertexOut in [[stage_in]]) {
 
 Running the app produces a much more colorful triangle than before:
 
-![Result](sample.png)
+> Screenshot unavailable: triangle rendered with vertex colors.
 
 That’s how we add additional attributes to vertices and use Metal to simplify vertex shader authoring with vertex descriptors. Next time, we’ll look at how to feed other data besides vertex attributes into our shader functions, which will give us a glimpse of how to introduce interaction and animation into our Metal apps.

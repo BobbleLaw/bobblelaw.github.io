@@ -122,7 +122,7 @@ In I2C, one bit is always transmitted on every clock. A byte which is transmitte
 In I2C, SDA line is always stable during the high clock phase except for the start condition, stop condition and repeated start condition. The SDA line only changes their state during the low clock phase.
 
 See the below image,
-![I2C frame](../images/i2c-frame.jpg)
+> Diagram unavailable: I2C frame.
 
 ***Question: What is START bit and STOP bit?***
 
@@ -131,12 +131,12 @@ See the below image,
 **Start Condition**:
 The default state of SDA and SCL line is high. A master asserts the start condition on the line to start the communication. A high to low transition of the SDA line while the SCL line is high called the START condition. The START condition is always asserted by the master. The I2C bus is considered busy after the assertion of the START bit.
 
-![i2c start bit](../images/i2start.jpg)
+> Diagram unavailable: I2C start condition.
 
 **Stop Condition**:
 The STOP condition is asserted by the master to stop the communication. A Low to high transition of SDA line while the SCL line is high called the STOP condition. The STOP condition is always asserted by the master. The I2C bus is considered free after the assertion of the STOP bit.
 
-![I2c stop](../images/stop-min.jpg)
+> Diagram unavailable: I2C stop condition.
 
 *Note: A START and STOP condition always asserted by the master.*
 
@@ -187,7 +187,7 @@ The arbitration is required in the case of a multi-master, where more than one m
 For Example,
 Suppose two masters in the I2C bus is tried to communicate with a slave simultaneously then they will assert a start condition on the bus. The SCL clock of the I2c bus would be already synchronized by the wired and logic.
 
-![Bus Arbitration](../images/arbitration-min.jpg)
+> Diagram unavailable: I2C bus arbitration.
 
 In the above case, everything will be good till the state of SDA line will same what is the masters driving on the bus. If any master sees that the state of SDA line differs, what is it driving then they will exit from the communication and lose their arbitration.
 
@@ -199,7 +199,7 @@ In the above case, everything will be good till the state of SDA line will same 
 
 In I2c, communication can be paused by the clock stretching to holding the SCL line low and it cannot continue until the SCL line released high again.
 
-![Clock Stretching](../images/i2c-clock-stretch.jpg)
+> Diagram unavailable: I2C clock stretching.
 
 In I2C, slave able to receive a byte of data on the fast rate but sometimes slave takes more time in processing the received bytes in that situation slave pull the SCL line to pause the transaction and after the processing of the received bytes, it again released the SCL line high again to resume the communication.
 
@@ -215,7 +215,7 @@ Unlike RS-232, I2C is synchronous communication, in which the clock is always ge
 
 For a better understanding, I am taking an example, where two masters try to communicate with a slave. In that situation, both masters generate their own clock, master M1 generate clk1 and master M2 generate clk2 and clock which observed on the bus is SCL.
 
-![Clock Sync](../images/Clock-sync.jpg)
+> Diagram unavailable: I2C clock synchronization.
 
 The SCL clock would be the Anding (clk1 & clk2) of clk1 and clk2 and most interesting thing is that highest logic 1 of SCL line defines by the CLK which has lowest logic 1.
 

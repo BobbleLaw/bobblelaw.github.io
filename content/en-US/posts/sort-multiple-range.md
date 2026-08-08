@@ -2,7 +2,8 @@
 title: Sort Multiple Ranges
 description: Sorting a range of keys while keeping a range of values in sync.
 date: '2020-11-28T09:45:32+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags: 
   - C++
 image:

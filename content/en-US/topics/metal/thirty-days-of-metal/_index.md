@@ -1,3 +1,8 @@
+---
+title: Thirty Days of Metal
+description: A practical introduction to Metal for Swift developers
+---
+
 # Preface
 
 This series of posts is my attempt to present the Metal graphics programming framework in small, bite-sized chunks for Swift app developers who haven’t done GPU programming before.

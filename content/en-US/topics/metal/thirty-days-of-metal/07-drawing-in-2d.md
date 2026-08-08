@@ -24,7 +24,7 @@ We often use the phrase “graphics pipeline” to describe the series of stages
 
 Here is a greatly simplified diagram of the process:
 
-![Simplied rendering pipeline](sample.png)
+> Diagram unavailable: simplified rendering pipeline.
 
 The light blue boxes in this figure represent “programmable” stages, portions of the pipeline where we are responsible for writing shader code. We have already seen examples of vertex and fragment functions, but have not really begun to use them in earnest.
 
@@ -60,7 +60,7 @@ We will learn in future articles how to transform points from one coordinate sys
 
 In graphics, it is often useful to use “normalized” coordinate systems, where some significance is attached to the positions that are one unit away from the origin. One such space is _normalized device coordinate_ (NDC) space, illustrated here:
 
-![NDC](ndc.png)
+> Diagram unavailable: normalized device coordinate space.
 
 What is the significance of the values -1 and 1 in NDC space? You can think of them as the boundaries of the picture we’re drawing. For example, the point (1, 1) is at the top right of NDC, while the point (-1, -1) is at the bottom left. This is true regardless of the resolution (size) of the image, which is what makes NDC space convenient to work in.
 
@@ -232,6 +232,6 @@ commandBuffer.commit()
 
 If all has gone according to plan, we can build and run to see the results of our labors: the first triangle, with many more to come.
 
-![Result](result.png)
+> Screenshot unavailable: rendered triangle.
 
 After learning a lot of concepts and writing a lot of code, we finally achieved our first milestone: drawing a triangle on the screen. In the next article, we’ll talk about how to extend the amount of data processed by our pipeline by adding more attributes to our vertices. Stay tuned!

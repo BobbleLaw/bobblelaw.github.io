@@ -2,7 +2,8 @@
 title: How to Become a Video Game Designer?
 description: Random notes on the way to ametuer game designer.
 date: '2019-09-12T11:14:27+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags: 
   - Note
 image:

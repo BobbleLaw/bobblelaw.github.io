@@ -34,7 +34,7 @@ MSL is a derivative of C++, and its syntax is rather different from Swift’s. W
 
 To demonstrate how to write shaders, we can first create a macOS command-line app, which reduces the boilerplate code to a bare minimum. Then, we can create a Metal shader source file using Xcode’s New File menu and selecting the “Metal File” template:
 
-![new project](sample.png)
+> Screenshot unavailable: creating a Metal shader source file.
 
 This file will have the following lines at the top, which are common to most Metal shader files, and simply import the Metal standard library, making it available throughout the file.
 

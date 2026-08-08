@@ -2,7 +2,8 @@
 title: Overload Return Type
 description: Everyone overloads by argument types. But can you do return type?
 date: '2021-02-11T10:43:29+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags: 
   - C++
 image:
@@ -240,7 +241,7 @@ to_string_t from_string(std::string_view s) { return to_string_t{s}; }
 
 The conversion in `to_string_t` is now templated and always calls `to_string_impl<T>::from_string(s)`.
 `to_string_impl<T>` is a class template that is specialized for all supported conversions.
-Should a non-supported conversion be called, the [`always_false<T>` produces a nice(-ish) error message](/blog/2020/10/03/always-false).
+For an unsupported conversion, `always_false<T>` produces a reasonably clear error message.
 We can now add our supported conversions via:
 
 ```cpp

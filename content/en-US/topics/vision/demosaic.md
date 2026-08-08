@@ -1,5 +1,5 @@
 ---
-title: Demosoaic
+title: Demosaicing
 description:
 toc: true
 authors:

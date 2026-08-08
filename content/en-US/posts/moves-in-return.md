@@ -2,7 +2,8 @@
 title: Moves in Returns
 description: Mini guide to 'when is my return a move?'
 date: '2020-12-19T14:39:20+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags: 
   - C++
 image:

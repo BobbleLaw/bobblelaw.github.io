@@ -30,13 +30,13 @@ We’ll talk a lot more about textures in subsequent articles. The important par
 
 Let’s write some code. This time, instead of working in a Playground, we start by creating a new _project_ in Xcode. Use the macOS App template, choose a name, and make sure that you select Swift as the language and Storyboard as the interface paradigm.
 
-![new project](sample.png)
+> Screenshot unavailable: creating the Xcode project.
 
 Once the project is created and saved somewhere, open Main.storyboard.
 
 Interface Builder does not include `MTKView` as one of the view types in the object palette. Instead, we drop a Custom View onto the root view of the view controller. We can then configure its class in the inspector. Set it to `MTKView`.
 
-![set to MTKView](sample.png)
+> Screenshot unavailable: setting the custom view class to `MTKView`.
 
 ## Associating a Device with a View
 
@@ -164,6 +164,6 @@ commandBuffer.commit()
 
 If everything went according to plan, you should see the window cleared to a pleasing shade of blue:
 
-![result](sample.png)
+> Screenshot unavailable: the window cleared to blue.
 
 All right, now we’re getting somewhere! We’re finally using the GPU to put colors on the screen. Well, one color. But there will be a lot more colors soon. In the next article, we’ll introduce yet another essential topic, _shaders_, and start to write code that runs on the GPU!

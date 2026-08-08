@@ -2,7 +2,8 @@
 title: Multi-Level Loop Break
 description: Ever wanted to break more than one level at once?
 date: '2021-05-12T09:57:09+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags: 
   - C++
 image:

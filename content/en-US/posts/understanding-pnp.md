@@ -2,7 +2,8 @@
 title: Understanding Perspective-N-Points
 description: Discuss and derivation on PnP problem.
 date: '2021-04-18T15:17:26+08:00'
-authors: "Bob Law"
+authors:
+  - Bob Law
 tags:
   - registration
 image:

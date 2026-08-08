@@ -176,6 +176,6 @@ To get a pointer to the current constant buffer region, we use the `advanced(by:
 
 If we build and run our updated app, we can see the triangle gently circling the screen:
 
-![Result](sample.png)
+> Screenshot unavailable: animated triangle.
 
 Next time, we’ll look at some 2D math that will help us leverage the power of animation and interaction in the future.
