@@ -1,93 +1,25 @@
-\documentclass[11pt]{article}
-\usepackage[margin=0.8in]{geometry}
-\usepackage{fix-cm}
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[hidelinks]{hyperref}
-\usepackage{enumitem}
 
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0.25em}
-\setlength{\emergencystretch}{2em}
-\pagenumbering{gobble}
-\hypersetup{pageanchor=false}
-\sloppy
-\hbadness=10000
-\hfuzz=10pt
-
-\newcommand{\resmaintitle}[1]{{\fontsize{12pt}{14pt}\selectfont\textbf{#1}}}
-\newcommand{\ressubtitle}[1]{{\fontsize{11pt}{13pt}\selectfont #1}}
-\newcommand{\resnextlevel}[1]{{\fontsize{10.5pt}{12.5pt}\selectfont #1}}
-\newcommand{\ressection}[1]{%
-\vspace{0.5em}%
-{\fontsize{12pt}{14pt}\selectfont\textbf{#1}}\\[-0.45em]%
-\rule{\textwidth}{0.4pt}%
-\vspace{0.2em}\par}
-\newcommand{\resrole}[4]{%
-\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
-\ressubtitle{\textbf{#1}} & \ressubtitle{#2}
-\end{tabular*}\\
-\resnextlevel{#3, #4}\\[-0.75em]}
+\pagestyle{empty}
 
 \begin{document}
 
 \begin{center}
-\resmaintitle{Ziyun Luo}\\
-\resnextlevel{+44-7881689271 \textbar{} \href{mailto:luo.ziyun@outlook.com}{luo.ziyun@outlook.com} \textbar{} \href{https://www.linkedin.com/in/boblzy}{www.linkedin.com/in/boblzy} \textbar{} \href{https://bobblaw.github.io}{bobblaw.github.io}}
+  {\LARGE\textbf{Resume Placeholder}}\\[0.75em]
+  Replace this file with your resume source when ready.
 \end{center}
 
-\ressection{Professional Summary}
-Software engineer focused on 3D computer vision, robotics, and modern C++ systems, with production experience spanning multi-sensor calibration, visual localization, point cloud registration, and real-time perception pipelines. Built and deployed systems for outdoor robotics and industrial vision, including calibration and localization infrastructure supporting 200,000+ fielded devices. Strong in translating mathematically complex algorithms into robust, high-performance software, with strengths in geometric vision, numerical optimization, embedded constraints, and end-to-end ownership from prototyping to production deployment.
-\ressection{Professional Experience}
+\section*{Profile}
+This placeholder confirms that the website's automated LaTeX build and hidden
+PDF route are working correctly.
 
-\resrole{Senior Software Engineer, Roku UK}{Sep. 2025 -- Present}{TV OS and UI Framework}{Cambridge, UK}
-\begin{itemize}[leftmargin=1.25em, itemsep=0.15em, topsep=0em]
-  \item Implemented an interactive video playback feature in Roku SceneGraph and BrightScript, coordinating with backend and product teams to define data contracts and playback state transitions.
-  \item Owned the integration pipeline from requirement clarification to on-device validation, debugging playback edge cases and improving configuration reliability across content scenarios.
-  \item Designed and implemented a JSON-schema-driven UI framework for dynamic layout composition and runtime feature injection.
-  \item Replaced hard-coded UI logic with data-driven rendering and centralized event dispatch, reducing coupling and improving cold launch latency and runtime responsiveness.
-\end{itemize}
-\vspace{0.65em}
-\resrole{Computer Vision Engineer, Mammotion Tech}{Feb. 2023 -- Feb. 2025}{Autonomous Outdoor Mower}{Shenzhen, China}
-\begin{itemize}[leftmargin=1.25em, itemsep=0.15em, topsep=0em]
-  \item Designed a high-performance offline calibration solution for stereo cameras, IMUs, and LiDAR-equipped robotic mowers, calibrating 4 devices in around 30 seconds and improving factory throughput.
-  \item Developed a Qt-based desktop tool to automate full calibration workflow, including incoming sensor QA, sensor data monitoring, motorized rig control, result verification, and production data analysis.
-  \item Built ZMQ-based asynchronous streaming for real-time data visualization and SQLite-backed data management for traceability, improving usability and reducing operator effort in mass production.
-  \item Implemented IMU data acquisition and calibration on first-generation mower platform running FreeRTOS, including SPI communication, real-time task scheduling, and calibration routines for bias and alignment correction.
-  \item Engineered a robust online calibration algorithm with minimal runtime overhead to mitigate temperature-induced lens or mounting deformation, preventing post-deployment localization degradation and resulting in zero customer complaints.
-  \item Optimized feature tracking by combining patch tracking, motion priors, and RANSAC-based geometric filtering, improving robustness in extreme lighting transitions.
-  \item Contributed to vision-only robotic mower research by integrating a deep-learning-based feature and place recognition model (MixVPR-based) into the relocalization pipeline for uniform and parallel mowing trajectories.
-\end{itemize}
-\vspace{0.65em}
-\resrole{Computer Vision Engineer, Mech-Mind Robotics}{Apr. 2020 -- Dec. 2022}{Industrial AI Vision Solutions}{Beijing, China}
-\begin{itemize}[leftmargin=1.25em, itemsep=0.15em, topsep=0em]
-  \item Developed a probabilistic point cloud fine registration algorithm based on Gaussian mixture modeling (GMM) for large-scale industrial scenes, improving object pose robustness in cluttered and partially occluded environments.
-  \item Optimized legacy point cloud coarse registration using SIMD parallelism, zero-copy memory strategies, and cache-friendly data layout, reducing runtime by 60\% for 10M-scale point clouds.
-  \item Fine-tuned a deep-learning-based 6D pose estimation model (Pix2Pose-based) for industrial pick-and-place tasks and applied model quantization for deployment, improving accuracy and runtime efficiency.
-  \item Designed and developed a calibration toolbox in Qt-based machine vision software, enabling precise intrinsic and extrinsic calibration of structured-light scanners with sub-millimeter 3D reconstruction accuracy.
-  \item Ported phase decoding algorithms for structured-light 3D reconstruction to NVIDIA Jetson Xavier, leveraging CUDA parallelism and optimized CPU-GPU memory transfer for reliable real-time embedded performance.
-\end{itemize}
-\vspace{0.65em}
-\resrole{Research Intern, DJI Robotics}{Aug. 2017 -- Jan. 2019}{Robotics and Automation}{Hong Kong SAR, China}
-\begin{itemize}[leftmargin=1.25em, itemsep=0.15em, topsep=0em]
-  \item Spearheaded research and development for a 6-axis robotic-arm-mounted structured-light camera system to automate drone brushless motor assembly lines via precise pre-grasp pose estimation.
-  \item Engineered a multi-modal pose estimation pipeline using ICP-like point cloud registration for static alignment and real-time monocular pose estimation via silhouette-to-template comparison during high-speed motion.
-  \item Designed and implemented an improved structured-light pattern encoding method to enhance 3D reconstruction accuracy on reflective surfaces under challenging industrial lighting.
-  \item Developed a companion Qt-based desktop application for algorithm configuration, live 3D visualization, and performance validation, streamlining deployment across production lines.
-  \item Used ROS to plan robot arm trajectories from estimated object poses, integrating vision outputs into industrial pick-and-place motion planning.
-\end{itemize}
+\section*{Experience}
+Your experience will go here.
 
-\ressection{Education}
-
-\ressubtitle{\textbf{Hong Kong University of Science and Technology}} \hfill \ressubtitle{Sep. 2016 -- Jan. 2020}\\
-\resnextlevel{Master of Philosophy in Electronics and Computer Engineering, Hong Kong SAR, China}\\
-\resnextlevel{Thesis: Multi-Modality Structured Light System Design for Workpiece 3D Modelling and Pose Estimation}\\
-\resnextlevel{Supervisor: LI Zexiang}
-
-\vspace{0.3em}
-\ressubtitle{\textbf{Southern University of Science and Technology}} \hfill \ressubtitle{Sep. 2012 -- Jul. 2016}\\
-\resnextlevel{Bachelor of Engineering in Communication Engineering, Shenzhen, China}\\
-\resnextlevel{Thesis: Real-time 3D Reconstruction with Distributed Depth Sensors}\\
-\resnextlevel{Supervisor: HAO Qi}
+\section*{Education}
+Your education will go here.
 
 \end{document}
