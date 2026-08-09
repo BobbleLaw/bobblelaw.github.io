@@ -34,6 +34,14 @@ jobs:
         with:
           bun-version: '1.3.14'
 
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes latexmk texlive-fonts-recommended texlive-latex-recommended
+
+      - name: Build resume
+        run: ./scripts/build-resume.sh
+
       - name: Install presentation dependencies
         run: bun run scripts/build-presentations.ts --install --frozen-lockfile
 

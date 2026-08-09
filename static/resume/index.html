@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>Resume</title>
+    <style>
+      html,
+      body,
+      object {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        background: #525659;
+      }
+
+      .fallback {
+        box-sizing: border-box;
+        max-width: 38rem;
+        margin: 4rem auto;
+        padding: 1.5rem;
+        color: #111;
+        background: #fff;
+        font: 1rem/1.5 system-ui, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <object data="./resume.pdf#view=FitH" type="application/pdf">
+      <p class="fallback">
+        This browser cannot display the resume inline.
+        <a href="./resume.pdf">Open the PDF directly.</a>
+      </p>
+    </object>
+  </body>
+</html>
