@@ -1,6 +1,6 @@
 ---
 theme: default
-title: Building a Production Calibration System
+title: Building a Production Calibration Solution
 info: |
   Factory calibration, online compensation, validation, and production deployment
 aspectRatio: 16/9
@@ -8,31 +8,73 @@ canvasWidth: 1280
 colorSchema: light
 transition: none
 download: false
-exportFilename: snap-calibration-presentation
+exportFilename: snap-panel-presentation
 mdc: true
 ---
 
 <div class="title-layout">
-  <div class="eyebrow">Production Computer Vision</div>
-  <h1 class="deck-title">Building a Production<br><span class="accent">Calibration System</span></h1>
-  <div class="deck-subtitle">Factory Calibration · Online Compensation · Validation at Scale</div>
+  <h1 class="deck-title">Building a Production<br><span class="accent">Calibration Solution</span></h1>
+  <div class="deck-subtitle">Factory Calibration · Online Compensation</div>
   <div class="presenter-name">Ziyun Luo</div>
 </div>
+<img class="title-setup-photo" src="/assets/poc_setup.png" alt="Proof-of-concept mower calibration setup surrounded by fiducial targets">
 
 <!--
-Timing: ~1:15
+Hi everyone, thanks for having me.
 
-This project was a production calibration system for robotic mowers. The algorithm mattered, but the difficult engineering work was making calibration fast enough for a factory, robust enough for uncontrolled data, and conservative enough to update a deployed device safely.
+I’m Ziyun. I applied for this Computer Vision Engineer - Calibration role. Today I’d like to walk through one of my past projects that happens to align with the job description particularly well: building a production calibration system for a robotic mower platform.
 
-I will focus on the decisions around that optimizer: observability, validation, software boundaries, and production safeguards.
+I’ll start with the factory calibration system, then explain why that alone was not enough once the device was deployed in the field, and finally how we approached online calibration and safe parameter updates.
 -->
 
 ---
 
-# Reliable navigation starts with trusted geometry
+# Background
 <div class="section-rule"></div>
 
-<div class="product-flow">
+<div class="career-flow" aria-label="Career progression">
+  <section class="career-stage">
+    <div class="career-kicker">Research Focus & Earlier career</div>
+    <h2>3D Computer Vision</h2>
+    <div class="career-topics">3D registration<br>3D reconstruction<br>6 DoF pose estimation<br>Depth sensor</div>
+  </section>
+  <div class="career-arrow">→</div>
+  <section class="career-stage">
+    <div class="career-kicker">Robotic mower</div>
+    <h2>Robotics</h2>
+    <div class="career-topics">Visual SLAM<br>Production calibration<br>Embeded system</div>
+  </section>
+  <div class="career-arrow">→</div>
+  <section class="career-stage">
+    <div class="career-kicker">Current role</div>
+    <h2>OS & UI Framework</h2>
+    <div class="career-role">Senior Software Engineer at Roku</div>
+    <div class="career-topics">Embeded UI framework<br>Data contract and API design<br>Language engine</div>
+  </section>
+</div>
+
+<div class="bottom-thesis">This project sits at the intersection of computer vision and production engineering.</div>
+
+<!--
+Before I get into the project, a quick overview of my background.
+
+In my grad school and earlier in career, I wmostly orked on 3D computer vision and machine vision, tasks like 6 DoF pose estimation, using point cloud, or images, 3D reconstruction of multiple images, structured light.
+
+And I went to a robotic mower company, I worked on and owned the whole calibration solution across different models. I also contribute to visual SLAM code repo.
+
+Currently, I’ve been working as a senior software engineer in Roku, mainly around UI framework architecture, Data contract and API design for new UI features. and maintain in house language.
+
+For this presentation, I won't cover that part, as it's totally not relant to this role, in case any of you are interested, you can ask more in the following 1-on-1 deep dive sessions. I’ll focus on the robotic mower project because it combines both sides: computer vision and production engineering.
+-->
+
+---
+
+# The Problem
+<div class="section-rule"></div>
+
+<img class="problem-planning-inset" src="/assets/mower_planning.webp" alt="Robotic mower coverage planning illustration">
+
+<div class="product-flow problem-flow">
   <div class="sensor-stack">
     <div class="flow-node">Stereo Cameras</div>
     <div class="flow-node">IMU</div>
@@ -44,116 +86,148 @@ I will focus on the decisions around that optimizer: observability, validation, 
   <div class="flow-node">Navigation</div>
 </div>
 
-<div class="lifetime-risks">Factory baseline &nbsp;·&nbsp; temperature &nbsp;·&nbsp; vibration &nbsp;·&nbsp; mechanical stress &nbsp;·&nbsp; impact &nbsp;·&nbsp; long-term use</div>
+<div class="lifetime-risks problem-risks">Factory baseline &nbsp;·&nbsp; temperature &nbsp;·&nbsp; vibration &nbsp;·&nbsp; mechanical stress &nbsp;·&nbsp; impact &nbsp;·&nbsp; long-term use</div>
 
-<div class="bottom-thesis">The challenge was not just calibrating the device once, but keeping calibration trustworthy throughout its lifetime.</div>
+<div class="bottom-thesis problem-thesis">The challenge was not just calibrating the device once, but keeping calibration trustworthy throughout its lifetime.</div>
+<img class="mower-family-strip" src="/assets/mower_family.webp" alt="Robotic mower product family">
 
 <!--
-Timing: ~1:45
+The product was an autonomous robotic mower.
 
-The mower localized from multiple sensors, so their geometric relationship directly affected navigation quality. Factory calibration gave us a trusted starting point.
+It relied on multiple sensors for localization and navigation, including stereo cameras, an IMU, and other sensing components.
 
-But the device then lived outdoors. Temperature cycles, vibration, stress, impact, and long-term use could move the physical system away from that factory baseline. That changed the question from “can we calibrate it?” to “how do we keep calibration trustworthy?”
+Accurate sensor geometry was a prerequisite for the localization stack to work correctly.
+
+That meant every device needed a trusted set of calibration parameters before it could leave manufacturing.
+
+At first, the problem looked fairly conventional:
+
+collect controlled observations, estimate the calibration parameters, validate them, and write the result to the device. With OpenCV, it's few lines of code.
+
+But because this was a production product, we had additional constraints.
+
+Calibration had to be accurate, repeatable, fast enough for manufacturing throughput, robust across hardware variation, and easy to diagnose when something went wrong.
+
+So the first problem we solved was:
+
+**How do we build a factory calibration system that is accurate enough for localization, but also reliable and efficient enough for large-scale production?**
 -->
 
 ---
 
-# Optimization had to satisfy four production constraints
+# Factory Calibration and Validation
 <div class="section-rule"></div>
 
-<div class="four-pillars">
-  <div class="pillar">
-    <div class="pillar-mark">A</div>
-    <h3>Accuracy</h3>
-    <p>Meet downstream localization requirements.</p>
-  </div>
-  <div class="pillar">
-    <div class="pillar-mark">T</div>
-    <h3>Throughput</h3>
-    <p>Stay off the factory critical path.</p>
-  </div>
-  <div class="pillar">
-    <div class="pillar-mark">R</div>
-    <h3>Robustness</h3>
-    <p>Handle noise and changing environments.</p>
-  </div>
-  <div class="pillar">
-    <div class="pillar-mark">S</div>
-    <h3>Safety</h3>
-    <p>Never make a good system worse.</p>
-  </div>
+<div class="factory-validation-grid">
+  <section class="factory-validation-half factory-half">
+    <h2>Calibration</h2>
+    <div class="factory-validation-summary">Calibration produced a candidate baseline through automated acquisition and estimation.</div>
+    <div class="compact-factory-flow">
+      <div class="compact-factory-step">Device<span>identify + configure</span></div>
+      <div class="compact-chevron">↓</div>
+      <div class="compact-factory-step">Motorized rig<span>automated acquisition</span></div>
+      <div class="compact-chevron">↓</div>
+      <div class="compact-factory-step core">Detection<span>targets + features</span></div>
+      <div class="compact-chevron">↓</div>
+      <div class="compact-factory-step core">Optimization<span>sensor geometry</span></div>
+      <div class="compact-chevron">↓</div>
+      <div class="compact-decision-diamond"><span>validate</span></div>
+    </div>
+    <div class="compact-factory-outcomes">
+      <div class="decision-result fail">FAIL<br><span>retry / diagnose</span></div>
+      <div class="decision-result pass">PASS<br><span>persist + write</span></div>
+    </div>
+    <div class="compact-support-note">Rig control · automatic criteria · result persistence · operator tooling</div>
+  </section>
+
+  <section class="factory-validation-half validation-half">
+    <h2>Validation</h2>
+    <div class="factory-validation-summary">Independent validation decided whether the candidate baseline was safe to ship.</div>
+    <div class="compact-validation-layout">
+      <div class="compact-validation-layers">
+        <div class="validation-layer"><strong>Baseline</strong><span>Does the estimated geometry make sense?</span></div>
+        <div class="validation-layer"><strong>System</strong><span>Do downstream use cases remain stable?</span></div>
+        <div class="validation-layer"><strong>Integration</strong><span>Do field metrics or failure rates regress?</span></div>
+      </div>
+      <TestingPyramid />
+    </div>
+  </section>
 </div>
 
-<div class="bottom-thesis">Optimization quality alone was not enough — we needed a reliable decision system around it.</div>
-
 <!--
-Timing: ~1:40
+The factory workflow was highly automated.
 
-These constraints pulled in different directions. Accuracy encouraged more data and more optimization. Throughput limited both. Robustness required rejecting bad observations, while online safety required rejecting plausible-looking but uncertain answers.
+The device was placed into a motorized calibration setup.
 
-That meant success could not be defined by one optimization metric. We needed a system that decided when to collect, estimate, accept, retry, or do nothing.
+We collected controlled sensor observations while the rig moved the device through the required poses.
+
+The pipeline then performed feature or calibration-target detection, estimated the sensor parameters, and independently validated the result before accepting it.
+
+Conceptually, the flow was as in the graph.
+
+One important design was that the optimizer itself did not decide whether a calibration was valid.
+
+A numerically converged solution was only a candidate result.
+
+We applied independent acceptance criteria before deploying it. There's a validation station right next to calibration station, which use the fresh calibrated result to reconstruct a controlled scene. 
+
+So even at the factory stage, we were already treating calibration as more than an optimization problem.
 -->
 
 ---
 
-# Calibration is a lifecycle, not just an optimizer
+# Production Engineering
 <div class="section-rule"></div>
 
-<div class="offline-online-legend">
-  <div class="legend-item"><span class="legend-line"></span> factory baseline</div>
-  <div class="legend-item"><span class="legend-line online"></span> runtime assurance</div>
+<div class="engineering-results">
+  <div class="engineering-main">
+    <ProductionArchitecture />
+    <div class="reuse-row">One core · unit tests · offline datasets · factory tooling · production runtime</div>
+  </div>
+  <figure class="factory-setup-photo">
+    <img src="/assets/early_version_setup.jpeg" alt="Early production calibration rig with fiducial target walls">
+    <figcaption>Early calibration-rig setup</figcaption>
+  </figure>
 </div>
 
-<SystemArchitecture />
+<div class="metrics production-results">
+  <div class="metric"><div class="metric-value">~30 s</div><div class="metric-label">calibration duration</div></div>
+  <div class="metric"><div class="metric-value">4×</div><div class="metric-label">devices per cycle</div></div>
+  <div class="metric"><div class="metric-value">~100K</div><div class="metric-label">deployed devices</div></div>
+  <div class="metric"><div class="metric-value robust-value">Robust</div><div class="metric-label">field operation</div></div>
+</div>
 
-<div class="diagram-caption">A validated factory baseline enters production; runtime evidence can propose controlled corrections.</div>
+<div class="bottom-thesis">Engineering the core for reuse, automation, and diagnosis made calibration fast enough for production.</div>
 
 <!--
-Timing: ~2:00
+A big part of the project was engineering the calibration workflow into something that could operate reliably in manufacturing.
 
-I treated calibration as a lifecycle. Offline, the factory workflow produced and independently validated baseline parameters, persisted them, and wrote them to the device.
+The system had to recover gracefully from bad sensor input, failed observations, or invalid optimization results.
 
-Online, the deployed system monitored normal runtime observations. It could estimate a possible change, but validation and update policy remained separate stages. This separation was important: each stage had different failure modes, test strategies, and operational ownership.
+It also needed to make failures explainable to operators, detailed enough for engineers to locate the issues, modular enough that algorithm improvement and tooling improvement can happen in parallel.
+
+We separated the calibration core from the UI and device-control logic.
+
+That meant the same core components could be exercised from the production application, offline analysis tools, and automated tests.
+
+There were several supporting systems around the core algorithm.
+
+We also had tooling for monitoring incoming sensor data, controlling the rig, visualizing calibration results, diagnosing failed runs, and storing historical calibration data.
+
+This was important for reproducibility and regression testing.
+
+From a throughput perspective, the calibration cycle was around 30 seconds, and the system could process four devices in parallel.
+
+The overall calibration workflow was eventually used across roughly 100,000 production devices. still ramping up fast even after I left the team last time I heard.
+
+At that point, we had solved the first problem: establishing a reliable calibration baseline at manufacturing scale.
+
+But that raised the next question.
 -->
 
 ---
 
-# Factory calibration was an automated decision pipeline
-<div class="section-rule"></div>
-
-<div class="factory-flow">
-  <div class="factory-step">Device<span>identified + configured</span></div>
-  <div class="factory-chevron">›</div>
-  <div class="factory-step">Motorized Rig<span>automated acquisition</span></div>
-  <div class="factory-chevron">›</div>
-  <div class="factory-step core">Detection<span>targets + features</span></div>
-  <div class="factory-chevron">›</div>
-  <div class="factory-step core">Optimization<span>sensor geometry</span></div>
-</div>
-
-<div class="factory-decision">
-  <div class="decision-result fail">FAIL → retry / diagnose</div>
-  <div class="decision-diamond"><span>validate</span></div>
-  <div class="decision-result pass">PASS → persist + write</div>
-</div>
-
-<div class="small-note" style="text-align:center; margin-top:20px;">Rig control · automatic criteria · result persistence · operator and debugging tools</div>
-
-<div class="bottom-thesis">Reprojection error was one signal, not the acceptance criterion.</div>
-
-<!-- Optional Qt tool screenshot: add public/assets/qt-calibration-tool.png and place it here. -->
-
-<!--
-Timing: ~2:15
-
-The rig and software automated acquisition rather than asking an operator to manually find poses. Detection and optimization were followed by independent acceptance checks, then persistence and device programming.
-
-The tooling mattered as much as the math: operators needed clear pass/fail behavior, and engineers needed intermediate observations and metrics for diagnosis. Reprojection error helped, but a low residual alone could still hide weak coverage, poor geometry, or implausible parameters.
--->
-
----
-
-# The factory baseline could drift in the field
+# Why Factory Calibration Wasn't Enough
 <div class="section-rule"></div>
 
 <div class="geometry-compare">
@@ -173,171 +247,190 @@ The tooling mattered as much as the math: operators needed clear pass/fail behav
   <span class="cause">temperature</span><span class="cause">mechanical stress</span><span class="cause">impact</span><span class="cause">assembly creep</span><span class="cause">long-term use</span>
 </div>
 
-<div class="question-block">Can we estimate calibration changes from normal operating data — without a calibration target?</div>
+<div class="question-block">Can we estimate calibration changes from normal operating data without a calibration target?</div>
 
 <!--
-Timing: ~1:40
+The factory calibration represents the geometry of the device at one point in time.
 
-The online problem was harder because there was no controlled target, rig, or operator. We had only normal operating data, and much of that data was not informative for calibration.
+It assumes that the relationship between sensors remains sufficiently stable afterwards.
 
-So the core contribution was not simply moving the factory optimizer onto the device. It was designing a pipeline that recognized when runtime evidence was sufficient, estimated a candidate, and then made a conservative production decision.
+In practice, that assumption can break.
+
+The device operates outdoors and experiences temperature variation, vibration, mechanical stress, long-term usage, and potentially accidental impact.
+
+Those effects can change the effective sensor geometry after the device has left the factory.
+
+The individual sensors may still appear healthy. But a small geometric shift can create a persistent systematic error in the localization stack.
+
+So we ended up with a second, much harder problem:
+
+**Can we detect and compensate for calibration changes during normal operation, without asking the user to perform a dedicated calibration procedure?**
+
+This is what led us to online calibration.
 -->
 
 ---
 
-# Online calibration separates observation, estimation, and decision
+# Online Calibration Approach
 <div class="section-rule"></div>
 
 <OnlineCalibrationPipeline />
 
-<div class="bottom-thesis">An optimizer producing an answer does not mean the system should trust it.</div>
+<div class="pipeline-questions">
+  <div>Is the current data informative enough to constrain calibration?</div>
+  <div>What correction best explains the observations?</div>
+  <div>Is there enough evidence to modify trusted state?</div>
+</div>
+
+<div class="bottom-thesis">The optimiser generates a candidate; the system decides whether it deserves trust.</div>
 
 <!--
-Timing: ~2:40
+The online system used observations that were already available during normal operation.
 
-I separated the system into three questions.
+There was no calibration target and no controlled rig.
 
-First: observation. Can this runtime window actually constrain the calibration parameters? If not, discard it before optimization.
+That changes the nature of the problem substantially.
 
-Second: estimation. Given informative geometry, what change best explains the observations?
+In the factory, we control the observations.
 
-Third: decision. Is the candidate plausible, stable, independently beneficial, and supported strongly enough to modify a production baseline?
+In the field, we have to decide whether the observations are good enough to tell us anything about calibration at all.
 
-This architecture made abstention a normal successful outcome rather than an error case.
+I like to divide the online calibration problem into three separate questions.
+
+The first question is:
+
+**Is the current data informative enough to constrain the calibration parameters?**
+
+The second question is:
+
+**If it is informative, what calibration correction best explains the observations?**
+
+And the third question is:
+
+**Even if we can estimate a correction, do we have enough evidence to safely modify the trusted calibration state?**
+
+That separation became one of the key design principles.
+
+We deliberately avoided continuously estimate calibration and immediately write the latest result.
+
+The optimizer generates a candidate.
+
+The rest of the flow decides whether that candidate deserves to become trusted state.
 -->
 
 ---
 
-# A low residual is meaningless when geometry is degenerate
+# Observability and Safe Updates
 <div class="section-rule"></div>
 
-<div class="risk-policy" style="font-size:18px; margin-top:-12px; padding:9px 18px;">A small residual under degenerate geometry is not evidence that the estimate is correct.</div>
-
-<div class="split-observability">
-  <div class="obs-column poor">
-    <h3 class="danger">Poor geometry</h3>
-    <div class="obs-list">
-      <div class="obs-item">mostly straight or repetitive motion</div>
-      <div class="obs-item">low parallax</div>
-      <div class="obs-item">limited image coverage</div>
-      <div class="obs-item">short or unstable tracks</div>
-      <div class="obs-item">weak parameter excitation</div>
+<div class="observability-update-grid">
+  <section class="merged-half observability-half">
+    <h2>Trust the evidence before the estimate</h2>
+    <div class="merged-policy">A low residual is meaningless when geometry is degenerate.</div>
+    <div class="merged-observability">
+      <div class="obs-column poor">
+        <h3 class="danger">Poor geometry</h3>
+        <div class="obs-list">
+          <div class="obs-item">repetitive motion</div>
+          <div class="obs-item">low parallax</div>
+          <div class="obs-item">limited coverage</div>
+          <div class="obs-item">weak excitation</div>
+        </div>
+      </div>
+      <div class="obs-column good">
+        <h3 class="teal">Good geometry</h3>
+        <div class="obs-list">
+          <div class="obs-item">diverse motion</div>
+          <div class="obs-item">strong parallax</div>
+          <div class="obs-item">wide coverage</div>
+          <div class="obs-item">stable tracks</div>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="obs-column good">
-    <h3 class="teal">Good geometry</h3>
-    <div class="obs-list">
-      <div class="obs-item">diverse motion and viewing directions</div>
-      <div class="obs-item">strong parallax</div>
-      <div class="obs-item">wide image coverage</div>
-      <div class="obs-item">long stable tracks</div>
-      <div class="obs-item">sufficient parameter excitation</div>
+    <div class="signal-heading">Representative confidence signals</div>
+    <div class="signals merged-signals">
+      <span class="signal">track duration</span><span class="signal">coverage</span><span class="signal">parallax</span><span class="signal">motion diversity</span><span class="signal">conditioning</span><span class="signal">covariance</span><span class="signal">window consistency</span>
     </div>
-  </div>
-  <div class="obs-column good">
-    <ObservabilityDiagram />
-    <div class="signals">
-      <span class="signal">feature count</span><span class="signal">track duration</span><span class="signal">coverage</span><span class="signal">parallax</span><span class="signal">motion diversity</span><span class="signal">conditioning</span><span class="signal">covariance</span><span class="signal">window consistency</span>
+  </section>
+
+  <section class="merged-half update-half">
+    <h2>Require stronger evidence to update</h2>
+    <div class="merged-policy">False-positive updates are more dangerous than missed updates.</div>
+    <div class="compact-confidence-gate">
+      <div class="gate-candidate">Candidate calibration</div>
+      <div class="gate-arrow">↓</div>
+      <div class="gate-quality">
+        <div>Independent metric<br>improvement</div>
+        <div>Physical parameter<br>plausibility</div>
+        <div>Consistency &amp; stability<br>across time</div>
+      </div>
+      <div class="gate-arrow">↓</div>
+      <div class="gate-confidence">Confidence threshold</div>
+      <div class="gate-arrow split-arrow">↙&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↘</div>
+      <div class="gate-outcomes">
+        <div class="reject">Reject · keep baseline</div>
+        <div class="accept">Accept · bounded update</div>
+      </div>
     </div>
-    <div class="small-note" style="margin-top:9px;">Representative signals; the exact subset is system-dependent.</div>
-  </div>
+    <div class="update-policy-strip"><span>Weak evidence → no update</span><span>Degenerate geometry → no update</span><span>Consistent evidence → controlled update</span></div>
+  </section>
 </div>
 
 <!--
-Timing: ~2:50
+The hardest technical issue in online calibration was observability.
 
-This was the central technical lesson. With weak excitation, an optimizer can fit the observations while calibration parameters remain underconstrained. The residual can look excellent because many parameter combinations explain the same data.
+A small residual does not necessarily mean the calibration estimate is correct.
 
-We therefore evaluated the evidence before trusting the result: track quality, spatial coverage, parallax, motion diversity, and measures related to conditioning or uncertainty. These are representative signals—the important design principle is to explicitly test whether the data contains information about the parameter being estimated.
+For example, if the device motion is repetitive, there is very little parallax, the visual features cover only a small part of the image, or the motion does not excite a particular parameter direction, multiple calibration values can explain the observations almost equally well.
+
+The optimizer can still converge. It can even produce a very low residual.
+
+But the parameter estimate may be poorly constrained.
+
+So before trusting an estimate, we considered whether the observations contained enough useful geometric information.
+
+At the practical level, that means signals such as feature quality, track stability, spatial coverage, parallax, and motion diversity.
+
+At the numerical level, the same idea can be understood through the Jacobian and the approximate Hessian.
+
+If the information matrix has weak directions, some combination of calibration parameters is poorly observable.
+
+The key lesson is:
+
+**A small residual under degenerate geometry is not evidence of correct calibration.**
+
+Once the estimator produced a candidate, we still did not update immediately.
+
+We looked for additional evidence.
+
+Was the candidate physically plausible?
+
+Was it consistent across multiple observation windows?
+
+Did independent metrics improve?
+
+Was the estimate stable over time?
+
+The update policy was deliberately conservative.
+
+If the geometry was poor, we did nothing.
+
+If independent windows disagreed, we did nothing.
+
+If the estimated change was physically unreasonable, we did nothing.
+
+Only when there was persistent, consistent, high-confidence evidence would the system allow a controlled update.
+
+The principle I’d summarize this with is:
+
+**The trusted calibration state should be harder to modify than an internal estimate.**
+
+That was important because the cost of a false-positive update was much higher than the cost of waiting longer to correct a genuine drift.
 -->
 
 ---
 
-# Updating requires stronger evidence than estimating
-<div class="section-rule"></div>
-
-<div class="risk-policy">False-positive calibration updates are more dangerous than missed updates.</div>
-
-<ConfidenceGate />
-
-<!--
-Timing: ~2:50
-
-A candidate had to pass multiple independent gates. We checked physical plausibility, consistency across observation windows, improvement in metrics not used solely to fit the candidate, and temporal stability.
-
-Even an accepted update was bounded in size and rate. This limited the consequence of an unexpected failure and made behavior easier to monitor and roll back.
-
-The policy was intentionally asymmetric. Missing an update meant continuing with the trusted baseline. A false-positive update could corrupt a system that was already working.
--->
-
----
-
-# The calibration core was isolated from products and tools
-<div class="section-rule"></div>
-
-<div class="engineering-layout">
-  <ProductionArchitecture />
-  <div class="cross-cutting">
-    <div class="eyebrow">Cross-cutting</div>
-    <div class="cross-label">Logging</div>
-    <div class="cross-label">Configuration</div>
-    <div class="cross-label">Result persistence</div>
-    <div class="cross-label">Visualization</div>
-    <div class="cross-label">Versioning</div>
-    <div class="cross-label">Regression testing</div>
-  </div>
-</div>
-
-<div class="reuse-row">One core · unit tests · offline datasets · factory tooling · production runtime</div>
-
-<div class="bottom-thesis">The calibration core should be independently testable from the device and UI.</div>
-
-<!--
-Timing: ~2:20
-
-The software boundary was deliberate. Geometry, optimization, metrics, and validation lived in a reusable C++ core behind stable APIs.
-
-The device runtime, Qt factory tool, and offline analysis tooling were consumers rather than owners of calibration logic. That allowed the same behavior to run against unit tests, captured datasets, factory devices, and production observations.
-
-Cross-cutting capabilities—especially logging, result versioning, and replay—made field failures reproducible instead of anecdotal.
--->
-
----
-
-# Validation connected algorithm quality to fleet behavior
-<div class="section-rule"></div>
-
-<div class="metrics">
-  <div class="metric"><div class="metric-value">~30 s</div><div class="metric-label">calibration duration</div></div>
-  <div class="metric"><div class="metric-value">4×</div><div class="metric-label">devices per cycle</div></div>
-  <div class="metric"><div class="metric-value">~100K</div><div class="metric-label">deployed devices</div></div>
-  <div class="metric"><div class="metric-value" style="font-size:36px; margin-top:13px;">Robust</div><div class="metric-label">field operation</div></div>
-</div>
-
-<div style="display:grid; grid-template-columns:0.75fr 1.25fr; gap:48px; align-items:center; margin-top:28px;">
-  <TestingPyramid />
-  <div class="validation-layers" style="grid-template-columns:1fr; margin-top:0; gap:17px;">
-    <div class="validation-layer"><strong>Algorithm-level validation</strong><span>Does the estimated geometry make sense?</span></div>
-    <div class="validation-layer"><strong>System-level validation</strong><span>Does downstream localization remain stable or improve?</span></div>
-    <div class="validation-layer"><strong>Fleet-level validation</strong><span>Do field metrics or failure rates regress?</span></div>
-  </div>
-</div>
-
-<div class="bottom-thesis">The metric we ultimately cared about wasn't reprojection error. It was whether calibration remained invisible to the customer.</div>
-
-<!--
-Timing: ~2:10
-
-These figures are editable placeholders for the final interview version: about thirty seconds per calibration, four devices per cycle, and roughly one hundred thousand deployed products.
-
-Validation connected three levels. Algorithm checks asked whether geometry and uncertainty made sense. System checks measured whether localization remained stable or improved. Fleet checks watched for regressions in real operation.
-
-That hierarchy prevented a locally attractive calibration metric from becoming the only definition of success.
--->
-
----
-
-# Four principles made calibration reliable in production
+# Outcomes and Lessons Learned
 <div class="section-rule"></div>
 
 <div class="principles">
@@ -351,11 +444,39 @@ That hierarchy prevented a locally attractive calibration metric from becoming t
 <div class="thanks">Thank you · Questions</div>
 
 <!--
-Timing: ~1:30. Expected uninterrupted total: ~24 minutes.
+Looking back, there are four main lessons I took from the project.
 
-The main lesson is that production calibration is not a single optimization problem. It is a system that controls when estimation is valid, when a result is trustworthy, and how change reaches a deployed product safely.
+The first is:
 
-Observability prevents false confidence. Independent validation connects parameters to customer-visible behavior. Conservative deployment policy makes abstention safe. And deliberate debugging support lets the team learn when reality breaks an assumption.
+**Calibration is a system problem.**
 
-Thank you—I’m happy to go deeper into the factory workflow, online estimator, confidence signals, or production architecture.
+The optimizer is only one component. Data collection, validation, observability, tooling, diagnostics, and deployment policy are equally important.
+
+The second is:
+
+**Observability comes before optimization.**
+
+If the data does not constrain a parameter, the correct answer may simply be that we do not know yet.
+
+The third is:
+
+**Updating requires stronger evidence than estimating.**
+
+Generating a candidate calibration and modifying trusted device state should be treated as two separate operations.
+
+And the fourth is:
+
+**Debuggability needs to be designed in from the beginning.**
+
+Calibration bugs often do not crash the system. They produce numbers that look plausible but are subtly wrong. So replayability, intermediate metrics, and clear acceptance or rejection reasons are extremely important.
+
+If I had to summarize the whole project in one line, it would be:
+
+**Reliable calibration is not just estimation. It is estimation plus observability, validation, and safe deployment.**
+
+That combination of computer vision and production engineering is one of the areas I enjoy most.
+
+Thank you.
+
+I’m happy to go into any of the technical details.
 -->
